@@ -17,6 +17,10 @@ namespace RealmTodo.ViewModels
         [ObservableProperty]
         private string xummary;
 
+        // added new attribute-mapname 
+        [ObservableProperty]
+        private string mapname;
+
 
         [ObservableProperty]
         private string pageHeader;
@@ -28,6 +32,7 @@ namespace RealmTodo.ViewModels
                 InitialItem = query["item"] as Item;
                 Summary = InitialItem.Summary;
                 Xummary = InitialItem.Xummary;
+                Mapname = InitialItem.Mapname;
 
                 PageHeader = $"Modify Item {InitialItem.Id}";
             }
@@ -48,6 +53,8 @@ namespace RealmTodo.ViewModels
                 {
                     InitialItem.Summary = Summary;
                     InitialItem.Xummary = Xummary;
+                    InitialItem.Mapname = Mapname;
+
 
                 }
                 else // creating a new item
@@ -57,6 +64,7 @@ namespace RealmTodo.ViewModels
                         OwnerId = RealmService.CurrentUser.Id,
                         Summary = summary,
                         Xummary = xummary,
+                        Mapname=mapname
 
                     });
                 }

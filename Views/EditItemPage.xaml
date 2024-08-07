@@ -15,6 +15,7 @@
             TextColor="{DynamicResource Primary}"/>
         <Entry Text="{Binding Summary}" Placeholder="Item Summary"  PlaceholderColor="#787878"/>
         <Entry Text="{Binding Xummary}" Placeholder="Item Xummary"  PlaceholderColor="#787878"/>
+        <Entry Text="{Binding Mapname}" Placeholder="Item Mapname"  PlaceholderColor="#787878"/>
 
 
         <HorizontalStackLayout HorizontalOptions="Center" >

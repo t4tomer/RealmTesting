@@ -23,6 +23,10 @@ namespace RealmTodo.Models
         [Required]
         public string Xummary { get; set; }
 
+        //new attribute
+        [MapTo("mapname")]
+        [Required]
+        public string Mapname { get; set; }
 
 
         [MapTo("isComplete")]

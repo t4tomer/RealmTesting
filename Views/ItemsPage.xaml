@@ -70,16 +70,24 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Border BackgroundColor="White"
-                StrokeThickness="0"
-               Padding="8" Grid.Row="2">
-            <Button
-                Margin="5"
-                Text="Add new To-do"
-                FontSize="Medium"
-                Command="{Binding AddItemCommand}"
-            />
-        </Border>
+        <Frame Grid.Row="2" Padding="10" BorderColor="Black" BackgroundColor="#E3FCF7" Margin="5">
+            <Label HorizontalTextAlignment="Center" >
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Add new item " />
+                        <Span Text="here"
+                              TextColor="Blue"
+                              TextDecorations="Underline">
+                        </Span>
+                        <Span Text="." />
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding AddItemCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+        </Frame>
+        
         <Frame Grid.Row="3" Padding="10" BorderColor="Black" BackgroundColor="#E3FCF7" Margin="5">
             <Label HorizontalTextAlignment="Center" >
                 <Label.FormattedText>
