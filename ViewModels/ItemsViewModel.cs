@@ -72,9 +72,13 @@ namespace RealmTodo.ViewModels
 
             await realm.WriteAsync(() =>
             {
+                Console.WriteLine($"---> Delete Item ");
+
                 realm.Remove(item);
             });
         }
+
+
 
         [RelayCommand]
         public void ChangeConnectionStatus()

@@ -70,6 +70,11 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+
+
+
+
         <Frame Grid.Row="2" Padding="10" BorderColor="Black" BackgroundColor="#E3FCF7" Margin="5">
             <Label HorizontalTextAlignment="Center" >
                 <Label.FormattedText>
@@ -105,10 +110,16 @@
                     </Label.GestureRecognizers>
             </Label>
         </Frame>
-        <Frame  Grid.Row="4" Padding="10" BorderColor="Black" BackgroundColor="#E3FCF7"  Margin="5">
-            <Label            Text="HINT3: Log in with the same account on another device or simulator to see your list sync in real-time"
-                FontSize="Micro"
-                HorizontalTextAlignment="Center"/>
-        </Frame>
+
+        <Button
+                Grid.Row="4"
+                Text="Show Points of Map"
+                Clicked="ShowPointsOfMap"
+                BackgroundColor="Green"
+                TextColor="White"
+                FontSize="16"
+                Margin="5" />
+
+
     </Grid>
 </ContentPage>
