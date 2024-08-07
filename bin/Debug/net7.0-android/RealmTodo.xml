@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RealmTodo</name>
+    </assembly>
+    <members>
+        <member name="F:RealmTodo.Models.Item.RealmSchema">
+            <summary>
+            Defines the schema for the <see cref="T:RealmTodo.Models.Item"/> class.
+            </summary>
+        </member>
+        <member name="P:RealmTodo.Models.Item.IsManaged">
+            <inheritdoc />
+        </member>
+        <member name="P:RealmTodo.Models.Item.IsValid">
+            <inheritdoc />
+        </member>
+        <member name="P:RealmTodo.Models.Item.IsFrozen">
+            <inheritdoc />
+        </member>
+        <member name="P:RealmTodo.Models.Item.Realm">
+            <inheritdoc />
+        </member>
+        <member name="P:RealmTodo.Models.Item.ObjectSchema">
+            <inheritdoc />
+        </member>
+        <member name="P:RealmTodo.Models.Item.DynamicApi">
+            <inheritdoc />
+        </member>
+        <member name="P:RealmTodo.Models.Item.BacklinksCount">
+            <inheritdoc />
+        </member>
+        <member name="E:RealmTodo.Models.Item.PropertyChanged">
+            <inheritdoc />
+        </member>
+        <member name="M:RealmTodo.Models.Item.op_Explicit(Realms.RealmValue)~RealmTodo.Models.Item">
+            <summary>
+            Converts a <see cref="T:Realms.RealmValue"/> to <see cref="T:RealmTodo.Models.Item"/>. Equivalent to <see cref="M:Realms.RealmValue.AsNullableRealmObject``1"/>.
+            </summary>
+            <param name="val">The <see cref="T:Realms.RealmValue"/> to convert.</param>
+            <returns>The <see cref="T:RealmTodo.Models.Item"/> stored in the <see cref="T:Realms.RealmValue"/>.</returns>
+        </member>
+        <member name="M:RealmTodo.Models.Item.op_Implicit(RealmTodo.Models.Item)~Realms.RealmValue">
+            <summary>
+            Implicitly constructs a <see cref="T:Realms.RealmValue"/> from <see cref="T:RealmTodo.Models.Item"/>.
+            </summary>
+            <param name="val">The value to store in the <see cref="T:Realms.RealmValue"/>.</param>
+            <returns>A <see cref="T:Realms.RealmValue"/> containing the supplied <paramref name="val"/>.</returns>
+        </member>
+        <member name="M:RealmTodo.Models.Item.op_Implicit(RealmTodo.Models.Item)~Realms.QueryArgument">
+            <summary>
+            Implicitly constructs a <see cref="T:Realms.QueryArgument"/> from <see cref="T:RealmTodo.Models.Item"/>.
+            </summary>
+            <param name="val">The value to store in the <see cref="T:Realms.QueryArgument"/>.</param>
+            <returns>A <see cref="T:Realms.QueryArgument"/> containing the supplied <paramref name="val"/>.</returns>
+        </member>
+        <member name="M:RealmTodo.Models.Item.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="M:RealmTodo.Models.Item.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:RealmTodo.Models.Item.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:RealmTodo.Models.Item.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:RealmTodo.ViewModels.BaseViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:RealmTodo.ViewModels.BaseViewModel.isBusy"/>
+        </member>
+        <member name="M:RealmTodo.ViewModels.BaseViewModel.OnIsBusyChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:RealmTodo.ViewModels.BaseViewModel.IsBusy"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:RealmTodo.ViewModels.BaseViewModel.IsBusy"/> is changed.</remarks>
+        </member>
+        <member name="T:RealmTodo.ViewModels.EditItemViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditItemViewModel.InitialItem">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditItemViewModel.initialItem"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditItemViewModel.Summary">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditItemViewModel.summary"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditItemViewModel.PageHeader">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditItemViewModel.pageHeader"/>
+        </member>
+        <member name="F:RealmTodo.ViewModels.EditItemViewModel.saveItemCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditItemViewModel.SaveItemCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditItemViewModel.SaveItemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditItemViewModel.SaveItem"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.EditItemViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditItemViewModel.CancelCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditItemViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditItemViewModel.Cancel"/>.</summary>
+        </member>
+        <member name="T:RealmTodo.ViewModels.ItemsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.ItemsViewModel.ConnectionStatusIcon">
+            <inheritdoc cref="F:RealmTodo.ViewModels.ItemsViewModel.connectionStatusIcon"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.ItemsViewModel.IsShowAllTasks">
+            <inheritdoc cref="F:RealmTodo.ViewModels.ItemsViewModel.isShowAllTasks"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.ItemsViewModel.Items">
+            <inheritdoc cref="F:RealmTodo.ViewModels.ItemsViewModel.items"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.ItemsViewModel.DataExplorerLink">
+            <inheritdoc cref="F:RealmTodo.ViewModels.ItemsViewModel.dataExplorerLink"/>
+        </member>
+        <member name="M:RealmTodo.ViewModels.ItemsViewModel.OnIsShowAllTasksChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:RealmTodo.ViewModels.ItemsViewModel.IsShowAllTasks"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:RealmTodo.ViewModels.ItemsViewModel.IsShowAllTasks"/> is changed.</remarks>
+        </member>
+        <member name="F:RealmTodo.ViewModels.ItemsViewModel.appearingCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.ItemsViewModel.AppearingCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.ItemsViewModel.AppearingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.ItemsViewModel.OnAppearing"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.ItemsViewModel.logoutCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.ItemsViewModel.LogoutCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.ItemsViewModel.LogoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.ItemsViewModel.Logout"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.ItemsViewModel.addItemCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.ItemsViewModel.AddItemCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.ItemsViewModel.AddItemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.ItemsViewModel.AddItem"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.ItemsViewModel.editItemCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.ItemsViewModel.EditItemCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.ItemsViewModel.EditItemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.ItemsViewModel.EditItem(RealmTodo.Models.Item)"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.ItemsViewModel.deleteItemCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.ItemsViewModel.DeleteItemCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.ItemsViewModel.DeleteItemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.ItemsViewModel.DeleteItem(RealmTodo.Models.Item)"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.ItemsViewModel.changeConnectionStatusCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.ItemsViewModel.ChangeConnectionStatusCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.ItemsViewModel.ChangeConnectionStatusCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.ItemsViewModel.ChangeConnectionStatus"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.ItemsViewModel.urlTapCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.ItemsViewModel.UrlTapCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.ItemsViewModel.UrlTapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.ItemsViewModel.UrlTap(System.String)"/>.</summary>
+        </member>
+        <member name="T:RealmTodo.ViewModels.LoginViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:RealmTodo.ViewModels.LoginViewModel.appearingCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.LoginViewModel.AppearingCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.LoginViewModel.AppearingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.LoginViewModel.OnAppearing"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.LoginViewModel.loginCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.LoginViewModel.LoginCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.LoginViewModel.LoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.LoginViewModel.Login"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.LoginViewModel.signUpCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.LoginViewModel.SignUpCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.LoginViewModel.SignUpCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.LoginViewModel.SignUp"/>.</summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InitialItem">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InitialItem" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Summary">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Summary" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PageHeader">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PageHeader" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ConnectionStatusIcon">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ConnectionStatusIcon" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsShowAllTasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsShowAllTasks" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Items">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Items" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DataExplorerLink">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DataExplorerLink" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InitialItem">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InitialItem" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Summary">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Summary" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PageHeader">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PageHeader" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ConnectionStatusIcon">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ConnectionStatusIcon" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsShowAllTasks">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsShowAllTasks" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Items">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Items" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DataExplorerLink">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DataExplorerLink" generated properties.</summary>
+        </member>
+    </members>
+</doc>
