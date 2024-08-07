@@ -13,6 +13,11 @@ namespace RealmTodo.ViewModels
         [ObservableProperty]
         private string summary;
 
+        // added new attribute-xummary 
+        [ObservableProperty]
+        private string xummary;
+
+
         [ObservableProperty]
         private string pageHeader;
 
@@ -22,6 +27,8 @@ namespace RealmTodo.ViewModels
             {
                 InitialItem = query["item"] as Item;
                 Summary = InitialItem.Summary;
+                Xummary = InitialItem.Xummary;
+
                 PageHeader = $"Modify Item {InitialItem.Id}";
             }
             else // we're creating a new item
@@ -40,13 +47,17 @@ namespace RealmTodo.ViewModels
                 if (InitialItem != null) // editing an item
                 {
                     InitialItem.Summary = Summary;
+                    InitialItem.Xummary = Xummary;
+
                 }
                 else // creating a new item
                 {
                     realm.Add(new Item()
                     {
                         OwnerId = RealmService.CurrentUser.Id,
-                        Summary = summary
+                        Summary = summary,
+                        Xummary = xummary,
+
                     });
                 }
             });

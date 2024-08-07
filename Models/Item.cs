@@ -18,6 +18,13 @@ namespace RealmTodo.Models
         [Required]
         public string Summary { get; set; }
 
+        //new attribute
+        [MapTo("xummary")]
+        [Required]
+        public string Xummary { get; set; }
+
+
+
         [MapTo("isComplete")]
         public bool IsComplete { get; set; }
 

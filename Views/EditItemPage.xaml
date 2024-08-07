@@ -14,6 +14,9 @@
             HorizontalOptions="Center"
             TextColor="{DynamicResource Primary}"/>
         <Entry Text="{Binding Summary}" Placeholder="Item Summary"  PlaceholderColor="#787878"/>
+        <Entry Text="{Binding Xummary}" Placeholder="Item Xummary"  PlaceholderColor="#787878"/>
+
+
         <HorizontalStackLayout HorizontalOptions="Center" >
             <Button  Margin="0,0,20,0" Text="OK" Command="{Binding SaveItemCommand}"/>
             <Button  BackgroundColor="#454556"
