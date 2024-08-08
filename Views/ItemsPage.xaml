@@ -70,29 +70,18 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
-
-
-
-
-        <Frame Grid.Row="2" Padding="10" BorderColor="Black" BackgroundColor="#E3FCF7" Margin="5">
-            <Label HorizontalTextAlignment="Center" >
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="Add new item " />
-                        <Span Text="here"
-                              TextColor="Blue"
-                              TextDecorations="Underline">
-                        </Span>
-                        <Span Text="." />
-                    </FormattedString>
-                </Label.FormattedText>
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding AddItemCommand}" />
-                </Label.GestureRecognizers>
-            </Label>
-        </Frame>
-        
+        <Border BackgroundColor="White"
+                StrokeThickness="0"
+               Padding="8" Grid.Row="2">
+            <Button
+                Margin="5"
+                Text="Add new To-do"
+                FontSize="12" 
+                Padding="5,0,5,10"   
+                Command="{Binding AddItemCommand}"
+                
+            />
+        </Border>
         <Frame Grid.Row="3" Padding="10" BorderColor="Black" BackgroundColor="#E3FCF7" Margin="5">
             <Label HorizontalTextAlignment="Center" >
                 <Label.FormattedText>
@@ -105,20 +94,29 @@
                         <Span Text="." />
                     </FormattedString>
                 </Label.FormattedText>
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding Path=BindingContext.UrlTapCommand, Source={x:Reference itemsPage}}" />
-                    </Label.GestureRecognizers>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Path=BindingContext.UrlTapCommand, Source={x:Reference itemsPage}}" />
+                </Label.GestureRecognizers>
             </Label>
         </Frame>
 
+
         <Button
-                Grid.Row="4"
-                Text="Show Points of Map"
-                Clicked="ShowPointsOfMap"
-                BackgroundColor="Green"
-                TextColor="White"
-                FontSize="16"
-                Margin="5" />
+            Grid.Row="4"
+            Margin="5"
+            Text="Print Summery of map1"
+            FontSize="12" 
+            Padding="5,0,5,10"        
+            Command="{Binding PrintSummeryCommand}" />
+
+
+
+
+
+
+
+
+
 
 
     </Grid>

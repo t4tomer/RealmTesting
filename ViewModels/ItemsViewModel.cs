@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using RealmTodo.Models;
 using RealmTodo.Services;
 using Realms;
+using Microsoft.Maui.Controls;
 
 namespace RealmTodo.ViewModels
 {
@@ -63,6 +64,33 @@ namespace RealmTodo.ViewModels
         }
 
         [RelayCommand]
+        public async Task PrintSummery() // used to print the summary of objects of the same mapname
+        {
+            Console.WriteLine($"---> test1 !!!@@@!!! ");
+            // Query the Realm database for items with Mapname == "map1"
+            var itemsWithMap1 = realm.All<Item>().Where(i => i.Mapname == "map1").ToList();
+
+            // Print the Summary of each item
+            foreach (var item in itemsWithMap1)
+            {
+                Console.WriteLine($"the summary of item is :{item.Summary}");
+            }
+
+            // This is an async method, so we should use await in an actual async operation
+            await Task.CompletedTask;
+
+
+ 
+
+        }
+
+
+
+
+
+
+
+        [RelayCommand]
         public async Task DeleteItem(Item item)
         {
             if (!await CheckItemOwnership(item))
@@ -72,13 +100,9 @@ namespace RealmTodo.ViewModels
 
             await realm.WriteAsync(() =>
             {
-                Console.WriteLine($"---> Delete Item ");
-
                 realm.Remove(item);
             });
         }
-
-
 
         [RelayCommand]
         public void ChangeConnectionStatus()
