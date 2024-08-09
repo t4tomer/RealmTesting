@@ -107,7 +107,7 @@
             Text="Print Summery of map1"
             FontSize="12" 
             Padding="5,0,5,10"        
-            Command="{Binding PrintSummeryCommand}" />
+            Command="{Binding PrintSummaryCommand}" />
 
 
 

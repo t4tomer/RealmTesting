@@ -1,6 +1,6 @@
 using Microsoft.Maui.Controls;
 
-namespace MauiGoogleMapsSample
+namespace RealmTodo.Views // Change this to match the XAML namespace
 {
     public partial class TestPage : ContentPage
     {

@@ -3,7 +3,11 @@ using CommunityToolkit.Mvvm.Input;
 using RealmTodo.Models;
 using RealmTodo.Services;
 using Realms;
-using Microsoft.Maui.Controls;
+using RealmTodo.Views; // Correct namespace for TestPage
+using Microsoft.Maui.Controls; // Required for navigation
+using System.Windows.Input;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace RealmTodo.ViewModels
 {
@@ -25,11 +29,17 @@ namespace RealmTodo.ViewModels
         private string currentUserId;
         private bool isOnline = true;
 
-        [RelayCommand]
-        public void OnAppearing()
+        public ICommand NavigateCommand { get; private set; }
+
+        public ItemsViewModel()
         {
             realm = RealmService.GetMainThreadRealm();
             currentUserId = RealmService.CurrentUser.Id;
+        }
+
+        [RelayCommand]
+        public void OnAppearing()
+        {
             Items = realm.All<Item>().OrderBy(i => i.Id);
 
             var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
@@ -59,36 +69,27 @@ namespace RealmTodo.ViewModels
             {
                 return;
             }
-            var itemParameter = new Dictionary<string, object>() { { "item", item } };
+
+            var itemParameter = new Dictionary<string, object> { { "item", item } };
             await Shell.Current.GoToAsync($"itemEdit", itemParameter);
         }
 
         [RelayCommand]
-        public async Task PrintSummery() // used to print the summary of objects of the same mapname
+        public async Task PrintSummary() // Used to print the summary of objects of the same mapname
         {
             Console.WriteLine($"---> test1 !!!@@@!!! ");
-            // Query the Realm database for items with Mapname == "map1"
+
             var itemsWithMap1 = realm.All<Item>().Where(i => i.Mapname == "map1").ToList();
 
-            // Print the Summary of each item
             foreach (var item in itemsWithMap1)
             {
-                Console.WriteLine($"the summary of item is :{item.Summary}");
+                Console.WriteLine($"The summary of the item is: {item.Summary}");
             }
 
-            // This is an async method, so we should use await in an actual async operation
-            await Task.CompletedTask;
-
-
- 
-
+            // Navigate to the TestPage
+            var page = new TestPage();
+            await Shell.Current.Navigation.PushAsync(page);
         }
-
-
-
-
-
-
 
         [RelayCommand]
         public async Task DeleteItem(Item item)
@@ -149,4 +150,3 @@ namespace RealmTodo.ViewModels
         }
     }
 }
-

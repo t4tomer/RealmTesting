@@ -161,11 +161,11 @@
         <member name="P:RealmTodo.ViewModels.ItemsViewModel.EditItemCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.ItemsViewModel.EditItem(RealmTodo.Models.Item)"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.ItemsViewModel.printSummeryCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.ItemsViewModel.PrintSummeryCommand"/>.</summary>
+        <member name="F:RealmTodo.ViewModels.ItemsViewModel.printSummaryCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.ItemsViewModel.PrintSummaryCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.ItemsViewModel.PrintSummeryCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.ItemsViewModel.PrintSummery"/>.</summary>
+        <member name="P:RealmTodo.ViewModels.ItemsViewModel.PrintSummaryCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.ItemsViewModel.PrintSummary"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.ItemsViewModel.deleteItemCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.ItemsViewModel.DeleteItemCommand"/>.</summary>
