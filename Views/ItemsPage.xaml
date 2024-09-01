@@ -105,7 +105,7 @@
         <Button
             Grid.Row="4"
             Margin="5"
-            Text="Print Summery of map2"
+            Text="Show Map "
             FontSize="12" 
             Padding="5,0,5,10"        
             Command="{Binding PrintSummaryCommand}" />

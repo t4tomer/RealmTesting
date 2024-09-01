@@ -87,7 +87,8 @@ namespace RealmTodo.ViewModels
             }
 
             // Navigate to the TestPage
-            var page = new TestPage();
+            //var page = new TestPage();
+            var page = new MapPage();
             await Shell.Current.Navigation.PushAsync(page);
         }
 
