@@ -1,6 +1,8 @@
 C:\Users\tomer\.nuget\packages\communitytoolkit.maui\5.3.0\lib\net7.0-android33.0\CommunityToolkit.Maui.dll
 C:\Users\tomer\.nuget\packages\communitytoolkit.maui.core\5.3.0\lib\net7.0-android33.0\CommunityToolkit.Maui.Core.dll
 C:\Users\tomer\.nuget\packages\communitytoolkit.mvvm\8.2.1\lib\net6.0\CommunityToolkit.Mvvm.dll
+C:\Users\tomer\.nuget\packages\documentformat.openxml\3.0.2\lib\netstandard2.0\DocumentFormat.OpenXml.dll
+C:\Users\tomer\.nuget\packages\documentformat.openxml.framework\3.0.2\lib\net6.0\DocumentFormat.OpenXml.Framework.dll
 C:\Users\tomer\.nuget\packages\googlegson\2.9.1.1\lib\net6.0-android31.0\GoogleGson.dll
 C:\Users\tomer\.nuget\packages\microsoft.extensions.configuration\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.dll
 C:\Users\tomer\.nuget\packages\microsoft.extensions.configuration.abstractions\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -11,11 +13,15 @@ C:\Users\tomer\.nuget\packages\microsoft.extensions.logging.abstractions\7.0.0\l
 C:\Users\tomer\.nuget\packages\microsoft.extensions.logging.debug\7.0.0\lib\net7.0\Microsoft.Extensions.Logging.Debug.dll
 C:\Users\tomer\.nuget\packages\microsoft.extensions.options\7.0.0\lib\net7.0\Microsoft.Extensions.Options.dll
 C:\Users\tomer\.nuget\packages\microsoft.extensions.primitives\7.0.0\lib\net7.0\Microsoft.Extensions.Primitives.dll
+C:\Users\tomer\.nuget\packages\microsoft.maui.controls.maps\8.0.61\lib\netstandard2.1\Microsoft.Maui.Controls.Maps.dll
 C:\Users\tomer\.nuget\packages\microsoft.maui.graphics\7.0.101\lib\net7.0-android33.0\Microsoft.Maui.Graphics.dll
+C:\Users\tomer\.nuget\packages\microsoft.maui.maps\8.0.61\lib\netstandard2.1\Microsoft.Maui.Maps.dll
 C:\Users\tomer\.nuget\packages\mongodb.bson\2.19.1\lib\netstandard2.1\MongoDB.Bson.dll
+C:\Users\tomer\.nuget\packages\onion.maui.googlemaps\5.0.0\lib\net7.0-android\Maui.GoogleMaps.dll
 C:\Users\tomer\.nuget\packages\realm\11.4.0\lib\net6.0\Realm.dll
 C:\Users\tomer\.nuget\packages\realm.platformhelpers\11.4.0\lib\net6.0-android31.0\Realm.PlatformHelpers.dll
 C:\Users\tomer\.nuget\packages\remotion.linq\2.2.0\lib\portable-net45+win+wpa81+wp80\Remotion.Linq.dll
+C:\Users\tomer\.nuget\packages\system.io.packaging\8.0.0\lib\net7.0\System.IO.Packaging.dll
 C:\Users\tomer\.nuget\packages\system.runtime.compilerservices.unsafe\6.0.0\lib\net6.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\tomer\.nuget\packages\system.threading.channels\6.0.0\lib\net6.0\System.Threading.Channels.dll
 C:\Users\tomer\.nuget\packages\xamarin.android.glide\4.13.2.2\lib\net6.0-android31.0\Xamarin.Android.Glide.dll
@@ -92,6 +98,10 @@ C:\Users\tomer\.nuget\packages\xamarin.androidx.window\1.0.0.10\lib\net6.0-andro
 C:\Users\tomer\.nuget\packages\xamarin.google.android.material\1.7.0\lib\net6.0-android31.0\Xamarin.Google.Android.Material.dll
 C:\Users\tomer\.nuget\packages\xamarin.google.crypto.tink.android\1.7.0.1\lib\net6.0-android31.0\Xamarin.Google.Crypto.Tink.Android.dll
 C:\Users\tomer\.nuget\packages\xamarin.google.guava.listenablefuture\1.0.0.10\lib\net6.0-android31.0\Xamarin.Google.Guava.ListenableFuture.dll
+C:\Users\tomer\.nuget\packages\xamarin.googleplayservices.base\118.1.0\lib\net6.0-android31.0\Xamarin.GooglePlayServices.Base.dll
+C:\Users\tomer\.nuget\packages\xamarin.googleplayservices.basement\118.1.0\lib\net6.0-android31.0\Xamarin.GooglePlayServices.Basement.dll
+C:\Users\tomer\.nuget\packages\xamarin.googleplayservices.maps\118.1.0\lib\net6.0-android31.0\Xamarin.GooglePlayServices.Maps.dll
+C:\Users\tomer\.nuget\packages\xamarin.googleplayservices.tasks\118.0.2\lib\net6.0-android31.0\Xamarin.GooglePlayServices.Tasks.dll
 C:\Users\tomer\.nuget\packages\xamarin.jetbrains.annotations\23.0.0.5\lib\net6.0-android31.0\Xamarin.Jetbrains.Annotations.dll
 C:\Users\tomer\.nuget\packages\xamarin.kotlin.stdlib\1.7.20.1\lib\net6.0-android31.0\Xamarin.Kotlin.StdLib.dll
 C:\Users\tomer\.nuget\packages\xamarin.kotlin.stdlib.common\1.7.20.1\lib\net6.0-android31.0\Xamarin.Kotlin.StdLib.Common.dll

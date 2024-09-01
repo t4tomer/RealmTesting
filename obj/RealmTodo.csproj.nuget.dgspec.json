@@ -69,6 +69,10 @@
               "target": "Package",
               "version": "[8.2.1, )"
             },
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -88,10 +92,18 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Microsoft.Maui.Controls.Maps": {
+              "target": "Package",
+              "version": "[8.0.61, )"
+            },
             "Microsoft.Maui.Graphics": {
               "target": "Package",
               "version": "[7.0.101, )",
               "autoReferenced": true
+            },
+            "Microsoft.Maui.Maps": {
+              "target": "Package",
+              "version": "[8.0.61, )"
             },
             "Microsoft.NET.ILLink.Analyzers": {
               "suppressParent": "All",
@@ -104,6 +116,10 @@
               "target": "Package",
               "version": "[7.0.100-1.23401.1, )",
               "autoReferenced": true
+            },
+            "Onion.Maui.GoogleMaps": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Realm": {
               "target": "Package",
@@ -163,6 +179,10 @@
               "target": "Package",
               "version": "[1.7.0.1, )",
               "autoReferenced": true
+            },
+            "Xamarin.Google.iOS.Maps": {
+              "target": "Package",
+              "version": "[6.0.1.1, )"
             }
           },
           "imports": [
@@ -252,6 +272,10 @@
               "target": "Package",
               "version": "[8.2.1, )"
             },
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -271,10 +295,18 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Microsoft.Maui.Controls.Maps": {
+              "target": "Package",
+              "version": "[8.0.61, )"
+            },
             "Microsoft.Maui.Graphics": {
               "target": "Package",
               "version": "[7.0.101, )",
               "autoReferenced": true
+            },
+            "Microsoft.Maui.Maps": {
+              "target": "Package",
+              "version": "[8.0.61, )"
             },
             "Microsoft.NET.ILLink.Analyzers": {
               "suppressParent": "All",
@@ -288,9 +320,17 @@
               "version": "[7.0.100-1.23401.1, )",
               "autoReferenced": true
             },
+            "Onion.Maui.GoogleMaps": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Realm": {
               "target": "Package",
               "version": "[11.4.0, )"
+            },
+            "Xamarin.Google.iOS.Maps": {
+              "target": "Package",
+              "version": "[6.0.1.1, )"
             }
           },
           "imports": [
@@ -368,6 +408,10 @@
               "target": "Package",
               "version": "[8.2.1, )"
             },
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )",
@@ -387,6 +431,10 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Microsoft.Maui.Controls.Maps": {
+              "target": "Package",
+              "version": "[8.0.61, )"
+            },
             "Microsoft.Maui.Graphics": {
               "target": "Package",
               "version": "[7.0.101, )",
@@ -397,14 +445,26 @@
               "version": "[7.0.101, )",
               "autoReferenced": true
             },
+            "Microsoft.Maui.Maps": {
+              "target": "Package",
+              "version": "[8.0.61, )"
+            },
             "Microsoft.WindowsAppSDK": {
               "target": "Package",
               "version": "[1.2.221209.1, )",
               "autoReferenced": true
             },
+            "Onion.Maui.GoogleMaps": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Realm": {
               "target": "Package",
               "version": "[11.4.0, )"
+            },
+            "Xamarin.Google.iOS.Maps": {
+              "target": "Package",
+              "version": "[6.0.1.1, )"
             }
           },
           "imports": [
