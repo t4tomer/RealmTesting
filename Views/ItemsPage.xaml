@@ -108,7 +108,7 @@
             Text="Show Map "
             FontSize="12" 
             Padding="5,0,5,10"        
-            Command="{Binding PrintSummaryCommand}" />
+            Command="{Binding ToMapPageCommand}" />
 
 
 

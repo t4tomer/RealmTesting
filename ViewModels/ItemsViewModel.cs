@@ -75,7 +75,7 @@ namespace RealmTodo.ViewModels
         }
 
         [RelayCommand]
-        public async Task PrintSummary() // Used to print the summary of objects of the same mapname
+        public async Task ToMapPage() // Used to print the summary of objects of the same mapname
         {
             Console.WriteLine($"---> test1 !!!@@@!!! ");
 
