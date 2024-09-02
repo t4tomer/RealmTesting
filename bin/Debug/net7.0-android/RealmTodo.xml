@@ -88,6 +88,9 @@
         <member name="P:RealmTodo.ViewModels.EditItemViewModel.Summary">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditItemViewModel.summary"/>
         </member>
+        <member name="P:RealmTodo.ViewModels.EditItemViewModel.Latitude">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditItemViewModel.latitude"/>
+        </member>
         <member name="P:RealmTodo.ViewModels.EditItemViewModel.Xummary">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditItemViewModel.xummary"/>
         </member>
@@ -110,6 +113,7 @@
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditItemViewModel.Cancel"/>.</summary>
         </member>
         <member name="T:RealmTodo.ViewModels.ItemsViewModel">
+            <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
@@ -166,6 +170,12 @@
         </member>
         <member name="P:RealmTodo.ViewModels.ItemsViewModel.ToMapPageCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.ItemsViewModel.ToMapPage"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.ItemsViewModel.toEditPointPageCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.ItemsViewModel.ToEditPointPageCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.ItemsViewModel.ToEditPointPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.ItemsViewModel.ToEditPointPage"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.ItemsViewModel.deleteItemCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.ItemsViewModel.DeleteItemCommand"/>.</summary>
@@ -322,6 +332,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Summary">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Summary" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Latitude">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Latitude" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Xummary">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Xummary" generated properties.</summary>
         </member>
@@ -357,6 +370,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Summary">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Summary" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Latitude">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Latitude" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Xummary">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Xummary" generated properties.</summary>

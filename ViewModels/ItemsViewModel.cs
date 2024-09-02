@@ -74,23 +74,44 @@ namespace RealmTodo.ViewModels
             await Shell.Current.GoToAsync($"itemEdit", itemParameter);
         }
 
+
+        // used to transfer the user to the map page 
         [RelayCommand]
-        public async Task ToMapPage() // Used to print the summary of objects of the same mapname
+        public async Task ToMapPage() 
         {
             Console.WriteLine($"---> test1 !!!@@@!!! ");
-
             var itemsWithMap1 = realm.All<Item>().Where(i => i.Mapname == "map1").ToList();
 
             foreach (var item in itemsWithMap1)
             {
                 Console.WriteLine($"The summary of the item is: {item.Summary}");
             }
-
             // Navigate to the TestPage
             //var page = new TestPage();
             var page = new MapPage();
             await Shell.Current.Navigation.PushAsync(page);
         }
+
+        // used to transfer the user to edit point page
+        [RelayCommand]
+        public async Task ToEditPointPage()
+        {
+
+
+
+            Console.WriteLine($"---> transfering user to EditPointPage ");
+            var page = new PropertyTriggerXaml();
+            await Shell.Current.Navigation.PushAsync(page);
+
+
+
+        }
+
+
+
+
+
+
 
         [RelayCommand]
         public async Task DeleteItem(Item item)

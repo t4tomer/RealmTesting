@@ -1,12 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-
-<!-- FirstPage1-original -->
-
-<ContentPage
+﻿<ContentPage
     x:Class="RealmTodo.Views.MapPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:maps="clr-namespace:Maui.GoogleMaps;assembly=Maui.GoogleMaps">
+    xmlns:maps="clr-namespace:Maui.GoogleMaps;assembly=Maui.GoogleMaps"
+    xmlns:vm="clr-namespace:RealmTodo.ViewModels">
+
+    <ContentPage.BindingContext>
+        <vm:ItemsViewModel />
+    </ContentPage.BindingContext>
 
     <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
         <!-- Show Google Map -->
@@ -28,11 +29,11 @@
 
             <Button
                 Text="Edit Point"
-                Clicked="EditPoint"
                 BackgroundColor="Green"
                 TextColor="White"
                 FontSize="13"
-                Margin="5" />
+                Margin="5"
+                Command="{Binding ToEditPointPageCommand}"/>
 
             <Button
                 Text="Reset Map"
@@ -47,11 +48,7 @@
                 Clicked="Reset_Map_Clicked"
                 BackgroundColor="DeepPink"
                 TextColor="Black"
-                FontSize="11"
-             />
-
-
-
+                FontSize="11" />
 
         </StackLayout>
 
@@ -62,15 +59,7 @@
             BackgroundColor="Blue"
             TextColor="White"
             AbsoluteLayout.LayoutFlags="PositionProportional"
-            AbsoluteLayout.LayoutBounds="0.1, 0.95, AutoSize, AutoSize" 
-            />
-
-
-
-
-
-
-
+            AbsoluteLayout.LayoutBounds="0.1, 0.95, AutoSize, AutoSize" />
 
     </AbsoluteLayout>
 

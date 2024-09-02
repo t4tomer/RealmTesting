@@ -76,7 +76,7 @@
                Padding="8" Grid.Row="2">
             <Button
                 Margin="5"
-                Text="Add new To-do"
+                Text="Add Point data "
                 FontSize="12" 
                 Padding="5,0,5,10"   
                 Command="{Binding AddItemCommand}"

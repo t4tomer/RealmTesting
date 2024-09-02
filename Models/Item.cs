@@ -18,6 +18,13 @@ namespace RealmTodo.Models
         [Required]
         public string Summary { get; set; }
 
+        //new attribute-latitude
+        [MapTo("latitude")]
+        [Required]
+        public string Latitude { get; set; }
+
+
+
         //new attribute
         [MapTo("xummary")]
         [Required]

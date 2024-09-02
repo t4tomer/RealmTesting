@@ -13,6 +13,12 @@ namespace RealmTodo.ViewModels
         [ObservableProperty]
         private string summary;
 
+        // added new attribute-Latitude 
+        [ObservableProperty]
+        private string latitude;
+
+
+
         // added new attribute-xummary 
         [ObservableProperty]
         private string xummary;
@@ -33,6 +39,8 @@ namespace RealmTodo.ViewModels
                 Summary = InitialItem.Summary;
                 Xummary = InitialItem.Xummary;
                 Mapname = InitialItem.Mapname;
+                Latitude = InitialItem.Latitude;
+
 
                 PageHeader = $"Modify Item {InitialItem.Id}";
             }
@@ -54,6 +62,8 @@ namespace RealmTodo.ViewModels
                     InitialItem.Summary = Summary;
                     InitialItem.Xummary = Xummary;
                     InitialItem.Mapname = Mapname;
+                    InitialItem.Latitude = Latitude;
+
 
 
                 }
@@ -64,7 +74,8 @@ namespace RealmTodo.ViewModels
                         OwnerId = RealmService.CurrentUser.Id,
                         Summary = summary,
                         Xummary = xummary,
-                        Mapname=mapname
+                        Mapname=mapname,
+                        Latitude=latitude
 
                     });
                 }

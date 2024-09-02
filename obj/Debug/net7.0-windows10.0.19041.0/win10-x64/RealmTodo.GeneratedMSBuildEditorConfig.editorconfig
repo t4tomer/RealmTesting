@@ -66,6 +66,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.MapPage.xa
 build_metadata.AdditionalFiles.TargetPath = Views\MapPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\MapPage.xaml
 
+[D:/GitHub/RealmExamples/RealmTesting/Views/PropertyTriggerXaml.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.PropertyTriggerXaml.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\PropertyTriggerXaml.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\PropertyTriggerXaml.xaml
+
 [D:/GitHub/RealmExamples/RealmTesting/Views/TestPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.TestPage.xaml
