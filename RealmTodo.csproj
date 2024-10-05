@@ -69,6 +69,11 @@
   
 	<ItemGroup>
 		<None Remove="Models\" />
+		<None Remove="Resources\Images\back.svg" />
+		<None Remove="Resources\Images\clear.svg" />
+		<None Remove="Resources\Images\distance.svg" />
+		<None Remove="Resources\Images\edit_point.svg" />
+		<None Remove="Resources\Images\zoom.svg" />
 		<None Remove="Views\" />
 		<None Remove="ViewModels\" />
 		<None Remove="CommunityToolkit.Mvvm" />
@@ -78,11 +83,16 @@
 		<None Remove="atlasConfig.json" />
 	</ItemGroup>
 	<ItemGroup>
-		<Folder Include="Models\" />
 		<Folder Include="ViewModels\" />
 		<Folder Include="Services\" />
 	</ItemGroup>
 	<ItemGroup>
+		<MauiXaml Update="Views\DistancePage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\EditPinAddr.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="Views\LoginPage.xaml">
 			<SubType>
 			</SubType>

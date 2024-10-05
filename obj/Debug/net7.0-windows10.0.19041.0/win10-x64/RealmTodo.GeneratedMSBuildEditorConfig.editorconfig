@@ -42,11 +42,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.BusyPopup.
 build_metadata.AdditionalFiles.TargetPath = Views\BusyPopup.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\BusyPopup.xaml
 
+[D:/GitHub/RealmExamples/RealmTesting/Views/DistancePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.DistancePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\DistancePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\DistancePage.xaml
+
 [D:/GitHub/RealmExamples/RealmTesting/Views/EditItemPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.EditItemPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\EditItemPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\EditItemPage.xaml
+
+[D:/GitHub/RealmExamples/RealmTesting/Views/EditPinAddr.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.EditPinAddr.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\EditPinAddr.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\EditPinAddr.xaml
 
 [D:/GitHub/RealmExamples/RealmTesting/Views/ItemsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
