@@ -33,7 +33,7 @@
 
                 <Button
                   ImageSource="edit_point.png"
-                  Clicked="EditPoint"
+                  Clicked="Edit_Point_Clicked"
                   BackgroundColor="Transparent"
                   Padding="30"
                 />

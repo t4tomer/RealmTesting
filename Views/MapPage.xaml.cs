@@ -171,22 +171,21 @@ namespace RealmTodo.Views
         }
 
         // method that is used to transfer the user to the edit point page
-        private async void EditPoint(object sender, EventArgs e)
+        private async void Edit_Point_Clicked(object sender, EventArgs e)
         {
-            Console.WriteLine($"----> Add Point ");
+            Console.WriteLine($"----> Edit Point clicked ");
             //toPage("TestPage");
             //string pageName = "NotePage";
 
 
             List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
             int pinCount = pinsList.Count;
-            Console.WriteLine($"number of pins in the list(Add_Point_Clicked): -->'{pinCount}': {pinCount}");
+            //Console.WriteLine($"number of pins in the list(Add_Point_Clicked): -->'{pinCount}': {pinCount}");
 
             var EditPinAddrPage = new EditPinAddr(pinsList, myMap);
             //EditPinAddrPage.SetPinsList(pinsList);
             //! Pass the pinsList directly when navigating to the triggerPage
             await Navigation.PushAsync(EditPinAddrPage);
-
 
         }
         // remove all the points&polylines from the map 
