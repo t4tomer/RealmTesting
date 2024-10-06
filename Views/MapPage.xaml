@@ -19,52 +19,41 @@
             AbsoluteLayout.LayoutBounds="0, 0, 1, 1" />
 
         <!-- Custom Toolbar with regular labels -->
-        <StackLayout
-            Orientation="Horizontal"
-            BackgroundColor="Transparent"
-            Padding="10"
-            VerticalOptions="Start"
-            HorizontalOptions="Start"
-            HeightRequest="50"                  
-            >
+        <!-- Custom Toolbar with regular labels -->
+    <StackLayout
+          Orientation="Horizontal"
+          BackgroundColor="Transparent"
+          Padding="10"
+          Margin="30"
+          HorizontalOptions="Center"
+          VerticalOptions="Start"
+          HeightRequest="50"
+          IsVisible="True"
+      >
 
-            <Button
-                ImageSource="edit_point.png"
-                Clicked="EditPoint"
-                BackgroundColor="Transparent"
-                FontSize="13"
-                Margin="50"
-                HorizontalOptions="Start"
-                Padding="30"
-                HeightRequest="0" 
-                 WidthRequest="40"                  
-/>
+                <Button
+                  ImageSource="edit_point.png"
+                  Clicked="EditPoint"
+                  BackgroundColor="Transparent"
+                  Padding="30"
+                />
 
-            <Button
-                ImageSource="clear.png"
-                Clicked="Reset_Map_Clicked"
-                BackgroundColor="Transparent"
-                FontSize="11"
-                Margin="0"
-                Padding="0"
-                 HeightRequest="0"    />
+                <Button
+                  ImageSource="clear.png"
+                  Clicked="Reset_Map_Clicked"
+                  BackgroundColor="Transparent"
+                  Padding="0"
+                />
 
-            <Button
-                ImageSource="distance.png"
-                Clicked="Calc_Distance_Clicked"         
-                BackgroundColor="Transparent"
-                AbsoluteLayout.LayoutFlags="PositionProportional"
-                AbsoluteLayout.LayoutBounds="0.42, 1.0, AutoSize, AutoSize" 
-                Padding="30"
-                Margin="0"
-
-                
-             />
-
-
-
-
-        </StackLayout>
+                <Button
+                  ImageSource="distance.png"
+                  Clicked="Calc_Distance_Clicked"         
+                  BackgroundColor="Transparent"
+                  AbsoluteLayout.LayoutFlags="PositionProportional"
+                  AbsoluteLayout.LayoutBounds="0.42, 1.0, AutoSize, AutoSize" 
+                 />
+    </StackLayout>
+        
         <Button
             ImageSource="back.png"
             BackgroundColor="Transparent"
