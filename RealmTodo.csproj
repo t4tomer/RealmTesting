@@ -69,6 +69,7 @@
   
 	<ItemGroup>
 		<None Remove="Models\" />
+		<None Remove="Resources\Images\add2mongo.svg" />
 		<None Remove="Resources\Images\back.svg" />
 		<None Remove="Resources\Images\clear.svg" />
 		<None Remove="Resources\Images\distance.svg" />

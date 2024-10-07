@@ -1,4 +1,5 @@
 ﻿obj\Debug\net7.0-android\resizetizer\r\drawable\mongodb.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\add2mongo.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\back.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\clear.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\close.png
@@ -9,6 +10,7 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\logout.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\wifi_off.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\wifi_on.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\zoom.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\add2mongo.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\back.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\clear.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\close.png
@@ -19,6 +21,7 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\logout.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\wifi_off.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\wifi_on.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\zoom.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\add2mongo.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\back.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\clear.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\close.png
@@ -29,6 +32,7 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\logout.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\wifi_off.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\wifi_on.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\zoom.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\add2mongo.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\back.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\clear.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\close.png
@@ -39,6 +43,7 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\logout.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\wifi_off.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\wifi_on.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\zoom.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\add2mongo.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\back.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\clear.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\close.png

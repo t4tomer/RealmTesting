@@ -2113,3 +2113,8 @@ D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\draw
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\distance.png
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\edit_point.png
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\zoom.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\add2mongo.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\add2mongo.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\add2mongo.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\add2mongo.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\add2mongo.png
