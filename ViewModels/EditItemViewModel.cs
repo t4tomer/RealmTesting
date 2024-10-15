@@ -7,29 +7,41 @@ namespace RealmTodo.ViewModels
 {
     public partial class EditItemViewModel : BaseViewModel, IQueryAttributable
     {
+
         [ObservableProperty]
         private Item initialItem;
+
+
+
 
         [ObservableProperty]
         private string summary;
 
-        // added new attribute-Latitude 
-        [ObservableProperty]
-        private string latitude;
 
-
-
-        // added new attribute-xummary 
-        [ObservableProperty]
-        private string xummary;
-
-        // added new attribute-mapname 
         [ObservableProperty]
         private string mapname;
 
 
         [ObservableProperty]
+        private string labelpin;
+
+
+        [ObservableProperty]
+        private string address;
+
+
+        [ObservableProperty]
+        private string latitude;
+
+
+        [ObservableProperty]
+        private string longtiude;
+
+
+
+        [ObservableProperty]
         private string pageHeader;
+
 
         public void ApplyQueryAttributes(IDictionary<string, object> query)
         {
@@ -37,19 +49,26 @@ namespace RealmTodo.ViewModels
             {
                 InitialItem = query["item"] as Item;
                 Summary = InitialItem.Summary;
-                Xummary = InitialItem.Xummary;
                 Mapname = InitialItem.Mapname;
+                Labelpin = InitialItem.Labelpin;
+                Address = InitialItem.Address;
                 Latitude = InitialItem.Latitude;
-
-
+                Longtiude = InitialItem.Longitude;
                 PageHeader = $"Modify Item {InitialItem.Id}";
             }
             else // we're creating a new item
             {
                 Summary = "";
+                Mapname = "";
+                Labelpin = "";
+                Address = "";
+                Latitude = "";
+                Longtiude = "";
+
                 PageHeader = "Create a New Item";
             }
         }
+
 
         [RelayCommand]
         public async Task SaveItem()
@@ -60,11 +79,11 @@ namespace RealmTodo.ViewModels
                 if (InitialItem != null) // editing an item
                 {
                     InitialItem.Summary = Summary;
-                    InitialItem.Xummary = Xummary;
-                    InitialItem.Mapname = Mapname;
+                    InitialItem.Mapname = Summary;
+                    InitialItem.Labelpin = Labelpin;
+                    InitialItem.Address = Address;
                     InitialItem.Latitude = Latitude;
-
-
+                    InitialItem.Longitude = Longtiude;
 
                 }
                 else // creating a new item
@@ -73,10 +92,11 @@ namespace RealmTodo.ViewModels
                     {
                         OwnerId = RealmService.CurrentUser.Id,
                         Summary = summary,
-                        Xummary = xummary,
-                        Mapname=mapname,
-                        Latitude=latitude
-
+                        Mapname = summary,
+                        Labelpin = summary,
+                        Address = summary,
+                        Latitude = "test13",
+                        Longitude = "test14"
                     });
                 }
             });
