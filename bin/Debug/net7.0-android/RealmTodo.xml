@@ -66,68 +66,6 @@
         <member name="M:RealmTodo.Models.Item.ToString">
             <inheritdoc />
         </member>
-        <member name="F:RealmTodo.Models.PinOnMap.RealmSchema">
-            <summary>
-            Defines the schema for the <see cref="T:RealmTodo.Models.PinOnMap"/> class.
-            </summary>
-        </member>
-        <member name="P:RealmTodo.Models.PinOnMap.IsManaged">
-            <inheritdoc />
-        </member>
-        <member name="P:RealmTodo.Models.PinOnMap.IsValid">
-            <inheritdoc />
-        </member>
-        <member name="P:RealmTodo.Models.PinOnMap.IsFrozen">
-            <inheritdoc />
-        </member>
-        <member name="P:RealmTodo.Models.PinOnMap.Realm">
-            <inheritdoc />
-        </member>
-        <member name="P:RealmTodo.Models.PinOnMap.ObjectSchema">
-            <inheritdoc />
-        </member>
-        <member name="P:RealmTodo.Models.PinOnMap.DynamicApi">
-            <inheritdoc />
-        </member>
-        <member name="P:RealmTodo.Models.PinOnMap.BacklinksCount">
-            <inheritdoc />
-        </member>
-        <member name="E:RealmTodo.Models.PinOnMap.PropertyChanged">
-            <inheritdoc />
-        </member>
-        <member name="M:RealmTodo.Models.PinOnMap.op_Explicit(Realms.RealmValue)~RealmTodo.Models.PinOnMap">
-            <summary>
-            Converts a <see cref="T:Realms.RealmValue"/> to <see cref="T:RealmTodo.Models.PinOnMap"/>. Equivalent to <see cref="M:Realms.RealmValue.AsNullableRealmObject``1"/>.
-            </summary>
-            <param name="val">The <see cref="T:Realms.RealmValue"/> to convert.</param>
-            <returns>The <see cref="T:RealmTodo.Models.PinOnMap"/> stored in the <see cref="T:Realms.RealmValue"/>.</returns>
-        </member>
-        <member name="M:RealmTodo.Models.PinOnMap.op_Implicit(RealmTodo.Models.PinOnMap)~Realms.RealmValue">
-            <summary>
-            Implicitly constructs a <see cref="T:Realms.RealmValue"/> from <see cref="T:RealmTodo.Models.PinOnMap"/>.
-            </summary>
-            <param name="val">The value to store in the <see cref="T:Realms.RealmValue"/>.</param>
-            <returns>A <see cref="T:Realms.RealmValue"/> containing the supplied <paramref name="val"/>.</returns>
-        </member>
-        <member name="M:RealmTodo.Models.PinOnMap.op_Implicit(RealmTodo.Models.PinOnMap)~Realms.QueryArgument">
-            <summary>
-            Implicitly constructs a <see cref="T:Realms.QueryArgument"/> from <see cref="T:RealmTodo.Models.PinOnMap"/>.
-            </summary>
-            <param name="val">The value to store in the <see cref="T:Realms.QueryArgument"/>.</param>
-            <returns>A <see cref="T:Realms.QueryArgument"/> containing the supplied <paramref name="val"/>.</returns>
-        </member>
-        <member name="M:RealmTodo.Models.PinOnMap.GetTypeInfo">
-            <inheritdoc />
-        </member>
-        <member name="M:RealmTodo.Models.PinOnMap.Equals(System.Object)">
-            <inheritdoc />
-        </member>
-        <member name="M:RealmTodo.Models.PinOnMap.GetHashCode">
-            <inheritdoc />
-        </member>
-        <member name="M:RealmTodo.Models.PinOnMap.ToString">
-            <inheritdoc />
-        </member>
         <member name="T:RealmTodo.ViewModels.BaseViewModel">
             <inheritdoc/>
         </member>

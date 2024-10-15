@@ -7,7 +7,6 @@ namespace RealmTodo.ViewModels
 {
     public partial class EditItemViewModel : BaseViewModel, IQueryAttributable
     {
-
         [ObservableProperty]
         private Item initialItem;
 
@@ -42,7 +41,6 @@ namespace RealmTodo.ViewModels
         [ObservableProperty]
         private string pageHeader;
 
-
         public void ApplyQueryAttributes(IDictionary<string, object> query)
         {
             if (query.Count > 0 && query["item"] != null) // we're editing an Item
@@ -68,7 +66,6 @@ namespace RealmTodo.ViewModels
                 PageHeader = "Create a New Item";
             }
         }
-
 
         [RelayCommand]
         public async Task SaveItem()
