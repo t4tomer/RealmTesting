@@ -51,6 +51,33 @@ namespace RealmTodo.Models
             this.pinsList=newpinstList;
         }
 
+        //method used for testing 
+        public void PrintPinAddresses()
+        {
+            if (pinsList != null)
+            {
+                int pinCount = pinsList.Count;
+                Console.WriteLine($"number of pins in the list(PrintPinAddresses): -->'{pinCount}");
+
+                foreach (var pin in pinsList)
+                {
+                    Console.WriteLine($"PrintPinAddresses -->'{pin.Label}': {pin.Address}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("pinsList is null in PrintPinAddresses(PrintPinAddresses)");
+            }
+        }
+
+
+
+
+
+
+
+
+
 
         public void PrintPinAddresses(object sender, MapClickedEventArgs e)
         {

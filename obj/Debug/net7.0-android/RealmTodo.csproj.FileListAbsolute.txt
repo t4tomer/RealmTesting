@@ -3223,3 +3223,8 @@ D:\GitHub\RealmExamples\RealmTestingCopy2\RealmTesting\obj\Debug\net7.0-android\
 D:\GitHub\RealmExamples\RealmTestingCopy2\RealmTesting\obj\Debug\net7.0-android\stamp\_GenerateJavaStubs.stamp
 D:\GitHub\RealmExamples\RealmTestingCopy2\RealmTesting\obj\Debug\net7.0-android\stamp\_GeneratePackageManagerJava.stamp
 D:\GitHub\RealmExamples\RealmTestingCopy2\RealmTesting\obj\Debug\net7.0-android\stamp\_ResolveLibraryProjectImports.stamp
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\to_cloud.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\to_cloud.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\to_cloud.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\to_cloud.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\to_cloud.png

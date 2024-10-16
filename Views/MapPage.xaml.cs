@@ -8,6 +8,8 @@ using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Windows.Input;
 using Position = Maui.GoogleMaps.Position;
+using RealmTodo.ViewModels;
+
 
 namespace RealmTodo.Views
 {
@@ -16,6 +18,8 @@ namespace RealmTodo.Views
         private CancellationTokenSource _cancelTokenSource;
         private bool _isCheckingLocation;
         private MapHelper MapHelperObject; // Declare m as a class-level variable
+        private EditItemViewModel CloudPage ; //new 
+
         int strokeColorPolyline = 0;
 
         public ICommand NavigateCommand { get; private set; }
@@ -170,13 +174,33 @@ namespace RealmTodo.Views
             }
         }
 
+        private async void Add_To_Cloud_Clicked(object sender, EventArgs e)
+        {
+            //AddMapToDbPage
+            List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
+
+            MapHelperObject= new MapHelper(pinsList, myMap);
+            MapHelperObject.PrintPinAddresses();
+            CloudPage = new EditItemViewModel(pinsList, myMap);
+            var AddToCloud = new AddMapToDbPage(pinsList, myMap);
+            //EditPinAddrPage.SetPinsList(pinsList);
+            //! Pass the pinsList directly when navigating to the triggerPage
+            await Navigation.PushAsync(AddToCloud);
+
+
+
+
+        }
+
+
+
+
+
+
         // method that is used to transfer the user to the edit point page
         private async void Edit_Point_Clicked(object sender, EventArgs e)
         {
             Console.WriteLine($"----> Edit Point clicked ");
-            //toPage("TestPage");
-            //string pageName = "NotePage";
-
 
             List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
             int pinCount = pinsList.Count;

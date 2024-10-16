@@ -81,6 +81,8 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:RealmTodo.ViewModels.EditItemViewModel.InitialItem">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditItemViewModel.initialItem"/>
@@ -105,6 +107,18 @@
         </member>
         <member name="P:RealmTodo.ViewModels.EditItemViewModel.PageHeader">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditItemViewModel.pageHeader"/>
+        </member>
+        <member name="F:RealmTodo.ViewModels.EditItemViewModel.uploadToCloudPinsCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditItemViewModel.UploadToCloudPinsCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditItemViewModel.UploadToCloudPinsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditItemViewModel.UploadToCloudPins"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.EditItemViewModel.savePinCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditItemViewModel.SavePinCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditItemViewModel.SavePinCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditItemViewModel.SavePin(Maui.GoogleMaps.Pin)"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.EditItemViewModel.saveItemCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditItemViewModel.SaveItemCommand"/>.</summary>
