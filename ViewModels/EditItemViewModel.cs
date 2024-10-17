@@ -49,13 +49,19 @@ namespace RealmTodo.ViewModels
         {
             Console.WriteLine($"----> empty constructor,EditItemViewModel");
 
+
         }
 
         public EditItemViewModel(List<Pin> NewPinsList, Maui.GoogleMaps.Map newMyMap)
         {
+            Console.WriteLine($"-->  EditItemViewModel(pinsList,myMAp)!!");
 
             this.pinsList = NewPinsList;
             this.myMap = newMyMap;
+            if(pinsList == null || myMap==null)
+                Console.WriteLine($"--> pinsList or myMap  is null !!");
+
+
 
         }
 
@@ -87,10 +93,27 @@ namespace RealmTodo.ViewModels
             }
         }
 
+
+        [RelayCommand]
+        public async Task PrintList()
+        {
+            int numberOfPins = pinsList.Count;
+            Console.WriteLine($"--> number of pins(PrintList):{numberOfPins}!!!");
+
+
+            foreach (var pin in pinsList)
+            {
+                Console.WriteLine($"PrintPinAddresses -->'{pin.Label}': {pin.Address}");
+            }
+        }
+
+
         //TODO nned to fix this method 
         [RelayCommand]
         public async Task UploadToCloudPins()
         {
+            int numberOfPins = pinsList.Count;
+            Console.WriteLine($"--> number of pins(UploadToCloudPins):{numberOfPins}!!!");
 
             if (pinsList.Count == 0)
             {
@@ -111,6 +134,11 @@ namespace RealmTodo.ViewModels
         [RelayCommand]
         public async Task SavePin(Maui.GoogleMaps.Pin newPin)
         {
+            List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
+            
+            int numberOfPins = pinsList.Count;
+            Console.WriteLine($"--> number of pins(SavePin):{numberOfPins}!!!");
+
             var realm = RealmService.GetMainThreadRealm();
             await realm.WriteAsync(() =>
             {
@@ -153,6 +181,16 @@ namespace RealmTodo.ViewModels
         [RelayCommand]
         public async Task SaveItem()
         {
+
+            // Access the singleton instance of the map
+            myMap = MapSingleton.Instance.myMap;
+
+            // Initialize the list of pins from the map
+            pinsList = myMap.Pins.ToList();
+            int numberOfPins = pinsList.Count;
+            Console.WriteLine($"--> number of pins(PrintList):{numberOfPins}!!!");
+
+
             var realm = RealmService.GetMainThreadRealm();
             await realm.WriteAsync(() =>
             {

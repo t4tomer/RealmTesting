@@ -27,6 +27,8 @@ namespace RealmTodo.Views
 
         public MapPage()
         {
+            myMap = new Maui.GoogleMaps.Map();
+
             InitializeComponent();
 
 
@@ -181,7 +183,7 @@ namespace RealmTodo.Views
 
             MapHelperObject= new MapHelper(pinsList, myMap);
             MapHelperObject.PrintPinAddresses();
-            CloudPage = new EditItemViewModel(pinsList, myMap);
+            //CloudPage = new EditItemViewModel(pinsList, myMap);
             var AddToCloud = new AddMapToDbPage(pinsList, myMap);
             //EditPinAddrPage.SetPinsList(pinsList);
             //! Pass the pinsList directly when navigating to the triggerPage

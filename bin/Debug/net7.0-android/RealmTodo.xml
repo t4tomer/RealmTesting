@@ -83,6 +83,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:RealmTodo.ViewModels.EditItemViewModel.InitialItem">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditItemViewModel.initialItem"/>
@@ -107,6 +108,12 @@
         </member>
         <member name="P:RealmTodo.ViewModels.EditItemViewModel.PageHeader">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditItemViewModel.pageHeader"/>
+        </member>
+        <member name="F:RealmTodo.ViewModels.EditItemViewModel.printListCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditItemViewModel.PrintListCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditItemViewModel.PrintListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditItemViewModel.PrintList"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.EditItemViewModel.uploadToCloudPinsCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditItemViewModel.UploadToCloudPinsCommand"/>.</summary>

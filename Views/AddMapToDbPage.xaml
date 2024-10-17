@@ -15,7 +15,7 @@
             TextColor="{DynamicResource Primary}"/>
         <Entry Text="{Binding Summary}" Placeholder="Enter Map Name"  PlaceholderColor="#787878"/>
         <HorizontalStackLayout HorizontalOptions="Center" >
-            <Button  Margin="0,0,20,0" Text="OK" Command="{Binding UploadPinsToDbCommand}"/>
+            <Button  Margin="0,0,20,0" Text="OK" Command="{Binding SaveItemCommand}"/>
             <Button  BackgroundColor="#454556"
                     Text="Cancel" Command="{Binding CancelCommand}"/>
         </HorizontalStackLayout>
