@@ -61,7 +61,7 @@
     <Compile Update="Views\AddMapToDbPage.xaml.cs">
       <DependentUpon>AddMapToDbPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\MapPage.xaml.cs">
+    <Compile Update="Models\MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -110,7 +110,7 @@
 		<MauiXaml Update="Views\BusyPopup.xaml">
 		  <SubType></SubType>
 		</MauiXaml>
-		<MauiXaml Update="Views\MapPage.xaml">
+		<MauiXaml Update="Models\MapPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\NewEditItemPage.xaml">

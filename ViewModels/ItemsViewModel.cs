@@ -8,6 +8,7 @@ using Microsoft.Maui.Controls; // Required for navigation
 using System.Windows.Input;
 using System.Linq;
 using System.Threading.Tasks;
+using DocumentFormat.OpenXml.Drawing.Diagrams;
 
 namespace RealmTodo.ViewModels
 {
@@ -88,7 +89,16 @@ namespace RealmTodo.ViewModels
             }
             // Navigate to the TestPage
             //var page = new TestPage();
-            var page = new MapPage();
+            //await Navigation.PushAsync(MapPage.Instance);
+
+            // Navigate to the singleton instance of MapPage
+            var page = MapPage.Instance;
+            List<Maui.GoogleMaps.Pin> pinList = MapPage.Instance.GetPinList();
+
+            int numberOfPins = pinList.Count;
+            Console.WriteLine($"--> number of pins(ToMapPage):{numberOfPins}!!!");
+
+
             await Shell.Current.Navigation.PushAsync(page);
         }
 

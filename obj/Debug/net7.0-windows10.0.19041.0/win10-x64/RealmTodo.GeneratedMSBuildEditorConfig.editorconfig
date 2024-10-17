@@ -24,6 +24,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
+[D:/GitHub/RealmExamples/RealmTesting/Models/MapPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Models.MapPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Models\MapPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Models\MapPage.xaml
+
 [D:/GitHub/RealmExamples/RealmTesting/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Resources.Styles.Colors.xaml
@@ -77,12 +83,6 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
-
-[D:/GitHub/RealmExamples/RealmTesting/Views/MapPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.MapPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\MapPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\MapPage.xaml
 
 [D:/GitHub/RealmExamples/RealmTesting/Views/PropertyTriggerXaml.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

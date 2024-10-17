@@ -5,6 +5,18 @@ using RealmTodo.Services;
 using Microsoft.Maui.Maps;
 using Position = Maui.GoogleMaps.Position;
 using Maui.GoogleMaps;
+using RealmTodo.Views; // Correct namespace for TestPage
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using RealmTodo.Models;
+using RealmTodo.Services;
+using Realms;
+using RealmTodo.Views; // Correct namespace for TestPage
+using Microsoft.Maui.Controls; // Required for navigation
+using System.Windows.Input;
+using System.Linq;
+using System.Threading.Tasks;
+using DocumentFormat.OpenXml.Drawing.Diagrams;
 
 namespace RealmTodo.ViewModels
 
@@ -97,14 +109,23 @@ namespace RealmTodo.ViewModels
         [RelayCommand]
         public async Task PrintList()
         {
-            int numberOfPins = pinsList.Count;
-            Console.WriteLine($"--> number of pins(PrintList):{numberOfPins}!!!");
+            Console.WriteLine("PrintList --EditItemViewModel.");
+            if (MapPage.Instance == null)
+                Console.WriteLine("MapPage instance is null.");
+            else
+                Console.WriteLine($"MapPage instance initialized with {MapPage.Instance.GetPinList().Count} pins.");
 
 
-            foreach (var pin in pinsList)
-            {
-                Console.WriteLine($"PrintPinAddresses -->'{pin.Label}': {pin.Address}");
-            }
+
+            List<Maui.GoogleMaps.Pin> pinsList1 = MapPage.Instance.GetPinList();
+            //int numberOfPins = pinsList1.Count;
+            //Console.WriteLine($"--> number of pins(PrintList):{numberOfPins}!!!");
+
+
+            //foreach (var pin in pinsList)
+            //{
+            //    Console.WriteLine($"PrintPinAddresses -->'{pin.Label}': {pin.Address}");
+            //}
         }
 
 
@@ -112,21 +133,19 @@ namespace RealmTodo.ViewModels
         [RelayCommand]
         public async Task UploadToCloudPins()
         {
-            int numberOfPins = pinsList.Count;
-            Console.WriteLine($"--> number of pins(UploadToCloudPins):{numberOfPins}!!!");
 
-            if (pinsList.Count == 0)
-            {
-                Console.WriteLine($"--> no pins -error!!!");
-                return;
-            }
+            Console.WriteLine("UploadToCloudPins --EditItemViewModel.");
+            if (MapPage.Instance == null)
+                Console.WriteLine("MapPage instance is null.");
+            else
+                Console.WriteLine($"MapPage instance initialized with(UploadToCloudPins) {MapPage.Instance.GetPinList().Count} pins.");
 
-
+            List<Maui.GoogleMaps.Pin> pinsList = MapPage.Instance.GetPinList();
 
             foreach (var pin in pinsList)
             {
                 Console.WriteLine($"PrintPinAddresses -->'{pin.Label}': {pin.Address}");
-                await SavePin(pin);
+                await SavePin(pin);//TODO continue from this point 
             }
         }
 
@@ -134,10 +153,7 @@ namespace RealmTodo.ViewModels
         [RelayCommand]
         public async Task SavePin(Maui.GoogleMaps.Pin newPin)
         {
-            List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
-            
-            int numberOfPins = pinsList.Count;
-            Console.WriteLine($"--> number of pins(SavePin):{numberOfPins}!!!");
+
 
             var realm = RealmService.GetMainThreadRealm();
             await realm.WriteAsync(() =>
@@ -183,12 +199,14 @@ namespace RealmTodo.ViewModels
         {
 
             // Access the singleton instance of the map
-            myMap = MapSingleton.Instance.myMap;
+            //var myMap = MapPage.Instance;
+            //if(myMap == null)
+            //    Console.WriteLine($"--> the instance is Null!!!");
 
             // Initialize the list of pins from the map
-            pinsList = myMap.Pins.ToList();
+            List<Pin> pinList = MapPage.Instance.GetPinList();
             int numberOfPins = pinsList.Count;
-            Console.WriteLine($"--> number of pins(PrintList):{numberOfPins}!!!");
+            Console.WriteLine($"--> number of pins(SaveItem):{numberOfPins}!!!");
 
 
             var realm = RealmService.GetMainThreadRealm();
