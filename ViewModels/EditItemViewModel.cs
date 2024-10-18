@@ -118,14 +118,7 @@ namespace RealmTodo.ViewModels
 
 
             List<Maui.GoogleMaps.Pin> pinsList1 = MapPage.Instance.GetPinList();
-            //int numberOfPins = pinsList1.Count;
-            //Console.WriteLine($"--> number of pins(PrintList):{numberOfPins}!!!");
 
-
-            //foreach (var pin in pinsList)
-            //{
-            //    Console.WriteLine($"PrintPinAddresses -->'{pin.Label}': {pin.Address}");
-            //}
         }
 
 
@@ -177,11 +170,15 @@ namespace RealmTodo.ViewModels
                         Mapname = summary,
                         Labelpin = newPin.Label,
                         Address = newPin.Address,
-                        Latitude = "test21",
-                        Longitude = "test22"
+                        Latitude = newPin.Position.Latitude.ToString(),
+                        Longitude = newPin.Position.Longitude.ToString()
                     });
                 }
             });
+
+            //double number = 123.45;
+            //string result = number.ToString();
+            //Console.WriteLine(result); // Output: "123.45"
 
             // If you're getting this app code by cloning the repository at
             // https://github.com/mongodb/template-app-maui-todo, 
@@ -198,12 +195,7 @@ namespace RealmTodo.ViewModels
         public async Task SaveItem()
         {
 
-            // Access the singleton instance of the map
-            //var myMap = MapPage.Instance;
-            //if(myMap == null)
-            //    Console.WriteLine($"--> the instance is Null!!!");
 
-            // Initialize the list of pins from the map
             List<Pin> pinList = MapPage.Instance.GetPinList();
             int numberOfPins = pinsList.Count;
             Console.WriteLine($"--> number of pins(SaveItem):{numberOfPins}!!!");
