@@ -32,7 +32,7 @@
                      Padding="20"
                      Spacing="15">
             <Label HorizontalTextAlignment="End"
-                Text="Show all tasks"
+                Text="Show All Users Maps"
                 FontSize="Default"
                 HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
             <Switch HorizontalOptions="End" VerticalOptions="Center" IsToggled="{Binding IsShowAllTasks}" />
@@ -76,7 +76,7 @@
                Padding="8" Grid.Row="2">
             <Button
                 Margin="5"
-                Text="Add Point data "
+                Text="Add Point Test "
                 FontSize="12" 
                 Padding="5,0,5,10"   
                 Command="{Binding AddItemCommand}"
@@ -105,7 +105,7 @@
         <Button
             Grid.Row="4"
             Margin="5"
-            Text="Show Map "
+            Text="Create Map "
             FontSize="12" 
             Padding="5,0,5,10"        
             Command="{Binding ToMapPageCommand}" />

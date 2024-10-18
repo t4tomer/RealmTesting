@@ -38,14 +38,43 @@ namespace RealmTodo.ViewModels
             currentUserId = RealmService.CurrentUser.Id;
         }
 
+
+        //! WARNING orginal method-OnAppearing  
+        //[RelayCommand]
+        //public void OnAppearing()
+        //{
+        //    Items = realm.All<Item>().OrderBy(i => i.Id);
+
+        //    var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
+        //    IsShowAllTasks = currentSubscriptionType == SubscriptionType.All;
+        //}
+
+        //TODO - need to change the delete item 
+        //method that elimantes duplicates items with same map name 
+
         [RelayCommand]
         public void OnAppearing()
         {
-            Items = realm.All<Item>().OrderBy(i => i.Id);
+            // Retrieve all items from Realm and convert them to a list.
+            var itemsList = realm.All<Item>().ToList();
+
+            // Group the items by Summary and select the first item from each group.
+            var distinctItems = itemsList
+                .GroupBy(item => item.Summary)
+                .Select(group => group.First())
+                .OrderBy(item => item.Id)
+                .ToList();
+
+            // Assign the filtered list back to Items.
+            Items = distinctItems.AsQueryable();
 
             var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
             IsShowAllTasks = currentSubscriptionType == SubscriptionType.All;
         }
+
+
+
+
 
         [RelayCommand]
         public async Task Logout()
@@ -87,9 +116,7 @@ namespace RealmTodo.ViewModels
             {
                 Console.WriteLine($"The summary of the item is: {item.Summary}");
             }
-            // Navigate to the TestPage
-            //var page = new TestPage();
-            //await Navigation.PushAsync(MapPage.Instance);
+
 
             // Navigate to the singleton instance of MapPage
             var page = MapPage.Instance;
@@ -122,7 +149,7 @@ namespace RealmTodo.ViewModels
 
 
 
-
+        //orignal method 
         [RelayCommand]
         public async Task DeleteItem(Item item)
         {
@@ -136,6 +163,34 @@ namespace RealmTodo.ViewModels
                 realm.Remove(item);
             });
         }
+
+
+        //[RelayCommand]
+        //public async Task DeleteItem(Item item)
+        //{
+        //    if (!await CheckItemOwnership(item))
+        //    {
+        //        return;
+        //    }
+
+        //    // Get all items with the same summary
+        //    var itemsToDelete = realm.All<Item>().Where(i => i.Summary == item.Summary).ToList();
+
+        //    await realm.WriteAsync(() =>
+        //    {
+        //        // Remove all items with the same summary
+        //        foreach (var itemToDelete in itemsToDelete)
+        //        {
+        //            realm.Remove(itemToDelete);
+        //        }
+        //    });
+        //}
+
+
+
+
+
+
 
         [RelayCommand]
         public void ChangeConnectionStatus()
