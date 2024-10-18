@@ -39,7 +39,7 @@ namespace RealmTodo.ViewModels
         }
 
 
-        //! WARNING orginal method-OnAppearing  
+        //!  orginal method-OnAppearing  
         //[RelayCommand]
         //public void OnAppearing()
         //{
@@ -149,10 +149,13 @@ namespace RealmTodo.ViewModels
 
 
 
-        //orignal method 
+        //orignal method
         [RelayCommand]
         public async Task DeleteItem(Item item)
         {
+
+            Console.WriteLine($"--->(DeleteItem) item summery:{item.Summary} ");
+
             if (!await CheckItemOwnership(item))
             {
                 return;
@@ -162,29 +165,35 @@ namespace RealmTodo.ViewModels
             {
                 realm.Remove(item);
             });
+
         }
 
+        // used to delete map from the items view 
+        [RelayCommand]
+        public async Task DeleteItems(Item item)
+        {
 
-        //[RelayCommand]
-        //public async Task DeleteItem(Item item)
-        //{
-        //    if (!await CheckItemOwnership(item))
-        //    {
-        //        return;
-        //    }
+            Console.WriteLine($"--->(DeleteItems) item summery:{item.Summary} ");
 
-        //    // Get all items with the same summary
-        //    var itemsToDelete = realm.All<Item>().Where(i => i.Summary == item.Summary).ToList();
+            if (!await CheckItemOwnership(item))
+            {
+                return;
+            }
 
-        //    await realm.WriteAsync(() =>
-        //    {
-        //        // Remove all items with the same summary
-        //        foreach (var itemToDelete in itemsToDelete)
-        //        {
-        //            realm.Remove(itemToDelete);
-        //        }
-        //    });
-        //}
+            // Query all items with the same Summary
+            var itemsToDelete = realm.All<Item>()
+                .Where(i => i.Summary == item.Summary)
+                .ToList();
+
+   
+                foreach (var itemToDelete in itemsToDelete)
+                {
+                    await DeleteItem(itemToDelete);
+                }
+            // Refresh the list after deletion
+            OnAppearing();
+        }
+
 
 
 

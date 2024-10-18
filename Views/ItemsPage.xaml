@@ -62,7 +62,7 @@
                             <Button ImageSource="close.png"
                                     BackgroundColor="Transparent"
                                     VerticalOptions="Center" HorizontalOptions="End"
-                                    Command="{Binding Path=BindingContext.DeleteItemCommand, Source={x:Reference itemsPage}}"
+                                    Command="{Binding Path=BindingContext.DeleteItemsCommand, Source={x:Reference itemsPage}}"
                                     CommandParameter="{Binding .}"
                                     IsEnabled="{Binding IsMine}"
                                     />
