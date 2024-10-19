@@ -145,7 +145,15 @@ namespace RealmTodo.ViewModels
         }
 
 
+        [RelayCommand]
+        public async Task ShowTrack(Item item)
+        {
 
+            Console.WriteLine($"--->(ShowTrack) item summery:{item.Summary} ");
+
+
+
+        }
 
 
 

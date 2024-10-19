@@ -45,7 +45,16 @@ namespace RealmTodo.Models
         }
 
 
+        public void showTrack()
+        {
+            foreach (var pin in pinsList)
+            {
+                // Assuming each pin has a 'Label' property that holds the summary
+                Console.WriteLine($"Pin Summary: {pin.Label}");
+                myMap.Pins.Add(pin);
 
+            }
+        }
         public void set_pinsList(List<Maui.GoogleMaps.Pin> newpinstList)
         {
             this.pinsList=newpinstList;

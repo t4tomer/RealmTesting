@@ -23,6 +23,8 @@ namespace RealmTodo.ViewModels
 {
     public partial class EditItemViewModel : BaseViewModel, IQueryAttributable
     {
+
+
         [ObservableProperty]
         private Item initialItem;
 
@@ -55,11 +57,13 @@ namespace RealmTodo.ViewModels
         private string pageHeader;
 
         List<Maui.GoogleMaps.Pin> pinsList;// the list of pins in the map
-        Maui.GoogleMaps.Map myMap;
-
+        private Maui.GoogleMaps.Map myMap;
+        private MapHelper MapHelperObject; // OBEJECT   THAT is used to show track of map
         public EditItemViewModel()
         {
             Console.WriteLine($"----> empty constructor,EditItemViewModel");
+            MapHelperObject = new MapHelper(); // Initialize m in the constructor
+
 
 
         }
@@ -90,7 +94,7 @@ namespace RealmTodo.ViewModels
                 Address = InitialItem.Address;
                 Latitude = InitialItem.Latitude;
                 Longtiude = InitialItem.Longitude;
-                PageHeader = $"Modify Item {InitialItem.Id}";
+                PageHeader = $"Modify Item {InitialItem.Mapname}";
             }
             else // we're creating a new item
             {
@@ -105,6 +109,58 @@ namespace RealmTodo.ViewModels
             }
         }
 
+        //ShowTrack1
+        [RelayCommand]
+        public async Task ShowTrack1()
+        {
+
+            Console.WriteLine($"EditItemViewModel(ShowTrack1) name: {InitialItem.Mapname} .");
+            string trackName = InitialItem.Mapname;
+            var realm = RealmService.GetMainThreadRealm();
+
+            // Query Realm for all items with a matching Summary.
+            var matchingItems = realm.All<Item>().Where(i => i.Summary == trackName);
+
+            var itemsList = realm.All<Item>().ToList(); // Fetch all items into memory
+
+            // Now you can safely use Select
+            var summaries = itemsList
+                .Where(i => i.Summary == trackName)  // Filter if needed
+                .Select(i => new Maui.GoogleMaps.Pin
+                {
+                    Label = i.Labelpin,
+                    Address = i.Address,
+                    Position = new Position(Convert.ToDouble(i.Latitude), Convert.ToDouble(i.Longitude))
+                })
+                .ToList();
+
+            // Loop through the matching items and print their Summary.
+            foreach (var pin in summaries)
+            {
+                Console.WriteLine($"Address of pin (MapHelper class) -->pin label:'{pin.Label}'pin addr: {pin.Address}");
+            }
+            MapHelperObject = new MapHelper(); // Initialize m in the constructor
+
+            MapHelperObject.set_Map(myMap);
+            MapHelperObject.set_pinsList(summaries);
+            MapHelperObject.showTrack();//TODO continue from this point 
+
+
+            var page = MapPage.Instance;
+            //page.showTrack(pinsList);
+            //List<Maui.GoogleMaps.Pin> pinList = MapPage.Instance.GetPinList();
+            //int numberOfPins = pinList.Count;
+            //Console.WriteLine($"--> number of pins(ToMapPage):{numberOfPins}!!!");
+            //await Shell.Current.Navigation.PushAsync(page);
+
+            // If no matching items are found, print a message.
+            if (!matchingItems.Any())
+            {
+                Console.WriteLine($"No items found with the summary: {trackName}");
+            }
+
+
+        }
 
         [RelayCommand]
         public async Task PrintList()

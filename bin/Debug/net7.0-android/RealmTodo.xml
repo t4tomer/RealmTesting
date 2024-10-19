@@ -84,6 +84,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:RealmTodo.ViewModels.EditItemViewModel.InitialItem">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditItemViewModel.initialItem"/>
@@ -108,6 +109,12 @@
         </member>
         <member name="P:RealmTodo.ViewModels.EditItemViewModel.PageHeader">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditItemViewModel.pageHeader"/>
+        </member>
+        <member name="F:RealmTodo.ViewModels.EditItemViewModel.showTrack1Command">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditItemViewModel.ShowTrack1Command"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditItemViewModel.ShowTrack1Command">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditItemViewModel.ShowTrack1"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.EditItemViewModel.printListCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditItemViewModel.PrintListCommand"/>.</summary>
@@ -140,6 +147,7 @@
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditItemViewModel.Cancel"/>.</summary>
         </member>
         <member name="T:RealmTodo.ViewModels.ItemsViewModel">
+            <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
@@ -204,6 +212,12 @@
         </member>
         <member name="P:RealmTodo.ViewModels.ItemsViewModel.ToEditPointPageCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.ItemsViewModel.ToEditPointPage"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.ItemsViewModel.showTrackCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.ItemsViewModel.ShowTrackCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.ItemsViewModel.ShowTrackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.ItemsViewModel.ShowTrack(RealmTodo.Models.Item)"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.ItemsViewModel.deleteItemCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.ItemsViewModel.DeleteItemCommand"/>.</summary>

@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Windows.Input;
 using Position = Maui.GoogleMaps.Position;
 using RealmTodo.ViewModels;
+//using static Xamarin.Google.Crypto.Tink.Shaded.Protobuf.Internal;
 
 
 namespace RealmTodo.Views
@@ -193,6 +194,20 @@ namespace RealmTodo.Views
                 Console.WriteLine($"Address of pin22 -->'{pin.Label}': {pin.Address}");
             }
         }
+
+
+        public void showTrack(List<Maui.GoogleMaps.Pin> pinsList)
+        {
+            foreach (var pin in pinsList)
+            {
+                // Assuming each pin has a 'Label' property that holds the summary
+                Console.WriteLine($"Pin Summary: {pin.Label}");
+                myMap.Pins.Add(pin);
+
+            }
+        }
+
+
 
         private async void Add_To_Cloud_Clicked(object sender, EventArgs e)
         {
