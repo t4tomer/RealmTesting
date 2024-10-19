@@ -125,7 +125,7 @@ namespace RealmTodo.ViewModels
             int numberOfPins = pinList.Count;
             Console.WriteLine($"--> number of pins(ToMapPage):{numberOfPins}!!!");
 
-
+            mapPage.ClearMap();
             await Shell.Current.Navigation.PushAsync(mapPage);
         }
 

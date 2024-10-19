@@ -253,7 +253,7 @@ namespace RealmTodo.Views
 
         }
 
-        private void ClearMap()
+        public void ClearMap()
         {
             Console.WriteLine($"----> Remove all Points  ");
             // Clear all pins from the map
