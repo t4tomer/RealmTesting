@@ -17,7 +17,7 @@ namespace RealmTodo.Models
 
         public MapHelper()
         {
-            Console.WriteLine($"----> empty constructor");
+            Console.WriteLine($"----> empty constructor MapHelper");
          
         }
         public MapHelper(List<Pin> pinsList)
@@ -34,11 +34,17 @@ namespace RealmTodo.Models
 
         public MapHelper(List<Pin> NewPinsList, Maui.GoogleMaps.Map newMyMap)
         {
+            Console.WriteLine($"---->  constructor -MapHelper(PinsList,myMap)");
+
             this.pinsList = NewPinsList;
             this.myMap = newMyMap;  
         }
 
+        public void test()
+        {
+            Console.WriteLine($"---->  Test MapHelper");
 
+        }
         public void set_Map(Maui.GoogleMaps.Map myMap)
         {
             this.myMap = myMap;
@@ -55,6 +61,36 @@ namespace RealmTodo.Models
 
             }
         }
+
+        private Maui.GoogleMaps.Pin getPoint(double x, double y, string inputLabel, string inputAddress)
+        {
+            var position = new Location(x, y);
+            var pin = new Maui.GoogleMaps.Pin
+            {
+                Label = inputLabel,
+                Address = inputAddress,
+                Type = PinType.Place,
+                Position = new Position(position.Latitude, position.Longitude)
+            };
+
+            myMap.Pins.Add(pin);
+            return pin;
+        }
+
+
+
+
+        public void showTrackOnMap() //used to show the pins on the map 
+        {
+            foreach (var pin in pinsList)
+            {
+                // Assuming each pin has a 'Label' property that holds the summary
+                Console.WriteLine($"Pin Summary: {pin.Label}");
+                myMap.Pins.Add(pin);
+
+            }
+        }
+
         public void set_pinsList(List<Maui.GoogleMaps.Pin> newpinstList)
         {
             this.pinsList=newpinstList;

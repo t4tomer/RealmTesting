@@ -110,11 +110,11 @@
         <member name="P:RealmTodo.ViewModels.EditItemViewModel.PageHeader">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditItemViewModel.pageHeader"/>
         </member>
-        <member name="F:RealmTodo.ViewModels.EditItemViewModel.showTrack1Command">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditItemViewModel.ShowTrack1Command"/>.</summary>
+        <member name="F:RealmTodo.ViewModels.EditItemViewModel.showTrackCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditItemViewModel.ShowTrackCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditItemViewModel.ShowTrack1Command">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditItemViewModel.ShowTrack1"/>.</summary>
+        <member name="P:RealmTodo.ViewModels.EditItemViewModel.ShowTrackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditItemViewModel.ShowTrack"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.EditItemViewModel.printListCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditItemViewModel.PrintListCommand"/>.</summary>

@@ -56,7 +56,7 @@
 
             <Button
                   ImageSource="to_cloud.png"
-                  Clicked="Add_To_Cloud_Clicked"
+                  Clicked="AddToCloud_Clicked"
                   BackgroundColor="Transparent"
                   Padding="10"
             />

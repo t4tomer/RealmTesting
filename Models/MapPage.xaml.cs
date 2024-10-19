@@ -21,6 +21,7 @@ namespace RealmTodo.Views
         private bool _isCheckingLocation;
         private MapHelper MapHelperObject; // Declare m as a class-level variable
         private EditItemViewModel CloudPage; //new 
+        List<Maui.GoogleMaps.Pin> pinsList;// the list of pins in the map
 
         int strokeColorPolyline = 0;
 
@@ -45,6 +46,12 @@ namespace RealmTodo.Views
                 return _instance;
             }
         }
+
+        public void set_pinsList(List<Maui.GoogleMaps.Pin> newpinstList)
+        {
+            this.pinsList = newpinstList;
+        }
+
 
 
         // Public method to get the list of pins from the map
@@ -136,6 +143,7 @@ namespace RealmTodo.Views
         }
 
 
+
         // add new point on the map 
         private void addPointOnMap(object sender, MapClickedEventArgs e)
         {
@@ -164,25 +172,13 @@ namespace RealmTodo.Views
 
             strokeColorPolyline++;
 
-            //Pin pin1 = getPoint(31.267747377228275, 34.80811007275169, "busStopNearHouse", "HaDaatStr"); // bus stop near house
-            //Pin pin2 = getPoint(31.264841221137907, 34.81186612445039, "busStopGavYam", "YakovMarshStr"); // bus near GavYam 
-            //Pin pin3 = getPoint(31.263721857951772, 34.81224914158527, "busStopGym", "Torat HaYahasut"); // bus Torat hauyhasot 
-            //double dist = GetDistance(pin1, pin3);
-
 
             myMap.Pins.Add(pin);
             List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
 
-            MapHelperObject = new MapHelper(pinsList, myMap); // Initialize m in the constructor
+            MapHelperObject = new MapHelper(pinsList, myMap); 
             MapHelperObject.DrawLineBetweenAllPins(strokeColorPolyline);
-            //numberOfPoints(sender, e); // Call the numberOfPoints method to print the number of points
-            //PrintPinAddresses(sender, e); // Print the addresses of the pins 
-            //MapHelperObject.test(); // Use m object
-            //List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
-            //MapHelperObject.set_pinsList(pinsList);
 
-            //MapHelperObject.PrintPinAddresses(sender, e);
-            //MapHelperObject.calculateTotalDistance();
         }
 
         // Print all addresses of the points 
@@ -196,21 +192,14 @@ namespace RealmTodo.Views
         }
 
 
-        public void showTrack(List<Maui.GoogleMaps.Pin> pinsList)
+
+
+
+        private async void AddToCloud_Clicked(object sender, EventArgs e)
         {
-            foreach (var pin in pinsList)
-            {
-                // Assuming each pin has a 'Label' property that holds the summary
-                Console.WriteLine($"Pin Summary: {pin.Label}");
-                myMap.Pins.Add(pin);
 
-            }
-        }
+            Console.WriteLine($"-->AddToCloud_Clicked ");
 
-
-
-        private async void Add_To_Cloud_Clicked(object sender, EventArgs e)
-        {
             //AddMapToDbPage
             List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
 
@@ -229,7 +218,16 @@ namespace RealmTodo.Views
 
 
 
+        public void ShowTrack_Clicked()//show the pins and the lines of the track 
+        {
 
+            ClearMap();//clear the map from previus pins 
+
+            MapHelperObject = new MapHelper(pinsList, myMap);
+            MapHelperObject.showTrackOnMap();//show the pins on the map .
+            MapHelperObject.DrawLineBetweenAllPins(strokeColorPolyline);//draw line between all the pins of the map .
+
+        }
 
 
         // method that is used to transfer the user to the edit point page
@@ -250,6 +248,13 @@ namespace RealmTodo.Views
         // remove all the points&polylines from the map 
         private async void Reset_Map_Clicked(object sender, EventArgs e)
         {
+
+            ClearMap();
+
+        }
+
+        private void ClearMap()
+        {
             Console.WriteLine($"----> Remove all Points  ");
             // Clear all pins from the map
             myMap.Pins.Clear();
@@ -257,8 +262,6 @@ namespace RealmTodo.Views
             myMap.Polylines.Clear();
 
             Console.WriteLine("----> All pins and polylines have been cleared.");
-
-
         }
 
 

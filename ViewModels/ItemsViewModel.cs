@@ -119,14 +119,14 @@ namespace RealmTodo.ViewModels
 
 
             // Navigate to the singleton instance of MapPage
-            var page = MapPage.Instance;
+            var mapPage = MapPage.Instance;
             List<Maui.GoogleMaps.Pin> pinList = MapPage.Instance.GetPinList();
 
             int numberOfPins = pinList.Count;
             Console.WriteLine($"--> number of pins(ToMapPage):{numberOfPins}!!!");
 
 
-            await Shell.Current.Navigation.PushAsync(page);
+            await Shell.Current.Navigation.PushAsync(mapPage);
         }
 
         // used to transfer the user to edit point page

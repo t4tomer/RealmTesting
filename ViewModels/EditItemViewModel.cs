@@ -2,6 +2,8 @@
 using CommunityToolkit.Mvvm.Input;
 using RealmTodo.Models;
 using RealmTodo.Services;
+using RealmTodo.ViewModels;
+
 using Microsoft.Maui.Maps;
 using Position = Maui.GoogleMaps.Position;
 using Maui.GoogleMaps;
@@ -109,9 +111,9 @@ namespace RealmTodo.ViewModels
             }
         }
 
-        //ShowTrack1
+        //Show the track of pins that are stored in realm db 
         [RelayCommand]
-        public async Task ShowTrack1()
+        public async Task ShowTrack()
         {
 
             Console.WriteLine($"EditItemViewModel(ShowTrack1) name: {InitialItem.Mapname} .");
@@ -139,21 +141,17 @@ namespace RealmTodo.ViewModels
             {
                 Console.WriteLine($"Address of pin (MapHelper class) -->pin label:'{pin.Label}'pin addr: {pin.Address}");
             }
-            MapHelperObject = new MapHelper(); // Initialize m in the constructor
-
-            MapHelperObject.set_Map(myMap);
-            MapHelperObject.set_pinsList(summaries);
-            MapHelperObject.showTrack();//TODO continue from this point 
 
 
-            var page = MapPage.Instance;
-            //page.showTrack(pinsList);
-            //List<Maui.GoogleMaps.Pin> pinList = MapPage.Instance.GetPinList();
-            //int numberOfPins = pinList.Count;
-            //Console.WriteLine($"--> number of pins(ToMapPage):{numberOfPins}!!!");
-            //await Shell.Current.Navigation.PushAsync(page);
+            // Navigate to the singleton instance of MapPage
+            var mapPage = MapPage.Instance;
+            List<Maui.GoogleMaps.Pin> pinList = MapPage.Instance.GetPinList();
+            mapPage.set_pinsList(summaries);
+            mapPage.ShowTrack_Clicked();
+            
+            await Shell.Current.Navigation.PushAsync(mapPage);
 
-            // If no matching items are found, print a message.
+
             if (!matchingItems.Any())
             {
                 Console.WriteLine($"No items found with the summary: {trackName}");
