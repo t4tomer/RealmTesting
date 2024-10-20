@@ -22,7 +22,7 @@ namespace RealmTodo.Views
         private MapHelper MapHelperObject; // Declare m as a class-level variable
         private EditItemViewModel CloudPage; //new 
         List<Maui.GoogleMaps.Pin> pinsList;// the list of pins in the map
-
+        public bool _canAddPins = true; // Controls if pins can be added
         int strokeColorPolyline = 0;
 
         public ICommand NavigateCommand { get; private set; }
@@ -147,17 +147,7 @@ namespace RealmTodo.Views
         // add new point on the map 
         private void addPointOnMap(object sender, MapClickedEventArgs e)
         {
-            //Console.WriteLine($"----> Added Point to screen1");
-
-            double latitude = e.Point.Latitude;
-            double longitude = e.Point.Longitude;
-
-            // Print the coordinates to the console
-
-
-
-
-
+            if (!_canAddPins) return; // Stop if adding pins is disabled
 
 
             int pinCount = myMap.Pins.Count + 1;
@@ -171,13 +161,11 @@ namespace RealmTodo.Views
             };
 
             strokeColorPolyline++;
-
-
             myMap.Pins.Add(pin);
             List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
-
             MapHelperObject = new MapHelper(pinsList, myMap); 
             MapHelperObject.DrawLineBetweenAllPins(strokeColorPolyline);
+
 
         }
 
@@ -343,6 +331,16 @@ namespace RealmTodo.Views
             ZoomButton.IsVisible = false;
         }
 
+
+        public void ShowButtonsOnMap()
+        {
+            EditPointButton.IsVisible = true;
+            ClearMapButton.IsVisible = true;
+            DistanceButton.IsVisible = true;
+            AddToCloudButton.IsVisible = true;
+            DeleteLastPointButton.IsVisible = true;
+            ZoomButton.IsVisible = true;
+        }
 
 
         private Maui.GoogleMaps.Pin getPoint(double x, double y, string inputLabel, string inputAddress)

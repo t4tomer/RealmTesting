@@ -152,23 +152,18 @@ namespace RealmTodo.ViewModels
 
             if (InitialItem.IsMine)
             {
-                Console.WriteLine($"-->Item is  mine!!!");
+                Console.WriteLine($"-->Track is  mine!!!");
+                mapPage._canAddPins = true;
                 await Shell.Current.Navigation.PushAsync(mapPage);
             }
             else
             {
-                Console.WriteLine($"-->Item is not mine!!!");
-                // Remove buttons from the map (calling your method)
-                mapPage.RemoveButtonsFromMap();
-                //TODO need also to remove the option of adding pins to the map
-
+                Console.WriteLine($"-->Track is not mine!!!");
+                mapPage.RemoveButtonsFromMap(); // Remove buttons from the map 
+                mapPage._canAddPins = false;
                 await Shell.Current.Navigation.PushAsync(mapPage);
 
             }
-
-
-
-
 
 
 

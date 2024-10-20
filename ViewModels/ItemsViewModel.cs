@@ -134,6 +134,8 @@ namespace RealmTodo.ViewModels
             Console.WriteLine($"--> number of pins(ToMapPage):{numberOfPins}!!!");
 
             mapPage.ClearMap();
+            mapPage.ShowButtonsOnMap();//show buttons on map
+            mapPage._canAddPins = true;// user can add pins on map
             await Shell.Current.Navigation.PushAsync(mapPage);
         }
 
