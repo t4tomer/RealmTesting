@@ -159,6 +159,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:RealmTodo.ViewModels.ItemsViewModel.ConnectionStatusIcon">
             <inheritdoc cref="F:RealmTodo.ViewModels.ItemsViewModel.connectionStatusIcon"/>
@@ -230,6 +231,12 @@
         </member>
         <member name="P:RealmTodo.ViewModels.ItemsViewModel.DeleteItemsCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.ItemsViewModel.DeleteItems(RealmTodo.Models.Item)"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.ItemsViewModel.refreshCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.ItemsViewModel.RefreshCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.ItemsViewModel.RefreshCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.ItemsViewModel.Refresh"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.ItemsViewModel.changeConnectionStatusCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.ItemsViewModel.ChangeConnectionStatusCommand"/>.</summary>

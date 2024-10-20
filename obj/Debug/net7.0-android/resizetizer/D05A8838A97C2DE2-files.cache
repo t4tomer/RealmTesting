@@ -6,6 +6,7 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\distance.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\edit_point.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\logout.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\refresh.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\to_cloud.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\wifi_off.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\wifi_on.png
@@ -17,6 +18,7 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\distance.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\edit_point.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\logout.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\refresh.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\to_cloud.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\wifi_off.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\wifi_on.png
@@ -28,6 +30,7 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\distance.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\edit_point.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\logout.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\refresh.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\to_cloud.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\wifi_off.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\wifi_on.png
@@ -39,6 +42,7 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\distance.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\edit_point.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\logout.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\refresh.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\to_cloud.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\wifi_off.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\wifi_on.png
@@ -50,6 +54,7 @@ obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\distance.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\dotnet_bot.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\edit_point.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\logout.png
+obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\refresh.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\to_cloud.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\wifi_off.png
 obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\wifi_on.png

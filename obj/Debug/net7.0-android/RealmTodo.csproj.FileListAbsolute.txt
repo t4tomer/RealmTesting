@@ -3228,3 +3228,8 @@ D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\draw
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\to_cloud.png
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\to_cloud.png
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\to_cloud.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\refresh.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\refresh.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\refresh.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\refresh.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\refresh.png

@@ -28427,25 +28427,28 @@ namespace RealmTodo
 			public const int notify_panel_notification_icon_bg = 2131165419;
 			
 			// aapt resource value: 0x7F0700EC
-			public const int test_level_drawable = 2131165420;
-			
-			// aapt resource value: 0x7F0700EE
-			public const int tooltip_frame_dark = 2131165422;
-			
-			// aapt resource value: 0x7F0700EF
-			public const int tooltip_frame_light = 2131165423;
+			public const int refresh = 2131165420;
 			
 			// aapt resource value: 0x7F0700ED
-			public const int to_cloud = 2131165421;
+			public const int test_level_drawable = 2131165421;
+			
+			// aapt resource value: 0x7F0700EF
+			public const int tooltip_frame_dark = 2131165423;
 			
 			// aapt resource value: 0x7F0700F0
-			public const int wifi_off = 2131165424;
+			public const int tooltip_frame_light = 2131165424;
+			
+			// aapt resource value: 0x7F0700EE
+			public const int to_cloud = 2131165422;
 			
 			// aapt resource value: 0x7F0700F1
-			public const int wifi_on = 2131165425;
+			public const int wifi_off = 2131165425;
 			
 			// aapt resource value: 0x7F0700F2
-			public const int zoom = 2131165426;
+			public const int wifi_on = 2131165426;
+			
+			// aapt resource value: 0x7F0700F3
+			public const int zoom = 2131165427;
 			
 			static Drawable()
 			{

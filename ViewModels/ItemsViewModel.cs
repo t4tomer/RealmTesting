@@ -52,9 +52,14 @@ namespace RealmTodo.ViewModels
         //TODO - need to change the delete item 
         //method that elimantes duplicates items with same map name 
 
+ 
+ 
+
         [RelayCommand]
         public void OnAppearing()
         {
+            Console.WriteLine($"IsShowAllTasks is :{IsShowAllTasks} ");
+
             // Retrieve all items from Realm and convert them to a list.
             var itemsList = realm.All<Item>().ToList();
 
@@ -69,6 +74,9 @@ namespace RealmTodo.ViewModels
             Items = distinctItems.AsQueryable();
 
             var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
+
+
+
             IsShowAllTasks = currentSubscriptionType == SubscriptionType.All;
         }
 
@@ -202,7 +210,13 @@ namespace RealmTodo.ViewModels
             OnAppearing();
         }
 
+        [RelayCommand]
+        public void Refresh()
+        {
+            Console.WriteLine($"---> refreshed page ");
+            OnAppearing();
 
+        }
 
 
 
@@ -245,12 +259,14 @@ namespace RealmTodo.ViewModels
 
         async partial void OnIsShowAllTasksChanged(bool value)
         {
+            
             await RealmService.SetSubscription(realm, value ? SubscriptionType.All : SubscriptionType.Mine);
 
             if (!isOnline)
             {
                 await DialogService.ShowToast("Switching subscriptions does not affect Realm data when the sync is offline.");
             }
+            Refresh();//refresh the items list 
         }
     }
 }
