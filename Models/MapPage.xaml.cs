@@ -251,6 +251,7 @@ namespace RealmTodo.Views
 
             ClearMap();
 
+
         }
 
         public void ClearMap()
@@ -330,6 +331,16 @@ namespace RealmTodo.Views
             Console.WriteLine($"----> Distance between p1 and p2: {distance} km");
 
             return distance;
+        }
+
+        public void RemoveButtonsFromMap()
+        {
+            EditPointButton.IsVisible = false;
+            ClearMapButton.IsVisible = false;
+            DistanceButton.IsVisible = false;
+            AddToCloudButton.IsVisible = false;
+            DeleteLastPointButton.IsVisible = false;
+            ZoomButton.IsVisible = false;
         }
 
 

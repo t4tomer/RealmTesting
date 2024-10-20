@@ -96,7 +96,7 @@ namespace RealmTodo.ViewModels
                 Address = InitialItem.Address;
                 Latitude = InitialItem.Latitude;
                 Longtiude = InitialItem.Longitude;
-                PageHeader = $"Modify Item {InitialItem.Mapname}";
+                PageHeader = $"Modify Map: {InitialItem.Mapname}";
             }
             else // we're creating a new item
             {
@@ -148,8 +148,28 @@ namespace RealmTodo.ViewModels
             List<Maui.GoogleMaps.Pin> pinList = MapPage.Instance.GetPinList();
             mapPage.set_pinsList(summaries);
             mapPage.ShowTrack_Clicked();
-            
-            await Shell.Current.Navigation.PushAsync(mapPage);
+
+
+            if (InitialItem.IsMine)
+            {
+                Console.WriteLine($"-->Item is  mine!!!");
+                await Shell.Current.Navigation.PushAsync(mapPage);
+            }
+            else
+            {
+                Console.WriteLine($"-->Item is not mine!!!");
+                // Remove buttons from the map (calling your method)
+                mapPage.RemoveButtonsFromMap();
+                //TODO need also to remove the option of adding pins to the map
+
+                await Shell.Current.Navigation.PushAsync(mapPage);
+
+            }
+
+
+
+
+
 
 
             if (!matchingItems.Any())
