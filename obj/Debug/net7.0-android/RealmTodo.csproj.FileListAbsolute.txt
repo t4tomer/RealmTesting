@@ -2086,8 +2086,6 @@ D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\stamp\_ConvertReso
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\stamp\_GenerateJavaStubs.stamp
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\stamp\_GeneratePackageManagerJava.stamp
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\stamp\_ResolveLibraryProjectImports.stamp
-D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\RealmTodo.csproj.Fody.CopyLocal.cache
-D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\RealmTodo.csproj.Fody.RuntimeCopyLocal.cache
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\back.png
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\clear.png
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\distance.png
