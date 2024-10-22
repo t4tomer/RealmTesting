@@ -159,7 +159,7 @@ namespace RealmTodo.ViewModels
             else
             {
                 Console.WriteLine($"-->Track is not mine!!!");
-                mapPage.RemoveButtonsFromMap(); // Remove buttons from the map 
+                mapPage.ShowButtonsOnMap(false); // Remove buttons from the map 
                 mapPage._canAddPins = false;
                 await Shell.Current.Navigation.PushAsync(mapPage);
 

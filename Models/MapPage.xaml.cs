@@ -321,24 +321,15 @@ namespace RealmTodo.Views
             return distance;
         }
 
-        public void RemoveButtonsFromMap()
-        {
-            EditPointButton.IsVisible = false;
-            ClearMapButton.IsVisible = false;
-            DistanceButton.IsVisible = false;
-            AddToCloudButton.IsVisible = false;
-            DeleteLastPointButton.IsVisible = false;
-            ZoomButton.IsVisible = false;
-        }
 
 
-        public void ShowButtonsOnMap()
+        public void ShowButtonsOnMap(bool ans)
         {
-            EditPointButton.IsVisible = true;
-            ClearMapButton.IsVisible = true;
+            EditPointButton.IsVisible = ans;
+            ClearMapButton.IsVisible = ans;
             DistanceButton.IsVisible = true;
-            AddToCloudButton.IsVisible = true;
-            DeleteLastPointButton.IsVisible = true;
+            AddToCloudButton.IsVisible = ans;
+            DeleteLastPointButton.IsVisible = ans;
             ZoomButton.IsVisible = true;
         }
 

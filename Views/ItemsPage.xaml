@@ -55,8 +55,10 @@
                             <CheckBox IsChecked="{Binding IsComplete}" VerticalOptions="Center" IsEnabled="{Binding IsMine}"  />
                             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
                                 <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.EditItemCommand, Source={x:Reference itemsPage}}"
-                                    CommandParameter="{Binding .}"/>
+                                    <TapGestureRecognizer 
+                                        Command="{Binding Path=BindingContext.EditItemCommand,
+                                        Source={x:Reference itemsPage}}"
+                                        CommandParameter="{Binding .}"/>
                                 </StackLayout.GestureRecognizers>
                                 <Label Text="{Binding Summary}"
                                     HorizontalOptions="FillAndExpand"

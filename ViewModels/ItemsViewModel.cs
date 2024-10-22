@@ -100,17 +100,53 @@ namespace RealmTodo.ViewModels
             await Shell.Current.GoToAsync($"itemEdit");
         }
 
+        //original EditItem method!
+        //[RelayCommand]
+        //public async Task EditItem(Item item)
+        //{
+        //    if (!await CheckItemOwnership(item))
+        //    {
+        //        return;
+        //    }
+
+        //    var itemParameter = new Dictionary<string, object> { { "item", item } };
+        //        var editItemPage = new EditItemPage(); // Create the page instance
+
+        //    await Shell.Current.GoToAsync($"itemEdit", itemParameter);
+        //}
+
+
+
         [RelayCommand]
         public async Task EditItem(Item item)
         {
+            bool ans;
             if (!await CheckItemOwnership(item))
             {
                 return;
             }
+            if (item.IsMine)
+                ans = true;
+            else
+                ans = false;
+                
+            var queryParameters = new Dictionary<string, object>
+            {
+                { "item", item },
+                { "isEditVisible", ans }
+            };
 
-            var itemParameter = new Dictionary<string, object> { { "item", item } };
-            await Shell.Current.GoToAsync($"itemEdit", itemParameter);
+            await Shell.Current.GoToAsync("itemEdit", queryParameters);
+
+
+
+
         }
+
+
+
+
+
 
 
         // used to transfer the user to the map page 
@@ -134,7 +170,7 @@ namespace RealmTodo.ViewModels
             Console.WriteLine($"--> number of pins(ToMapPage):{numberOfPins}!!!");
 
             mapPage.ClearMap();
-            mapPage.ShowButtonsOnMap();//show buttons on map
+            mapPage.ShowButtonsOnMap(true);//show buttons on map
             mapPage._canAddPins = true;// user can add pins on map
             await Shell.Current.Navigation.PushAsync(mapPage);
         }
