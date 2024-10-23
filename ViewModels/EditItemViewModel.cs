@@ -149,23 +149,25 @@ namespace RealmTodo.ViewModels
             mapPage.set_pinsList(summaries);
             mapPage.ShowTrack_Clicked();
 
-
-            if (InitialItem.IsMine)
+            if (await mapPage.IsLocationEnabled())
             {
-                Console.WriteLine($"-->Track is  mine!!!");
-                mapPage.ShowButtonsOnMap(true); // show buttons 
+                if (InitialItem.IsMine)
+                {
+                    Console.WriteLine($"-->Track is  mine!!!");
+                    mapPage.ShowButtonsOnMap(true); // show buttons 
+                    mapPage._canAddPins = true;
+                    await Shell.Current.Navigation.PushAsync(mapPage);
+                }
+                else
+                {
+                    Console.WriteLine($"-->Track is not mine!!!");
+                    mapPage.ShowButtonsOnMap(false); // Remove buttons from the map 
+                    mapPage._canAddPins = false;
+                    await Shell.Current.Navigation.PushAsync(mapPage);
 
-                mapPage._canAddPins = true;
-                await Shell.Current.Navigation.PushAsync(mapPage);
+                }
             }
-            else
-            {
-                Console.WriteLine($"-->Track is not mine!!!");
-                mapPage.ShowButtonsOnMap(false); // Remove buttons from the map 
-                mapPage._canAddPins = false;
-                await Shell.Current.Navigation.PushAsync(mapPage);
 
-            }
 
 
 

@@ -65,7 +65,48 @@ namespace RealmTodo.Views
             this.pinsList = newpinstList;
         }
 
+        public async Task<bool> IsLocationEnabled()
+        {
+            try
+            {
+                var location = await Geolocation.GetLastKnownLocationAsync();
 
+                // If we get a valid location, services are likely enabled.
+                if (location != null)
+                {
+                    Console.WriteLine($"Location: Lat {location.Latitude}, Lon {location.Longitude}");
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("No location found. Location services may be off.");
+                    await DialogService.ShowAlertAsync("Error", "No location found. Location services may be off", "OK");
+
+                    return false;
+                }
+            }
+            catch (FeatureNotEnabledException)
+            {
+                Console.WriteLine("Location services are disabled.");
+                await DialogService.ShowAlertAsync("Error", "Turnon location on your device", "OK");
+
+                return false;
+            }
+            catch (PermissionException)
+            {
+                Console.WriteLine("Location permission not granted.");
+                await DialogService.ShowAlertAsync("Error", "Turnon location on your device", "OK");
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Unexpected error: {ex.Message}");
+                await DialogService.ShowAlertAsync("Error", "Unexpected error", "OK");
+
+                return false;
+            }
+        }
 
         // Public method to get the list of pins from the map
         public List<Maui.GoogleMaps.Pin> GetPinList()
