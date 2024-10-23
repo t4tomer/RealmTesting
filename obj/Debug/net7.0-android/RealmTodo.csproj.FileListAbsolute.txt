@@ -3231,3 +3231,5 @@ D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\draw
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\refresh.png
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\refresh.png
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\refresh.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\RealmTodo.csproj.Fody.CopyLocal.cache
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\RealmTodo.csproj.Fody.RuntimeCopyLocal.cache

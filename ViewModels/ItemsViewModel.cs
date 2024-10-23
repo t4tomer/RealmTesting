@@ -248,11 +248,11 @@ namespace RealmTodo.ViewModels
 
         private async Task<bool> CheckItemOwnership(Item item)
         {
-            if (!item.IsMine)
-            {
-                await DialogService.ShowAlertAsync("Error", "You cannot modify items not belonging to you", "OK");
-                return false;
-            }
+            //if (!item.IsMine)
+            //{
+            //    await DialogService.ShowAlertAsync("Error", "You cannot modify items not belonging to you", "OK");
+            //    return false;
+            //}
 
             return true;
         }

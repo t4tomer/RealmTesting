@@ -9,6 +9,18 @@ using System.Security.Cryptography;
 using System.Windows.Input;
 using Position = Maui.GoogleMaps.Position;
 using RealmTodo.ViewModels;
+
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using RealmTodo.Models;
+using RealmTodo.Services;
+using Realms;
+using RealmTodo.Views; // Correct namespace for TestPage
+using Microsoft.Maui.Controls; // Required for navigation
+using System.Windows.Input;
+using System.Linq;
+using System.Threading.Tasks;
+using DocumentFormat.OpenXml.Drawing.Diagrams;
 //using static Xamarin.Google.Crypto.Tink.Shaded.Protobuf.Internal;
 
 
@@ -202,14 +214,19 @@ namespace RealmTodo.Views
 
             //AddMapToDbPage
             List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
+            int pinCount=pinsList.Count;
+            if(await EnoughPins(pinCount))
+            {
+                MapHelperObject = new MapHelper(pinsList, myMap);
+                MapHelperObject.PrintPinAddresses();
+                //CloudPage = new EditItemViewModel(pinsList, myMap);
+                var AddToCloud = new AddMapToDbPage(pinsList, myMap);
+                //EditPinAddrPage.SetPinsList(pinsList);
+                //! Pass the pinsList directly when navigating to the triggerPage
+                await Navigation.PushAsync(AddToCloud);
+            }
 
-            MapHelperObject= new MapHelper(pinsList, myMap);
-            MapHelperObject.PrintPinAddresses();
-            //CloudPage = new EditItemViewModel(pinsList, myMap);
-            var AddToCloud = new AddMapToDbPage(pinsList, myMap);
-            //EditPinAddrPage.SetPinsList(pinsList);
-            //! Pass the pinsList directly when navigating to the triggerPage
-            await Navigation.PushAsync(AddToCloud);
+
 
 
 
@@ -253,6 +270,25 @@ namespace RealmTodo.Views
 
         }
 
+
+        private async Task<bool> EnoughPins(int num)
+        {
+            if (num == 0)
+            {
+                await DialogService.ShowAlertAsync("Error", "Not Enough Pins(add at least 2 points).", "OK");
+                return false;
+            }
+            else if (num == 1)
+            {
+                await DialogService.ShowAlertAsync("Error", "Not Enough Pins(add at least 1 point).", "OK");
+                return false;
+            }
+            return true;
+
+        }
+
+
+
         public void ClearMap()
         {
             Console.WriteLine($"----> Remove all Points  ");
@@ -269,22 +305,23 @@ namespace RealmTodo.Views
         private async void Calc_Distance_Clicked(object sender, EventArgs e)
         {
 
-
+            
             List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
+            int pinCount=pinsList.Count;
+            if(await EnoughPins(pinCount))
+            {
+                //MapHelperObject = new MapHelper(pinsList,myMap); // Initialize m in the constructor
 
-            //MapHelperObject = new MapHelper(pinsList,myMap); // Initialize m in the constructor
-
-            MapHelperObject.set_pinsList(pinsList);
-            double totalDistance = MapHelperObject.calculateTotalDistance();
-
-
-            // Create an instance of TestPage and pass the total distance
-            var testPage = new DistancePage(totalDistance, pinsList, MapHelperObject);
-
-            // Navigate to the TestPage
-            await Navigation.PushAsync(testPage);
+                MapHelperObject.set_pinsList(pinsList);
+                double totalDistance = MapHelperObject.calculateTotalDistance();
 
 
+                // Create an instance of TestPage and pass the total distance
+                var testPage = new DistancePage(totalDistance, pinsList, MapHelperObject);
+
+                // Navigate to the TestPage
+                await Navigation.PushAsync(testPage);
+            }
 
 
         }
