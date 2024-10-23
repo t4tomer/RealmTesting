@@ -9,7 +9,6 @@ using System.Windows.Input;
 using System.Linq;
 using System.Threading.Tasks;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
-
 namespace RealmTodo.ViewModels
 {
     public partial class ItemsViewModel : BaseViewModel

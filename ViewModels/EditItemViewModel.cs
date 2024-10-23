@@ -153,6 +153,8 @@ namespace RealmTodo.ViewModels
             if (InitialItem.IsMine)
             {
                 Console.WriteLine($"-->Track is  mine!!!");
+                mapPage.ShowButtonsOnMap(true); // show buttons 
+
                 mapPage._canAddPins = true;
                 await Shell.Current.Navigation.PushAsync(mapPage);
             }
