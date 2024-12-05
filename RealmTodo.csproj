@@ -86,7 +86,6 @@
 		<None Remove="atlasConfig.json" />
 	</ItemGroup>
 	<ItemGroup>
-		<Folder Include="ViewModels\" />
 		<Folder Include="Services\" />
 	</ItemGroup>
 	<ItemGroup>

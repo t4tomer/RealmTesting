@@ -4,7 +4,7 @@ using RealmTodo.Services;
 ///////
 namespace RealmTodo.Models
 {
-    public partial class Item : IRealmObject
+    public partial class MapPin : IRealmObject
     {
         [PrimaryKey]
         [MapTo("_id")]
@@ -14,9 +14,7 @@ namespace RealmTodo.Models
         [Required]
         public string OwnerId { get; set; }
 
-        [MapTo("summary")]
-        [Required]
-        public string Summary { get; set; }
+
 
         //new code 
         [MapTo("mapname")]

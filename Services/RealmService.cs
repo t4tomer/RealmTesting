@@ -57,11 +57,17 @@ namespace RealmTodo.Services
         {
             var config = new FlexibleSyncConfiguration(app.CurrentUser)
             {
+                // item upload
                 PopulateInitialSubscriptions = (realm) =>
                 {
-                    var (query, queryName) = GetQueryForSubscriptionType(realm, SubscriptionType.Mine);
+                    //var (query, queryName) = GetQueryForSubscriptionItemType(realm, SubscriptionType.Mine);
+                    var (query, queryName) = GetQueryForSubscriptionMapPinType(realm, SubscriptionType.Mine);
+
                     realm.Subscriptions.Add(query, new SubscriptionOptions { Name = queryName });
                 }
+
+
+
             };
 
             return Realm.GetInstance(config);
@@ -99,7 +105,9 @@ namespace RealmTodo.Services
             {
                 realm.Subscriptions.RemoveAll(true);
 
-                var (query, queryName) = GetQueryForSubscriptionType(realm, subType);
+                //var (query, queryName) = GetQueryForSubscriptionItemType(realm, subType); //item type 
+                var (query, queryName) = GetQueryForSubscriptionMapPinType(realm, subType);//map pin type
+
 
                 realm.Subscriptions.Add(query, new SubscriptionOptions { Name = queryName });
             });
@@ -123,7 +131,33 @@ namespace RealmTodo.Services
             };
         }
 
-        private static (IQueryable<Item> Query, string Name) GetQueryForSubscriptionType(Realm realm, SubscriptionType subType)
+        private static (IQueryable<MapPin> Query, string Name) GetQueryForSubscriptionMapPinType(Realm realm, SubscriptionType subType)
+        {
+            IQueryable<MapPin> query = null;
+            string queryName = null;
+            Console.WriteLine("GetQueryForSubscriptionMapPinType-->MapPin object");
+
+            if (subType == SubscriptionType.Mine)
+            {
+                query = realm.All<MapPin>().Where(i => i.OwnerId == CurrentUser.Id);
+                queryName = "mine";
+            }
+            else if (subType == SubscriptionType.All)
+            {
+                query = realm.All<MapPin>();
+                queryName = "all";
+            }
+            else
+            {
+                throw new ArgumentException("Unknown subscription type");
+            }
+
+            return (query, queryName);
+        }
+
+
+        //original code
+        private static (IQueryable<Item> Query, string Name) GetQueryForSubscriptionItemType(Realm realm, SubscriptionType subType)
         {
             IQueryable<Item> query = null;
             string queryName = null;

@@ -5,7 +5,7 @@
              xmlns:vm="clr-namespace:RealmTodo.ViewModels"
              Title="Add Map to DB ">
     <ContentPage.BindingContext>
-        <vm:EditItemViewModel />
+        <vm:EditMapPinViewModel />
     </ContentPage.BindingContext>
     <VerticalStackLayout Padding="10" Spacing="20">
         <Label 

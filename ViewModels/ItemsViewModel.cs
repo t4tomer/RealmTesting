@@ -38,46 +38,43 @@ namespace RealmTodo.ViewModels
         }
 
 
-        //!  orginal method-OnAppearing  
-        //[RelayCommand]
-        //public void OnAppearing()
-        //{
-        //    Items = realm.All<Item>().OrderBy(i => i.Id);
-
-        //    var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
-        //    IsShowAllTasks = currentSubscriptionType == SubscriptionType.All;
-        //}
-
-        //TODO - need to change the delete item 
-        //method that elimantes duplicates items with same map name 
-
- 
- 
-
+        //!  orginal method-OnAppearing
         [RelayCommand]
         public void OnAppearing()
         {
-            Console.WriteLine($"IsShowAllTasks is :{IsShowAllTasks} ");
-
-            // Retrieve all items from Realm and convert them to a list.
-            var itemsList = realm.All<Item>().ToList();
-
-            // Group the items by Summary and select the first item from each group.
-            var distinctItems = itemsList
-                .GroupBy(item => item.Summary)
-                .Select(group => group.First())
-                .OrderBy(item => item.Id)
-                .ToList();
-
-            // Assign the filtered list back to Items.
-            Items = distinctItems.AsQueryable();
+            Items = realm.All<Item>().OrderBy(i => i.Id);
 
             var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
-
-
-
             IsShowAllTasks = currentSubscriptionType == SubscriptionType.All;
         }
+
+
+
+
+        //[RelayCommand]
+        //public void OnAppearing()
+        //{
+        //    Console.WriteLine($"IsShowAllTasks is :{IsShowAllTasks} ");
+
+        //    // Retrieve all items from Realm and convert them to a list.
+        //    var itemsList = realm.All<Item>().ToList();
+
+        //    // Group the items by Summary and select the first item from each group.
+        //    var distinctItems = itemsList
+        //        .GroupBy(item => item.Summary)
+        //        .Select(group => group.First())
+        //        .OrderBy(item => item.Id)
+        //        .ToList();
+
+        //    // Assign the filtered list back to Items.
+        //    Items = distinctItems.AsQueryable();
+
+        //    var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
+
+
+
+        //    IsShowAllTasks = currentSubscriptionType == SubscriptionType.All;
+        //}
 
 
 
