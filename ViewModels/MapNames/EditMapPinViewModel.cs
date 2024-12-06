@@ -21,6 +21,7 @@ using System.Threading.Tasks;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
 using Microsoft.Maui.Controls.Maps;
 using System.Net.NetworkInformation;
+using Realms.Sync;
 
 namespace RealmTodo.ViewModels
 
@@ -224,6 +225,42 @@ namespace RealmTodo.ViewModels
             Console.WriteLine($"SavePin EditMapPin -->'{newPin.Label}': {newPin.Address}");
 
             var realm = RealmService.GetMainThreadRealm();
+
+
+
+            var mapPinSubscriptionExists = realm.Subscriptions.Any(sub => sub.Name == "DogSubscription");
+
+            if (!mapPinSubscriptionExists)
+            {
+                Console.WriteLine("No existing subscription for Dog. Adding one now...");
+
+                // Add the subscription synchronously
+                realm.Subscriptions.Update(() =>
+                {
+                    var dogQuery = realm.All<MapPin>().Where(d => d.OwnerId == RealmService.CurrentUser.Id);
+                    realm.Subscriptions.Add(dogQuery, new SubscriptionOptions { Name = "DogSubscription" });
+                });
+
+                Console.WriteLine("MapPin subscription added. Waiting for synchronization...");
+
+                // Wait for synchronization
+                await realm.Subscriptions.WaitForSynchronizationAsync();
+                Console.WriteLine("MapPin synchronized successfully.");
+            }
+            else
+            {
+                Console.WriteLine("MapPin subscription already exists.");
+            }
+
+
+
+
+
+
+
+
+
+
             await realm.WriteAsync(() =>
             {
                 if (InitialMapPin != null) // editing an item
@@ -259,49 +296,6 @@ namespace RealmTodo.ViewModels
 
 
 
-        [RelayCommand]
-        public async Task SaveItem()
-        {
-
-
-            //List<Pin> pinList = MapPage.Instance.GetPinList();
-            int numberOfPins = pinsList.Count;
-            Console.WriteLine($"--> number of pins(SaveItem):{numberOfPins}!!!");
-            //InitialMapPin
-
-            var realm = RealmService.GetMainThreadRealm();
-            await realm.WriteAsync(() =>
-            {
-                if (InitialMapPin != null) // editing an item
-                {
-                    InitialMapPin.Mapname = Summary;
-                    InitialMapPin.Labelpin = Labelpin;
-                    InitialMapPin.Address = Address;
-                    InitialMapPin.Latitude = Latitude;
-                    InitialMapPin.Longitude = Longtiude;
-
-                }
-                else // creating a new item
-                {
-                    realm.Add(new MapPin()
-                    {
-                        OwnerId = RealmService.CurrentUser.Id,
-                        Mapname = summary,
-                        Labelpin = "labelPin",
-                        Address = "Address",
-                        Latitude = "LatitudeMapPin",
-                        Longitude = "LongitudeMapPin"
-                    });
-                }
-            });
-
-            // If you're getting this app code by cloning the repository at
-            // https://github.com/mongodb/template-app-maui-todo, 
-            // it does not contain the data explorer link. Download the
-            // app template from the Atlas UI to view a link to your data.
-            Console.WriteLine($"To view your data in Atlas, use this link: {RealmService.DataExplorerLink}");
-            await Shell.Current.GoToAsync("..");
-        }
 
         [RelayCommand]
         public async Task Cancel()

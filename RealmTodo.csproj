@@ -64,6 +64,9 @@
     <Compile Update="Models\MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Maps\MapNamesPage.xaml.cs">
+      <DependentUpon>MapNamesPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   
   
@@ -95,14 +98,14 @@
 		<MauiXaml Update="Views\AddMapToDbPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Views\EditPinAddr.xaml">
+		<MauiXaml Update="Views\Maps\EditPinAddr.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\LoginPage.xaml">
 			<SubType>
 			</SubType>
 		</MauiXaml>
-		<MauiXaml Update="Views\ItemsPage.xaml">
+		<MauiXaml Update="Views\Items\ItemsPage.xaml">
 			<SubType>
 			</SubType>
 		</MauiXaml>
@@ -110,6 +113,11 @@
 		  <SubType></SubType>
 		</MauiXaml>
 		<MauiXaml Update="Models\MapPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\Maps\MapNamesPage.xaml">
+		  <SubType>
+			</SubType>
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\NewEditItemPage.xaml">

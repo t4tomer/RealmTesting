@@ -12,8 +12,18 @@
         Route="login" />
 
     <ShellContent
-        Title="RealmTodo"
+        Title="ItemsList"
         ContentTemplate="{DataTemplate local:ItemsPage}"
-        Route="items" />
+        Route="list_of_items" />
+
+    <ShellContent
+        Title="MapNames"
+        ContentTemplate="{DataTemplate local:MapNamesPage}"
+        Route="list_of_maps" />
+
+
+
+
+
 </Shell>
 

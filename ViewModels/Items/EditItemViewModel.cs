@@ -19,6 +19,7 @@ using System.Windows.Input;
 using System.Linq;
 using System.Threading.Tasks;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
+using Realms.Sync;
 
 namespace RealmTodo.ViewModels
 
@@ -222,6 +223,47 @@ namespace RealmTodo.ViewModels
 
 
             var realm = RealmService.GetMainThreadRealm();
+
+
+
+
+
+            //this check fixed the problem of no flexibale subscrption !!!!
+
+            // Check if the subscription for Dog type exists
+            var itemSubscriptionExists = realm.Subscriptions.Any(sub => sub.Name == "DogSubscription");
+
+            if (!itemSubscriptionExists)
+            {
+                Console.WriteLine("No existing subscription for Item . Adding one now...");
+
+                // Add the subscription synchronously
+                realm.Subscriptions.Update(() =>
+                {
+                    var dogQuery = realm.All<Item>().Where(d => d.OwnerId == RealmService.CurrentUser.Id);
+                    realm.Subscriptions.Add(dogQuery, new SubscriptionOptions { Name = "DogSubscription" });
+                });
+
+                Console.WriteLine("Item subscription added. Waiting for synchronization...");
+
+                // Wait for synchronization
+                await realm.Subscriptions.WaitForSynchronizationAsync();
+                Console.WriteLine("Subscriptions synchronized successfully.");
+            }
+            else
+            {
+                Console.WriteLine("Dog subscription already exists.");
+            }
+
+
+
+
+
+
+
+
+
+
             await realm.WriteAsync(() =>
             {
                 if (InitialItem != null) // editing an item

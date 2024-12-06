@@ -64,29 +64,35 @@ build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.DistancePa
 build_metadata.AdditionalFiles.TargetPath = Views\DistancePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\DistancePage.xaml
 
-[D:/GitHub/RealmExamples/RealmTesting/Views/EditItemPage.xaml]
+[D:/GitHub/RealmExamples/RealmTesting/Views/Items/EditItemPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.EditItemPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\EditItemPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\EditItemPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.Items.EditItemPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Items\EditItemPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Items\EditItemPage.xaml
 
-[D:/GitHub/RealmExamples/RealmTesting/Views/EditPinAddr.xaml]
+[D:/GitHub/RealmExamples/RealmTesting/Views/Items/ItemsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.EditPinAddr.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\EditPinAddr.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\EditPinAddr.xaml
-
-[D:/GitHub/RealmExamples/RealmTesting/Views/ItemsPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.ItemsPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\ItemsPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\ItemsPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.Items.ItemsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Items\ItemsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Items\ItemsPage.xaml
 
 [D:/GitHub/RealmExamples/RealmTesting/Views/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
+
+[D:/GitHub/RealmExamples/RealmTesting/Views/Maps/EditPinAddr.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.Maps.EditPinAddr.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Maps\EditPinAddr.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Maps\EditPinAddr.xaml
+
+[D:/GitHub/RealmExamples/RealmTesting/Views/Maps/MapNamesPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.Maps.MapNamesPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Maps\MapNamesPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Maps\MapNamesPage.xaml
 
 [D:/GitHub/RealmExamples/RealmTesting/Views/PropertyTriggerXaml.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

@@ -13,10 +13,13 @@
     <MauiXaml Update="Views\AddMapToDbPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Views\EditPinAddr.xaml">
+    <MauiXaml Update="Views\Maps\EditPinAddr.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Models\MapPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\Maps\MapNamesPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Views\PropertyTriggerXaml.xaml">
