@@ -7,6 +7,12 @@
     <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
   </PropertyGroup>
   <ItemGroup>
+    <MauiXaml Update="Views\MapPin\EditMapPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\MapPin\MapsPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Views\MapSettings\DistancePage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

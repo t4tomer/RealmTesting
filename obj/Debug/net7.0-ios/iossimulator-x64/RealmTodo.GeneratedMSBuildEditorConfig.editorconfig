@@ -70,6 +70,18 @@ build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.LoginPage.
 build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
 
+[D:/GitHub/RealmExamples/RealmTesting/Views/MapPin/EditMapPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.MapPin.EditMapPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MapPin\EditMapPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MapPin\EditMapPage.xaml
+
+[D:/GitHub/RealmExamples/RealmTesting/Views/MapPin/MapsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.MapPin.MapsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MapPin\MapsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MapPin\MapsPage.xaml
+
 [D:/GitHub/RealmExamples/RealmTesting/Views/MapSettings/AddMapToDbPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.MapSettings.AddMapToDbPage.xaml

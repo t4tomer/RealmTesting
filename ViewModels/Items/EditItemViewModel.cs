@@ -96,7 +96,7 @@ namespace RealmTodo.ViewModels
                 Address = InitialItem.Address;
                 Latitude = InitialItem.Latitude;
                 Longtiude = InitialItem.Longitude;
-                PageHeader = $"Modify Map: {InitialItem.Mapname}";
+                PageHeader = $"Modify Map: {InitialItem.Mapname}(Item)";
             }
             else // we're creating a new item
             {

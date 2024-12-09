@@ -58,6 +58,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\MapPin\EditMapPage.xaml.cs">
+      <DependentUpon>EditMapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MapPin\MapsPage.xaml.cs">
+      <DependentUpon>MapsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\MapSettings\AddMapToDbPage.xaml.cs">
       <DependentUpon>AddMapToDbPage.xaml</DependentUpon>
     </Compile>
@@ -89,6 +95,14 @@
 		<Folder Include="Services\" />
 	</ItemGroup>
 	<ItemGroup>
+		<MauiXaml Update="Views\MapPin\EditMapPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Views\MapPin\MapsPage.xaml">
+		  <SubType>
+			</SubType>
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="Views\MapSettings\DistancePage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>

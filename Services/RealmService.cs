@@ -17,6 +17,8 @@ namespace RealmTodo.Services
 
         public static string DataExplorerLink;
 
+        private static FlexibleSyncConfiguration config3;
+
         public static async Task Init()
         {
             if (serviceInitialised)
@@ -50,7 +52,96 @@ namespace RealmTodo.Services
 
         public static Realm GetMainThreadRealm()
         {
-            return mainThreadRealm ??= GetRealm();
+
+            //return mainThreadRealm ??= GetRealm();//original code line
+            return mainThreadRealm ??= GetRealmForMultipleTypes();//original code line
+
+
+        }
+
+        public static Realm GetRealmForMultipleTypes()
+        {
+
+            Console.WriteLine("Adding subscriptions for both Dog and Item.");
+
+            config3 = new FlexibleSyncConfiguration(app.CurrentUser)
+            {
+                PopulateInitialSubscriptions = (realm3) =>
+                {
+                    Console.WriteLine("FlexibleSyncConfiguration-GetRealmForMultipleTypes1");
+
+                  
+                    // Add Item subscription
+                    var (itemQuery, itemQueryName) = GetQueryForSubscriptionItemType(realm3, SubscriptionType.Mine);
+                    realm3.Subscriptions.Add(itemQuery, new SubscriptionOptions { Name = itemQueryName });
+
+                    //Add MapPin subscroption 
+                    var (mapPinQuery, mapPinQueryName) = GetQueryForSubscriptionMapPinType(realm3, SubscriptionType.Mine);
+                    realm3.Subscriptions.Add(mapPinQuery, new SubscriptionOptions { Name = mapPinQueryName });
+
+
+
+                    //realm3.Subscriptions.WaitForSynchronizationAsync().Wait();
+                    Console.WriteLine("Subscriptions synchronized successfully.");
+
+                }
+            };
+
+            Console.WriteLine("Returning Realm with subscriptions for both Dog and Item.");
+            return Realm.GetInstance(config3);
+        }
+        private static (IQueryable<MapPin> Query, string Name) GetQueryForSubscriptionMapPinType(Realm realm, SubscriptionType subType)
+        {
+
+            Console.WriteLine($"(GetQueryForSubscriptionDogType)inputObject is MapPin ");
+
+
+            IQueryable<MapPin> query = null;
+            string queryName = null;
+
+            if (subType == SubscriptionType.Mine)
+            {
+                query = realm.All<MapPin>().Where(i => i.OwnerId == CurrentUser.Id);
+                queryName = "mine";
+            }
+            else if (subType == SubscriptionType.All)
+            {
+                query = realm.All<MapPin>();
+                queryName = "all";
+            }
+            else
+            {
+                throw new ArgumentException("Unknown subscription type");
+            }
+
+            return (query, queryName);
+        }
+        // new method-used for adding Item class 
+        private static (IQueryable<Item> Query, string Name) GetQueryForSubscriptionItemType(Realm realm, SubscriptionType subType)
+        {
+            Console.WriteLine($"(GetQueryForSubscriptionItemType)inputObject is Item ");
+
+
+
+            IQueryable<Item> query = null;
+            string queryName = null;
+
+            if (subType == SubscriptionType.Mine)
+            {
+                query = realm.All<Item>().Where(i => i.OwnerId == CurrentUser.Id);
+                queryName = "mine";
+            }
+            else if (subType == SubscriptionType.All)
+            {
+                query = realm.All<Item>();
+                queryName = "all";
+            }
+            else
+            {
+                throw new ArgumentException("Unknown subscription type");
+            }
+
+            return (query, queryName);
         }
 
         public static Realm GetRealm()
@@ -77,7 +168,8 @@ namespace RealmTodo.Services
             await app.LogInAsync(Credentials.EmailPassword(email, password));
 
             //This will populate the initial set of subscriptions the first time the realm is opened
-            using var realm = GetRealm();
+            //using var realm = GetRealm();//orignal code line
+            using var realm = GetRealmForMultipleTypes();
             await realm.Subscriptions.WaitForSynchronizationAsync();
         }
 

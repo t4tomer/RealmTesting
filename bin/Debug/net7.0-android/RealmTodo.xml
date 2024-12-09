@@ -335,6 +335,151 @@
         <member name="P:RealmTodo.ViewModels.LoginViewModel.SignUpCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.LoginViewModel.SignUp"/>.</summary>
         </member>
+        <member name="T:RealmTodo.ViewModels.EditMapPinViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.InitialMapPin">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.initialMapPin"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Summary">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.summary"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Mapname">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.mapname"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Labelpin">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.labelpin"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Address">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.address"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Latitude">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.latitude"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Longtiude">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.longtiude"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.PageHeader">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.pageHeader"/>
+        </member>
+        <member name="F:RealmTodo.ViewModels.EditMapPinViewModel.showTrackCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditMapPinViewModel.ShowTrackCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.ShowTrackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditMapPinViewModel.ShowTrack"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.EditMapPinViewModel.printListCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditMapPinViewModel.PrintListCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.PrintListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditMapPinViewModel.PrintList"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.EditMapPinViewModel.uploadToCloudPinsCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditMapPinViewModel.UploadToCloudPinsCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.UploadToCloudPinsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditMapPinViewModel.UploadToCloudPins"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.EditMapPinViewModel.savePinCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditMapPinViewModel.SavePinCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.SavePinCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditMapPinViewModel.SavePin(Maui.GoogleMaps.Pin)"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.EditMapPinViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditMapPinViewModel.CancelCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditMapPinViewModel.Cancel"/>.</summary>
+        </member>
+        <member name="T:RealmTodo.ViewModels.MapsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.ConnectionStatusIcon">
+            <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.connectionStatusIcon"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.IsShowAllTasks">
+            <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.isShowAllTasks"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.Maps">
+            <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.maps"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.DataExplorerLink">
+            <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.dataExplorerLink"/>
+        </member>
+        <member name="M:RealmTodo.ViewModels.MapsViewModel.OnIsShowAllTasksChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:RealmTodo.ViewModels.MapsViewModel.IsShowAllTasks"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:RealmTodo.ViewModels.MapsViewModel.IsShowAllTasks"/> is changed.</remarks>
+        </member>
+        <member name="F:RealmTodo.ViewModels.MapsViewModel.appearingCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.AppearingCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.AppearingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.OnAppearing"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.MapsViewModel.logoutCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.LogoutCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.LogoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.Logout"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.MapsViewModel.editMapCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.EditMapCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.EditMapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.EditMap(RealmTodo.Models.MapPin)"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.MapsViewModel.toMapPageCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.ToMapPageCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.ToMapPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.ToMapPage"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.MapsViewModel.deleteMapCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.DeleteMapCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.DeleteMapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.DeleteMap(RealmTodo.Models.MapPin)"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.MapsViewModel.deleteSinglePinCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.DeleteSinglePinCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.DeleteSinglePinCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.DeleteSinglePin(RealmTodo.Models.MapPin)"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.MapsViewModel.refreshCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.RefreshCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.RefreshCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.Refresh"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.MapsViewModel.changeConnectionStatusCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.ChangeConnectionStatusCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.ChangeConnectionStatusCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.ChangeConnectionStatus"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.MapsViewModel.urlTapCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.UrlTapCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.UrlTapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.UrlTap(System.String)"/>.</summary>
+        </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>
             Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
@@ -479,6 +624,12 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DataExplorerLink">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DataExplorerLink" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InitialMapPin">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InitialMapPin" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Maps">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Maps" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -523,6 +674,12 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DataExplorerLink">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DataExplorerLink" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InitialMapPin">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InitialMapPin" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Maps">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Maps" generated properties.</summary>
         </member>
     </members>
 </doc>

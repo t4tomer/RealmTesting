@@ -20,7 +20,7 @@ namespace RealmTodo.ViewModels
         private bool isShowAllTasks;
 
         [ObservableProperty]
-        private IQueryable<MapPin> items;
+        private IQueryable<MapPin> maps;
 
         [ObservableProperty]
         public string dataExplorerLink = RealmService.DataExplorerLink;
@@ -38,43 +38,33 @@ namespace RealmTodo.ViewModels
         }
 
 
-        //!  orginal method-OnAppearing
+
+
+
         [RelayCommand]
         public void OnAppearing()
         {
-            Items = realm.All<MapPin>().OrderBy(i => i.Id);
+            Console.WriteLine($"IsShowAllTasks is :{IsShowAllTasks} ");
+
+            // Retrieve all items from Realm and convert them to a list.
+            var mapNamesList = realm.All<MapPin>().ToList();
+
+            // Group the items by Summary and select the first item from each group.
+            var distinctMapNames = mapNamesList
+                .GroupBy(map => map.Mapname)
+                .Select(group => group.First())
+                .OrderBy(map => map.Id)
+                .ToList();
+
+            // Assign the filtered list back to Items.
+            Maps = distinctMapNames.AsQueryable();
 
             var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
+
+
+
             IsShowAllTasks = currentSubscriptionType == SubscriptionType.All;
         }
-
-
-
-
-        //[RelayCommand]
-        //public void OnAppearing()
-        //{
-        //    Console.WriteLine($"IsShowAllTasks is :{IsShowAllTasks} ");
-
-        //    // Retrieve all items from Realm and convert them to a list.
-        //    var itemsList = realm.All<Item>().ToList();
-
-        //    // Group the items by Summary and select the first item from each group.
-        //    var distinctItems = itemsList
-        //        .GroupBy(item => item.Summary)
-        //        .Select(group => group.First())
-        //        .OrderBy(item => item.Id)
-        //        .ToList();
-
-        //    // Assign the filtered list back to Items.
-        //    Items = distinctItems.AsQueryable();
-
-        //    var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
-
-
-
-        //    IsShowAllTasks = currentSubscriptionType == SubscriptionType.All;
-        //}
 
 
 
@@ -90,49 +80,32 @@ namespace RealmTodo.ViewModels
             await Shell.Current.GoToAsync($"//login");
         }
 
-        [RelayCommand]
-        public async Task AddItem()
-        {
-            await Shell.Current.GoToAsync($"itemEdit");
-        }
-
-        //original EditItem method!
-        //[RelayCommand]
-        //public async Task EditItem(Item item)
-        //{
-        //    if (!await CheckItemOwnership(item))
-        //    {
-        //        return;
-        //    }
-
-        //    var itemParameter = new Dictionary<string, object> { { "item", item } };
-        //        var editItemPage = new EditItemPage(); // Create the page instance
-
-        //    await Shell.Current.GoToAsync($"itemEdit", itemParameter);
-        //}
 
 
 
         [RelayCommand]
-        public async Task EditItem(Item item)
+        public async Task EditMap(MapPin map)
         {
             bool ans;
-            if (!await CheckItemOwnership(item))
+            if (!await CheckItemOwnership(map))
             {
                 return;
             }
-            if (item.IsMine)
+            if (map.IsMine)
                 ans = true;
             else
                 ans = false;
 
             var queryParameters = new Dictionary<string, object>
             {
-                { "item", item },
+                { "map", map },
                 { "isEditVisible", ans }
             };
 
-            await Shell.Current.GoToAsync("itemEdit", queryParameters);
+
+            Console.WriteLine($"---> EditMap(MapsViewModel) ");
+
+            await Shell.Current.GoToAsync("mapEdit", queryParameters);
 
 
 
@@ -149,13 +122,7 @@ namespace RealmTodo.ViewModels
         [RelayCommand]
         public async Task ToMapPage()
         {
-            Console.WriteLine($"---> test1 !!!@@@!!! ");
-            var itemsWithMap1 = realm.All<Item>().Where(i => i.Mapname == "map1").ToList();
-
-            foreach (var item in itemsWithMap1)
-            {
-                Console.WriteLine($"The summary of the item is: {item.Summary}");
-            }
+   
 
 
             // Navigate to the singleton instance of MapPage
@@ -171,78 +138,58 @@ namespace RealmTodo.ViewModels
             }
         }
 
-        // used to transfer the user to edit point page
+
+
+
+
+
+
+
+
+        // used to delete map from the maps view 
         [RelayCommand]
-        public async Task ToEditPointPage()
+        public async Task DeleteMap(MapPin pin)
         {
 
 
+            if (!await CheckItemOwnership(pin))
+            {
+                return;
+            }
 
-            Console.WriteLine($"---> transfering user to EditPointPage ");
-            var page = new PropertyTriggerXaml();
-            await Shell.Current.Navigation.PushAsync(page);
+            // Query all maps with the same mapname
+            var mapToDelete = realm.All<MapPin>()
+                .Where(i => i.Mapname == pin.Mapname)
+                .ToList();
 
 
-
+            foreach (var pinsInMap in mapToDelete)
+            {
+                await DeleteSinglePin(pinsInMap);
+            }
+            // Refresh the list after deletion
+            OnAppearing();
         }
 
-
+        //delete single pin from map 
         [RelayCommand]
-        public async Task ShowTrack(Item item)
+        public async Task DeleteSinglePin(MapPin pin)
         {
 
-            Console.WriteLine($"--->(ShowTrack) item summery:{item.Summary} ");
+            //Console.WriteLine($"--->(DeleteItem) item summery:{item.Summary} ");
 
-
-
-        }
-
-
-
-        //orignal method
-        [RelayCommand]
-        public async Task DeleteItem(Item item)
-        {
-
-            Console.WriteLine($"--->(DeleteItem) item summery:{item.Summary} ");
-
-            if (!await CheckItemOwnership(item))
+            if (!await CheckItemOwnership(pin))
             {
                 return;
             }
 
             await realm.WriteAsync(() =>
             {
-                realm.Remove(item);
+                realm.Remove(pin);
             });
 
         }
 
-        // used to delete map from the items view 
-        [RelayCommand]
-        public async Task DeleteItems(Item item)
-        {
-
-            Console.WriteLine($"--->(DeleteItems) item summery:{item.Summary} ");
-
-            if (!await CheckItemOwnership(item))
-            {
-                return;
-            }
-
-            // Query all items with the same Summary
-            var itemsToDelete = realm.All<Item>()
-                .Where(i => i.Summary == item.Summary)
-                .ToList();
-
-
-            foreach (var itemToDelete in itemsToDelete)
-            {
-                await DeleteItem(itemToDelete);
-            }
-            // Refresh the list after deletion
-            OnAppearing();
-        }
 
         [RelayCommand]
         public void Refresh()
@@ -280,7 +227,7 @@ namespace RealmTodo.ViewModels
             await Launcher.OpenAsync(DataExplorerLink);
         }
 
-        private async Task<bool> CheckItemOwnership(Item item)
+        private async Task<bool> CheckItemOwnership(MapPin map)
         {
             //if (!item.IsMine)
             //{
