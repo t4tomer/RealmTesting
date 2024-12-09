@@ -66,6 +66,68 @@
         <member name="M:RealmTodo.Models.Item.ToString">
             <inheritdoc />
         </member>
+        <member name="F:RealmTodo.Models.MapPin.RealmSchema">
+            <summary>
+            Defines the schema for the <see cref="T:RealmTodo.Models.MapPin"/> class.
+            </summary>
+        </member>
+        <member name="P:RealmTodo.Models.MapPin.IsManaged">
+            <inheritdoc />
+        </member>
+        <member name="P:RealmTodo.Models.MapPin.IsValid">
+            <inheritdoc />
+        </member>
+        <member name="P:RealmTodo.Models.MapPin.IsFrozen">
+            <inheritdoc />
+        </member>
+        <member name="P:RealmTodo.Models.MapPin.Realm">
+            <inheritdoc />
+        </member>
+        <member name="P:RealmTodo.Models.MapPin.ObjectSchema">
+            <inheritdoc />
+        </member>
+        <member name="P:RealmTodo.Models.MapPin.DynamicApi">
+            <inheritdoc />
+        </member>
+        <member name="P:RealmTodo.Models.MapPin.BacklinksCount">
+            <inheritdoc />
+        </member>
+        <member name="E:RealmTodo.Models.MapPin.PropertyChanged">
+            <inheritdoc />
+        </member>
+        <member name="M:RealmTodo.Models.MapPin.op_Explicit(Realms.RealmValue)~RealmTodo.Models.MapPin">
+            <summary>
+            Converts a <see cref="T:Realms.RealmValue"/> to <see cref="T:RealmTodo.Models.MapPin"/>. Equivalent to <see cref="M:Realms.RealmValue.AsNullableRealmObject``1"/>.
+            </summary>
+            <param name="val">The <see cref="T:Realms.RealmValue"/> to convert.</param>
+            <returns>The <see cref="T:RealmTodo.Models.MapPin"/> stored in the <see cref="T:Realms.RealmValue"/>.</returns>
+        </member>
+        <member name="M:RealmTodo.Models.MapPin.op_Implicit(RealmTodo.Models.MapPin)~Realms.RealmValue">
+            <summary>
+            Implicitly constructs a <see cref="T:Realms.RealmValue"/> from <see cref="T:RealmTodo.Models.MapPin"/>.
+            </summary>
+            <param name="val">The value to store in the <see cref="T:Realms.RealmValue"/>.</param>
+            <returns>A <see cref="T:Realms.RealmValue"/> containing the supplied <paramref name="val"/>.</returns>
+        </member>
+        <member name="M:RealmTodo.Models.MapPin.op_Implicit(RealmTodo.Models.MapPin)~Realms.QueryArgument">
+            <summary>
+            Implicitly constructs a <see cref="T:Realms.QueryArgument"/> from <see cref="T:RealmTodo.Models.MapPin"/>.
+            </summary>
+            <param name="val">The value to store in the <see cref="T:Realms.QueryArgument"/>.</param>
+            <returns>A <see cref="T:Realms.QueryArgument"/> containing the supplied <paramref name="val"/>.</returns>
+        </member>
+        <member name="M:RealmTodo.Models.MapPin.GetTypeInfo">
+            <inheritdoc />
+        </member>
+        <member name="M:RealmTodo.Models.MapPin.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:RealmTodo.Models.MapPin.GetHashCode">
+            <inheritdoc />
+        </member>
+        <member name="M:RealmTodo.Models.MapPin.ToString">
+            <inheritdoc />
+        </member>
         <member name="T:RealmTodo.ViewModels.BaseViewModel">
             <inheritdoc/>
         </member>

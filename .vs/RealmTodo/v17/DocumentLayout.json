@@ -3,56 +3,64 @@
   "WorkspaceRootPath": "D:\\GitHub\\RealmExamples\\RealmTesting\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\viewmodels\\edititemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:viewmodels\\edititemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\viewmodels\\items\\itemsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:viewmodels\\items\\itemsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\viewmodels\\items\\edititemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:viewmodels\\items\\edititemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\models\\mappin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:models\\mappin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\atlasconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:atlasconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\models\\mappage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:models\\mappage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\viewmodels\\itemsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:viewmodels\\itemsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\itemspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\itemspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\items\\itemspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\items\\itemspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\models\\mappage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:models\\mappage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\itemspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\itemspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\items\\itemspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\items\\itemspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\edititempage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\edititempage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\items\\edititempage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\items\\edititempage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\models\\maphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:models\\maphelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\editpinaddr.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\editpinaddr.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\mapsettings\\editpinaddr.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\mapsettings\\editpinaddr.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\addmaptodbpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\addmaptodbpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\mapsettings\\addmaptodbpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\mapsettings\\addmaptodbpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\models\\mapsingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:models\\mapsingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\editpinaddr.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\editpinaddr.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\mapsettings\\editpinaddr.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\mapsettings\\editpinaddr.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\propertytriggerxaml.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -63,12 +71,12 @@
       "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\propertytriggerxaml.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\distancepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\distancepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\mapsettings\\distancepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\mapsettings\\distancepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\distancepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\distancepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\mapsettings\\distancepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\mapsettings\\distancepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -77,25 +85,38 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 283,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 194,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "atlasConfig.json",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\atlasConfig.json",
+              "RelativeDocumentMoniker": "atlasConfig.json",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\atlasConfig.json",
+              "RelativeToolTip": "atlasConfig.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-09T15:14:14.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "EditItemViewModel.cs",
-              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\ViewModels\\EditItemViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\EditItemViewModel.cs",
-              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\ViewModels\\EditItemViewModel.cs",
-              "RelativeToolTip": "ViewModels\\EditItemViewModel.cs",
-              "ViewState": "AQIAAIkAAAAAAAAAAAAAAI8AAAAAAAAA",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\ViewModels\\Items\\EditItemViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\Items\\EditItemViewModel.cs",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\ViewModels\\Items\\EditItemViewModel.cs",
+              "RelativeToolTip": "ViewModels\\Items\\EditItemViewModel.cs",
+              "ViewState": "AQIAAJUAAAAAAAAAAAAAAKgAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T12:45:09.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "MapPage.xaml.cs",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Models\\MapPage.xaml.cs",
               "RelativeDocumentMoniker": "Models\\MapPage.xaml.cs",
@@ -103,25 +124,23 @@
               "RelativeToolTip": "Models\\MapPage.xaml.cs",
               "ViewState": "AQIAACsAAAAAAAAAAAAewEEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T14:57:11.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T14:57:11.867Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ItemsPage.xaml",
-              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\ItemsPage.xaml",
-              "RelativeDocumentMoniker": "Views\\ItemsPage.xaml",
-              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\ItemsPage.xaml",
-              "RelativeToolTip": "Views\\ItemsPage.xaml",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\Items\\ItemsPage.xaml",
+              "RelativeDocumentMoniker": "Views\\Items\\ItemsPage.xaml",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\Items\\ItemsPage.xaml",
+              "RelativeToolTip": "Views\\Items\\ItemsPage.xaml",
               "ViewState": "AQIAAFoAAAAAAAAAAAAvwHcAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-05T15:13:38.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T15:13:38.038Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "MapPage.xaml",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Models\\MapPage.xaml",
               "RelativeDocumentMoniker": "Models\\MapPage.xaml",
@@ -133,19 +152,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "AddMapToDbPage.xaml.cs",
-              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\AddMapToDbPage.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\AddMapToDbPage.xaml.cs",
-              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\AddMapToDbPage.xaml.cs",
-              "RelativeToolTip": "Views\\AddMapToDbPage.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\AddMapToDbPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\MapSettings\\AddMapToDbPage.xaml.cs",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\AddMapToDbPage.xaml.cs",
+              "RelativeToolTip": "Views\\MapSettings\\AddMapToDbPage.xaml.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAswCcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T16:05:02.841Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "MapSingleton.cs",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Models\\MapSingleton.cs",
               "RelativeDocumentMoniker": "Models\\MapSingleton.cs",
@@ -157,21 +176,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "EditPinAddr.xaml",
-              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\EditPinAddr.xaml",
-              "RelativeDocumentMoniker": "Views\\EditPinAddr.xaml",
-              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\EditPinAddr.xaml",
-              "RelativeToolTip": "Views\\EditPinAddr.xaml",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\EditPinAddr.xaml",
+              "RelativeDocumentMoniker": "Views\\MapSettings\\EditPinAddr.xaml",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\EditPinAddr.xaml",
+              "RelativeToolTip": "Views\\MapSettings\\EditPinAddr.xaml",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAAIAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-05T14:51:02.435Z"
+              "WhenOpened": "2024-10-05T14:51:02.435Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 243,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 332,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -180,43 +200,57 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "MapPin.cs",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Models\\MapPin.cs",
+              "RelativeDocumentMoniker": "Models\\MapPin.cs",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Models\\MapPin.cs",
+              "RelativeToolTip": "Models\\MapPin.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAYwBEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T15:26:36.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "ItemsViewModel.cs",
-              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\ViewModels\\ItemsViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\ItemsViewModel.cs",
-              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\ViewModels\\ItemsViewModel.cs",
-              "RelativeToolTip": "ViewModels\\ItemsViewModel.cs",
-              "ViewState": "AQIAAIgAAAAAAAAAAAArwKYAAAAMAAAA",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\ViewModels\\Items\\ItemsViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\Items\\ItemsViewModel.cs",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\ViewModels\\Items\\ItemsViewModel.cs",
+              "RelativeToolTip": "ViewModels\\Items\\ItemsViewModel.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAYwEkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T15:14:36.386Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ItemsPage.xaml.cs",
-              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\ItemsPage.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\ItemsPage.xaml.cs",
-              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\ItemsPage.xaml.cs",
-              "RelativeToolTip": "Views\\ItemsPage.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\Items\\ItemsPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\Items\\ItemsPage.xaml.cs",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\Items\\ItemsPage.xaml.cs",
+              "RelativeToolTip": "Views\\Items\\ItemsPage.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-20T11:55:13.005Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "EditItemPage.xaml",
-              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\EditItemPage.xaml",
-              "RelativeDocumentMoniker": "Views\\EditItemPage.xaml",
-              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\EditItemPage.xaml",
-              "RelativeToolTip": "Views\\EditItemPage.xaml",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\Items\\EditItemPage.xaml",
+              "RelativeDocumentMoniker": "Views\\Items\\EditItemPage.xaml",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\Items\\EditItemPage.xaml",
+              "RelativeToolTip": "Views\\Items\\EditItemPage.xaml",
               "ViewState": "AQIAAAwAAAAAAAAAAAAewBsAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-15T12:48:15.036Z"
+              "WhenOpened": "2024-10-15T12:48:15.036Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "MapHelper.cs",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Models\\MapHelper.cs",
               "RelativeDocumentMoniker": "Models\\MapHelper.cs",
@@ -228,19 +262,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "EditPinAddr.xaml.cs",
-              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\EditPinAddr.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\EditPinAddr.xaml.cs",
-              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\EditPinAddr.xaml.cs",
-              "RelativeToolTip": "Views\\EditPinAddr.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\EditPinAddr.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\MapSettings\\EditPinAddr.xaml.cs",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\EditPinAddr.xaml.cs",
+              "RelativeToolTip": "Views\\MapSettings\\EditPinAddr.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T14:41:52.363Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Item.cs",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Models\\Item.cs",
               "RelativeDocumentMoniker": "Models\\Item.cs",
@@ -252,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "PropertyTriggerXaml.xaml",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\PropertyTriggerXaml.xaml",
               "RelativeDocumentMoniker": "Views\\PropertyTriggerXaml.xaml",
@@ -264,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "PropertyTriggerXaml.xaml.cs",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\PropertyTriggerXaml.xaml.cs",
               "RelativeDocumentMoniker": "Views\\PropertyTriggerXaml.xaml.cs",
@@ -276,27 +310,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "DistancePage.xaml.cs",
-              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\DistancePage.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\DistancePage.xaml.cs",
-              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\DistancePage.xaml.cs",
-              "RelativeToolTip": "Views\\DistancePage.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\DistancePage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\MapSettings\\DistancePage.xaml.cs",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\DistancePage.xaml.cs",
+              "RelativeToolTip": "Views\\MapSettings\\DistancePage.xaml.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAQwAQAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T14:48:43.442Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "DistancePage.xaml",
-              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\DistancePage.xaml",
-              "RelativeDocumentMoniker": "Views\\DistancePage.xaml",
-              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\DistancePage.xaml",
-              "RelativeToolTip": "Views\\DistancePage.xaml",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\DistancePage.xaml",
+              "RelativeDocumentMoniker": "Views\\MapSettings\\DistancePage.xaml",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\DistancePage.xaml",
+              "RelativeToolTip": "Views\\MapSettings\\DistancePage.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-05T14:48:13.814Z"
+              "WhenOpened": "2024-10-05T14:48:13.814Z",
+              "EditorCaption": ""
             }
           ]
         }

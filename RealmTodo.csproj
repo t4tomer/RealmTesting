@@ -58,7 +58,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\AddMapToDbPage.xaml.cs">
+    <Compile Update="Views\MapSettings\AddMapToDbPage.xaml.cs">
       <DependentUpon>AddMapToDbPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Models\MapPage.xaml.cs">
@@ -86,24 +86,23 @@
 		<None Remove="atlasConfig.json" />
 	</ItemGroup>
 	<ItemGroup>
-		<Folder Include="ViewModels\" />
 		<Folder Include="Services\" />
 	</ItemGroup>
 	<ItemGroup>
-		<MauiXaml Update="Views\DistancePage.xaml">
+		<MauiXaml Update="Views\MapSettings\DistancePage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Views\AddMapToDbPage.xaml">
+		<MauiXaml Update="Views\MapSettings\AddMapToDbPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Views\EditPinAddr.xaml">
+		<MauiXaml Update="Views\MapSettings\EditPinAddr.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\LoginPage.xaml">
 			<SubType>
 			</SubType>
 		</MauiXaml>
-		<MauiXaml Update="Views\ItemsPage.xaml">
+		<MauiXaml Update="Views\Items\ItemsPage.xaml">
 			<SubType>
 			</SubType>
 		</MauiXaml>
