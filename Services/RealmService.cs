@@ -53,8 +53,8 @@ namespace RealmTodo.Services
         public static Realm GetMainThreadRealm()
         {
 
-            //return mainThreadRealm ??= GetRealm();//original code line
-            return mainThreadRealm ??= GetRealmForMultipleTypes();//original code line
+            return mainThreadRealm ??= GetRealm();//original code line
+            //return mainThreadRealm ??= GetRealmForMultipleTypes();//original code line
 
 
         }
@@ -168,8 +168,8 @@ namespace RealmTodo.Services
             await app.LogInAsync(Credentials.EmailPassword(email, password));
 
             //This will populate the initial set of subscriptions the first time the realm is opened
-            //using var realm = GetRealm();//orignal code line
-            using var realm = GetRealmForMultipleTypes();
+            using var realm = GetRealm();//orignal code line
+            //using var realm = GetRealmForMultipleTypes();
             await realm.Subscriptions.WaitForSynchronizationAsync();
         }
 

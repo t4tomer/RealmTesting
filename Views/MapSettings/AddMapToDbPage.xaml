@@ -8,7 +8,7 @@
     <ContentPage.BindingContext>
         <!--if you adding map with mappin objects use vm:EditMapPinViewModel-->
         <!--if you adding map with item objects use vm:EditItemViewModel-->
-        <vm:EditMapPinViewModel />
+        <vm:EditItemViewModel />
     </ContentPage.BindingContext>
     <VerticalStackLayout Padding="10" Spacing="20">
         <Label 
