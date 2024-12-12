@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RealmTodo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+433de871f3b28a1382f3891854aa582b062af898")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+9339ebb3de614728b27915623b6875a131f528d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("RealmTodo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RealmTodo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -143,9 +143,47 @@ namespace RealmTodo.Services
 
             return (query, queryName);
         }
-
         public static Realm GetRealm()
         {
+
+            var singleton = ObjectSingleton.Instance;
+
+            // Default type
+            Console.WriteLine($"Default type: {singleton.GetCurrentType().Name}");
+
+            if (singleton.GetCurrentType() == typeof(MapPin))
+            {
+                Console.WriteLine($"the type is MapPin");
+
+                var configPinMap = new FlexibleSyncConfiguration(app.CurrentUser)
+                {
+                    PopulateInitialSubscriptions = (realm) =>
+                    {
+                        var (query, queryName) = GetQueryForSubscriptionMapPinType(realm, SubscriptionType.Mine);
+                        realm.Subscriptions.Add(query, new SubscriptionOptions { Name = queryName });
+                    }
+                };
+
+                return Realm.GetInstance(configPinMap);
+
+            }
+
+
+            var configItem = new FlexibleSyncConfiguration(app.CurrentUser)
+            {
+                PopulateInitialSubscriptions = (realm) =>
+                {
+                    var (query, queryName) = GetQueryForSubscriptionItemType(realm, SubscriptionType.Mine);
+                    realm.Subscriptions.Add(query, new SubscriptionOptions { Name = queryName });
+                }
+            };
+
+            return Realm.GetInstance(configItem);
+        }
+        /* //the orignal method for GetRealm
+        public static Realm GetRealm()
+        {
+
             var config = new FlexibleSyncConfiguration(app.CurrentUser)
             {
                 PopulateInitialSubscriptions = (realm) =>
@@ -157,6 +195,8 @@ namespace RealmTodo.Services
 
             return Realm.GetInstance(config);
         }
+
+        */
 
         public static async Task RegisterAsync(string email, string password)
         {

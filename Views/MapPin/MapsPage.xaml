@@ -56,7 +56,7 @@
                             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer 
-                                        Command="{Binding Path=BindingContext.EditMapCommand,
+                                        Command="{Binding Path=BindingContext.ChooseMapFromList,
                                         Source={x:Reference mapsPage}}"
                                         CommandParameter="{Binding .}"/>
                                 </StackLayout.GestureRecognizers>

@@ -438,11 +438,11 @@
         <member name="P:RealmTodo.ViewModels.MapsViewModel.LogoutCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.Logout"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.MapsViewModel.editMapCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.EditMapCommand"/>.</summary>
+        <member name="F:RealmTodo.ViewModels.MapsViewModel.chooseMapFromListCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.ChooseMapFromListCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.EditMapCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.EditMap(RealmTodo.Models.MapPin)"/>.</summary>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.ChooseMapFromListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.ChooseMapFromList(RealmTodo.Models.MapPin)"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.MapsViewModel.toMapPageCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.ToMapPageCommand"/>.</summary>

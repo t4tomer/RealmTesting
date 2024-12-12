@@ -85,7 +85,7 @@ namespace RealmTodo.ViewModels
         }
 
 
-        public static List<Maui.GoogleMaps.Pin> getPinsListByName(string trackName)
+        private static List<Maui.GoogleMaps.Pin> getPinsListByName(string trackName)
         {
             var realm = RealmService.GetMainThreadRealm();
 
@@ -95,7 +95,7 @@ namespace RealmTodo.ViewModels
             var mapPinsList = realm.All<MapPin>().ToList(); // Fetch all items into memory
 
             // Now you can safely use Select
-            var summaries = mapPinsList
+            var pinTypeList = mapPinsList
                 .Where(i => i.Mapname == trackName)  // Filter if needed
                 .Select(i => new Maui.GoogleMaps.Pin
                 {
@@ -106,23 +106,17 @@ namespace RealmTodo.ViewModels
                 .ToList();
 
             // Loop through the matching items and print their Summary.
-            foreach (var pin in summaries)
+            foreach (var pin in pinTypeList)
             {
                 Console.WriteLine($"Address of pin (MapHelper class) -->pin label:'{pin.Label}'pin addr: {pin.Address}");
             }
 
-
-            // Navigate to the singleton instance of MapPage
-            //var mapPage = MapPage.Instance;
-            //List<Maui.GoogleMaps.Pin> pinList = MapPage.Instance.GetPinList();
-            //mapPage.set_pinsList(summaries);
-
-            return summaries;
+            return pinTypeList;
         }
 
         //method that is used to edit map
         [RelayCommand]
-        public async Task EditMap(MapPin map)
+        public async Task ChooseMapFromList(MapPin map)
         {
 
             Console.WriteLine($"(EditMap)MapsViewModel,mapname:{map.Mapname} ");
@@ -157,14 +151,7 @@ namespace RealmTodo.ViewModels
             }
 
 
-
-
-
-
-
-
-
-            }
+        }
 
 
 
