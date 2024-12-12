@@ -9,6 +9,10 @@ using System.Windows.Input;
 using System.Linq;
 using System.Threading.Tasks;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
+using Position = Maui.GoogleMaps.Position;
+
+
+
 namespace RealmTodo.ViewModels
 {
     public partial class MapsViewModel : BaseViewModel
@@ -81,36 +85,86 @@ namespace RealmTodo.ViewModels
         }
 
 
+        public static List<Maui.GoogleMaps.Pin> getPinsListByName(string trackName)
+        {
+            var realm = RealmService.GetMainThreadRealm();
+
+            // Query Realm for all items with a matching Summary.
+            var matchingMapPins = realm.All<MapPin>().Where(i => i.Mapname == trackName);
+
+            var mapPinsList = realm.All<MapPin>().ToList(); // Fetch all items into memory
+
+            // Now you can safely use Select
+            var summaries = mapPinsList
+                .Where(i => i.Mapname == trackName)  // Filter if needed
+                .Select(i => new Maui.GoogleMaps.Pin
+                {
+                    Label = i.Labelpin,
+                    Address = i.Address,
+                    Position = new Position(Convert.ToDouble(i.Latitude), Convert.ToDouble(i.Longitude))
+                })
+                .ToList();
+
+            // Loop through the matching items and print their Summary.
+            foreach (var pin in summaries)
+            {
+                Console.WriteLine($"Address of pin (MapHelper class) -->pin label:'{pin.Label}'pin addr: {pin.Address}");
+            }
 
 
+            // Navigate to the singleton instance of MapPage
+            //var mapPage = MapPage.Instance;
+            //List<Maui.GoogleMaps.Pin> pinList = MapPage.Instance.GetPinList();
+            //mapPage.set_pinsList(summaries);
+
+            return summaries;
+        }
+
+        //method that is used to edit map
         [RelayCommand]
         public async Task EditMap(MapPin map)
         {
-            bool ans;
-            if (!await CheckItemOwnership(map))
+
+            Console.WriteLine($"(EditMap)MapsViewModel,mapname:{map.Mapname} ");
+
+            //convert MapPin object with the same mapname to list with the same name but with type of Maui.GoogleMaps.Pin
+            List<Maui.GoogleMaps.Pin> pinListOfSameMapName = getPinsListByName(map.Mapname);
+
+            var mapPage = MapPage.Instance;
+            mapPage.set_pinsList(pinListOfSameMapName);
+            mapPage.ShowTrack_Clicked();
+
+            if (await mapPage.IsLocationEnabled())
             {
-                return;
+                if (map.IsMine)
+                {
+                    Console.WriteLine($"-->Track is  mine!!!");
+                    mapPage.ShowButtonsOnMap(true); // show buttons 
+                    mapPage._canAddPins = true;
+                    await Shell.Current.Navigation.PushAsync(mapPage);
+                }
+                else
+                {
+                    Console.WriteLine($"-->Track is not mine!!!");
+                    mapPage.ShowButtonsOnMap(false); // Remove buttons from the map 
+                    mapPage._canAddPins = false;
+                    await Shell.Current.Navigation.PushAsync(mapPage);
+
+                }
+
+
+
             }
-            if (map.IsMine)
-                ans = true;
-            else
-                ans = false;
-
-            var queryParameters = new Dictionary<string, object>
-            {
-                { "map", map },
-                { "isEditVisible", ans }
-            };
-
-
-            Console.WriteLine($"---> EditMap(MapsViewModel) ");
-
-            await Shell.Current.GoToAsync("mapEdit", queryParameters);
 
 
 
 
-        }
+
+
+
+
+
+            }
 
 
 

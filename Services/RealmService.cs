@@ -215,19 +215,19 @@ namespace RealmTodo.Services
             };
         }
 
-        private static (IQueryable<Item> Query, string Name) GetQueryForSubscriptionType(Realm realm, SubscriptionType subType)
+        private static (IQueryable<MapPin> Query, string Name) GetQueryForSubscriptionType(Realm realm, SubscriptionType subType)
         {
-            IQueryable<Item> query = null;
+            IQueryable<MapPin> query = null;
             string queryName = null;
 
             if (subType == SubscriptionType.Mine)
             {
-                query = realm.All<Item>().Where(i => i.OwnerId == CurrentUser.Id);
+                query = realm.All<MapPin>().Where(i => i.OwnerId == CurrentUser.Id);
                 queryName = "mine";
             }
             else if (subType == SubscriptionType.All)
             {
-                query = realm.All<Item>();
+                query = realm.All<MapPin>();
                 queryName = "all";
             }
             else

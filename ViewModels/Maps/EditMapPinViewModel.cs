@@ -92,6 +92,9 @@ namespace RealmTodo.ViewModels
 
         public void ApplyQueryAttributes(IDictionary<string, object> query)
         {
+
+
+
             if (query.Count > 0 && query["mappin"] != null) // we're editing an Item
             {
 

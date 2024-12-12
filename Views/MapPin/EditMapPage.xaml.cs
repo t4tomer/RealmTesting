@@ -27,6 +27,9 @@ public partial class EditMapPage : ContentPage, IQueryAttributable
     // Implement the IQueryAttributable interface to handle query parameters
     public void ApplyQueryAttributes(IDictionary<string, object> query)
     {
+
+
+
         if (query.ContainsKey("isEditVisible") &&
             bool.TryParse(query["isEditVisible"].ToString(), out bool isVisible))
         {
