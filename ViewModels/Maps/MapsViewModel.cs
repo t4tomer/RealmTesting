@@ -114,6 +114,15 @@ namespace RealmTodo.ViewModels
             return pinTypeList;
         }
 
+
+
+        [RelayCommand]
+        public void TestCommand(MapPin pin)
+        {
+            Console.WriteLine("TestCommand triggered!");
+        }
+
+
         //method that is used to edit map
         [RelayCommand]
         public async Task ChooseMapFromList(MapPin map)

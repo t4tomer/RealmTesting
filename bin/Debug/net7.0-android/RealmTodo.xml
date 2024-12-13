@@ -408,6 +408,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:RealmTodo.ViewModels.MapsViewModel.ConnectionStatusIcon">
             <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.connectionStatusIcon"/>
@@ -437,6 +438,12 @@
         </member>
         <member name="P:RealmTodo.ViewModels.MapsViewModel.LogoutCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.Logout"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.MapsViewModel.testCommandCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.TestCommandCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.TestCommandCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.TestCommand(RealmTodo.Models.MapPin)"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.MapsViewModel.chooseMapFromListCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.ChooseMapFromListCommand"/>.</summary>
