@@ -22,7 +22,7 @@
     <MauiXaml Update="Views\MapSettings\EditPinAddr.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="Models\MapPage.xaml">
+    <MauiXaml Update="Views\MapSettings\MapPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Views\PropertyTriggerXaml.xaml">
