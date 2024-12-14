@@ -257,6 +257,17 @@ namespace RealmTodo.ViewModels
 
 
 
+        [RelayCommand]
+        public async Task ToTimerPage()//transfer to timer page
+        {
+            // Navigate to the singleton instance of MapPage
+            var timerPage = TimerPage.Instance;
+            await Shell.Current.Navigation.PushAsync(timerPage);
+        }
+
+
+
+
 
 
         [RelayCommand]

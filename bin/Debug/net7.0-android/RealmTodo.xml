@@ -409,6 +409,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:RealmTodo.ViewModels.MapsViewModel.ConnectionStatusIcon">
             <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.connectionStatusIcon"/>
@@ -475,6 +476,12 @@
         <member name="P:RealmTodo.ViewModels.MapsViewModel.RefreshCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.Refresh"/>.</summary>
         </member>
+        <member name="F:RealmTodo.ViewModels.MapsViewModel.toTimerPageCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.ToTimerPageCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.ToTimerPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.ToTimerPage"/>.</summary>
+        </member>
         <member name="F:RealmTodo.ViewModels.MapsViewModel.changeConnectionStatusCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.ChangeConnectionStatusCommand"/>.</summary>
         </member>
@@ -486,6 +493,29 @@
         </member>
         <member name="P:RealmTodo.ViewModels.MapsViewModel.UrlTapCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.UrlTap(System.String)"/>.</summary>
+        </member>
+        <member name="T:RealmTodo.Views.TimerPage">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:RealmTodo.Views.TimerPage.startTimerCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.Views.TimerPage.StartTimerCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.Views.TimerPage.StartTimerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.TimerPage.StartTimer"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.Views.TimerPage.pauseTimerCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.Views.TimerPage.PauseTimerCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.Views.TimerPage.PauseTimerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.TimerPage.PauseTimer"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.Views.TimerPage.resetTimerCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.Views.TimerPage.ResetTimerCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.Views.TimerPage.ResetTimerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.TimerPage.ResetTimer"/>.</summary>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>

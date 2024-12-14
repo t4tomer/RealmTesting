@@ -111,3 +111,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.TestPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\TestPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\TestPage.xaml
+
+[D:/GitHub/RealmExamples/RealmTesting/Views/TimerPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.TimerPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\TimerPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\TimerPage.xaml

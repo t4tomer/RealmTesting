@@ -85,11 +85,12 @@
                Padding="8" Grid.Row="2">
             <Button
                 Margin="5"
-                Text="deleted button "
+                Text="Timer Button "
                 FontSize="12" 
-                Padding="5,0,5,10"   
-                
-            />
+                Padding="5,0,5,10"
+                Command="{Binding ToTimerPageCommand}"
+                BackgroundColor="Purple"/>
+
         </Border>
         <Frame Grid.Row="3" Padding="10" BorderColor="Black" BackgroundColor="#E3FCF7" Margin="5">
             <Label HorizontalTextAlignment="Center" >
