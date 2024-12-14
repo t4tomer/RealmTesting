@@ -21,12 +21,13 @@ using System.Windows.Input;
 using System.Linq;
 using System.Threading.Tasks;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
+using System.ComponentModel;
 //using static Xamarin.Google.Crypto.Tink.Shaded.Protobuf.Internal;
 
 
 namespace RealmTodo.Views
 {
-    public partial class MapPage : ContentPage
+    public partial class MapPage : ContentPage, INotifyPropertyChanged
     {
         private static MapPage _instance; // Singleton instance
         private CancellationTokenSource _cancelTokenSource;
@@ -35,7 +36,7 @@ namespace RealmTodo.Views
         private EditItemViewModel CloudPage; //new 
         List<Maui.GoogleMaps.Pin> pinsList;// the list of pins in the map
         public bool _canAddPins = true; // Controls if pins can be added
-
+        private string _mapTitle = ""; // Default value
         int strokeColorPolyline = 0;
 
         public ICommand NavigateCommand { get; private set; }
@@ -45,6 +46,8 @@ namespace RealmTodo.Views
         private MapPage()
         {
             InitializeComponent();
+            BindingContext = this; // Set the binding context for data binding
+
         }
 
         // Public static property to get the singleton instance
@@ -59,6 +62,26 @@ namespace RealmTodo.Views
                 return _instance;
             }
         }
+
+        public string MapTitle
+        {
+            get => _mapTitle;
+            set
+            {
+                if (_mapTitle != value)
+                {
+                    _mapTitle = value;
+                    OnPropertyChanged(nameof(MapTitle)); // Notify the UI about the change
+                }
+            }
+        }
+
+        public void SetTitle(string newTitle)
+        {
+            _mapTitle = newTitle; // Update the internal mapTitle field
+            Console.WriteLine($"Map title updated to: {newTitle}");
+        }
+
 
         public void set_pinsList(List<Maui.GoogleMaps.Pin> newpinstList)
         {

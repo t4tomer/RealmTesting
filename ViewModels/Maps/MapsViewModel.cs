@@ -127,16 +127,16 @@ namespace RealmTodo.ViewModels
         [RelayCommand]
         public async Task ChooseMapFromList(MapPin map)
         {
-
+            string mapName = map.Mapname;
             Console.WriteLine($"(EditMap)MapsViewModel,mapname:{map.Mapname} ");
 
             //convert MapPin object with the same mapname to list with the same name but with type of Maui.GoogleMaps.Pin
-            List<Maui.GoogleMaps.Pin> pinListOfSameMapName = getPinsListByName(map.Mapname);
+            List<Maui.GoogleMaps.Pin> pinListOfSameMapName = getPinsListByName(mapName);
 
             var mapPage = MapPage.Instance;
             mapPage.set_pinsList(pinListOfSameMapName);
             mapPage.ShowTrack_Clicked();
-
+            mapPage.SetTitle("map:"+mapName);
             if (await mapPage.IsLocationEnabled())
             {
                 if (map.IsMine)
@@ -182,6 +182,7 @@ namespace RealmTodo.ViewModels
 
             // Navigate to the singleton instance of MapPage
             var mapPage = MapPage.Instance;
+            mapPage.SetTitle("Create new map");
             List<Maui.GoogleMaps.Pin> pinList = MapPage.Instance.GetPinList();
             if (await mapPage.IsLocationEnabled())
             {
