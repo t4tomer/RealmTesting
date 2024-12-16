@@ -349,20 +349,20 @@
         <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Summary">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.summary"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Mapname">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.mapname"/>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Map_nameNew">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.map_nameNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Labelpin">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.labelpin"/>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Label_pinNew">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.label_pinNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Address">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.address"/>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.AddressNew">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.addressNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Latitude">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.latitude"/>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.LatitudeNew">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.latitudeNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Longtiude">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.longtiude"/>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.LongtiudeNew">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.longtiudeNew"/>
         </member>
         <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.PageHeader">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.pageHeader"/>
@@ -493,6 +493,131 @@
         </member>
         <member name="P:RealmTodo.ViewModels.MapsViewModel.UrlTapCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.UrlTap(System.String)"/>.</summary>
+        </member>
+        <member name="T:RealmTodo.ViewModels.EditUserRecordViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.InitialUserRecord">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.initialUserRecord"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.Profile_name">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.profile_name"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.Map_name">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.map_name"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.Track_time">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.track_time"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.Upload_date_time">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.upload_date_time"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.PageHeader">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.pageHeader"/>
+        </member>
+        <member name="F:RealmTodo.ViewModels.EditUserRecordViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditUserRecordViewModel.CancelCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditUserRecordViewModel.Cancel"/>.</summary>
+        </member>
+        <member name="T:RealmTodo.ViewModels.UserRecordsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.ConnectionStatusIcon">
+            <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.connectionStatusIcon"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.IsShowAllTasks">
+            <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.isShowAllTasks"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.Maps">
+            <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.maps"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.DataExplorerLink">
+            <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.dataExplorerLink"/>
+        </member>
+        <member name="M:RealmTodo.ViewModels.UserRecordsViewModel.OnIsShowAllTasksChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.IsShowAllTasks"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.IsShowAllTasks"/> is changed.</remarks>
+        </member>
+        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.appearingCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.AppearingCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.AppearingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.OnAppearing"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.logoutCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.LogoutCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.LogoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.Logout"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.testCommandCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.TestCommandCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.TestCommandCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.TestCommand(RealmTodo.Models.MapPin)"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.chooseMapFromListCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.ChooseMapFromListCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.ChooseMapFromListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.ChooseMapFromList(RealmTodo.Models.MapPin)"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.toMapPageCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.ToMapPageCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.ToMapPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.ToMapPage"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.deleteMapCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.DeleteMapCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.DeleteMapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.DeleteMap(RealmTodo.Models.MapPin)"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.deleteSinglePinCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.DeleteSinglePinCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.DeleteSinglePinCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.DeleteSinglePin(RealmTodo.Models.MapPin)"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.refreshCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.RefreshCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.RefreshCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.Refresh"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.toTimerPageCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.ToTimerPageCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.ToTimerPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.ToTimerPage"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.changeConnectionStatusCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.ChangeConnectionStatusCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.ChangeConnectionStatusCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.ChangeConnectionStatus"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.urlTapCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.UrlTapCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.UrlTapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.UrlTap(System.String)"/>.</summary>
         </member>
         <member name="T:RealmTodo.Views.TimerPage">
             <inheritdoc/>
@@ -664,8 +789,38 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InitialMapPin">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InitialMapPin" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Map_nameNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Map_nameNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Label_pinNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Label_pinNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AddressNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AddressNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LatitudeNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LatitudeNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LongtiudeNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LongtiudeNew" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Maps">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Maps" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InitialUserRecord">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InitialUserRecord" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Profile_name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Profile_name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Map_name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Map_name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Track_time">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Track_time" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Upload_date_time">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Upload_date_time" generated properties.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
@@ -715,8 +870,38 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InitialMapPin">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InitialMapPin" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Map_nameNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Map_nameNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Label_pinNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Label_pinNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AddressNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AddressNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LatitudeNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LatitudeNew" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LongtiudeNew">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LongtiudeNew" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Maps">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Maps" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InitialUserRecord">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InitialUserRecord" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Profile_name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Profile_name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Map_name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Map_name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Track_time">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Track_time" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Upload_date_time">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Upload_date_time" generated properties.</summary>
         </member>
     </members>
 </doc>

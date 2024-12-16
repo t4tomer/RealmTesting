@@ -22,6 +22,8 @@ using DocumentFormat.OpenXml.Drawing.Diagrams;
 using Microsoft.Maui.Controls.Maps;
 using System.Net.NetworkInformation;
 using Realms.Sync;
+using DocumentFormat.OpenXml.Wordprocessing;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace RealmTodo.ViewModels
 
@@ -40,23 +42,23 @@ namespace RealmTodo.ViewModels
 
 
         [ObservableProperty]
-        private string mapname;
+        private string map_nameNew;
 
 
         [ObservableProperty]
-        private string labelpin;
+        private string label_pinNew;
 
 
         [ObservableProperty]
-        private string address;
+        private string addressNew;
 
 
         [ObservableProperty]
-        private string latitude;
+        private string latitudeNew;
 
 
         [ObservableProperty]
-        private string longtiude;
+        private string longtiudeNew;
 
 
 
@@ -75,18 +77,6 @@ namespace RealmTodo.ViewModels
 
         }
 
-        //public EditMapPinViewModel(List<Pin> NewPinsList, Maui.GoogleMaps.Map newMyMap)
-        //{
-        //    Console.WriteLine($"-->  EditMapPinViewModel(pinsList,myMAp)!!");
-
-        //    this.pinsList = NewPinsList;
-        //    this.myMap = newMyMap;
-        //    if(pinsList == null || myMap==null)
-        //        Console.WriteLine($"--> pinsList or myMap  is null !!");
-
-
-
-        //}
 
 
 
@@ -99,20 +89,20 @@ namespace RealmTodo.ViewModels
             {
 
                 InitialMapPin = query["mappin"] as MapPin;
-                Mapname = InitialMapPin.Mapname;
-                Labelpin = InitialMapPin.Labelpin;
-                Address = InitialMapPin.Address;
-                Latitude = InitialMapPin.Latitude;
-                Longtiude = InitialMapPin.Longitude;
+                Map_nameNew = InitialMapPin.Mapname;
+                Label_pinNew = InitialMapPin.Labelpin;
+                AddressNew = InitialMapPin.Address;
+                LatitudeNew = InitialMapPin.Latitude;
+                LongtiudeNew = InitialMapPin.Longitude;
                 PageHeader = $"Modify Map: {InitialMapPin.Mapname}(PinMap)";
             }
             else // we're creating a new pin map
             {
-                Mapname = "";
-                Labelpin = "";
-                Address = "";
-                Latitude = "";
-                Longtiude = "";
+                Map_nameNew = "";
+                Label_pinNew = "";
+                AddressNew = "";
+                LatitudeNew = "";
+                LongtiudeNew = "";
 
                 PageHeader = "Create a New Map";
             }
@@ -269,10 +259,10 @@ namespace RealmTodo.ViewModels
                 if (InitialMapPin != null) // editing an item
                 {
                     InitialMapPin.Mapname = Summary;
-                    InitialMapPin.Labelpin = Labelpin;
-                    InitialMapPin.Address = Address;
-                    InitialMapPin.Latitude = Latitude;
-                    InitialMapPin.Longitude = Longtiude;
+                    InitialMapPin.Labelpin = Label_pinNew;
+                    InitialMapPin.Address = AddressNew;
+                    InitialMapPin.Latitude = LatitudeNew;
+                    InitialMapPin.Longitude = LongtiudeNew;
 
                 }
                 else // creating a new item
