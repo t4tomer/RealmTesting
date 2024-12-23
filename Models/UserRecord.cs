@@ -14,30 +14,30 @@ namespace RealmTodo.Models
         [Required]
         public string OwnerId { get; set; }
 
-        [MapTo("profilename")]
+        [MapTo("ProfileName")]//The variable that appears on the MONGO DB website
         [Required]
         public string ProfileName { get; set; }
 
 
-        [MapTo("mapname")]
+        [MapTo("MapName")]//The variable that appears on the MONGO DB website
         [Required]
 
         public string MapName { get; set; }
 
 
-        [MapTo("tracktime")]
+        [MapTo("TrackTime")]//The variable that appears on the MONGO DB website
         [Required]
         public string TrackTime { get; set; }
 
 
-
-        [MapTo("uploadateime")] // the date and time the user uploaded to mongodb.
+        //The variable that appears on the MONGO DB website
+        [MapTo("UploadDateTime")] // the date and time the user uploaded to mongodb.
         [Required]
 
         public string UploadDateTime { get; set; }
 
 
-        [MapTo("comment")] // user comments 
+        [MapTo("Comment")] // user comments 
         [Required]
 
         public string Comment { get; set; }

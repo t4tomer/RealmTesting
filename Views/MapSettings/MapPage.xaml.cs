@@ -210,6 +210,16 @@ namespace RealmTodo.Views
 
         }
 
+        private void StartExercise_Clicked(object sender, EventArgs e)
+        {
+            Console.WriteLine($"----> StartExercise_Clicked pressed!!!");
+            //GetCurrentLocation();
+
+        }
+
+
+
+
         private void DeletLastPoint_Clicked(object sender, EventArgs e)
         {
             List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
@@ -312,6 +322,13 @@ namespace RealmTodo.Views
             ZoomButton.IsVisible = true;
             DistanceButton.IsVisible = true;
 
+        }
+
+        public void ShowStartExerciseButton(bool cond)
+        {
+            Console.WriteLine($"----> ShowStartExerciseButton condtion:{cond}");
+
+            StartExcericeButton.IsVisible = cond;
         }
 
         public void ShowTrack_Clicked()//show the pins and the lines of the track 

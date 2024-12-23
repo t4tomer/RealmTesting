@@ -146,6 +146,7 @@ namespace RealmTodo.ViewModels
             {
 
                 mapPage.ClearMap();
+                mapPage.ShowStartExerciseButton(false);
                 mapPage.ShowButtonsOnMap(true);//show buttons on map
                 mapPage._canAddPins = true;// user can add pins on map
                 await Shell.Current.Navigation.PushAsync(mapPage);

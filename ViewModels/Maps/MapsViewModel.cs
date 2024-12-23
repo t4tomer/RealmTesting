@@ -89,7 +89,9 @@ namespace RealmTodo.ViewModels
             DateTime now = DateTime.Now;
 
             // Format it as a string
-            string formattedDateTime = now.ToString("yyyy-MM-dd HH:mm:ss");
+            //string formattedDateTime = now.ToString("yyyy-MM-dd HH:mm:ss");
+            string formattedDateTime = now.ToString("dd-MM-yyyy HH:mm:ss");
+
 
             return formattedDateTime;
         }
@@ -264,6 +266,7 @@ namespace RealmTodo.ViewModels
                 if (map.IsMine)
                 {
                     Console.WriteLine($"-->Track is  mine!!!");
+                    mapPage.ShowStartExerciseButton(true);//show the start exerice button on map
                     mapPage.ShowButtonsOnMap(true); // show buttons 
                     mapPage._canAddPins = true;
                     await Shell.Current.Navigation.PushAsync(mapPage);//1 way 
@@ -273,6 +276,8 @@ namespace RealmTodo.ViewModels
                 else
                 {
                     Console.WriteLine($"-->Track is not mine!!!");
+                    mapPage.ShowStartExerciseButton(true);//show the start exerice button on map
+
                     mapPage.ShowButtonsOnMap(false); // Remove buttons from the map 
                     mapPage._canAddPins = false;
                     await Shell.Current.Navigation.PushAsync(mapPage);//1 way 
@@ -308,7 +313,7 @@ namespace RealmTodo.ViewModels
             List<Maui.GoogleMaps.Pin> pinList = MapPage.Instance.GetPinList();
             if (await mapPage.IsLocationEnabled())
             {
-
+                mapPage.ShowStartExerciseButton(false);
                 mapPage.ClearMap();
                 mapPage.ShowButtonsOnMap(true);//show buttons on map
                 mapPage._canAddPins = true;// user can add pins on map

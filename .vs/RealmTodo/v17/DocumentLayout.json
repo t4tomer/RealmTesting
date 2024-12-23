@@ -3,20 +3,44 @@
   "WorkspaceRootPath": "D:\\GitHub\\RealmExamples\\RealmTesting\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\models\\userrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:models\\userrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\mappin\\mapspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\mappin\\mapspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\viewmodels\\userrecord\\edituserrecordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:viewmodels\\userrecord\\edituserrecordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\viewmodels\\maps\\mapsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:viewmodels\\maps\\mapsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\mapsettings\\mappage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\mapsettings\\mappage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\mapsettings\\mappage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\mapsettings\\mappage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\resources\\images\\start_excerice2.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:resources\\images\\start_excerice2.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\resources\\images\\edit_point.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:resources\\images\\edit_point.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\resources\\images\\distance.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:resources\\images\\distance.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\resources\\images\\back.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:resources\\images\\back.svg||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\models\\userrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:models\\userrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\viewmodels\\userrecord\\edituserrecordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:viewmodels\\userrecord\\edituserrecordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\viewmodels\\maps\\editmappinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,6 +57,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\models\\objectsingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:models\\objectsingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\viewmodels\\items\\itemsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:viewmodels\\items\\itemsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,25 +69,38 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 201,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 355,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 14,
+              "Title": "ItemsViewModel.cs",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\ViewModels\\Items\\ItemsViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\Items\\ItemsViewModel.cs",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\ViewModels\\Items\\ItemsViewModel.cs",
+              "RelativeToolTip": "ViewModels\\Items\\ItemsViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T16:38:41.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "MapsPage.xaml",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapPin\\MapsPage.xaml",
               "RelativeDocumentMoniker": "Views\\MapPin\\MapsPage.xaml",
               "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapPin\\MapsPage.xaml",
               "RelativeToolTip": "Views\\MapPin\\MapsPage.xaml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAADIAAAAZAAAA",
+              "ViewState": "AQIAADEAAAAAAAAAAAAMwEsAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-23T09:54:23.076Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "RealmService.cs",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Services\\RealmService.cs",
               "RelativeDocumentMoniker": "Services\\RealmService.cs",
@@ -67,12 +108,11 @@
               "RelativeToolTip": "Services\\RealmService.cs",
               "ViewState": "AQIAAIwAAAAAAAAAAAAswJwAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T09:51:26.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T09:51:26.94Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "ObjectSingleton.cs",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Models\\ObjectSingleton.cs",
               "RelativeDocumentMoniker": "Models\\ObjectSingleton.cs",
@@ -80,14 +120,13 @@
               "RelativeToolTip": "Models\\ObjectSingleton.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T09:51:11.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T09:51:11.471Z"
             }
           ]
         },
         {
-          "DockedWidth": 301,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 147,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -95,20 +134,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "MapPage.xaml.cs",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\MapPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\MapSettings\\MapPage.xaml.cs",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\MapPage.xaml.cs",
+              "RelativeToolTip": "Views\\MapSettings\\MapPage.xaml.cs",
+              "ViewState": "AQIAADYBAAAAAAAAAAAowD8BAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T16:34:14.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "edit_point.svg",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Resources\\Images\\edit_point.svg",
+              "RelativeDocumentMoniker": "Resources\\Images\\edit_point.svg",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Resources\\Images\\edit_point.svg",
+              "RelativeToolTip": "Resources\\Images\\edit_point.svg",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAgASURBVFhHxVZ7UFTnFf/de3f37oNd3qw8BFQeFhGrgo3BigarMQn5wxLMpNqGVDJJnNFOx5namSbtNDOdtA5tjUVbxmYmTEvTpjjNjJqpNdOHGmjIBERBHvKShwu7cHeBZd\u002B7PffuvbDASpqZzvTHHL7Hfvec33fO953v4P\u002BKUCjEyN2oaGpqOk/Nq\u002BFRGPTNina1viwXjh49\u002Bpr0wzJ8HoHQoUOH5NEXR39/P8bGRjE5aYXb7e4iEpvknxbAyu3nIryTIILB1SSAQGBRTCYTbLYpVFZWiioKLl682Ckpi8B/TYAoEAG5GwnfIFhXHVjhm2As28BaywDHOfi9XsTHx0vERVRVVYmkCurq6paQ\u002BAIekDsSiIz7LtjZarCWrwJ9P0Gw/wb8tjwEhCRwA29BNfgteOfnJc8oEEn4fL6C3xDkKajkNioU9iOCC58NCxiecoJXu1CRfgmJ\u002BCX8VjIwocNI7M/AxmwH46VDFeBg4IeQbDkOf7IHiYkJaGhogMfjgZe8kpOTA4vF8jKpPUniXvUQvvOHppA3bSu6yZA51YTi9U7s0X4fnPOvQJcL12dr8A/vc7AKDDatTURVaR5STDzmpqdhsBzDbHI9GF4DwW6Hy\u002BWCTqeD2bwGjY2NqKmpSSUTlkeGIPv01W0fjqkwzPLY/EQBXvhyD/YZq6Gy/wVoc\u002BPvKY3ozH8dzJYdmNtajGZBhZ9evovOMQf0cfFgDOngVCoYDAZkZGQgNzdXavV6veJZrfgvKgHROMOGvptfUY6S7Smo5N9FJvMGMNyC4G0Vfpf0RzRzuzFvSoY\u002B0YSszDioN2bjfswanL/ejZ5xK4KaLWBYRb3oaFHCIVVCK2IFATJupiWvvfDSE0/vyOJxIHQRJua3QE8zArfVeNN2ATduJ8Jy5yGEzmF4HU5oSHdKoh6xaQl4YExD/T8HMaXaB7VO3KQSZdFouL8qAfr1pacObinfnsbH7Qk2Qs80Avduwn9XhZsZl1D9bBUufHs3Th/IR9kaHSZvdSAwPUOu5pCQoIUmOR7DLh5/apunEKhlm\u002BErrNh9JIHs713OSk\u002BNLXtsa1r2TnwEI9dAV\u002BwGAvdU6C64gl07n0R6gl5Sajbp8GRhGg6VZMHZPwrO54cxRo3YODVmU9fik4FpjE7PSXoX7YU7jyTAMMzOXSWZOcVsF9aozgKDHyHUyeDXvlrkbaIEI3sz4nuU5iRh3jYN1uuHljZsMKhhICJzQRVa\u002ByblVSIiPorAkjzAq9mi3esC6fnMm8DYZaADuLbxV7jXXoTvvNdGhoOScXEH4V2ERNK0ixC5m9jRdniOgU6rgl1jRK9lRia71HikB5YQSIpBxi5VI8/MXKV7DnyadQrjOS\u002BipFBHXzFL1ITNEyjR\u002BfwhuAMMyAlEhINKw8EdE4MJx4i4YgGK3aghoEn2xc3dm7X\u002B9xncn4WVyUV73utg9TqwtDuW3MtFiHi\u002B1JxoENDQ72rS5CW9QT\u002BxCPiJF0PEAqJmWb/USIgkIEeVJoW34x2OG0M64ZKJ6wEailvBpBWRcQ4f//5jSUFIzOvUkf6CchjEsaQw3A9GzBWuTcDJp4rEoYwQeF6Lc\u002BfO4cSJE\u002BtoYkgKgbj7kOUbz2tU/xJTHz4w/wgOYx5MlEgCriBoo/jFkWKwFO/weqkhLHQkPGp\u002B5XgRSghYhrMeZgTB65wxeK7qj8BKD8uMJwAfOZOPNaD3YfhALTeizEUzvnR\u002BEZEhkDzgGz6coeZbc9Xjfk/tUJnFlsFs1M37odOo6TGhBLPejD\u002B3DuN0RRFUMmWlmrPNufCD91pgd3phpNMfDAQRp1cjPV6P/VuzUZiZtLBWIRdJQFLHBWzFcDnBOoJTjZ2bPgxNCsNWuw/2eR9c/iCMmclwxujx8ysddLUcCFD8Z90\u002B3Oq14K0PPoMuKxOZz5QjoWI/Yp/dDyFjPWbmPSigFzIM0WAUVxDCZyBoN9ORhXcaLcmtf2tqS8xPWa81JnJqNoahc5oQo0HGjlwIfRacvzmIeWEGDMdCF2\u002BC7ks59BCYQfQxPevD5JAVGwa78MrhUvqSrm4Uuys8EHQ5Q6DbMyvgQcpAq5Xz\u002B870X2\u002B5\u002BnDIhpFpLybnfBA8dO2yUpFatgXrni5F6tceQ0xxIQLpGXCEWIzYPBjoHIOx\u002Bw6q9xXBHGcgzUt3rthdQcA55WoTE4pWD56G3pL6Yx3klh8bb/8b/PA47ltc6J/yYozOhdXHwEaOs1MymKDqZ0Rwo29kFo67vcgf78DJ/fnYvoEe1GWGwzYX5xRIBF7e\u002B\u002BDToBu39JnYSzUDpT1wo3VHOg\u002Bke7E3gYO5vR2aO70QukbR12NDR78DPfemMNU\u002BCO8nd5Dc3oIytYA3qkpRujFNVLkMouFIQot98YqDivVQwIPm3BysO3gQ1V8/irwf1uArvoC\u002BvKL8GTxOceZpgWpaQKwwCWawH3FTD5FD9eG2FB7P79yAysfzEWvQSEojEWFLgopSaHNzM65du0avHewLmfA5CjE1cSSxJGIp695z9uzYK8ePE/cQldRKdRu5E7kjYZklQjS3a7U61NbW4tSpU1ImlG818D6lAxIryX2SAZJxnuo5luOotFaUKCQUiGNFxDVhEdeL5Xj49QynZUWWY4FANCgfqNVqaDQaEqp4NPyC8LwuqojVr06njyrLsRCCaKivrz9PJF5dvoPI8fK5aP3IVsTExMSVM2fOHKOuZVUCMsTKUjwbUhn9P4KbxA7A/R/p8uJkqR8S6QAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-12-23T15:15:58.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "start_excerice2.svg",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Resources\\Images\\start_excerice2.svg",
+              "RelativeDocumentMoniker": "Resources\\Images\\start_excerice2.svg",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Resources\\Images\\start_excerice2.svg",
+              "RelativeToolTip": "Resources\\Images\\start_excerice2.svg",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAArAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAgASURBVFhHxVZ7UFTnFf/de3f37oNd3qw8BFQeFhGrgo3BigarMQn5wxLMpNqGVDJJnNFOx5namSbtNDOdtA5tjUVbxmYmTEvTpjjNjJqpNdOHGmjIBERBHvKShwu7cHeBZd\u002B7PffuvbDASpqZzvTHHL7Hfvec33fO953v4P\u002BKUCjEyN2oaGpqOk/Nq\u002BFRGPTNina1viwXjh49\u002Bpr0wzJ8HoHQoUOH5NEXR39/P8bGRjE5aYXb7e4iEpvknxbAyu3nIryTIILB1SSAQGBRTCYTbLYpVFZWiioKLl682Ckpi8B/TYAoEAG5GwnfIFhXHVjhm2As28BaywDHOfi9XsTHx0vERVRVVYmkCurq6paQ\u002BAIekDsSiIz7LtjZarCWrwJ9P0Gw/wb8tjwEhCRwA29BNfgteOfnJc8oEEn4fL6C3xDkKajkNioU9iOCC58NCxiecoJXu1CRfgmJ\u002BCX8VjIwocNI7M/AxmwH46VDFeBg4IeQbDkOf7IHiYkJaGhogMfjgZe8kpOTA4vF8jKpPUniXvUQvvOHppA3bSu6yZA51YTi9U7s0X4fnPOvQJcL12dr8A/vc7AKDDatTURVaR5STDzmpqdhsBzDbHI9GF4DwW6Hy\u002BWCTqeD2bwGjY2NqKmpSSUTlkeGIPv01W0fjqkwzPLY/EQBXvhyD/YZq6Gy/wVoc\u002BPvKY3ozH8dzJYdmNtajGZBhZ9evovOMQf0cfFgDOngVCoYDAZkZGQgNzdXavV6veJZrfgvKgHROMOGvptfUY6S7Smo5N9FJvMGMNyC4G0Vfpf0RzRzuzFvSoY\u002B0YSszDioN2bjfswanL/ejZ5xK4KaLWBYRb3oaFHCIVVCK2IFATJupiWvvfDSE0/vyOJxIHQRJua3QE8zArfVeNN2ATduJ8Jy5yGEzmF4HU5oSHdKoh6xaQl4YExD/T8HMaXaB7VO3KQSZdFouL8qAfr1pacObinfnsbH7Qk2Qs80Avduwn9XhZsZl1D9bBUufHs3Th/IR9kaHSZvdSAwPUOu5pCQoIUmOR7DLh5/apunEKhlm\u002BErrNh9JIHs713OSk\u002BNLXtsa1r2TnwEI9dAV\u002BwGAvdU6C64gl07n0R6gl5Sajbp8GRhGg6VZMHZPwrO54cxRo3YODVmU9fik4FpjE7PSXoX7YU7jyTAMMzOXSWZOcVsF9aozgKDHyHUyeDXvlrkbaIEI3sz4nuU5iRh3jYN1uuHljZsMKhhICJzQRVa\u002ByblVSIiPorAkjzAq9mi3esC6fnMm8DYZaADuLbxV7jXXoTvvNdGhoOScXEH4V2ERNK0ixC5m9jRdniOgU6rgl1jRK9lRia71HikB5YQSIpBxi5VI8/MXKV7DnyadQrjOS\u002BipFBHXzFL1ITNEyjR\u002BfwhuAMMyAlEhINKw8EdE4MJx4i4YgGK3aghoEn2xc3dm7X\u002B9xncn4WVyUV73utg9TqwtDuW3MtFiHi\u002B1JxoENDQ72rS5CW9QT\u002BxCPiJF0PEAqJmWb/USIgkIEeVJoW34x2OG0M64ZKJ6wEailvBpBWRcQ4f//5jSUFIzOvUkf6CchjEsaQw3A9GzBWuTcDJp4rEoYwQeF6Lc\u002BfO4cSJE\u002BtoYkgKgbj7kOUbz2tU/xJTHz4w/wgOYx5MlEgCriBoo/jFkWKwFO/weqkhLHQkPGp\u002B5XgRSghYhrMeZgTB65wxeK7qj8BKD8uMJwAfOZOPNaD3YfhALTeizEUzvnR\u002BEZEhkDzgGz6coeZbc9Xjfk/tUJnFlsFs1M37odOo6TGhBLPejD\u002B3DuN0RRFUMmWlmrPNufCD91pgd3phpNMfDAQRp1cjPV6P/VuzUZiZtLBWIRdJQFLHBWzFcDnBOoJTjZ2bPgxNCsNWuw/2eR9c/iCMmclwxujx8ysddLUcCFD8Z90\u002B3Oq14K0PPoMuKxOZz5QjoWI/Yp/dDyFjPWbmPSigFzIM0WAUVxDCZyBoN9ORhXcaLcmtf2tqS8xPWa81JnJqNoahc5oQo0HGjlwIfRacvzmIeWEGDMdCF2\u002BC7ks59BCYQfQxPevD5JAVGwa78MrhUvqSrm4Uuys8EHQ5Q6DbMyvgQcpAq5Xz\u002B870X2\u002B5\u002BnDIhpFpLybnfBA8dO2yUpFatgXrni5F6tceQ0xxIQLpGXCEWIzYPBjoHIOx\u002Bw6q9xXBHGcgzUt3rthdQcA55WoTE4pWD56G3pL6Yx3klh8bb/8b/PA47ltc6J/yYozOhdXHwEaOs1MymKDqZ0Rwo29kFo67vcgf78DJ/fnYvoEe1GWGwzYX5xRIBF7e\u002B\u002BDToBu39JnYSzUDpT1wo3VHOg\u002Bke7E3gYO5vR2aO70QukbR12NDR78DPfemMNU\u002BCO8nd5Dc3oIytYA3qkpRujFNVLkMouFIQot98YqDivVQwIPm3BysO3gQ1V8/irwf1uArvoC\u002BvKL8GTxOceZpgWpaQKwwCWawH3FTD5FD9eG2FB7P79yAysfzEWvQSEojEWFLgopSaHNzM65du0avHewLmfA5CjE1cSSxJGIp695z9uzYK8ePE/cQldRKdRu5E7kjYZklQjS3a7U61NbW4tSpU1ImlG818D6lAxIryX2SAZJxnuo5luOotFaUKCQUiGNFxDVhEdeL5Xj49QynZUWWY4FANCgfqNVqaDQaEqp4NPyC8LwuqojVr06njyrLsRCCaKivrz9PJF5dvoPI8fK5aP3IVsTExMSVM2fOHKOuZVUCMsTKUjwbUhn9P4KbxA7A/R/p8uJkqR8S6QAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-12-23T15:15:54.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MapPage.xaml",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\MapPage.xaml",
+              "RelativeDocumentMoniker": "Views\\MapSettings\\MapPage.xaml",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\MapPage.xaml",
+              "RelativeToolTip": "Views\\MapSettings\\MapPage.xaml",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAFMAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-23T15:10:04.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "distance.svg",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Resources\\Images\\distance.svg",
+              "RelativeDocumentMoniker": "Resources\\Images\\distance.svg",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Resources\\Images\\distance.svg",
+              "RelativeToolTip": "Resources\\Images\\distance.svg",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAGAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAgASURBVFhHxVZ7UFTnFf/de3f37oNd3qw8BFQeFhGrgo3BigarMQn5wxLMpNqGVDJJnNFOx5namSbtNDOdtA5tjUVbxmYmTEvTpjjNjJqpNdOHGmjIBERBHvKShwu7cHeBZd\u002B7PffuvbDASpqZzvTHHL7Hfvec33fO953v4P\u002BKUCjEyN2oaGpqOk/Nq\u002BFRGPTNina1viwXjh49\u002Bpr0wzJ8HoHQoUOH5NEXR39/P8bGRjE5aYXb7e4iEpvknxbAyu3nIryTIILB1SSAQGBRTCYTbLYpVFZWiioKLl682Ckpi8B/TYAoEAG5GwnfIFhXHVjhm2As28BaywDHOfi9XsTHx0vERVRVVYmkCurq6paQ\u002BAIekDsSiIz7LtjZarCWrwJ9P0Gw/wb8tjwEhCRwA29BNfgteOfnJc8oEEn4fL6C3xDkKajkNioU9iOCC58NCxiecoJXu1CRfgmJ\u002BCX8VjIwocNI7M/AxmwH46VDFeBg4IeQbDkOf7IHiYkJaGhogMfjgZe8kpOTA4vF8jKpPUniXvUQvvOHppA3bSu6yZA51YTi9U7s0X4fnPOvQJcL12dr8A/vc7AKDDatTURVaR5STDzmpqdhsBzDbHI9GF4DwW6Hy\u002BWCTqeD2bwGjY2NqKmpSSUTlkeGIPv01W0fjqkwzPLY/EQBXvhyD/YZq6Gy/wVoc\u002BPvKY3ozH8dzJYdmNtajGZBhZ9evovOMQf0cfFgDOngVCoYDAZkZGQgNzdXavV6veJZrfgvKgHROMOGvptfUY6S7Smo5N9FJvMGMNyC4G0Vfpf0RzRzuzFvSoY\u002B0YSszDioN2bjfswanL/ejZ5xK4KaLWBYRb3oaFHCIVVCK2IFATJupiWvvfDSE0/vyOJxIHQRJua3QE8zArfVeNN2ATduJ8Jy5yGEzmF4HU5oSHdKoh6xaQl4YExD/T8HMaXaB7VO3KQSZdFouL8qAfr1pacObinfnsbH7Qk2Qs80Avduwn9XhZsZl1D9bBUufHs3Th/IR9kaHSZvdSAwPUOu5pCQoIUmOR7DLh5/apunEKhlm\u002BErrNh9JIHs713OSk\u002BNLXtsa1r2TnwEI9dAV\u002BwGAvdU6C64gl07n0R6gl5Sajbp8GRhGg6VZMHZPwrO54cxRo3YODVmU9fik4FpjE7PSXoX7YU7jyTAMMzOXSWZOcVsF9aozgKDHyHUyeDXvlrkbaIEI3sz4nuU5iRh3jYN1uuHljZsMKhhICJzQRVa\u002ByblVSIiPorAkjzAq9mi3esC6fnMm8DYZaADuLbxV7jXXoTvvNdGhoOScXEH4V2ERNK0ixC5m9jRdniOgU6rgl1jRK9lRia71HikB5YQSIpBxi5VI8/MXKV7DnyadQrjOS\u002BipFBHXzFL1ITNEyjR\u002BfwhuAMMyAlEhINKw8EdE4MJx4i4YgGK3aghoEn2xc3dm7X\u002B9xncn4WVyUV73utg9TqwtDuW3MtFiHi\u002B1JxoENDQ72rS5CW9QT\u002BxCPiJF0PEAqJmWb/USIgkIEeVJoW34x2OG0M64ZKJ6wEailvBpBWRcQ4f//5jSUFIzOvUkf6CchjEsaQw3A9GzBWuTcDJp4rEoYwQeF6Lc\u002BfO4cSJE\u002BtoYkgKgbj7kOUbz2tU/xJTHz4w/wgOYx5MlEgCriBoo/jFkWKwFO/weqkhLHQkPGp\u002B5XgRSghYhrMeZgTB65wxeK7qj8BKD8uMJwAfOZOPNaD3YfhALTeizEUzvnR\u002BEZEhkDzgGz6coeZbc9Xjfk/tUJnFlsFs1M37odOo6TGhBLPejD\u002B3DuN0RRFUMmWlmrPNufCD91pgd3phpNMfDAQRp1cjPV6P/VuzUZiZtLBWIRdJQFLHBWzFcDnBOoJTjZ2bPgxNCsNWuw/2eR9c/iCMmclwxujx8ysddLUcCFD8Z90\u002B3Oq14K0PPoMuKxOZz5QjoWI/Yp/dDyFjPWbmPSigFzIM0WAUVxDCZyBoN9ORhXcaLcmtf2tqS8xPWa81JnJqNoahc5oQo0HGjlwIfRacvzmIeWEGDMdCF2\u002BC7ks59BCYQfQxPevD5JAVGwa78MrhUvqSrm4Uuys8EHQ5Q6DbMyvgQcpAq5Xz\u002B870X2\u002B5\u002BnDIhpFpLybnfBA8dO2yUpFatgXrni5F6tceQ0xxIQLpGXCEWIzYPBjoHIOx\u002Bw6q9xXBHGcgzUt3rthdQcA55WoTE4pWD56G3pL6Yx3klh8bb/8b/PA47ltc6J/yYozOhdXHwEaOs1MymKDqZ0Rwo29kFo67vcgf78DJ/fnYvoEe1GWGwzYX5xRIBF7e\u002B\u002BDToBu39JnYSzUDpT1wo3VHOg\u002Bke7E3gYO5vR2aO70QukbR12NDR78DPfemMNU\u002BCO8nd5Dc3oIytYA3qkpRujFNVLkMouFIQot98YqDivVQwIPm3BysO3gQ1V8/irwf1uArvoC\u002BvKL8GTxOceZpgWpaQKwwCWawH3FTD5FD9eG2FB7P79yAysfzEWvQSEojEWFLgopSaHNzM65du0avHewLmfA5CjE1cSSxJGIp695z9uzYK8ePE/cQldRKdRu5E7kjYZklQjS3a7U61NbW4tSpU1ImlG818D6lAxIryX2SAZJxnuo5luOotFaUKCQUiGNFxDVhEdeL5Xj49QynZUWWY4FANCgfqNVqaDQaEqp4NPyC8LwuqojVr06njyrLsRCCaKivrz9PJF5dvoPI8fK5aP3IVsTExMSVM2fOHKOuZVUCMsTKUjwbUhn9P4KbxA7A/R/p8uJkqR8S6QAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-12-23T15:06:07.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "back.svg",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Resources\\Images\\back.svg",
+              "RelativeDocumentMoniker": "Resources\\Images\\back.svg",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Resources\\Images\\back.svg",
+              "RelativeToolTip": "Resources\\Images\\back.svg",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAGAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAgASURBVFhHxVZ7UFTnFf/de3f37oNd3qw8BFQeFhGrgo3BigarMQn5wxLMpNqGVDJJnNFOx5namSbtNDOdtA5tjUVbxmYmTEvTpjjNjJqpNdOHGmjIBERBHvKShwu7cHeBZd\u002B7PffuvbDASpqZzvTHHL7Hfvec33fO953v4P\u002BKUCjEyN2oaGpqOk/Nq\u002BFRGPTNina1viwXjh49\u002Bpr0wzJ8HoHQoUOH5NEXR39/P8bGRjE5aYXb7e4iEpvknxbAyu3nIryTIILB1SSAQGBRTCYTbLYpVFZWiioKLl682Ckpi8B/TYAoEAG5GwnfIFhXHVjhm2As28BaywDHOfi9XsTHx0vERVRVVYmkCurq6paQ\u002BAIekDsSiIz7LtjZarCWrwJ9P0Gw/wb8tjwEhCRwA29BNfgteOfnJc8oEEn4fL6C3xDkKajkNioU9iOCC58NCxiecoJXu1CRfgmJ\u002BCX8VjIwocNI7M/AxmwH46VDFeBg4IeQbDkOf7IHiYkJaGhogMfjgZe8kpOTA4vF8jKpPUniXvUQvvOHppA3bSu6yZA51YTi9U7s0X4fnPOvQJcL12dr8A/vc7AKDDatTURVaR5STDzmpqdhsBzDbHI9GF4DwW6Hy\u002BWCTqeD2bwGjY2NqKmpSSUTlkeGIPv01W0fjqkwzPLY/EQBXvhyD/YZq6Gy/wVoc\u002BPvKY3ozH8dzJYdmNtajGZBhZ9evovOMQf0cfFgDOngVCoYDAZkZGQgNzdXavV6veJZrfgvKgHROMOGvptfUY6S7Smo5N9FJvMGMNyC4G0Vfpf0RzRzuzFvSoY\u002B0YSszDioN2bjfswanL/ejZ5xK4KaLWBYRb3oaFHCIVVCK2IFATJupiWvvfDSE0/vyOJxIHQRJua3QE8zArfVeNN2ATduJ8Jy5yGEzmF4HU5oSHdKoh6xaQl4YExD/T8HMaXaB7VO3KQSZdFouL8qAfr1pacObinfnsbH7Qk2Qs80Avduwn9XhZsZl1D9bBUufHs3Th/IR9kaHSZvdSAwPUOu5pCQoIUmOR7DLh5/apunEKhlm\u002BErrNh9JIHs713OSk\u002BNLXtsa1r2TnwEI9dAV\u002BwGAvdU6C64gl07n0R6gl5Sajbp8GRhGg6VZMHZPwrO54cxRo3YODVmU9fik4FpjE7PSXoX7YU7jyTAMMzOXSWZOcVsF9aozgKDHyHUyeDXvlrkbaIEI3sz4nuU5iRh3jYN1uuHljZsMKhhICJzQRVa\u002ByblVSIiPorAkjzAq9mi3esC6fnMm8DYZaADuLbxV7jXXoTvvNdGhoOScXEH4V2ERNK0ixC5m9jRdniOgU6rgl1jRK9lRia71HikB5YQSIpBxi5VI8/MXKV7DnyadQrjOS\u002BipFBHXzFL1ITNEyjR\u002BfwhuAMMyAlEhINKw8EdE4MJx4i4YgGK3aghoEn2xc3dm7X\u002B9xncn4WVyUV73utg9TqwtDuW3MtFiHi\u002B1JxoENDQ72rS5CW9QT\u002BxCPiJF0PEAqJmWb/USIgkIEeVJoW34x2OG0M64ZKJ6wEailvBpBWRcQ4f//5jSUFIzOvUkf6CchjEsaQw3A9GzBWuTcDJp4rEoYwQeF6Lc\u002BfO4cSJE\u002BtoYkgKgbj7kOUbz2tU/xJTHz4w/wgOYx5MlEgCriBoo/jFkWKwFO/weqkhLHQkPGp\u002B5XgRSghYhrMeZgTB65wxeK7qj8BKD8uMJwAfOZOPNaD3YfhALTeizEUzvnR\u002BEZEhkDzgGz6coeZbc9Xjfk/tUJnFlsFs1M37odOo6TGhBLPejD\u002B3DuN0RRFUMmWlmrPNufCD91pgd3phpNMfDAQRp1cjPV6P/VuzUZiZtLBWIRdJQFLHBWzFcDnBOoJTjZ2bPgxNCsNWuw/2eR9c/iCMmclwxujx8ysddLUcCFD8Z90\u002B3Oq14K0PPoMuKxOZz5QjoWI/Yp/dDyFjPWbmPSigFzIM0WAUVxDCZyBoN9ORhXcaLcmtf2tqS8xPWa81JnJqNoahc5oQo0HGjlwIfRacvzmIeWEGDMdCF2\u002BC7ks59BCYQfQxPevD5JAVGwa78MrhUvqSrm4Uuys8EHQ5Q6DbMyvgQcpAq5Xz\u002B870X2\u002B5\u002BnDIhpFpLybnfBA8dO2yUpFatgXrni5F6tceQ0xxIQLpGXCEWIzYPBjoHIOx\u002Bw6q9xXBHGcgzUt3rthdQcA55WoTE4pWD56G3pL6Yx3klh8bb/8b/PA47ltc6J/yYozOhdXHwEaOs1MymKDqZ0Rwo29kFo67vcgf78DJ/fnYvoEe1GWGwzYX5xRIBF7e\u002B\u002BDToBu39JnYSzUDpT1wo3VHOg\u002Bke7E3gYO5vR2aO70QukbR12NDR78DPfemMNU\u002BCO8nd5Dc3oIytYA3qkpRujFNVLkMouFIQot98YqDivVQwIPm3BysO3gQ1V8/irwf1uArvoC\u002BvKL8GTxOceZpgWpaQKwwCWawH3FTD5FD9eG2FB7P79yAysfzEWvQSEojEWFLgopSaHNzM65du0avHewLmfA5CjE1cSSxJGIp695z9uzYK8ePE/cQldRKdRu5E7kjYZklQjS3a7U61NbW4tSpU1ImlG818D6lAxIryX2SAZJxnuo5luOotFaUKCQUiGNFxDVhEdeL5Xj49QynZUWWY4FANCgfqNVqaDQaEqp4NPyC8LwuqojVr06njyrLsRCCaKivrz9PJF5dvoPI8fK5aP3IVsTExMSVM2fOHKOuZVUCMsTKUjwbUhn9P4KbxA7A/R/p8uJkqR8S6QAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-12-23T15:05:20.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "UserRecord.cs",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Models\\UserRecord.cs",
               "RelativeDocumentMoniker": "Models\\UserRecord.cs",
               "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Models\\UserRecord.cs",
               "RelativeToolTip": "Models\\UserRecord.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAADwvx8AAAAAAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAgwCMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-23T10:17:28.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "EditMapPinViewModel.cs",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\ViewModels\\Maps\\EditMapPinViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\Maps\\EditMapPinViewModel.cs",
@@ -116,12 +233,11 @@
               "RelativeToolTip": "ViewModels\\Maps\\EditMapPinViewModel.cs",
               "ViewState": "AQIAAKoAAAAAAAAAAAAgwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T10:09:43.067Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-23T10:09:43.067Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "EditUserRecordViewModel.cs",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\ViewModels\\UserRecord\\EditUserRecordViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\UserRecord\\EditUserRecordViewModel.cs",
@@ -134,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "EditItemViewModel.cs",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\ViewModels\\Items\\EditItemViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\Items\\EditItemViewModel.cs",
@@ -147,13 +263,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MapsViewModel.cs",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\ViewModels\\Maps\\MapsViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\Maps\\MapsViewModel.cs",
               "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\ViewModels\\Maps\\MapsViewModel.cs",
               "RelativeToolTip": "ViewModels\\Maps\\MapsViewModel.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAQwDcAAAAAAAAA",
+              "ViewState": "AQIAACsBAAAAAAAAAIAwwDABAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-23T09:57:31.326Z",
               "EditorCaption": ""

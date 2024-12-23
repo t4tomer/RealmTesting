@@ -155,6 +155,7 @@ namespace RealmTodo.ViewModels
                 if (InitialItem.IsMine)
                 {
                     Console.WriteLine($"-->Track is  mine!!!");
+                    mapPage.ShowStartExerciseButton(true);//show start exercise button
                     mapPage.ShowButtonsOnMap(true); // show buttons 
                     mapPage._canAddPins = true;
                     await Shell.Current.Navigation.PushAsync(mapPage);
@@ -162,6 +163,7 @@ namespace RealmTodo.ViewModels
                 else
                 {
                     Console.WriteLine($"-->Track is not mine!!!");
+                    mapPage.ShowStartExerciseButton(true);//show start exercise button
                     mapPage.ShowButtonsOnMap(false); // Remove buttons from the map 
                     mapPage._canAddPins = false;
                     await Shell.Current.Navigation.PushAsync(mapPage);

@@ -3233,3 +3233,13 @@ D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\draw
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\refresh.png
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\RealmTodo.csproj.Fody.CopyLocal.cache
 D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\RealmTodo.csproj.Fody.RuntimeCopyLocal.cache
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\start_excerice.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\start_excerice.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\start_excerice.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\start_excerice.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\start_excerice.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-hdpi\start_excerice2.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-mdpi\start_excerice2.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xhdpi\start_excerice2.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxhdpi\start_excerice2.png
+D:\GitHub\RealmExamples\RealmTesting\obj\Debug\net7.0-android\resizetizer\r\drawable-xxxhdpi\start_excerice2.png
