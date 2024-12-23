@@ -28,6 +28,8 @@
             <RowDefinition Height="70" />
             <RowDefinition Height="60" />
             <RowDefinition Height="60" />
+            <RowDefinition Height="60" />
+
         </Grid.RowDefinitions>
         <StackLayout Orientation="Horizontal"
                      BackgroundColor="#E3FCF7"
@@ -90,6 +92,9 @@
                 Padding="5,0,5,10"
                 Command="{Binding ToTimerPageCommand}"
                 BackgroundColor="Purple"/>
+            
+            
+            
 
         </Border>
         <Frame Grid.Row="3" Padding="10" BorderColor="Black" BackgroundColor="#E3FCF7" Margin="5">
@@ -121,6 +126,15 @@
 
 
 
+
+        <Button
+            Grid.Row="5"
+            Margin="5"
+            Text="Save UserRecord"
+            FontSize="12" 
+            Padding="5,0,5,10"        
+            Command="{Binding SaveUserRecordCommand}"
+            BackgroundColor="BlueViolet"/>
 
 
 

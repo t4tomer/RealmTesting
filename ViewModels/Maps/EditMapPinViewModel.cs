@@ -217,6 +217,10 @@ namespace RealmTodo.ViewModels
         {
             Console.WriteLine($"SavePin EditMapPin -->'{newPin.Label}': {newPin.Address}");
 
+            var singleton = ObjectSingleton.Instance;
+            singleton.SetMapPinType();
+
+
             var realm = RealmService.GetMainThreadRealm();
 
 
@@ -225,13 +229,13 @@ namespace RealmTodo.ViewModels
 
             if (!mapPinSubscriptionExists)
             {
-                Console.WriteLine("No existing subscription for Dog. Adding one now...");
+                Console.WriteLine("No existing subscription for MapPin. Adding one now...");
 
                 // Add the subscription synchronously
                 realm.Subscriptions.Update(() =>
                 {
-                    var dogQuery = realm.All<MapPin>().Where(d => d.OwnerId == RealmService.CurrentUser.Id);
-                    realm.Subscriptions.Add(dogQuery, new SubscriptionOptions { Name = "DogSubscription" });
+                    var mapPinQuery = realm.All<MapPin>().Where(d => d.OwnerId == RealmService.CurrentUser.Id);
+                    realm.Subscriptions.Add(mapPinQuery, new SubscriptionOptions { Name = "DogSubscription" });
                 });
 
                 Console.WriteLine("MapPin subscription added. Waiting for synchronization...");

@@ -116,11 +116,7 @@ namespace RealmTodo.ViewModels
 
 
 
-        [RelayCommand]
-        public void TestCommand(MapPin pin)
-        {
-            Console.WriteLine("TestCommand triggered!");
-        }
+ 
 
 
         //method that is used to edit map

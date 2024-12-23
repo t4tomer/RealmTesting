@@ -272,6 +272,8 @@ namespace RealmTodo.ViewModels
             int numberOfPins = pinsList.Count;
             Console.WriteLine($"--> number of pins(SaveItem):{numberOfPins}!!!");
             */
+            var singleton = ObjectSingleton.Instance;
+            singleton.SetItemType();
 
             var realm = RealmService.GetMainThreadRealm();
 

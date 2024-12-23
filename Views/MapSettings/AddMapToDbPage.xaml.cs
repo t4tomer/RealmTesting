@@ -5,6 +5,8 @@ using Microsoft.Maui.Maps;
 using Position = Maui.GoogleMaps.Position;
 using Microsoft.Maui.Controls.Maps;
 using System.Net.NetworkInformation;
+using RealmTodo.Models;
+
 
 namespace RealmTodo.Views
 {
@@ -31,6 +33,11 @@ namespace RealmTodo.Views
 
         public AddMapToDbPage(List<Maui.GoogleMaps.Pin> newPinsList, Maui.GoogleMaps.Map newMyMap)
         {
+            //set singlton to mappin 
+            var singleton = ObjectSingleton.Instance;
+            singleton.SetMapPinType();
+            
+
             InitializeComponent();
             this.pinsList = newPinsList;
             this.myMap = newMyMap;

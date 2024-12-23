@@ -59,37 +59,7 @@ namespace RealmTodo.Services
 
         }
 
-        public static Realm GetRealmForMultipleTypes()
-        {
 
-            Console.WriteLine("Adding subscriptions for both Dog and Item.");
-
-            config3 = new FlexibleSyncConfiguration(app.CurrentUser)
-            {
-                PopulateInitialSubscriptions = (realm3) =>
-                {
-                    Console.WriteLine("FlexibleSyncConfiguration-GetRealmForMultipleTypes1");
-
-                  
-                    // Add Item subscription
-                    var (itemQuery, itemQueryName) = GetQueryForSubscriptionItemType(realm3, SubscriptionType.Mine);
-                    realm3.Subscriptions.Add(itemQuery, new SubscriptionOptions { Name = itemQueryName });
-
-                    //Add MapPin subscroption 
-                    var (mapPinQuery, mapPinQueryName) = GetQueryForSubscriptionMapPinType(realm3, SubscriptionType.Mine);
-                    realm3.Subscriptions.Add(mapPinQuery, new SubscriptionOptions { Name = mapPinQueryName });
-
-
-
-                    //realm3.Subscriptions.WaitForSynchronizationAsync().Wait();
-                    Console.WriteLine("Subscriptions synchronized successfully.");
-
-                }
-            };
-
-            Console.WriteLine("Returning Realm with subscriptions for both Dog and Item.");
-            return Realm.GetInstance(config3);
-        }
         private static (IQueryable<MapPin> Query, string Name) GetQueryForSubscriptionMapPinType(Realm realm, SubscriptionType subType)
         {
 
@@ -116,6 +86,37 @@ namespace RealmTodo.Services
 
             return (query, queryName);
         }
+
+        private static (IQueryable<UserRecord> Query, string Name) GetQueryForSubscriptionUserRecordType(Realm realm, SubscriptionType subType)
+        {
+
+            Console.WriteLine($"(GetQueryForSubscriptionDogType)inputObject is UserRecord ");
+
+
+            IQueryable<UserRecord> query = null;
+            string queryName = null;
+
+            if (subType == SubscriptionType.Mine)
+            {
+                query = realm.All<UserRecord>().Where(i => i.OwnerId == CurrentUser.Id);
+                queryName = "mine";
+            }
+            else if (subType == SubscriptionType.All)
+            {
+                query = realm.All<UserRecord>();
+                queryName = "all";
+            }
+            else
+            {
+                throw new ArgumentException("Unknown subscription type");
+            }
+
+            return (query, queryName);
+        }
+
+
+
+
         // new method-used for adding Item class 
         private static (IQueryable<Item> Query, string Name) GetQueryForSubscriptionItemType(Realm realm, SubscriptionType subType)
         {
@@ -147,13 +148,13 @@ namespace RealmTodo.Services
         {
 
             var singleton = ObjectSingleton.Instance;
-
+            
             // Default type
             Console.WriteLine($"Default type: {singleton.GetCurrentType().Name}");
 
             if (singleton.GetCurrentType() == typeof(MapPin))
             {
-                Console.WriteLine($"the type is MapPin");
+                Console.WriteLine($"GetRealm type is MapPin");
 
                 var configPinMap = new FlexibleSyncConfiguration(app.CurrentUser)
                 {
@@ -168,17 +169,34 @@ namespace RealmTodo.Services
 
             }
 
+            else if (singleton.GetCurrentType() == typeof(Item))
+            {
+                Console.WriteLine($" GetRealm the type is Item");
 
-            var configItem = new FlexibleSyncConfiguration(app.CurrentUser)
+                var configItem = new FlexibleSyncConfiguration(app.CurrentUser)
+                {
+                    PopulateInitialSubscriptions = (realm) =>
+                    {
+                        var (query, queryName) = GetQueryForSubscriptionItemType(realm, SubscriptionType.Mine);
+                        realm.Subscriptions.Add(query, new SubscriptionOptions { Name = queryName });
+                    }
+                };
+                return Realm.GetInstance(configItem);
+
+            }
+            Console.WriteLine($" GetRealm the type is UserRecord");
+
+            var configUserRecord = new FlexibleSyncConfiguration(app.CurrentUser)
             {
                 PopulateInitialSubscriptions = (realm) =>
                 {
-                    var (query, queryName) = GetQueryForSubscriptionItemType(realm, SubscriptionType.Mine);
+                    var (query, queryName) = GetQueryForSubscriptionUserRecordType(realm, SubscriptionType.Mine);
                     realm.Subscriptions.Add(query, new SubscriptionOptions { Name = queryName });
                 }
             };
+            return Realm.GetInstance(configUserRecord);
 
-            return Realm.GetInstance(configItem);
+
         }
         /* //the orignal method for GetRealm
         public static Realm GetRealm()

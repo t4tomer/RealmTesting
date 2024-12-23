@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
 using Position = Maui.GoogleMaps.Position;
+using Realms.Sync;
 
 
 
@@ -33,22 +34,74 @@ namespace RealmTodo.ViewModels
         private string currentUserId;
         private bool isOnline = true;
 
+
+        //-->Start--->used for testing -upload user record object to mongodb 
+
+        [ObservableProperty]
+        private UserRecord initialUserRecord;
+
+        [ObservableProperty]
+        private string profileNameNew;
+
+
+        [ObservableProperty]
+        private string mapNameNew;
+
+
+        [ObservableProperty]
+        private string trackTimeNew;
+
+        [ObservableProperty]
+        private string uploadDateTimeNew;
+
+        [ObservableProperty]
+        private string comment;
+
+        [ObservableProperty]
+        private string pageHeader;
+
+        //-->End--->used for testing -upload user record object to mongodb 
+
+
+
+
+
+
+
+
         public ICommand NavigateCommand { get; private set; }
 
         public MapsViewModel()
         {
+            //set singlton to mappin 
+            var singleton = ObjectSingleton.Instance;
+            singleton.SetMapPinType();
+
             realm = RealmService.GetMainThreadRealm();
             currentUserId = RealmService.CurrentUser.Id;
         }
 
 
 
+        private static string GetCurrentDateTime()
+        {
+            // Get the current date and time
+            DateTime now = DateTime.Now;
+
+            // Format it as a string
+            string formattedDateTime = now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            return formattedDateTime;
+        }
 
 
         [RelayCommand]
         public void OnAppearing()
         {
             Console.WriteLine($"IsShowAllTasks is :{IsShowAllTasks} ");
+
+
+
 
             // Retrieve all items from Realm and convert them to a list.
             var mapNamesList = realm.All<MapPin>().ToList();
@@ -71,6 +124,75 @@ namespace RealmTodo.ViewModels
         }
 
 
+        [RelayCommand]
+        public async Task SaveUserRecord()
+        {
+            Console.WriteLine($"SaveUserRecord EditUserRecord -->");
+
+            var singleton = ObjectSingleton.Instance;
+            singleton.SetUserRecordType();
+
+
+            var realm = RealmService.GetMainThreadRealm();
+
+            var userRecordsSubscriptionExists = realm.Subscriptions.Any(sub => sub.Name == "DogSubscription");
+
+            if (!userRecordsSubscriptionExists)
+            {
+                Console.WriteLine("No existing subscription for Dog. Adding one now...");
+
+                // Add the subscription synchronously
+                realm.Subscriptions.Update(() =>
+                {
+                    var userRecordQuery = realm.All<UserRecord>().Where(d => d.OwnerId == RealmService.CurrentUser.Id);
+                    realm.Subscriptions.Add(userRecordQuery, new SubscriptionOptions { Name = "DogSubscription" });
+                });
+
+                Console.WriteLine("MapPin subscription added. Waiting for synchronization...");
+
+                // Wait for synchronization
+                await realm.Subscriptions.WaitForSynchronizationAsync();
+                Console.WriteLine("MapPin synchronized successfully.");
+            }
+            else
+            {
+                Console.WriteLine("MapPin subscription already exists.");
+            }
+
+
+
+
+
+            await realm.WriteAsync(() =>
+            {
+                if (InitialUserRecord != null) // editing an item
+                {
+                    InitialUserRecord.ProfileName = profileNameNew;
+                    InitialUserRecord.MapName = mapNameNew;
+                    InitialUserRecord.TrackTime = trackTimeNew;
+                    InitialUserRecord.UploadDateTime = uploadDateTimeNew;
+
+                }
+                else // creating a new item
+                {
+                    realm.Add(new UserRecord()
+                    {
+                        OwnerId = RealmService.CurrentUser.Id,
+                        ProfileName = "test1",
+                        MapName = "mapTest",
+                        TrackTime = "tracktime",
+                        UploadDateTime = GetCurrentDateTime(),
+                        Comment = "CommentTest"+GetCurrentDateTime()
+
+                    });
+                }
+            });
+
+
+
+
+            await Shell.Current.GoToAsync("..");
+        }
 
 
 

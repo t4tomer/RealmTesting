@@ -4,7 +4,7 @@ using RealmTodo.Services;
 
 namespace RealmTodo.Models
 {
-    public partial class UserRecord 
+    public partial class UserRecord : IRealmObject
     {
         [PrimaryKey]
         [MapTo("_id")]
@@ -16,19 +16,18 @@ namespace RealmTodo.Models
 
         [MapTo("profilename")]
         [Required]
-        public string Profilename { get; set; }
+        public string ProfileName { get; set; }
 
 
         [MapTo("mapname")]
         [Required]
 
-        public string Mapname { get; set; }
+        public string MapName { get; set; }
+
 
         [MapTo("tracktime")]
         [Required]
-
         public string TrackTime { get; set; }
-
 
 
 
@@ -36,6 +35,12 @@ namespace RealmTodo.Models
         [Required]
 
         public string UploadDateTime { get; set; }
+
+
+        [MapTo("comment")] // user comments 
+        [Required]
+
+        public string Comment { get; set; }
 
 
 

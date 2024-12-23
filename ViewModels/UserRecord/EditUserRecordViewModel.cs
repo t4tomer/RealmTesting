@@ -36,18 +36,21 @@ namespace RealmTodo.ViewModels
         private UserRecord initialUserRecord;
 
         [ObservableProperty]
-        private string profile_name;
+        private string profileNameNew;
 
 
         [ObservableProperty]
-        private string map_name;
+        private string mapNameNew;
 
 
         [ObservableProperty]
-        private string track_time;
+        private string trackTimeNew;
 
         [ObservableProperty]
-        private string upload_date_time;
+        private string uploadDateTimeNew;
+
+        [ObservableProperty]
+        private string comment;
 
 
         [ObservableProperty]
@@ -85,105 +88,110 @@ namespace RealmTodo.ViewModels
             {
 
                 InitialUserRecord = query["userrecord"] as UserRecord;
-                Profile_name = InitialUserRecord.Profilename;
-                Map_name = InitialUserRecord.Mapname;
-                Track_time = InitialUserRecord.TrackTime;
-                Upload_date_time= InitialUserRecord.UploadDateTime;
+                ProfileNameNew = InitialUserRecord.ProfileName;
+                MapNameNew = InitialUserRecord.MapName;
+                TrackTimeNew = InitialUserRecord.TrackTime;
+                UploadDateTimeNew= InitialUserRecord.UploadDateTime;
+                Comment = InitialUserRecord.Comment;
                 //Latitude = InitialMapPin.Latitude;
                 //Longtiude = InitialMapPin.Longitude;
                 //PageHeader = $"Modify Map: {InitialMapPin.Mapname}(PinMap)";
             }
-            else // we're creating a new pin map
+            else // we're creating a new user record
             {
-                //Mapname = "";
-                //Labelpin = "";
-                //Address = "";
-                //Latitude = "";
-                //Longtiude = "";
 
-                PageHeader = "Create a New Map";
+                ProfileNameNew = "";
+                MapNameNew = "";
+                TrackTimeNew = "";
+                UploadDateTimeNew = "";
+                Comment = "";
+ 
+
+                PageHeader = "Create new Record User ";
             }
         }
 
-        
 
 
 
 
 
-        
-
-
-
- 
-
-
-        //[RelayCommand]
-        //public async Task SavePin(Maui.GoogleMaps.Pin newPin)
-        //{
-        //    Console.WriteLine($"SavePin EditMapPin -->'{newPin.Label}': {newPin.Address}");
-
-        //    var realm = RealmService.GetMainThreadRealm();
-
-        //    var mapPinSubscriptionExists = realm.Subscriptions.Any(sub => sub.Name == "DogSubscription");
-
-        //    if (!mapPinSubscriptionExists)
-        //    {
-        //        Console.WriteLine("No existing subscription for Dog. Adding one now...");
-
-        //        // Add the subscription synchronously
-        //        realm.Subscriptions.Update(() =>
-        //        {
-        //            var dogQuery = realm.All<MapPin>().Where(d => d.OwnerId == RealmService.CurrentUser.Id);
-        //            realm.Subscriptions.Add(dogQuery, new SubscriptionOptions { Name = "DogSubscription" });
-        //        });
-
-        //        Console.WriteLine("MapPin subscription added. Waiting for synchronization...");
-
-        //        // Wait for synchronization
-        //        await realm.Subscriptions.WaitForSynchronizationAsync();
-        //        Console.WriteLine("MapPin synchronized successfully.");
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("MapPin subscription already exists.");
-        //    }
 
 
 
 
 
-        //    await realm.WriteAsync(() =>
-        //    {
-        //        if (InitialMapPin != null) // editing an item
-        //        {
-        //            InitialMapPin.Mapname = Summary;
-        //            InitialMapPin.Labelpin = Labelpin;
-        //            InitialMapPin.Address = Address;
-        //            InitialMapPin.Latitude = Latitude;
-        //            InitialMapPin.Longitude = Longtiude;
-
-        //        }
-        //        else // creating a new item
-        //        {
-        //            realm.Add(new MapPin()
-        //            {
-        //                OwnerId = RealmService.CurrentUser.Id,
-        //                Mapname = summary,
-        //                Labelpin = newPin.Label,
-        //                Address = newPin.Address,
-        //                Latitude = newPin.Position.Latitude.ToString(),
-        //                Longitude = newPin.Position.Longitude.ToString()
-        //            });
-        //        }
-        //    });
 
 
 
+        [RelayCommand]
+        public async Task SaveUserRecord()
+        {
+            Console.WriteLine($"SaveUserRecord EditUserRecordViewModel -->");
 
-        //    Console.WriteLine($"To view your data in Atlas, use this link: {RealmService.DataExplorerLink}");
-        //    await Shell.Current.GoToAsync("..");
-        //}
+            var singleton = ObjectSingleton.Instance;
+            singleton.SetUserRecordType();
+
+            var realm = RealmService.GetMainThreadRealm();
+
+            var userRecordsSubscriptionExists = realm.Subscriptions.Any(sub => sub.Name == "DogSubscription");
+
+            if (!userRecordsSubscriptionExists)
+            {
+                Console.WriteLine("No existing subscription for Dog. Adding one now...");
+
+                // Add the subscription synchronously
+                realm.Subscriptions.Update(() =>
+                {
+                    var userRecordQuery = realm.All<UserRecord>().Where(d => d.OwnerId == RealmService.CurrentUser.Id);
+                    realm.Subscriptions.Add(userRecordQuery, new SubscriptionOptions { Name = "DogSubscription" });
+                });
+
+                Console.WriteLine("MapPin subscription added. Waiting for synchronization...");
+
+                // Wait for synchronization
+                await realm.Subscriptions.WaitForSynchronizationAsync();
+                Console.WriteLine("MapPin synchronized successfully.");
+            }
+            else
+            {
+                Console.WriteLine("MapPin subscription already exists.");
+            }
+
+
+
+
+
+            await realm.WriteAsync(() =>
+            {
+                if (InitialUserRecord != null) // editing an item
+                {
+                    InitialUserRecord.ProfileName = profileNameNew;
+                    InitialUserRecord.MapName = mapNameNew;
+                    InitialUserRecord.TrackTime = trackTimeNew;
+                    InitialUserRecord.UploadDateTime = uploadDateTimeNew;
+
+                }
+                else // creating a new item
+                {
+                    realm.Add(new UserRecord()
+                    {
+                        OwnerId = RealmService.CurrentUser.Id,
+                        ProfileName = "test1",
+                        MapName = "mapTest",
+                        TrackTime = "tracktime",
+                        UploadDateTime = "uploadDateTest",
+                        Comment="CommentTest"
+                    });
+                }
+            });
+
+
+
+
+            Console.WriteLine($"To view your data in Atlas, use this link: {RealmService.DataExplorerLink}");
+            await Shell.Current.GoToAsync("..");
+        }
 
 
 

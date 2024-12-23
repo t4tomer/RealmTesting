@@ -33,23 +33,16 @@ namespace RealmTodo.ViewModels
 
         public ItemsViewModel()
         {
+
+
+            //set singlton to item 
+            var singleton = ObjectSingleton.Instance;
+            singleton.SetItemType();
+
             realm = RealmService.GetMainThreadRealm();
             currentUserId = RealmService.CurrentUser.Id;
         }
 
-
-        //!  orginal method-OnAppearing  
-        //[RelayCommand]
-        //public void OnAppearing()
-        //{
-        //    Items = realm.All<Item>().OrderBy(i => i.Id);
-
-        //    var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
-        //    IsShowAllTasks = currentSubscriptionType == SubscriptionType.All;
-        //}
-
-        //TODO - need to change the delete item 
-        //method that elimantes duplicates items with same map name 
 
  
  
@@ -58,6 +51,8 @@ namespace RealmTodo.ViewModels
         public void OnAppearing()
         {
             Console.WriteLine($"IsShowAllTasks is :{IsShowAllTasks} ");
+
+
 
             // Retrieve all items from Realm and convert them to a list.
             var itemsList = realm.All<Item>().ToList();
@@ -98,23 +93,6 @@ namespace RealmTodo.ViewModels
         {
             await Shell.Current.GoToAsync($"itemEdit");
         }
-
-        //original EditItem method!
-        //[RelayCommand]
-        //public async Task EditItem(Item item)
-        //{
-        //    if (!await CheckItemOwnership(item))
-        //    {
-        //        return;
-        //    }
-
-        //    var itemParameter = new Dictionary<string, object> { { "item", item } };
-        //        var editItemPage = new EditItemPage(); // Create the page instance
-
-        //    await Shell.Current.GoToAsync($"itemEdit", itemParameter);
-        //}
-
-
 
         [RelayCommand]
         public async Task EditItem(Item item)
