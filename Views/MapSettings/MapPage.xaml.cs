@@ -203,24 +203,41 @@ namespace RealmTodo.Views
             var mapSpan = Maui.GoogleMaps.MapSpan.FromCenterAndRadius(position, Maui.GoogleMaps.Distance.FromMeters(1)); // Adjust the radius as needed
             myMap.MoveToRegion(mapSpan);
         }
-        private void ZoomToMyLocation_Clicked(object sender, EventArgs e)
+
+
+
+
+        private void StartExercise_Clicked(object sender, EventArgs e)
+        {
+            Console.WriteLine($"----> StartExercise_Clicked pressed!!!");
+            // Navigate to the singleton instance of TimerPAge
+            var timerPage = TimerPage.Instance;
+            Shell.Current.Navigation.PushAsync(timerPage);
+            //GetCurrentLocation();
+
+        }
+
+        [RelayCommand]
+        public async Task ToTimerPage()//transfer to timer page
+        {
+            // Navigate to the singleton instance of TimerPAge
+            var timerPage = TimerPage.Instance;
+            await Shell.Current.Navigation.PushAsync(timerPage);
+        }
+
+        [RelayCommand]
+
+        public async Task ZoomToMyLocation()
         {
             Console.WriteLine($"----> LogLongitude_Clicked pressed!!!");
             GetCurrentLocation();
 
         }
 
-        private void StartExercise_Clicked(object sender, EventArgs e)
-        {
-            Console.WriteLine($"----> StartExercise_Clicked pressed!!!");
-            //GetCurrentLocation();
 
-        }
+        [RelayCommand]
 
-
-
-
-        private void DeletLastPoint_Clicked(object sender, EventArgs e)
+        public async Task DeletLastPoint()
         {
             List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
 
@@ -228,6 +245,88 @@ namespace RealmTodo.Views
 
             MapHelperObject.deleteLastPoint(pinsList);
         }
+
+
+        [RelayCommand]
+
+        public async Task AddToCloud()
+        {
+
+            Console.WriteLine($"-->AddToCloud_Clicked ");
+
+            //AddMapToDbPage
+            List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
+            int pinCount = pinsList.Count;
+            if (await EnoughPins(pinCount))
+            {
+                MapHelperObject = new MapHelper(pinsList, myMap);
+                MapHelperObject.PrintPinAddresses();
+                //CloudPage = new EditItemViewModel(pinsList, myMap);
+                var AddToCloud = new AddMapToDbPage(pinsList, myMap);
+                //EditPinAddrPage.SetPinsList(pinsList);
+                //! Pass the pinsList directly when navigating to the triggerPage
+                await Navigation.PushAsync(AddToCloud);
+            }
+        }
+
+
+        // calculate the distance between all the points on the map
+        [RelayCommand]
+
+        public async Task CalcDistance()
+        {
+
+
+            List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
+            int pinCount = pinsList.Count;
+            if (await EnoughPins(pinCount))
+            {
+                //MapHelperObject = new MapHelper(pinsList,myMap); // Initialize m in the constructor
+
+                MapHelperObject.set_pinsList(pinsList);
+                double totalDistance = MapHelperObject.calculateTotalDistance();
+
+
+                // Create an instance of TestPage and pass the total distance
+                var currentDistancePage = new DistancePage(totalDistance, pinsList, MapHelperObject);
+
+                // Navigate to the TestPage
+                await Navigation.PushAsync(currentDistancePage);
+            }
+
+
+        }
+
+
+        // remove all the points&polylines from the map 
+        [RelayCommand]
+
+        public async Task ResetMap()        {
+
+            ClearMap();
+
+        }
+
+
+        // method that is used to transfer the user to the edit point page
+        [RelayCommand]
+
+        public async Task EditPoint()
+        {
+            Console.WriteLine($"----> Edit Point clicked ");
+
+            List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
+            int pinCount = pinsList.Count;
+            //Console.WriteLine($"number of pins in the list(Add_Point_Clicked): -->'{pinCount}': {pinCount}");
+
+            var EditPinAddrPage = new EditPinAddr(pinsList, myMap);
+            //EditPinAddrPage.SetPinsList(pinsList);
+            //! Pass the pinsList directly when navigating to the triggerPage
+            await Navigation.PushAsync(EditPinAddrPage);
+
+        }
+
+
 
 
 
@@ -285,31 +384,9 @@ namespace RealmTodo.Views
 
 
 
-        private async void AddToCloud_Clicked(object sender, EventArgs e)
-        {
-
-            Console.WriteLine($"-->AddToCloud_Clicked ");
-
-            //AddMapToDbPage
-            List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
-            int pinCount=pinsList.Count;
-            if(await EnoughPins(pinCount))
-            {
-                MapHelperObject = new MapHelper(pinsList, myMap);
-                MapHelperObject.PrintPinAddresses();
-                //CloudPage = new EditItemViewModel(pinsList, myMap);
-                var AddToCloud = new AddMapToDbPage(pinsList, myMap);
-                //EditPinAddrPage.SetPinsList(pinsList);
-                //! Pass the pinsList directly when navigating to the triggerPage
-                await Navigation.PushAsync(AddToCloud);
-            }
 
 
 
-
-
-
-        }
 
         //added the ShowButtonsOnMap method 
 
@@ -343,28 +420,7 @@ namespace RealmTodo.Views
         }
 
 
-        // method that is used to transfer the user to the edit point page
-        private async void Edit_Point_Clicked(object sender, EventArgs e)
-        {
-            Console.WriteLine($"----> Edit Point clicked ");
 
-            List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
-            int pinCount = pinsList.Count;
-            //Console.WriteLine($"number of pins in the list(Add_Point_Clicked): -->'{pinCount}': {pinCount}");
-
-            var EditPinAddrPage = new EditPinAddr(pinsList, myMap);
-            //EditPinAddrPage.SetPinsList(pinsList);
-            //! Pass the pinsList directly when navigating to the triggerPage
-            await Navigation.PushAsync(EditPinAddrPage);
-
-        }
-        // remove all the points&polylines from the map 
-        private async void Reset_Map_Clicked(object sender, EventArgs e)
-        {
-
-            ClearMap();
-
-        }
 
 
         private async Task<bool> EnoughPins(int num)
@@ -397,30 +453,7 @@ namespace RealmTodo.Views
         }
 
 
-        // calculate the distance between all the points on the map
-        private async void Calc_Distance_Clicked(object sender, EventArgs e)
-        {
 
-            
-            List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
-            int pinCount=pinsList.Count;
-            if(await EnoughPins(pinCount))
-            {
-                //MapHelperObject = new MapHelper(pinsList,myMap); // Initialize m in the constructor
-
-                MapHelperObject.set_pinsList(pinsList);
-                double totalDistance = MapHelperObject.calculateTotalDistance();
-
-
-                // Create an instance of TestPage and pass the total distance
-                var testPage = new DistancePage(totalDistance, pinsList, MapHelperObject);
-
-                // Navigate to the TestPage
-                await Navigation.PushAsync(testPage);
-            }
-
-
-        }
 
 
         private async void toPage(string pageName)

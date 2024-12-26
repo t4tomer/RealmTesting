@@ -122,6 +122,9 @@ namespace RealmTodo.Views
         //used to update the name of the pin number on the map 
         private void OnDoneButtonClicked(object sender, EventArgs e)
         {
+
+            //TODO fix the code so that if the user changes the pin label it will update it
+            // also in the mongoDB
             if (pinsList != null)
             {
                 string pinLabel = pinLabelEntry.Text;

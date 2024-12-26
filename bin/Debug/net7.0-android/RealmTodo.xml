@@ -712,6 +712,57 @@
         <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.UrlTapCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.UrlTap(System.String)"/>.</summary>
         </member>
+        <member name="T:RealmTodo.Views.MapPage">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:RealmTodo.Views.MapPage.toTimerPageCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.ToTimerPageCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.Views.MapPage.ToTimerPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.ToTimerPage"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.Views.MapPage.zoomToMyLocationCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.ZoomToMyLocationCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.Views.MapPage.ZoomToMyLocationCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.ZoomToMyLocation"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.Views.MapPage.deletLastPointCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.DeletLastPointCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.Views.MapPage.DeletLastPointCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.DeletLastPoint"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.Views.MapPage.addToCloudCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.AddToCloudCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.Views.MapPage.AddToCloudCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.AddToCloud"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.Views.MapPage.calcDistanceCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.CalcDistanceCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.Views.MapPage.CalcDistanceCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.CalcDistance"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.Views.MapPage.resetMapCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.ResetMapCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.Views.MapPage.ResetMapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.ResetMap"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.Views.MapPage.editPointCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.EditPointCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.Views.MapPage.EditPointCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.EditPoint"/>.</summary>
+        </member>
         <member name="T:RealmTodo.Views.TimerPage">
             <inheritdoc/>
             <inheritdoc/>
