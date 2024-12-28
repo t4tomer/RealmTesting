@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Timers;  // Disambiguate Timer reference
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using DocumentFormat.OpenXml.Drawing.Diagrams;
 using Microsoft.Maui.Controls;
 
 namespace RealmTodo.Views
@@ -119,6 +120,25 @@ namespace RealmTodo.Views
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+
+        [RelayCommand]
+
+        public async Task Upload()
+        {
+            Console.WriteLine($"---------> Upload record");
+            string newRecordTime = _timerText;//save the user record time 
+            ResetTimer();
+
+
+            var addNewUserRecordToDb = new AddRecordToDb();
+            addNewUserRecordToDb.setRecordUserTime(newRecordTime);
+            await Navigation.PushAsync(addNewUserRecordToDb);
+
+
+        }
+
+
 
         protected virtual void OnPropertyChanged(string propertyName)
         {

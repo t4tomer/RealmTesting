@@ -767,6 +767,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="F:RealmTodo.Views.TimerPage.startTimerCommand">
             <summary>The backing field for <see cref="P:RealmTodo.Views.TimerPage.StartTimerCommand"/>.</summary>
@@ -785,6 +786,12 @@
         </member>
         <member name="P:RealmTodo.Views.TimerPage.ResetTimerCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.TimerPage.ResetTimer"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.Views.TimerPage.uploadCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.Views.TimerPage.UploadCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.Views.TimerPage.UploadCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.TimerPage.Upload"/>.</summary>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>

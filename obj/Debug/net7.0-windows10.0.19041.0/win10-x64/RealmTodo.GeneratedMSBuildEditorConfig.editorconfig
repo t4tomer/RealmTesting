@@ -108,8 +108,14 @@ build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.TestPage.x
 build_metadata.AdditionalFiles.TargetPath = Views\TestPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\TestPage.xaml
 
-[D:/GitHub/RealmExamples/RealmTesting/Views/TimerPage.xaml]
+[D:/GitHub/RealmExamples/RealmTesting/Views/UserRecords/AddRecordToDb.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.TimerPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\TimerPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\TimerPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.UserRecords.AddRecordToDb.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\UserRecords\AddRecordToDb.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\UserRecords\AddRecordToDb.xaml
+
+[D:/GitHub/RealmExamples/RealmTesting/Views/UserRecords/TimerPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.UserRecords.TimerPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\UserRecords\TimerPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\UserRecords\TimerPage.xaml
