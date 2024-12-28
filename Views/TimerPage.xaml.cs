@@ -11,6 +11,7 @@ namespace RealmTodo.Views
     {
         private static TimerPage _instance; // Singleton instance
         private static readonly object _lock = new object(); // Thread-safety lock
+        private string _mapTitle = "Test"; // Default value
 
         private System.Timers.Timer _timer;
         private TimeSpan _elapsedTime;
@@ -27,6 +28,30 @@ namespace RealmTodo.Views
                 OnPropertyChanged(nameof(TimerText)); // Notify the UI when the value changes
             }
         }
+
+
+        public string MapTitle
+        {
+            get => _mapTitle;
+            set
+            {
+                if (_mapTitle != value)
+                {
+                    _mapTitle = value;
+                    OnPropertyChanged(nameof(MapTitle)); // Notify the UI about the change
+                }
+            }
+        }
+
+
+        public void setTitle(string newTitle)
+        {
+            _mapTitle = newTitle; // Update the internal mapTitle field
+            Console.WriteLine($"Map title updated to: {newTitle}");
+        }
+
+
+
 
         // Private constructor to prevent direct instantiation
         private TimerPage()

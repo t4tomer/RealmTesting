@@ -76,12 +76,35 @@ namespace RealmTodo.ViewModels
             //set singlton to mappin 
             var singleton = ObjectSingleton.Instance;
             singleton.SetMapPinType();
-
+            
             realm = RealmService.GetMainThreadRealm();
             currentUserId = RealmService.CurrentUser.Id;
         }
 
+        public async void deleteExistingMapPinFromCloude(Maui.GoogleMaps.Pin newPin, string mapNameToDelete)
+        {
+            Console.WriteLine($"----> deleteExistingMapPinFromCloude OwnerId:{RealmService.CurrentUser.Id} ");
+            Console.WriteLine($"----> deleteExistingMapPinFromCloude mapName:{mapNameToDelete} ");
+            Console.WriteLine($"----> deleteExistingMapPinFromCloude label:{newPin.Label} ");
+            Console.WriteLine($"----> deleteExistingMapPinFromCloude Address:{newPin.Address} ");
 
+
+            var mapPinToDelete = new MapPin
+            {
+                OwnerId = RealmService.CurrentUser.Id, // Assuming `RealmService` is initialized
+                Mapname = mapNameToDelete,
+                Labelpin = newPin.Label,
+                Address = newPin.Address,
+                Latitude = newPin.Position.Latitude.ToString(), // Convert latitude to string
+                Longitude = newPin.Position.Longitude.ToString() // Convert longitude to string
+            };
+
+            Console.WriteLine($"----> deleteExistingMapPinFromCloude ");
+
+            await DeleteSinglePin(mapPinToDelete);
+
+ 
+        }
 
         private static string GetCurrentDateTime()
         {
@@ -361,10 +384,10 @@ namespace RealmTodo.ViewModels
 
             //Console.WriteLine($"--->(DeleteItem) item summery:{item.Summary} ");
 
-            if (!await CheckItemOwnership(pin))
-            {
-                return;
-            }
+            //if (!await CheckItemOwnership(pin))
+            //{
+            //    return;
+            //}
 
             await realm.WriteAsync(() =>
             {

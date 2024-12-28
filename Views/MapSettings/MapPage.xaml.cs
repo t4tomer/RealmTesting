@@ -220,8 +220,9 @@ namespace RealmTodo.Views
         [RelayCommand]
         public async Task ToTimerPage()//transfer to timer page
         {
-            // Navigate to the singleton instance of TimerPAge
+            // Navigate to the singleton instance of TimerPage
             var timerPage = TimerPage.Instance;
+            timerPage.setTitle(_mapTitle);
             await Shell.Current.Navigation.PushAsync(timerPage);
         }
 
@@ -320,7 +321,7 @@ namespace RealmTodo.Views
             //Console.WriteLine($"number of pins in the list(Add_Point_Clicked): -->'{pinCount}': {pinCount}");
 
             var EditPinAddrPage = new EditPinAddr(pinsList, myMap);
-            //EditPinAddrPage.SetPinsList(pinsList);
+            //EditPinAddrPage.setMapName(MapTitle);
             //! Pass the pinsList directly when navigating to the triggerPage
             await Navigation.PushAsync(EditPinAddrPage);
 

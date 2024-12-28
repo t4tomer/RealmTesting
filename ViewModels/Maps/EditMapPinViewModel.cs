@@ -76,7 +76,10 @@ namespace RealmTodo.ViewModels
 
 
         }
-
+        public void setMapName(string newMapName)
+        {
+            this.summary= newMapName;
+        }
 
 
 
@@ -248,10 +251,6 @@ namespace RealmTodo.ViewModels
             {
                 Console.WriteLine("MapPin subscription already exists.");
             }
-
-
-
-
 
 
 
