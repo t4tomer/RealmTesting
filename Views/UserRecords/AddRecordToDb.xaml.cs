@@ -17,8 +17,9 @@ namespace RealmTodo.Views
         List<Maui.GoogleMaps.Pin> pinsList; // the list of pins in the map
         Maui.GoogleMaps.Map myMap;
         private string _recordUserTime = ""; // Default value
+        private string _trackName = ""; // Default value
 
-        
+
 
 
 
@@ -34,10 +35,16 @@ namespace RealmTodo.Views
 
         public void setRecordUserTime(string newRecordUserTime)
         {
-            _recordUserTime = "time:"+newRecordUserTime; // Update the internal mapTitle field
+            _recordUserTime = newRecordUserTime; // Update the internal mapTitle field
             Console.WriteLine($"the new record time is--->: {_recordUserTime}");
         }
 
+        public void setTrackName(string newTrackName)
+        {
+            _trackName = newTrackName;
+            Console.WriteLine($"---------> the track name is : {_trackName}");
+
+        }
 
         public string RecordUserTime
         {
@@ -51,7 +58,19 @@ namespace RealmTodo.Views
                 }
             }
         }
+        public string TrackName
+        {
 
+            get => _trackName;
+            set
+            {
+                if (_trackName != value)
+                {
+                    _trackName = value;
+                    OnPropertyChanged(nameof(TrackName)); // Notify the UI about the change
+                }
+            }
+        }
 
 
     }
