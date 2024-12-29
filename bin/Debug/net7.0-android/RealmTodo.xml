@@ -763,6 +763,15 @@
         <member name="P:RealmTodo.Views.MapPage.EditPointCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.EditPoint"/>.</summary>
         </member>
+        <member name="T:RealmTodo.Views.AddRecordToDb">
+            <inheritdoc/>
+        </member>
+        <member name="F:RealmTodo.Views.AddRecordToDb.okPressedCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.Views.AddRecordToDb.OkPressedCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.Views.AddRecordToDb.OkPressedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.AddRecordToDb.OkPressed"/>.</summary>
+        </member>
         <member name="T:RealmTodo.Views.TimerPage">
             <inheritdoc/>
             <inheritdoc/>

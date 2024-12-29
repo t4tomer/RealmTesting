@@ -6,6 +6,7 @@ using Position = Maui.GoogleMaps.Position;
 using Microsoft.Maui.Controls.Maps;
 using System.Net.NetworkInformation;
 using RealmTodo.Models;
+using CommunityToolkit.Mvvm.Input;
 
 
 namespace RealmTodo.Views
@@ -61,7 +62,7 @@ namespace RealmTodo.Views
         public string TrackName
         {
 
-            get => _trackName;
+            get => $"Map: {_trackName}";
             set
             {
                 if (_trackName != value)
@@ -71,6 +72,16 @@ namespace RealmTodo.Views
                 }
             }
         }
+
+
+        [RelayCommand]
+
+        public async Task OkPressed()
+        {
+            Console.WriteLine($"the track name is---> :{_trackName} ");
+            
+        }
+
 
 
     }

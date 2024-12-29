@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RealmTodo.Views.AddRecordToDb"
              xmlns:vm="clr-namespace:RealmTodo.ViewModels"
-             Title="{Binding RecordUserTime}">
+             Title="{Binding TrackName}">
 
     <ContentPage.BindingContext>
         <!--if you adding map with mappin objects use vm:EditMapPinViewModel-->
@@ -18,7 +18,7 @@
             TextColor="{DynamicResource Primary}"/>
         <Entry Text="{Binding Summary}" Placeholder="Enter Map Name"  PlaceholderColor="#787878"/>
         <HorizontalStackLayout HorizontalOptions="Center" >
-            <Button  Margin="0,0,20,0" Text="OK" Command="{Binding UploadToCloudPinsCommand}"/>
+            <Button  Margin="0,0,20,0" Text="OK" Command="{Binding OkPressedCommand}"/>
             <Button  BackgroundColor="#454556"
                     Text="Cancel" Command="{Binding CancelCommand}"/>
         </HorizontalStackLayout>

@@ -132,7 +132,7 @@ namespace RealmTodo.ViewModels
             var mapPage = MapPage.Instance;
             mapPage.set_pinsList(pinListOfSameMapName);
             mapPage.ShowTrack_Clicked();
-            mapPage.SetTitle("map:"+mapName);
+            mapPage.SetTitle(mapName);
             if (await mapPage.IsLocationEnabled())
             {
                 if (map.IsMine)

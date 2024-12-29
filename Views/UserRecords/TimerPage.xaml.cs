@@ -133,6 +133,8 @@ namespace RealmTodo.Views
 
             var addNewUserRecordToDb = new AddRecordToDb();
             addNewUserRecordToDb.setRecordUserTime(newRecordTime);
+            addNewUserRecordToDb.setTrackName(_mapTitle);
+
             await Navigation.PushAsync(addNewUserRecordToDb);
 
 
