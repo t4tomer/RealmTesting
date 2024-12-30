@@ -47,8 +47,9 @@ namespace RealmTodo.Views
 
         public void setTitle(string newTitle)
         {
-            _mapTitle = newTitle; // Update the internal mapTitle field
-            Console.WriteLine($"Map title updated to: {newTitle}");
+            MapTitle = newTitle; // Update property
+            BindingContext = null;
+            BindingContext = this; // Reset BindingContext to refresh bindings
         }
 
 
@@ -127,10 +128,8 @@ namespace RealmTodo.Views
         public async Task Upload()
         {
             Console.WriteLine($"---------> Upload record");
+            PauseTimer();
             string newRecordTime = _timerText;//save the user record time 
-            ResetTimer();
-
-
             var addNewUserRecordToDb = new AddRecordToDb();
             addNewUserRecordToDb.setRecordUserTime(newRecordTime);
             addNewUserRecordToDb.setTrackName(_mapTitle);
@@ -138,6 +137,20 @@ namespace RealmTodo.Views
             await Navigation.PushAsync(addNewUserRecordToDb);
 
 
+        }
+
+
+                private static string GetCurrentDateTime()
+        {
+            // Get the current date and time
+            DateTime now = DateTime.Now;
+
+            // Format it as a string
+            //string formattedDateTime = now.ToString("yyyy-MM-dd HH:mm:ss");
+            string formattedDateTime = now.ToString("dd-MM-yyyy HH:mm:ss");
+
+
+            return formattedDateTime;
         }
 
 
