@@ -6,21 +6,26 @@
              Title="Add Map to DB ">
 
     <ContentPage.BindingContext>
-        <!--if you adding map with mappin objects use vm:EditMapPinViewModel-->
-        <!--if you adding map with item objects use vm:EditItemViewModel-->
         <vm:EditMapPinViewModel />
     </ContentPage.BindingContext>
+    
+    
     <VerticalStackLayout Padding="10" Spacing="20">
         <Label 
             Text="{Binding PageHeader}"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             TextColor="{DynamicResource Primary}"/>
-        <Entry Text="{Binding TrackName}" Placeholder="Enter Map Name"  PlaceholderColor="#787878"/>
+        <Entry Text="{Binding InputTrackName}" Placeholder="Enter Map Name"  PlaceholderColor="#787878"/>
+       
         <HorizontalStackLayout HorizontalOptions="Center" >
+            
             <Button  Margin="0,0,20,0" Text="OK" Command="{Binding UploadToCloudPinsCommand}"/>
+            
             <Button  BackgroundColor="#454556"
                     Text="Cancel" Command="{Binding CancelCommand}"/>
+        
         </HorizontalStackLayout>
+        
     </VerticalStackLayout>
 </ContentPage>

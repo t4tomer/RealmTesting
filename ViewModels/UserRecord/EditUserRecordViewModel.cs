@@ -4,16 +4,8 @@ using RealmTodo.Models;
 using RealmTodo.Services;
 using RealmTodo.ViewModels;
 
-using Microsoft.Maui.Maps;
-using Position = Maui.GoogleMaps.Position;
-using Maui.GoogleMaps;
 using RealmTodo.Views; // Correct namespace for TestPage
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using RealmTodo.Models;
-using RealmTodo.Services;
 using Realms;
-using RealmTodo.Views; // Correct namespace for TestPage
 using Microsoft.Maui.Controls; // Required for navigation
 using System.Windows.Input;
 using System.Linq;
@@ -21,6 +13,17 @@ using System.Threading.Tasks;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
 using Microsoft.Maui.Controls.Maps;
 using System.Net.NetworkInformation;
+using Realms.Sync;
+
+
+using Microsoft.Maui.Controls; // Required for navigation
+using System.Linq;
+using System.Threading.Tasks;
+using DocumentFormat.OpenXml.Wordprocessing;
+
+using Position = Maui.GoogleMaps.Position;
+using RealmTodo.Views; // Correct namespace for TestPage
+
 using Realms.Sync;
 
 namespace RealmTodo.ViewModels
@@ -31,6 +34,8 @@ namespace RealmTodo.ViewModels
 
 
 
+        [ObservableProperty]
+        private string inputUserName;// value in the xaml page
 
         [ObservableProperty]
         private UserRecord initialUserRecord;
@@ -64,18 +69,42 @@ namespace RealmTodo.ViewModels
 
         }
 
-        //public EditMapPinViewModel(List<Pin> NewPinsList, Maui.GoogleMaps.Map newMyMap)
-        //{
-        //    Console.WriteLine($"-->  EditMapPinViewModel(pinsList,myMAp)!!");
+        //used to update the name of the pin number on the map 
+        private void OnDoneButtonClicked(object sender, EventArgs e)
+        {
 
-        //    this.pinsList = NewPinsList;
-        //    this.myMap = newMyMap;
-        //    if(pinsList == null || myMap==null)
-        //        Console.WriteLine($"--> pinsList or myMap  is null !!");
+            Console.WriteLine(" ---------->>>>> OnDoneButtonClicked");
+            
+        }
 
+        [RelayCommand]
+        public void PrintName()
+        {
+            // Print the name entered in the Entry field
+            if (!string.IsNullOrWhiteSpace(InputUserName))
+            {
+                Console.WriteLine($"Entered Name: {InputUserName}");
+            }
+            else
+            {
+                Console.WriteLine("No name was entered.");
+            }
+        }
+        [RelayCommand]
+        public void OnOKClicked()
+        {
+            if (!string.IsNullOrWhiteSpace(InputUserName))
+            {
+                Console.WriteLine($"Entered Name: {InputUserName}");
+            }
+            else
+            {
+                Console.WriteLine("No name was entered.");
+            }
 
+            Console.WriteLine("OK button command executed.");
+        }
 
-        //}
 
 
 
@@ -118,6 +147,12 @@ namespace RealmTodo.ViewModels
 
 
 
+        [RelayCommand]
+        public async Task Test()
+        {
+            Console.WriteLine($"Test Command ,user name:{InputUserName}");
+
+        }
 
 
 

@@ -4,26 +4,14 @@ using RealmTodo.Models;
 using RealmTodo.Services;
 using RealmTodo.ViewModels;
 
-using Microsoft.Maui.Maps;
 using Position = Maui.GoogleMaps.Position;
-using Maui.GoogleMaps;
 using RealmTodo.Views; // Correct namespace for TestPage
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using RealmTodo.Models;
-using RealmTodo.Services;
-using Realms;
-using RealmTodo.Views; // Correct namespace for TestPage
-using Microsoft.Maui.Controls; // Required for navigation
-using System.Windows.Input;
-using System.Linq;
-using System.Threading.Tasks;
-using DocumentFormat.OpenXml.Drawing.Diagrams;
-using Microsoft.Maui.Controls.Maps;
-using System.Net.NetworkInformation;
+
 using Realms.Sync;
-using DocumentFormat.OpenXml.Wordprocessing;
-using CommunityToolkit.Mvvm.ComponentModel;
+
+
+
+
 
 namespace RealmTodo.ViewModels
 
@@ -38,7 +26,7 @@ namespace RealmTodo.ViewModels
         private MapPin initialMapPin;
 
         [ObservableProperty]
-        private string trackName;
+        private string inputTrackName;// value in the xaml page
 
 
         [ObservableProperty]
@@ -78,7 +66,7 @@ namespace RealmTodo.ViewModels
         }
         public void setMapName(string newMapName)
         {
-            this.trackName = newMapName;
+            this.inputTrackName = newMapName;
         }
 
 
@@ -198,15 +186,21 @@ namespace RealmTodo.ViewModels
         [RelayCommand]
         public async Task UploadToCloudPins()
         {
+            Console.WriteLine($"UploadToCloudPins maptrack name is: {InputTrackName}");
 
+            /*
             Console.WriteLine("UploadToCloudPins --EditMapPinViewModel.");
             if (MapPage.Instance == null)
                 Console.WriteLine("MapPage instance is null.");
             else
                 Console.WriteLine($"MapPage instance initialized with(UploadToCloudPins) {MapPage.Instance.GetPinList().Count} pins.");
 
+            */
+
+
             List<Maui.GoogleMaps.Pin> pinsList = MapPage.Instance.GetPinList();
 
+            // upload each pin to mongo db
             foreach (var pin in pinsList)
             {
                 Console.WriteLine($"PrintPinAddresses -->'{pin.Label}': {pin.Address}");
@@ -261,7 +255,7 @@ namespace RealmTodo.ViewModels
             {
                 if (InitialMapPin != null) // editing an item
                 {
-                    InitialMapPin.Mapname = TrackName;
+                    InitialMapPin.Mapname = InputTrackName;
                     InitialMapPin.Labelpin = Label_pinNew;
                     InitialMapPin.Address = AddressNew;
                     InitialMapPin.Latitude = LatitudeNew;
@@ -273,7 +267,7 @@ namespace RealmTodo.ViewModels
                     realm.Add(new MapPin()
                     {
                         OwnerId = RealmService.CurrentUser.Id,
-                        Mapname = TrackName,
+                        Mapname = InputTrackName,
                         Labelpin = newPin.Label,
                         Address = newPin.Address,
                         Latitude = newPin.Position.Latitude.ToString(),

@@ -408,8 +408,8 @@
         <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.InitialMapPin">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.initialMapPin"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.TrackName">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.trackName"/>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.InputTrackName">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.inputTrackName"/>
         </member>
         <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Map_nameNew">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.map_nameNew"/>
@@ -588,6 +588,12 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.InputUserName">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.inputUserName"/>
         </member>
         <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.InitialUserRecord">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.initialUserRecord"/>
@@ -609,6 +615,24 @@
         </member>
         <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.PageHeader">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.pageHeader"/>
+        </member>
+        <member name="F:RealmTodo.ViewModels.EditUserRecordViewModel.printNameCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditUserRecordViewModel.PrintNameCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.PrintNameCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditUserRecordViewModel.PrintName"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.EditUserRecordViewModel.oKClickedCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditUserRecordViewModel.OKClickedCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.OKClickedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditUserRecordViewModel.OnOKClicked"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.EditUserRecordViewModel.testCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditUserRecordViewModel.TestCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.TestCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditUserRecordViewModel.Test"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.EditUserRecordViewModel.saveUserRecordCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditUserRecordViewModel.SaveUserRecordCommand"/>.</summary>
@@ -949,8 +973,8 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InitialMapPin">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InitialMapPin" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TrackName">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TrackName" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InputTrackName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InputTrackName" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Map_nameNew">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Map_nameNew" generated properties.</summary>
@@ -987,6 +1011,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Comment">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Comment" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InputUserName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InputUserName" generated properties.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
@@ -1036,8 +1063,8 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InitialMapPin">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InitialMapPin" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TrackName">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TrackName" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InputTrackName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InputTrackName" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Map_nameNew">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Map_nameNew" generated properties.</summary>
@@ -1074,6 +1101,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Comment">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Comment" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InputUserName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InputUserName" generated properties.</summary>
         </member>
     </members>
 </doc>

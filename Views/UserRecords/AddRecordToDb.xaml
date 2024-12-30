@@ -4,12 +4,10 @@
              x:Class="RealmTodo.Views.AddRecordToDb"
              xmlns:vm="clr-namespace:RealmTodo.ViewModels"
              Title="{Binding TrackNameTitle}" >
-
     <ContentPage.BindingContext>
-        <!--if you adding map with mappin objects use vm:EditMapPinViewModel-->
-        <!--if you adding map with item objects use vm:EditItemViewModel-->
-        <vm:EditMapPinViewModel />
+        <vm:EditUserRecordViewModel />
     </ContentPage.BindingContext>
+
     <VerticalStackLayout Padding="10" Spacing="20">
 
 
@@ -21,7 +19,7 @@
                 HorizontalOptions="Start"
                 TextColor="{DynamicResource Primary}"/>
             <Entry 
-                Text="{Binding UserName}" 
+                Text="{Binding InputUserName}" 
                 Placeholder="Enter User Name" 
                 PlaceholderColor="#787878"
                 HorizontalOptions="FillAndExpand"/>
@@ -126,7 +124,7 @@
 
         <!-- Buttons Section -->
         <HorizontalStackLayout HorizontalOptions="Center">
-            <Button Margin="0,0,20,0" Text="OK" Command="{Binding UploadToCloudPinsCommand}"/>
+            <Button Margin="0,0,20,0" Text="OK" Command="{Binding PrintNameCommand}" />
             <Button BackgroundColor="#454556"
                     Text="Cancel" Command="{Binding CancelCommand}"/>
         </HorizontalStackLayout>

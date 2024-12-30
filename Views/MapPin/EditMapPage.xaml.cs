@@ -1,4 +1,9 @@
-﻿namespace RealmTodo.Views;
+﻿
+
+
+
+
+namespace RealmTodo.Views;
 
 public partial class EditMapPage : ContentPage, IQueryAttributable
 {
@@ -37,11 +42,6 @@ public partial class EditMapPage : ContentPage, IQueryAttributable
         }
     }
 
-    //public void Test()
-    //{
-    //    Console.WriteLine($"---> Edit Item Page--Test ");
-
-    //}
 
 
 }
