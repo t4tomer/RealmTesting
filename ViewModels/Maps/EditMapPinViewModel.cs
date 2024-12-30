@@ -38,7 +38,7 @@ namespace RealmTodo.ViewModels
         private MapPin initialMapPin;
 
         [ObservableProperty]
-        private string summary;
+        private string trackName;
 
 
         [ObservableProperty]
@@ -78,7 +78,7 @@ namespace RealmTodo.ViewModels
         }
         public void setMapName(string newMapName)
         {
-            this.summary= newMapName;
+            this.trackName = newMapName;
         }
 
 
@@ -261,7 +261,7 @@ namespace RealmTodo.ViewModels
             {
                 if (InitialMapPin != null) // editing an item
                 {
-                    InitialMapPin.Mapname = Summary;
+                    InitialMapPin.Mapname = TrackName;
                     InitialMapPin.Labelpin = Label_pinNew;
                     InitialMapPin.Address = AddressNew;
                     InitialMapPin.Latitude = LatitudeNew;
@@ -273,7 +273,7 @@ namespace RealmTodo.ViewModels
                     realm.Add(new MapPin()
                     {
                         OwnerId = RealmService.CurrentUser.Id,
-                        Mapname = summary,
+                        Mapname = TrackName,
                         Labelpin = newPin.Label,
                         Address = newPin.Address,
                         Latitude = newPin.Position.Latitude.ToString(),

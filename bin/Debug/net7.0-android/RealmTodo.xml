@@ -408,8 +408,8 @@
         <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.InitialMapPin">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.initialMapPin"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Summary">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.summary"/>
+        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.TrackName">
+            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.trackName"/>
         </member>
         <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Map_nameNew">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.map_nameNew"/>
@@ -949,6 +949,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InitialMapPin">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InitialMapPin" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TrackName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TrackName" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Map_nameNew">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Map_nameNew" generated properties.</summary>
         </member>
@@ -1032,6 +1035,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InitialMapPin">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InitialMapPin" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TrackName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TrackName" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Map_nameNew">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Map_nameNew" generated properties.</summary>

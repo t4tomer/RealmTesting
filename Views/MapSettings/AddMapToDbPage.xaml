@@ -16,7 +16,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             TextColor="{DynamicResource Primary}"/>
-        <Entry Text="{Binding Summary}" Placeholder="Enter Map Name"  PlaceholderColor="#787878"/>
+        <Entry Text="{Binding TrackName}" Placeholder="Enter Map Name"  PlaceholderColor="#787878"/>
         <HorizontalStackLayout HorizontalOptions="Center" >
             <Button  Margin="0,0,20,0" Text="OK" Command="{Binding UploadToCloudPinsCommand}"/>
             <Button  BackgroundColor="#454556"
