@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\userrecords\\addrecordtodb.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\models\\userrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:models\\userrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|d:\\github\\realmexamples\\realmtesting\\views\\userrecords\\addrecordtodb.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{ED1B0451-A735-464F-B6CA-E402C3A5AC0A}|RealmTodo.csproj|solutionrelative:views\\userrecords\\addrecordtodb.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -30,8 +34,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 282,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserRecord.cs",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Models\\UserRecord.cs",
+              "RelativeDocumentMoniker": "Models\\UserRecord.cs",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Models\\UserRecord.cs",
+              "RelativeToolTip": "Models\\UserRecord.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwCoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T17:19:12.06Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,14 +57,14 @@
               "RelativeDocumentMoniker": "ViewModels\\UserRecord\\EditUserRecordViewModel.cs",
               "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\ViewModels\\UserRecord\\EditUserRecordViewModel.cs",
               "RelativeToolTip": "ViewModels\\UserRecord\\EditUserRecordViewModel.cs",
-              "ViewState": "AQIAAK8AAAAAAAAAAAAYwMYAAAAyAAAA",
+              "ViewState": "AQIAALAAAAAAAAAAAAAAAMIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-30T16:55:32.269Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TimerPage.xaml.cs",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\UserRecords\\TimerPage.xaml.cs",
               "RelativeDocumentMoniker": "Views\\UserRecords\\TimerPage.xaml.cs",
@@ -55,31 +72,17 @@
               "RelativeToolTip": "Views\\UserRecords\\TimerPage.xaml.cs",
               "ViewState": "AQIAAHgAAAAAAAAAAAAIwJYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-31T10:03:13.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-31T10:03:13.889Z"
             }
           ]
         },
         {
           "DockedWidth": 295,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AddMapToDbPage.xaml",
-              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\AddMapToDbPage.xaml",
-              "RelativeDocumentMoniker": "Views\\MapSettings\\AddMapToDbPage.xaml",
-              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\AddMapToDbPage.xaml",
-              "RelativeToolTip": "Views\\MapSettings\\AddMapToDbPage.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-31T10:10:30.614Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -89,14 +92,26 @@
               "RelativeDocumentMoniker": "Views\\UserRecords\\AddRecordToDb.xaml.cs",
               "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\UserRecords\\AddRecordToDb.xaml.cs",
               "RelativeToolTip": "Views\\UserRecords\\AddRecordToDb.xaml.cs",
-              "ViewState": "AQIAALcAAAAAAAAAAAAiwMcAAAAAAAAA",
+              "ViewState": "AQIAAMIAAAAAAAAAAAAmwNsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-31T10:02:49.556Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "AddMapToDbPage.xaml",
+              "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\AddMapToDbPage.xaml",
+              "RelativeDocumentMoniker": "Views\\MapSettings\\AddMapToDbPage.xaml",
+              "ToolTip": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\MapSettings\\AddMapToDbPage.xaml",
+              "RelativeToolTip": "Views\\MapSettings\\AddMapToDbPage.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-31T10:10:30.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AddRecordToDb.xaml",
               "DocumentMoniker": "D:\\GitHub\\RealmExamples\\RealmTesting\\Views\\UserRecords\\AddRecordToDb.xaml",
               "RelativeDocumentMoniker": "Views\\UserRecords\\AddRecordToDb.xaml",
@@ -104,8 +119,7 @@
               "RelativeToolTip": "Views\\UserRecords\\AddRecordToDb.xaml",
               "ViewState": "AQIAAG8AAAAAAAAAAAAAAH8AAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-30T17:12:36.875Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-30T17:12:36.875Z"
             }
           ]
         }

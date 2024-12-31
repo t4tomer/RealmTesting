@@ -204,9 +204,20 @@ namespace RealmTodo.Views
 
             Console.WriteLine($"the InputCommentText is---> :{CommentText} ");
 
+            // Create the UserRecord object
+            var newUserRecord = new UserRecord
+            {
+                ProfileName = InputUserName,
+                MapName = TrackName,
+                TrackTime = _recordUserTime,
+                UploadDateTime = InputUploadDateTime,
+                Comment = CommentText
+            };
+
+
             // add new user record to mongo db 
             EditUserRecordViewModel addToDb = new EditUserRecordViewModel();
-            await addToDb.SaveUserRecord(InputUserName, TrackName, _recordUserTime, InputUploadDateTime, CommentText);
+            await addToDb.SaveUserRecord(newUserRecord);
 
 
         }

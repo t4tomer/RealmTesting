@@ -111,14 +111,14 @@ namespace RealmTodo.ViewModels
 
 
 
-
-
- 
-
-
-        public async Task SaveUserRecord(string InputProfileName,string InputMapName,string InputTrackTime,string InputUploadDateTime,string InputCommentText)
-        {
+        public async Task SaveUserRecord(UserRecord newUserRecord) { 
             Console.WriteLine($"SaveUserRecord EditUserRecordViewModel -->");
+
+            string InputProfileName = newUserRecord.ProfileName;
+            string InputMapName=newUserRecord.MapName;
+            string InputTrackTime = newUserRecord.TrackTime;
+            string InputUploadDateTime = newUserRecord.UploadDateTime;
+            string InputCommentText = newUserRecord.Comment;
 
             var singleton = ObjectSingleton.Instance;
             singleton.SetUserRecordType();
@@ -183,6 +183,9 @@ namespace RealmTodo.ViewModels
             Console.WriteLine($"To view your data in Atlas, use this link: {RealmService.DataExplorerLink}");
             await Shell.Current.GoToAsync("..");
         }
+
+
+
 
 
 
