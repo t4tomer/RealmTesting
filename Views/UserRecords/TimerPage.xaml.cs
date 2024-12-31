@@ -140,7 +140,7 @@ namespace RealmTodo.Views
         }
 
 
-                private static string GetCurrentDateTime()
+        private static string GetCurrentDateTime()
         {
             // Get the current date and time
             DateTime now = DateTime.Now;

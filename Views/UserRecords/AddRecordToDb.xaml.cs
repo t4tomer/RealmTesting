@@ -6,7 +6,10 @@ using Position = Maui.GoogleMaps.Position;
 using Microsoft.Maui.Controls.Maps;
 using System.Net.NetworkInformation;
 using RealmTodo.Models;
+using RealmTodo.ViewModels;
+
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 
 namespace RealmTodo.Views
@@ -18,10 +21,37 @@ namespace RealmTodo.Views
         List<Maui.GoogleMaps.Pin> pinsList; // the list of pins in the map
         Maui.GoogleMaps.Map myMap;
         private string _recordUserTime = ""; //
-        private string _trackName = ""; // Default value
-        private string _formattedTime = "";
-        private string _formattedDate = "";
+        private string _trackName = ""; //show on XAML page
+        private string _formattedTime = "";//show on XAML page
+        private string _formattedDate = "";//show on XAML page
 
+        private string _inputUserName;  // get entry from XAML page 
+        private string _commentText;//get entry from XAML page
+        public string InputUserName
+        {
+            get => _inputUserName;
+            set
+            {
+                if (_inputUserName != value)
+                {
+                    _inputUserName = value;
+                    OnPropertyChanged(nameof(InputUserName));  // Notify UI about the change
+                }
+            }
+        }
+
+        public string CommentText
+        {
+            get => _commentText;
+            set
+            {
+                if (_commentText != value)
+                {
+                    _commentText = value;
+                    OnPropertyChanged(nameof(CommentText));  // Notify UI about the change
+                }
+            }
+        }
 
         public string CurrentTime
         {
@@ -55,7 +85,6 @@ namespace RealmTodo.Views
             // Get the current date and time
             DateTime now = DateTime.Now;
 
-            //string formattedDateTime = now.ToString("HH:mm:ss dd/MM/yyyy ");
             string formattedTime = now.ToString("HH:mm:ss ");
 
 
@@ -160,10 +189,25 @@ namespace RealmTodo.Views
 
         [RelayCommand]
 
-        public async Task OkPressed()
+        //upload new user record to mongodb 
+        public async Task UpLoadToMongo()
         {
-            Console.WriteLine($"the track name is---> :{_trackName} ");
-            Console.WriteLine($"the TrackName is---> :{TrackName} ");
+            string InputUploadDateTime = CurrentDate + CurrentTime;
+            Console.WriteLine($"the InputProfileName is---> :{InputUserName} ");
+
+            
+            Console.WriteLine($"the InputMapName is---> :{TrackName} ");
+
+            Console.WriteLine($"the InputTrackTime is--->: {_recordUserTime}");
+
+            Console.WriteLine($"the InputUploadDateTime is---> :{InputUploadDateTime} ");
+
+            Console.WriteLine($"the InputCommentText is---> :{CommentText} ");
+
+            // add new user record to mongo db 
+            EditUserRecordViewModel addToDb = new EditUserRecordViewModel();
+            await addToDb.SaveUserRecord(InputUserName, TrackName, _recordUserTime, InputUploadDateTime, CommentText);
+
 
         }
 

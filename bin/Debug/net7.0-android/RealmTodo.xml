@@ -588,9 +588,6 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
         </member>
         <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.InputUserName">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.inputUserName"/>
@@ -616,29 +613,11 @@
         <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.PageHeader">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.pageHeader"/>
         </member>
-        <member name="F:RealmTodo.ViewModels.EditUserRecordViewModel.printNameCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditUserRecordViewModel.PrintNameCommand"/>.</summary>
-        </member>
-        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.PrintNameCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditUserRecordViewModel.PrintName"/>.</summary>
-        </member>
-        <member name="F:RealmTodo.ViewModels.EditUserRecordViewModel.oKClickedCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditUserRecordViewModel.OKClickedCommand"/>.</summary>
-        </member>
-        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.OKClickedCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditUserRecordViewModel.OnOKClicked"/>.</summary>
-        </member>
-        <member name="F:RealmTodo.ViewModels.EditUserRecordViewModel.testCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditUserRecordViewModel.TestCommand"/>.</summary>
-        </member>
-        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.TestCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditUserRecordViewModel.Test"/>.</summary>
-        </member>
         <member name="F:RealmTodo.ViewModels.EditUserRecordViewModel.saveUserRecordCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditUserRecordViewModel.SaveUserRecordCommand"/>.</summary>
         </member>
         <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.SaveUserRecordCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditUserRecordViewModel.SaveUserRecord"/>.</summary>
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditUserRecordViewModel.SaveUserRecord(System.String,System.String,System.String,System.String,System.String)"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.EditUserRecordViewModel.cancelCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditUserRecordViewModel.CancelCommand"/>.</summary>
@@ -790,11 +769,11 @@
         <member name="T:RealmTodo.Views.AddRecordToDb">
             <inheritdoc/>
         </member>
-        <member name="F:RealmTodo.Views.AddRecordToDb.okPressedCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.Views.AddRecordToDb.OkPressedCommand"/>.</summary>
+        <member name="F:RealmTodo.Views.AddRecordToDb.upLoadToMongoCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.Views.AddRecordToDb.UpLoadToMongoCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.Views.AddRecordToDb.OkPressedCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.AddRecordToDb.OkPressed"/>.</summary>
+        <member name="P:RealmTodo.Views.AddRecordToDb.UpLoadToMongoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.AddRecordToDb.UpLoadToMongo"/>.</summary>
         </member>
         <member name="T:RealmTodo.Views.TimerPage">
             <inheritdoc/>

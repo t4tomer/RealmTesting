@@ -69,41 +69,7 @@ namespace RealmTodo.ViewModels
 
         }
 
-        //used to update the name of the pin number on the map 
-        private void OnDoneButtonClicked(object sender, EventArgs e)
-        {
 
-            Console.WriteLine(" ---------->>>>> OnDoneButtonClicked");
-            
-        }
-
-        [RelayCommand]
-        public void PrintName()
-        {
-            // Print the name entered in the Entry field
-            if (!string.IsNullOrWhiteSpace(InputUserName))
-            {
-                Console.WriteLine($"Entered Name: {InputUserName}");
-            }
-            else
-            {
-                Console.WriteLine("No name was entered.");
-            }
-        }
-        [RelayCommand]
-        public void OnOKClicked()
-        {
-            if (!string.IsNullOrWhiteSpace(InputUserName))
-            {
-                Console.WriteLine($"Entered Name: {InputUserName}");
-            }
-            else
-            {
-                Console.WriteLine("No name was entered.");
-            }
-
-            Console.WriteLine("OK button command executed.");
-        }
 
 
 
@@ -147,21 +113,87 @@ namespace RealmTodo.ViewModels
 
 
 
-        [RelayCommand]
-        public async Task Test()
-        {
-            Console.WriteLine($"Test Command ,user name:{InputUserName}");
+ 
 
+
+        public async Task SaveUserRecord(string InputProfileName,string InputMapName,string InputTrackTime,string InputUploadDateTime,string InputCommentText)
+        {
+            Console.WriteLine($"SaveUserRecord EditUserRecordViewModel -->");
+
+            var singleton = ObjectSingleton.Instance;
+            singleton.SetUserRecordType();
+
+            var realm = RealmService.GetMainThreadRealm();
+
+            var userRecordsSubscriptionExists = realm.Subscriptions.Any(sub => sub.Name == "DogSubscription");
+
+            if (!userRecordsSubscriptionExists)
+            {
+                Console.WriteLine("No existing subscription for Dog. Adding one now...");
+
+                // Add the subscription synchronously
+                realm.Subscriptions.Update(() =>
+                {
+                    var userRecordQuery = realm.All<UserRecord>().Where(d => d.OwnerId == RealmService.CurrentUser.Id);
+                    realm.Subscriptions.Add(userRecordQuery, new SubscriptionOptions { Name = "DogSubscription" });
+                });
+
+                Console.WriteLine("MapPin subscription added. Waiting for synchronization...");
+
+                // Wait for synchronization
+                await realm.Subscriptions.WaitForSynchronizationAsync();
+                Console.WriteLine("MapPin synchronized successfully.");
+            }
+            else
+            {
+                Console.WriteLine("MapPin subscription already exists.");
+            }
+
+
+
+
+
+            await realm.WriteAsync(() =>
+            {
+                if (InitialUserRecord != null) // editing an item
+                {
+                    InitialUserRecord.ProfileName = profileNameNew;
+                    InitialUserRecord.MapName = mapNameNew;
+                    InitialUserRecord.TrackTime = trackTimeNew;
+                    InitialUserRecord.UploadDateTime = uploadDateTimeNew;
+
+                }
+                else // creating a new user record 
+                {
+                    realm.Add(new UserRecord()
+                    {
+                        OwnerId = RealmService.CurrentUser.Id,
+                        ProfileName = InputProfileName,
+                        MapName = InputMapName,
+                        TrackTime = InputTrackTime,
+                        UploadDateTime = InputUploadDateTime,
+                        Comment = InputCommentText
+                    });
+                }
+            });
+
+
+
+
+            Console.WriteLine($"To view your data in Atlas, use this link: {RealmService.DataExplorerLink}");
+            await Shell.Current.GoToAsync("..");
         }
 
 
 
 
 
+       
 
         [RelayCommand]
         public async Task SaveUserRecord()
         {
+            //method that is used for testing the upload of user record to mongodb
             Console.WriteLine($"SaveUserRecord EditUserRecordViewModel -->");
 
             var singleton = ObjectSingleton.Instance;

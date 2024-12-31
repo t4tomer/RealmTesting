@@ -4,6 +4,7 @@
              x:Class="RealmTodo.Views.AddRecordToDb"
              xmlns:vm="clr-namespace:RealmTodo.ViewModels"
              Title="{Binding TrackNameTitle}" >
+    
     <ContentPage.BindingContext>
         <vm:EditUserRecordViewModel />
     </ContentPage.BindingContext>
@@ -124,7 +125,7 @@
 
         <!-- Buttons Section -->
         <HorizontalStackLayout HorizontalOptions="Center">
-            <Button Margin="0,0,20,0" Text="OK" Command="{Binding PrintNameCommand}" />
+            <Button Margin="0,0,20,0" Text="OK" Command="{Binding UpLoadToMongoCommand}" />
             <Button BackgroundColor="#454556"
                     Text="Cancel" Command="{Binding CancelCommand}"/>
         </HorizontalStackLayout>
