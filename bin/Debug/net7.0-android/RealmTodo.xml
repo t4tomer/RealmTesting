@@ -473,6 +473,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:RealmTodo.ViewModels.MapsViewModel.ConnectionStatusIcon">
             <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.connectionStatusIcon"/>
@@ -523,6 +524,12 @@
         </member>
         <member name="P:RealmTodo.ViewModels.MapsViewModel.SaveUserRecordCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.SaveUserRecord"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.MapsViewModel.goToUserRecordsListCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.GoToUserRecordsListCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.MapsViewModel.GoToUserRecordsListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.GoToUserRecordsList"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.MapsViewModel.logoutCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.LogoutCommand"/>.</summary>
@@ -650,6 +657,9 @@
         <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.DataExplorerLink">
             <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.dataExplorerLink"/>
         </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.UserRecordsList">
+            <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.userRecordsList"/>
+        </member>
         <member name="M:RealmTodo.ViewModels.UserRecordsViewModel.OnIsShowAllTasksChanged(System.Boolean)">
             <summary>Executes the logic for when <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.IsShowAllTasks"/> just changed.</summary>
             <param name="value">The new property value that was set.</param>
@@ -666,12 +676,6 @@
         </member>
         <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.LogoutCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.Logout"/>.</summary>
-        </member>
-        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.chooseMapFromListCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.ChooseMapFromListCommand"/>.</summary>
-        </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.ChooseMapFromListCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.ChooseMapFromList(RealmTodo.Models.MapPin)"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.toMapPageCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.ToMapPageCommand"/>.</summary>
@@ -714,6 +718,12 @@
         </member>
         <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.UrlTapCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.UrlTap(System.String)"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.goToMapsListCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.GoToMapsListCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.GoToMapsListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.GoToMapsList"/>.</summary>
         </member>
         <member name="T:RealmTodo.Views.MapPage">
             <inheritdoc/>
@@ -994,6 +1004,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InputUserName">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InputUserName" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserRecordsList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserRecordsList" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -1083,6 +1096,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InputUserName">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InputUserName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserRecordsList">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserRecordsList" generated properties.</summary>
         </member>
     </members>
 </doc>

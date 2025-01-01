@@ -130,10 +130,10 @@
         <Button
             Grid.Row="5"
             Margin="5"
-            Text="Save UserRecord"
+            Text="Show User Records"
             FontSize="12" 
             Padding="5,0,5,10"        
-            Command="{Binding SaveUserRecordCommand}"
+            Command="{Binding GoToUserRecordsListCommand}"
             BackgroundColor="BlueViolet"/>
 
 

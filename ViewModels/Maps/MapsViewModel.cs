@@ -123,8 +123,37 @@ namespace RealmTodo.ViewModels
         [RelayCommand]
         public void OnAppearing()
         {
-            Console.WriteLine($"IsShowAllTasks is :{IsShowAllTasks} ");
 
+
+            //set the singlton object to mappin type 
+            var singleton = ObjectSingleton.Instance;
+            singleton.SetMapPinType();
+            realm = RealmService.GetMainThreadRealm();
+
+            // Check if the subscription for MapPin  type exists
+            var mapPinSubscriptionExists = realm.Subscriptions.Any(sub => sub.Name == "MapPinSubscription");
+
+            if (!mapPinSubscriptionExists)
+            {
+                Console.WriteLine("No existing subscription for Dog. Adding one now...");
+
+                // Add the subscription synchronously
+                realm.Subscriptions.Update(() =>
+                {
+                    var mapPinQuery = realm.All<MapPin>().Where(d => d.OwnerId == RealmService.CurrentUser.Id);
+                    realm.Subscriptions.Add(mapPinQuery, new SubscriptionOptions { Name = "MapPinSubscription" });
+                });
+
+                Console.WriteLine("MapPin subscription added. Waiting for synchronization...");
+
+                // Wait for synchronization
+                realm.Subscriptions.WaitForSynchronizationAsync();
+                Console.WriteLine("Subscriptions synchronized successfully.");
+            }
+            else
+            {
+                Console.WriteLine("MapPin subscription already exists.");
+            }
 
 
 
@@ -138,7 +167,7 @@ namespace RealmTodo.ViewModels
                 .OrderBy(map => map.Id)
                 .ToList();
 
-            // Assign the filtered list back to Items.
+            // Assign the filtered list back to Maps,showen in XAML page.
             Maps = distinctMapNames.AsQueryable();
 
             var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
@@ -151,7 +180,7 @@ namespace RealmTodo.ViewModels
 
         [RelayCommand]
         public async Task SaveUserRecord()
-        {
+        {// used for testing 
             Console.WriteLine($"SaveUserRecord EditUserRecord -->");
 
             var singleton = ObjectSingleton.Instance;
@@ -218,6 +247,19 @@ namespace RealmTodo.ViewModels
 
             await Shell.Current.GoToAsync("..");
         }
+
+        [RelayCommand]
+        public async Task GoToUserRecordsList()
+        {
+            //go to user record  list 
+            await Shell.Current.GoToAsync($"//user_records_list");
+
+
+
+
+
+        }
+
 
 
 

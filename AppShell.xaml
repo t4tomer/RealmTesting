@@ -17,9 +17,15 @@
         Route="items" />
 
     <ShellContent
-        Title="MapPinList"
+        Title="Maps List"
         ContentTemplate="{DataTemplate local:MapsPage}"
         Route="maps" />
+
+    <ShellContent
+        Title="User Records List"
+        ContentTemplate="{DataTemplate local:UserRecordsPage}"
+        Route="user_records_list" />
+
 
 
 

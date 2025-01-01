@@ -73,6 +73,9 @@
     <Compile Update="Views\UserRecords\AddRecordToDb.xaml.cs">
       <DependentUpon>AddRecordToDb.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\UserRecords\UserRecordsPage.xaml.cs">
+      <DependentUpon>UserRecordsPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   
   
@@ -98,6 +101,9 @@
 		<Folder Include="Services\" />
 	</ItemGroup>
 	<ItemGroup>
+		<MauiXaml Update="Views\UserRecords\UserRecordsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="Views\UserRecords\TimerPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>

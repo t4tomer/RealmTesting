@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
 using Position = Maui.GoogleMaps.Position;
+using Realms.Sync;
 
 
 
@@ -29,6 +30,13 @@ namespace RealmTodo.ViewModels
         [ObservableProperty]
         public string dataExplorerLink = RealmService.DataExplorerLink;
 
+        
+        [ObservableProperty]
+        private IQueryable<UserRecord> userRecordsList;
+
+
+
+
         private Realm realm;
         private string currentUserId;
         private bool isOnline = true;
@@ -37,6 +45,11 @@ namespace RealmTodo.ViewModels
 
         public UserRecordsViewModel()
         {
+
+            //set singlton to userrecord 
+            var singleton = ObjectSingleton.Instance;
+            singleton.SetUserRecordType();
+
             realm = RealmService.GetMainThreadRealm();
             currentUserId = RealmService.CurrentUser.Id;
         }
@@ -50,24 +63,60 @@ namespace RealmTodo.ViewModels
         {
             Console.WriteLine($"IsShowAllTasks is :{IsShowAllTasks} ");
 
-            // Retrieve all items from Realm and convert them to a list.
-            var mapNamesList = realm.All<MapPin>().ToList();
 
-            // Group the items by Summary and select the first item from each group.
-            var distinctMapNames = mapNamesList
-                .GroupBy(map => map.Mapname)
-                .Select(group => group.First())
-                .OrderBy(map => map.Id)
-                .ToList();
+            //set the singlton object to mappin type 
+            var singleton = ObjectSingleton.Instance;
+            singleton.SetUserRecordType();
 
-            // Assign the filtered list back to Items.
-            Maps = distinctMapNames.AsQueryable();
+
+            realm = RealmService.GetMainThreadRealm();
+
+            // Check if the subscription for MapPin  type exists
+            var userRecordSubscriptionExists = realm.Subscriptions.Any(sub => sub.Name == "UserRecordSubscription");
+
+            if (!userRecordSubscriptionExists)
+            {
+                Console.WriteLine("No existing subscription for Dog. Adding one now...");
+
+                // Add the subscription synchronously
+                realm.Subscriptions.Update(() =>
+                {
+                    var userRecordQuery = realm.All<UserRecord>().Where(d => d.OwnerId == RealmService.CurrentUser.Id);
+                    realm.Subscriptions.Add(userRecordQuery, new SubscriptionOptions { Name = "UserRecordSubscription" });
+                });
+
+                Console.WriteLine("UserRecord subscription added. Waiting for synchronization...");
+
+                // Wait for synchronization
+                realm.Subscriptions.WaitForSynchronizationAsync();
+                Console.WriteLine("Subscriptions synchronized successfully.");
+            }
+            else
+            {
+                Console.WriteLine("UserRecord subscription already exists.");
+            }
+
+
+
+
+
+            currentUserId = RealmService.CurrentUser.Id;
+            UserRecordsList = realm.All<UserRecord>().OrderBy(i => i.Id);
 
             var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
+
+            Console.WriteLine("----> Printing mapnames :");
+            foreach (var user_Record in UserRecordsList)
+            {
+                Console.WriteLine($"Map Name: {user_Record.MapName}");
+            }
+
 
 
 
             IsShowAllTasks = currentSubscriptionType == SubscriptionType.All;
+
+
         }
 
 
@@ -85,83 +134,9 @@ namespace RealmTodo.ViewModels
         }
 
 
-        private static List<Maui.GoogleMaps.Pin> getPinsListByName(string trackName)
-        {
-            var realm = RealmService.GetMainThreadRealm();
-
-            // Query Realm for all items with a matching Summary.
-            var matchingMapPins = realm.All<MapPin>().Where(i => i.Mapname == trackName);
-
-            var mapPinsList = realm.All<MapPin>().ToList(); // Fetch all items into memory
-
-            // Now you can safely use Select
-            var pinTypeList = mapPinsList
-                .Where(i => i.Mapname == trackName)  // Filter if needed
-                .Select(i => new Maui.GoogleMaps.Pin
-                {
-                    Label = i.Labelpin,
-                    Address = i.Address,
-                    Position = new Position(Convert.ToDouble(i.Latitude), Convert.ToDouble(i.Longitude))
-                })
-                .ToList();
-
-            // Loop through the matching items and print their Summary.
-            foreach (var pin in pinTypeList)
-            {
-                Console.WriteLine($"Address of pin (MapHelper class) -->pin label:'{pin.Label}'pin addr: {pin.Address}");
-            }
-
-            return pinTypeList;
-        }
-
-
 
  
 
-
-        //method that is used to edit map
-        [RelayCommand]
-        public async Task ChooseMapFromList(MapPin map)
-        {
-            string mapName = map.Mapname;
-            Console.WriteLine($"(EditMap)MapsViewModel,mapname:{map.Mapname} ");
-
-            //convert MapPin object with the same mapname to list with the same name but with type of Maui.GoogleMaps.Pin
-            List<Maui.GoogleMaps.Pin> pinListOfSameMapName = getPinsListByName(mapName);
-
-            var mapPage = MapPage.Instance;
-            mapPage.set_pinsList(pinListOfSameMapName);
-            mapPage.ShowTrack_Clicked();
-            mapPage.SetTitle(mapName);
-            if (await mapPage.IsLocationEnabled())
-            {
-                if (map.IsMine)
-                {
-                    Console.WriteLine($"-->Track is  mine!!!");
-                    mapPage.ShowButtonsOnMap(true); // show buttons 
-                    mapPage._canAddPins = true;
-                    await Shell.Current.Navigation.PushAsync(mapPage);//1 way 
-                    //await Shell.Current.GoToAsync($"chooseMapFromList");//2 way
-
-                }
-                else
-                {
-                    Console.WriteLine($"-->Track is not mine!!!");
-                    mapPage.ShowButtonsOnMap(false); // Remove buttons from the map 
-                    mapPage._canAddPins = false;
-                    await Shell.Current.Navigation.PushAsync(mapPage);//1 way 
-                    //await Shell.Current.GoToAsync($"chooseMapFromList");//2 way
-
-
-
-                }
-
-
-
-            }
-
-
-        }
 
 
 
@@ -300,6 +275,21 @@ namespace RealmTodo.ViewModels
 
             return true;
         }
+
+
+        [RelayCommand]
+        public async Task GoToMapsList()
+        {
+            //go to the maps list
+            await Shell.Current.GoToAsync($"//maps");
+
+
+
+
+
+        }
+
+
 
         async partial void OnIsShowAllTasksChanged(bool value)
         {
