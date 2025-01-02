@@ -31,15 +31,15 @@ namespace RealmTodo.Views
         }
 
 
-        public string MapTitle
+        public string TrackNameTiltle //XAML lavbel of the Title 
         {
-            get => _mapTitle;
+            get => $"Timer for {_mapTitle} map";
             set
             {
                 if (_mapTitle != value)
                 {
                     _mapTitle = value;
-                    OnPropertyChanged(nameof(MapTitle)); // Notify the UI about the change
+                    OnPropertyChanged(nameof(TrackNameTiltle)); // Notify the UI about the change
                 }
             }
         }
@@ -47,7 +47,7 @@ namespace RealmTodo.Views
 
         public void setTitle(string newTitle)
         {
-            MapTitle = newTitle; // Update property
+            TrackNameTiltle = newTitle; // Update property
             BindingContext = null;
             BindingContext = this; // Reset BindingContext to refresh bindings
         }

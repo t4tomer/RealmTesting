@@ -65,7 +65,7 @@ namespace RealmTodo.Views
 
         public string MapTitle
         {
-            get => _mapTitle;
+            get => $"Track :{_mapTitle}";
             set
             {
                 if (_mapTitle != value)
@@ -226,12 +226,33 @@ namespace RealmTodo.Views
             await Shell.Current.Navigation.PushAsync(timerPage);
         }
 
-        [RelayCommand]
 
+        [RelayCommand]
         public async Task ZoomToMyLocation()
         {
             Console.WriteLine($"----> LogLongitude_Clicked pressed!!!");
             GetCurrentLocation();
+
+        }
+
+
+        [RelayCommand]
+        public async Task GoToUserRecordsList()
+        {
+
+            UserRecordsViewModel userRecordsVM_Page = new UserRecordsViewModel();
+
+            userRecordsVM_Page.setTrackName(_mapTitle);
+
+            // Create a new instance of the UserRecordsPage and bind it to the ViewModel
+            var userRecordsPage = new UserRecordsPage
+            {
+                BindingContext = userRecordsVM_Page
+            };
+
+            // Navigate to the page
+            await Navigation.PushAsync(userRecordsPage);
+
 
         }
 

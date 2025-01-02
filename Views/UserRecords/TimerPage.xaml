@@ -4,10 +4,18 @@
              x:Class="RealmTodo.Views.TimerPage"
 
              BackgroundColor="#E3FCF7"
-             Title="{Binding MapTitle}">
+             Title="{Binding TrackNameTiltle}">
 
 
 
+        <Shell.TitleView>
+            <Label Text="{Binding TrackNameTiltle}" 
+                       FontSize="12" 
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" 
+                       TextColor="White" />
+        </Shell.TitleView>
 
 
 

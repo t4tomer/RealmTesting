@@ -733,6 +733,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="F:RealmTodo.Views.MapPage.toTimerPageCommand">
             <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.ToTimerPageCommand"/>.</summary>
@@ -745,6 +746,12 @@
         </member>
         <member name="P:RealmTodo.Views.MapPage.ZoomToMyLocationCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.ZoomToMyLocation"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.Views.MapPage.goToUserRecordsListCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.GoToUserRecordsListCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.Views.MapPage.GoToUserRecordsListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.GoToUserRecordsList"/>.</summary>
         </member>
         <member name="F:RealmTodo.Views.MapPage.deletLastPointCommand">
             <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.DeletLastPointCommand"/>.</summary>

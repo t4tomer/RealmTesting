@@ -24,7 +24,8 @@
     <ShellContent
         Title="User Records List"
         ContentTemplate="{DataTemplate local:UserRecordsPage}"
-        Route="user_records_list" />
+        Route="user_records_list?trackName={trackName}" />
+
 
 
 

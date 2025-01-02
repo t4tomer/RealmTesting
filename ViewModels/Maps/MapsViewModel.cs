@@ -160,7 +160,7 @@ namespace RealmTodo.ViewModels
             // Retrieve all items from Realm and convert them to a list.
             var mapNamesList = realm.All<MapPin>().ToList();
 
-            // Group the items by Summary and select the first item from each group.
+            // Group the MapPin object by the same Mapname and select the first item from each group.
             var distinctMapNames = mapNamesList
                 .GroupBy(map => map.Mapname)
                 .Select(group => group.First())

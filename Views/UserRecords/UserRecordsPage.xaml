@@ -6,7 +6,21 @@
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:vm="clr-namespace:RealmTodo.ViewModels"
              BackgroundColor="#E3FCF7"
-             x:Name="RecordsList">
+             x:Name="RecordsList"
+             Title="{Binding UserRecordsTiltle}">
+
+
+    <Shell.TitleView>
+        <Label Text="{Binding UserRecordsTiltle}" 
+                       FontSize="17" 
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" 
+                       TextColor="White" />
+    </Shell.TitleView>
+
+
+
     <ContentPage.Behaviors>
         <toolkit:EventToCommandBehavior
             EventName="Appearing"

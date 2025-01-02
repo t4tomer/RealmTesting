@@ -34,13 +34,17 @@ namespace RealmTodo.ViewModels
         [ObservableProperty]
         private IQueryable<UserRecord> userRecordsList;
 
+        private string _mapTitle = "Test"; // Default value
 
 
 
         private Realm realm;
         private string currentUserId;
         private bool isOnline = true;
+        public string _trackName = "Default"; // Default value
 
+        private static UserRecordsViewModel _instance;
+        private static readonly object _lock = new();
         public ICommand NavigateCommand { get; private set; }
 
         public UserRecordsViewModel()
@@ -52,16 +56,43 @@ namespace RealmTodo.ViewModels
 
             realm = RealmService.GetMainThreadRealm();
             currentUserId = RealmService.CurrentUser.Id;
+            Console.WriteLine($"--> UserRecordsViewModel -empty constructor");
+
         }
 
 
 
+        public string UserRecordsTiltle //XAML lavbel of the Title 
+        {
+            get => $" Map :{_trackName} user records";
+            set
+            {
+                if (_trackName != value)
+                {
+                    _trackName = value;
+                    OnPropertyChanged(nameof(UserRecordsTiltle)); // Notify the UI about the change
+                }
+            }
+        }
 
+
+        public void setTrackName(string newTitle)
+        {
+            _trackName = newTitle; // Update the internal mapTitle field
+            Console.WriteLine($"-->track name (UserRecordsViewModel): {_trackName}");
+        }
+
+        public string getTrackName()
+        {
+            return _trackName; 
+        }
 
         [RelayCommand]
         public void OnAppearing()
         {
             Console.WriteLine($"IsShowAllTasks is :{IsShowAllTasks} ");
+            string newTrackName = getTrackName();
+            Console.WriteLine($"-->track name (UserRecordsViewModel-OnAppearing): {newTrackName}");
 
 
             //set the singlton object to mappin type 
@@ -101,14 +132,20 @@ namespace RealmTodo.ViewModels
 
 
             currentUserId = RealmService.CurrentUser.Id;
-            UserRecordsList = realm.All<UserRecord>().OrderBy(i => i.Id);
+            //UserRecordsList = realm.All<UserRecord>().OrderBy(i => i.Id);//original code 
+
+            // Filter records by MapName
+            UserRecordsList = realm.All<UserRecord>()
+                .Where(record => record.MapName == _trackName)
+                .OrderBy(i => i.Id);
+
 
             var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
 
             Console.WriteLine("----> Printing mapnames :");
             foreach (var user_Record in UserRecordsList)
             {
-                Console.WriteLine($"Map Name: {user_Record.MapName}");
+                Console.WriteLine($"Profile name: {user_Record.ProfileName}");
             }
 
 

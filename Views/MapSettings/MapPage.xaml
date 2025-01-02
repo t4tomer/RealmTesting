@@ -81,7 +81,7 @@
             
             BackgroundColor="Transparent"
             AbsoluteLayout.LayoutFlags="PositionProportional"
-            AbsoluteLayout.LayoutBounds="0.2, 1.0, AutoSize, AutoSize" />
+            AbsoluteLayout.LayoutBounds="0.19, 1.0, AutoSize, AutoSize" />
 
         <Button
             x:Name="StartExcericeButton"
@@ -89,7 +89,19 @@
             BackgroundColor="Transparent"
              Command="{Binding ToTimerPageCommand}" 
             AbsoluteLayout.LayoutFlags="PositionProportional"
-            AbsoluteLayout.LayoutBounds="0.7, 1.0, AutoSize, AutoSize" />
+            AbsoluteLayout.LayoutBounds="0.62, 1.0, AutoSize, AutoSize" />
+
+        <Button
+            x:Name="ShowUsersRecords"
+            ImageSource="records_of_users.png"
+            BackgroundColor="Transparent"
+             Command="{Binding GoToUserRecordsListCommand}" 
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.81, 1.0, AutoSize, AutoSize" />
+
+
+
+
 
     </AbsoluteLayout>
 </ContentPage>
