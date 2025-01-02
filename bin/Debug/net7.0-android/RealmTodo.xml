@@ -644,6 +644,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.ConnectionStatusIcon">
             <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.connectionStatusIcon"/>
@@ -664,6 +665,12 @@
             <summary>Executes the logic for when <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.IsShowAllTasks"/> just changed.</summary>
             <param name="value">The new property value that was set.</param>
             <remarks>This method is invoked right after the value of <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.IsShowAllTasks"/> is changed.</remarks>
+        </member>
+        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.deleteUserRecordCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.DeleteUserRecordCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.DeleteUserRecordCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.DeleteUserRecord(RealmTodo.Models.UserRecord)"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.appearingCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.AppearingCommand"/>.</summary>

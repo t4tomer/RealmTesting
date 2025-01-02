@@ -61,6 +61,58 @@ namespace RealmTodo.ViewModels
         }
 
 
+        //[RelayCommand]
+        //public async Task DeleteItem(Item item)
+        //{
+        //    if (!await CheckItemOwnership(item))
+        //    {
+        //        return;
+        //    }
+
+        //    await realm.WriteAsync(() =>
+        //    {
+        //        realm.Remove(item);
+        //    });
+        //}
+
+
+
+        // used to user record   from the user recorods list 
+        [RelayCommand]
+        public async Task DeleteUserRecord(UserRecord userRecordFromList)
+        {
+
+            //await DialogService.ShowAlertAsync("Error", "You cannot delete user record that is not belonging to you", "OK");
+
+            if (!await CheckUserRecordOwnership(userRecordFromList))
+            {
+                return;
+            }
+
+            await realm.WriteAsync(() =>
+            {
+                realm.Remove(userRecordFromList);
+            });
+        
+            // Refresh the list after deletion
+            OnAppearing();
+        }
+
+
+        private async Task<bool> CheckUserRecordOwnership(UserRecord userRecordFromList)
+        {
+            if (!userRecordFromList.IsMine)
+            {
+                await DialogService.ShowAlertAsync("Error", "You cannot delete user record that is not belonging to you", "OK");
+                return false;
+            }
+
+            return true;
+        }
+
+
+
+
 
         public string UserRecordsTiltle //XAML lavbel of the Title 
         {

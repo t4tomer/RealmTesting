@@ -12,7 +12,7 @@
 
     <Shell.TitleView>
         <Label Text="{Binding UserRecordsTiltle}" 
-                       FontSize="17" 
+                       FontSize="12" 
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
                        VerticalOptions="Center" 
@@ -79,6 +79,17 @@
                                    Margin="15"
                                    VerticalOptions="Center" HorizontalOptions="End" IsVisible="{Binding IsMine}"/>
                             </StackLayout>
+
+                            <Button ImageSource="close.png"
+                                    BackgroundColor="Transparent"
+                                    VerticalOptions="Center" HorizontalOptions="End"
+                                    Command="{Binding Path=BindingContext.DeleteUserRecordCommand, Source={x:Reference RecordsList}}"
+                                    CommandParameter="{Binding .}"
+                                    IsEnabled="{Binding IsMine}"
+                                    />
+
+
+
 
                         </StackLayout>
                     </ViewCell>
