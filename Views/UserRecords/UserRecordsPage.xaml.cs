@@ -2,7 +2,27 @@
 
 public partial class UserRecordsPage : ContentPage
 {
-	public UserRecordsPage()
+
+    private static UserRecordsPage _instance;
+    private static readonly object _lock = new();
+
+    public static UserRecordsPage Instance
+    {
+        get
+        {
+            lock (_lock)
+            {
+                if (_instance == null)
+                {
+                    _instance = new UserRecordsPage();
+                }
+                return _instance;
+            }
+        }
+    }
+
+
+    public UserRecordsPage()
 	{
 		InitializeComponent();
 	}

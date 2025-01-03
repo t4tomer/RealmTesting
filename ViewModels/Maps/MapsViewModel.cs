@@ -252,9 +252,16 @@ namespace RealmTodo.ViewModels
         public async Task GoToUserRecordsList()
         {
             //go to user record  list 
-            await Shell.Current.GoToAsync($"//user_records_list");
+            //await Shell.Current.GoToAsync($"//user_records_list");
 
+            // Navigate to the singleton instance of MapPage
+            //UserRecordsPage test=new UserRecordsPage();
 
+            //await Shell.Current.Navigation.PushAsync(test);
+
+            //TODO fix the problem of app crashing when going to records page
+            var test = UserRecordsPage.Instance;
+            await Shell.Current.Navigation.PushAsync(test);
 
 
 
