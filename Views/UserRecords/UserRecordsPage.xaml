@@ -39,10 +39,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="60" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="70" />
-            <RowDefinition Height="60" />
-            <RowDefinition Height="60" />
-            <RowDefinition Height="60" />
 
         </Grid.RowDefinitions>
         <StackLayout Orientation="Horizontal"
@@ -96,59 +92,10 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Border BackgroundColor="White"
-                StrokeThickness="0"
-               Padding="8" Grid.Row="2">
-            <Button
-                Margin="5"
-                Text="Timer Button "
-                FontSize="12" 
-                Padding="5,0,5,10"
-                Command="{Binding ToTimerPageCommand}"
-                BackgroundColor="Purple"/>
-            
-            
-            
-
-        </Border>
-        <Frame Grid.Row="3" Padding="10" BorderColor="Black" BackgroundColor="#E3FCF7" Margin="5">
-            <Label HorizontalTextAlignment="Center" >
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="To see your changes in Atlas, tap " />
-                        <Span Text="here"
-                              TextColor="Blue"
-                              TextDecorations="Underline">
-                        </Span>
-                        <Span Text="." />
-                    </FormattedString>
-                </Label.FormattedText>
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding Path=BindingContext.UrlTapCommand, Source={x:Reference mapsPage}}" />
-                </Label.GestureRecognizers>
-            </Label>
-        </Frame>
-
-
-        <Button
-            Grid.Row="4"
-            Margin="5"
-            Text="Create Map "
-            FontSize="12" 
-            Padding="5,0,5,10"        
-            Command="{Binding ToMapPageCommand}" />
+ 
 
 
 
-
-        <Button
-            Grid.Row="5"
-            Margin="5"
-            Text="Show Maps"
-            FontSize="12" 
-            Padding="5,0,5,10"        
-            Command="{Binding GoToMapsListCommand}"
-            BackgroundColor="BlueViolet"/>
 
 
 
