@@ -260,6 +260,9 @@ namespace RealmTodo.ViewModels
             //await Shell.Current.Navigation.PushAsync(test);
 
             //TODO fix the problem of app crashing when going to records page
+
+
+
             var test = UserRecordsPage.Instance;
             await Shell.Current.Navigation.PushAsync(test);
 

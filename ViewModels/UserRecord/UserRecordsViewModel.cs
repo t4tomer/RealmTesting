@@ -41,7 +41,7 @@ namespace RealmTodo.ViewModels
         private Realm realm;
         private string currentUserId;
         private bool isOnline = true;
-        public string _trackName = "Default"; // Default value
+        public string _trackName = "Deafult"; // Default value
 
         private static UserRecordsViewModel _instance;
         private static readonly object _lock = new();
@@ -139,39 +139,37 @@ namespace RealmTodo.ViewModels
             return _trackName; 
         }
 
-        [RelayCommand]
-        public void OnAppearing()
+        public async void OnAppearing()
         {
-            Console.WriteLine($"IsShowAllTasks is :{IsShowAllTasks} ");
-            string newTrackName = getTrackName();
-            Console.WriteLine($"-->track name (UserRecordsViewModel-OnAppearing): {newTrackName}");
+            Console.WriteLine($"IsShowAllTasks is :{IsShowAllTasks}");
 
-
-            //set the singlton object to mappin type 
+            // Set the singleton object to UserRecord type
             var singleton = ObjectSingleton.Instance;
             singleton.SetUserRecordType();
-
-
             realm = RealmService.GetMainThreadRealm();
 
-            // Check if the subscription for MapPin  type exists
+            // Check if the subscription for UserRecord type exists
             var userRecordSubscriptionExists = realm.Subscriptions.Any(sub => sub.Name == "UserRecordSubscription");
 
             if (!userRecordSubscriptionExists)
             {
-                Console.WriteLine("No existing subscription for Dog. Adding one now...");
+                Console.WriteLine("No existing subscription for UserRecord. Adding one now...");
 
                 // Add the subscription synchronously
                 realm.Subscriptions.Update(() =>
                 {
-                    var userRecordQuery = realm.All<UserRecord>().Where(d => d.OwnerId == RealmService.CurrentUser.Id);
-                    realm.Subscriptions.Add(userRecordQuery, new SubscriptionOptions { Name = "UserRecordSubscription" });
+
+                    // Query to include all UserRecords
+                    var allUserRecordsQuery = realm.All<UserRecord>();
+
+                    realm.Subscriptions.Add(allUserRecordsQuery, new SubscriptionOptions { Name = "UserRecordSubscription" });
+               
                 });
 
                 Console.WriteLine("UserRecord subscription added. Waiting for synchronization...");
 
                 // Wait for synchronization
-                realm.Subscriptions.WaitForSynchronizationAsync();
+                await realm.Subscriptions.WaitForSynchronizationAsync();
                 Console.WriteLine("Subscriptions synchronized successfully.");
             }
             else
@@ -179,34 +177,38 @@ namespace RealmTodo.ViewModels
                 Console.WriteLine("UserRecord subscription already exists.");
             }
 
+            // Retrieve all UserRecords in the realm
+            //UserRecordsList = realm.All<UserRecord>().AsQueryable();
 
-
-
-
-            currentUserId = RealmService.CurrentUser.Id;
-            //UserRecordsList = realm.All<UserRecord>().OrderBy(i => i.Id);//original code 
-
-            // Filter records by MapName
-            UserRecordsList = realm.All<UserRecord>()
-                .Where(record => record.MapName == _trackName)
-                .OrderBy(i => i.Id);
-
-
-            var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
-
-            Console.WriteLine("----> Printing mapnames :");
-            foreach (var user_Record in UserRecordsList)
+            if(_trackName== "Deafult")
             {
-                Console.WriteLine($"Profile name: {user_Record.ProfileName}");
+                Console.WriteLine("------------->>>> Deafult!!!.");
+
+                // all user records 
+                UserRecordsList = realm.All<UserRecord>().AsQueryable();
+                _trackName = "All User Records";
+                setTrackName(_trackName);
+
+            }
+            else
+            {
+                // all user records with same MapName=_trackNam
+                UserRecordsList = realm.All<UserRecord>()
+                .Where(record => record.MapName == _trackName)
+                .AsQueryable();
             }
 
+            Console.WriteLine($"----> Displaying all UserRecords with MapName: {_trackName}");
+            foreach (var userRecord in UserRecordsList)
+            {
+                Console.WriteLine($"Id: {userRecord.Id}, ProfileName: {userRecord.ProfileName}, OwnerId: {userRecord.OwnerId}, MapName: {userRecord.MapName}");
+            }
 
-
-
+            var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
             IsShowAllTasks = currentSubscriptionType == SubscriptionType.All;
-
-
         }
+
+
 
 
 

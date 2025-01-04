@@ -644,7 +644,6 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
-            <inheritdoc/>
         </member>
         <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.ConnectionStatusIcon">
             <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.connectionStatusIcon"/>
@@ -671,12 +670,6 @@
         </member>
         <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.DeleteUserRecordCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.DeleteUserRecord(RealmTodo.Models.UserRecord)"/>.</summary>
-        </member>
-        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.appearingCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.AppearingCommand"/>.</summary>
-        </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.AppearingCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.OnAppearing"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.logoutCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.LogoutCommand"/>.</summary>
