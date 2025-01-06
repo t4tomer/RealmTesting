@@ -139,6 +139,10 @@ namespace RealmTodo.ViewModels
             return _trackName; 
         }
 
+
+
+        [RelayCommand]
+
         public async void OnAppearing()
         {
             Console.WriteLine($"IsShowAllTasks is :{IsShowAllTasks}");
@@ -177,27 +181,24 @@ namespace RealmTodo.ViewModels
                 Console.WriteLine("UserRecord subscription already exists.");
             }
 
-            // Retrieve all UserRecords in the realm
-            //UserRecordsList = realm.All<UserRecord>().AsQueryable();
+            //show all the useres with same MapName
+            UserRecordsList = realm.All<UserRecord>()
+            .Where(record => record.MapName == _trackName)
+            .AsQueryable();
 
-            if(_trackName== "Deafult")
+            // show the records of the same user that is logged to the app 
+            if (IsShowAllTasks)
             {
-                Console.WriteLine("------------->>>> Deafult!!!.");
-
-                // all user records 
-                UserRecordsList = realm.All<UserRecord>().AsQueryable();
-                _trackName = "All User Records";
-                setTrackName(_trackName);
-
+                // Show all UserRecords
+                UserRecordsList = UserRecordsList;
             }
             else
             {
-                // all user records with same MapName=_trackNam
-                UserRecordsList = realm.All<UserRecord>()
-                .Where(record => record.MapName == _trackName)
-                .AsQueryable();
+                // Show only the current user's UserRecords
+                UserRecordsList = UserRecordsList
+                    .Where(record => record.OwnerId == currentUserId)
+                    .AsQueryable();
             }
-
             Console.WriteLine($"----> Displaying all UserRecords with MapName: {_trackName}");
             foreach (var userRecord in UserRecordsList)
             {
