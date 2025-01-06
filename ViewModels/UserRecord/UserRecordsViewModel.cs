@@ -181,10 +181,18 @@ namespace RealmTodo.ViewModels
                 Console.WriteLine("UserRecord subscription already exists.");
             }
 
-            //show all the useres with same MapName
-            UserRecordsList = realm.All<UserRecord>()
-            .Where(record => record.MapName == _trackName)
-            .AsQueryable();
+            //show all the useres with the same MapName field
+            if (_trackName != "Deafult")
+            {
+                //all user records with same MapName
+                UserRecordsList = realm.All<UserRecord>()
+                .Where(record => record.MapName == _trackName)
+                .AsQueryable();
+
+            }
+            else
+                UserRecordsList = realm.All<UserRecord>();
+
 
             // show the records of the same user that is logged to the app 
             if (IsShowAllTasks)
