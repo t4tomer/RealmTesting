@@ -76,7 +76,7 @@ namespace RealmTodo.ViewModels
             //set singlton to mappin 
             var singleton = ObjectSingleton.Instance;
             singleton.SetMapPinType();
-            
+
             realm = RealmService.GetMainThreadRealm();
             currentUserId = RealmService.CurrentUser.Id;
         }
@@ -103,7 +103,7 @@ namespace RealmTodo.ViewModels
 
             await DeleteSinglePin(mapPinToDelete);
 
- 
+
         }
 
         private static string GetCurrentDateTime()
@@ -236,7 +236,7 @@ namespace RealmTodo.ViewModels
                         MapName = "mapTest",
                         TrackTime = "tracktime",
                         UploadDateTime = GetCurrentDateTime(),
-                        Comment = "CommentTest"+GetCurrentDateTime()
+                        Comment = "CommentTest" + GetCurrentDateTime()
 
                     });
                 }
@@ -379,7 +379,7 @@ namespace RealmTodo.ViewModels
         [RelayCommand]
         public async Task ToMapPage()
         {
-   
+
 
 
             // Navigate to the singleton instance of MapPage
@@ -406,40 +406,75 @@ namespace RealmTodo.ViewModels
 
         // used to delete map from the maps view 
         [RelayCommand]
-        public async Task DeleteMap(MapPin pin)
+        public async Task DeleteMap(MapPin pinOfChoseMap)
         {
 
+            string trackNameToDelete = pinOfChoseMap.Mapname;
 
-            if (!await CheckItemOwnership(pin))
+
+            if (!await CheckMapOwnership(pinOfChoseMap))
             {
                 return;
             }
 
-            // Query all maps with the same mapname
+
+            if (!await WarningDeletingMyTrack(pinOfChoseMap))
+            {
+                return;
+            }
+
+
+
+
+            // Query all MapPin objects with the same mapname
             var mapToDelete = realm.All<MapPin>()
-                .Where(i => i.Mapname == pin.Mapname)
+                .Where(track => track.Mapname == trackNameToDelete)
                 .ToList();
 
-
+            //delete each pin of the map 
             foreach (var pinsInMap in mapToDelete)
             {
                 await DeleteSinglePin(pinsInMap);
             }
-            // Refresh the list after deletion
+
+            await DeleteUsersOfTrack(trackNameToDelete);
+
+
+            // Refresh the list after deleting the chosen track
             OnAppearing();
+
+
+
+
+        }
+
+        public async Task DeleteUsersOfTrack(string trackName)
+        {
+            UserRecordsViewModel deleteUseres = new UserRecordsViewModel();
+
+            //set singlton to UserRecord 
+            var singleton = ObjectSingleton.Instance;
+            singleton.SetUserRecordType();
+            realm = RealmService.GetMainThreadRealm();
+
+            // list of user records with the same MapName 
+            var listOfUsersRecordsOfTrack = realm.All<UserRecord>()
+                .Where(user => user.MapName == trackName)
+                .ToList();
+
+            if (listOfUsersRecordsOfTrack.Count() == 0)
+                return;
+
+            foreach (var userToDelete in listOfUsersRecordsOfTrack)
+            {
+                await deleteUseres.DeleteUserRecord(userToDelete);
+            }
         }
 
         //delete single pin from map 
         [RelayCommand]
         public async Task DeleteSinglePin(MapPin pin)
         {
-
-            //Console.WriteLine($"--->(DeleteItem) item summery:{item.Summary} ");
-
-            //if (!await CheckItemOwnership(pin))
-            //{
-            //    return;
-            //}
 
             await realm.WriteAsync(() =>
             {
@@ -496,13 +531,32 @@ namespace RealmTodo.ViewModels
             await Launcher.OpenAsync(DataExplorerLink);
         }
 
-        private async Task<bool> CheckItemOwnership(MapPin map)
+        private async Task<bool> WarningDeletingMyTrack(MapPin chosenPinOfMap)
         {
-            //if (!item.IsMine)
-            //{
-            //    await DialogService.ShowAlertAsync("Error", "You cannot modify items not belonging to you", "OK");
-            //    return false;
-            //}
+            // Display a dialog with "OK" and "Cancel" and capture the user's response
+            bool userConfirmed = await Application.Current.MainPage.DisplayAlert(
+                "Warning",
+                "Deleting track will delete the user's records of this map",
+                "OK",
+                "Cancel"
+            );
+
+            // Return true if the user pressed "OK", false otherwise
+            return userConfirmed;
+        }
+
+
+
+
+        private async Task<bool> CheckMapOwnership(MapPin chosenPinOfMap)
+        {
+            if (!chosenPinOfMap.IsMine)
+            {
+                await DialogService.ShowAlertAsync("Error", "You cannot delete tracks not belonging to you", "OK");
+                return false;
+            }
+
+
 
             return true;
         }

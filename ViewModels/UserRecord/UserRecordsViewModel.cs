@@ -214,7 +214,7 @@ namespace RealmTodo.ViewModels
             }
 
             var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
-            IsShowAllTasks = currentSubscriptionType == SubscriptionType.All;
+            IsShowAllTasks = currentSubscriptionType == SubscriptionType.All;// TODO cheack this code line 
         }
 
 
@@ -393,6 +393,10 @@ namespace RealmTodo.ViewModels
 
         async partial void OnIsShowAllTasksChanged(bool value)
         {
+            if(value)
+                await DialogService.ShowAlertAsync("Switch", "Showing all Useres Records", "OK");
+            //else
+            //    await DialogService.ShowAlertAsync("Switch", "Showing only my user records", "OK");
 
             await RealmService.SetSubscription(realm, value ? SubscriptionType.All : SubscriptionType.Mine);
 

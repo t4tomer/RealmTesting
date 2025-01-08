@@ -64,7 +64,10 @@ namespace RealmTodo.ViewModels
         public EditUserRecordViewModel()
         {
             Console.WriteLine($"----> empty constructor,EditMapPinViewModel");
+            var singleton = ObjectSingleton.Instance;
+            singleton.SetUserRecordType();
 
+            var realm = RealmService.GetMainThreadRealm();
 
 
         }
