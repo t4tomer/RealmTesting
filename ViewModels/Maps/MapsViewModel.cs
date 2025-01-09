@@ -565,6 +565,8 @@ namespace RealmTodo.ViewModels
 
         async partial void OnIsShowAllTasksChanged(bool value)
         {
+            if (value)
+                await DialogService.ShowAlertAsync("Switch", "Displaying All Usere's Maps", "OK");
 
             await RealmService.SetSubscription(realm, value ? SubscriptionType.All : SubscriptionType.Mine);
 

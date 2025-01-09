@@ -16,116 +16,98 @@
         <ToolbarItem Text="Change Connection Status" Order="Primary" IconImageSource="{Binding ConnectionStatusIcon}" Command="{Binding ChangeConnectionStatusCommand}" />
         <ToolbarItem Text="Logout" Order="Primary" IconImageSource="logout.png" Command="{Binding LogoutCommand}"/>
         <ToolbarItem Text="Refresh" Order="Primary" IconImageSource="refresh.png" Command="{Binding RefreshCommand}"/>
-
     </ContentPage.ToolbarItems>
     <ContentPage.BindingContext>
         <vm:MapsViewModel />
     </ContentPage.BindingContext>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60" />
+            <RowDefinition Height="70" /> <!-- Show All Users Maps Label-->
             <RowDefinition Height="*" />
-            <RowDefinition Height="70" />
             <RowDefinition Height="60" />
             <RowDefinition Height="60" />
             <RowDefinition Height="60" />
-
         </Grid.RowDefinitions>
+
         <StackLayout Orientation="Horizontal"
                      BackgroundColor="#E3FCF7"
                      Padding="20"
                      Spacing="15">
             <Label HorizontalTextAlignment="End"
-                Text="Show All Users Maps"
-                FontSize="Default"
-                HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                   Text="Show All Users Maps"
+                   FontSize="15"  
+                   FontAttributes="Bold"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Center"
+                   />
             <Switch 
                 HorizontalOptions="End" 
                 VerticalOptions="Center"
                 IsToggled="{Binding IsShowAllTasks}"
-                Toggled="Switch_Toggled"
-             />
+                Toggled="Switch_Toggled" />
         </StackLayout>
+
         <ListView ItemsSource="{Binding Maps}"
                   SelectionMode="None"
-             Grid.Row="1"
-             BackgroundColor="White">
+                  Grid.Row="1"
+                  BackgroundColor="White">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="5">
-                            <CheckBox IsChecked="{Binding IsComplete}" VerticalOptions="Center" IsEnabled="{Binding IsMine}"  />
+                            <CheckBox IsChecked="{Binding IsComplete}" VerticalOptions="Center" IsEnabled="{Binding IsMine}" />
                             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer 
-                                    Command="{Binding Path=BindingContext.ChooseMapFromListCommand, Source={x:Reference mapsPage}}"
-                                    CommandParameter="{Binding .}"/>
-
+                                        Command="{Binding Path=BindingContext.ChooseMapFromListCommand, Source={x:Reference mapsPage}}"
+                                        CommandParameter="{Binding .}"/>
                                 </StackLayout.GestureRecognizers>
                                 <Label Text="{Binding Mapname}"
-                                    HorizontalOptions="FillAndExpand"
-                                    VerticalOptions="Center"/>
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="Center"/>
                                 <Label Text="(mine)"
-                                   FontSize="Small"
-                                   Margin="15"
-                                   VerticalOptions="Center" HorizontalOptions="End" IsVisible="{Binding IsMine}"/>
+                                       FontSize="Small"
+                                       Margin="15"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="End"
+                                       IsVisible="{Binding IsMine}"/>
                             </StackLayout>
                             <Button ImageSource="close.png"
                                     BackgroundColor="Transparent"
-                                    VerticalOptions="Center" HorizontalOptions="End"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="End"
                                     Command="{Binding Path=BindingContext.DeleteMapCommand, Source={x:Reference mapsPage}}"
                                     CommandParameter="{Binding .}"
-                                    IsEnabled="{Binding IsMine}"
-                                    />
+                                    IsEnabled="{Binding IsMine}" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
         <Border BackgroundColor="White"
                 StrokeThickness="0"
-               Padding="8" Grid.Row="2">
-            <Button
-                Margin="5"
-                Text="Timer Button "
-                FontSize="12" 
-                Padding="5,0,5,10"
-                Command="{Binding ToTimerPageCommand}"
-                BackgroundColor="Purple"/>
-            
-            
-            
+                Padding="8"
+                Grid.Row="2">
 
         </Border>
-        <Frame Grid.Row="3" Padding="10" BorderColor="Black" BackgroundColor="#E3FCF7" Margin="5">
-            <Label HorizontalTextAlignment="Center" >
-                <Label.FormattedText>
-                    <FormattedString>
-                        <Span Text="To see your changes in Atlas, tap " />
-                        <Span Text="here"
-                              TextColor="Blue"
-                              TextDecorations="Underline">
-                        </Span>
-                        <Span Text="." />
-                    </FormattedString>
-                </Label.FormattedText>
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding Path=BindingContext.UrlTapCommand, Source={x:Reference mapsPage}}" />
-                </Label.GestureRecognizers>
-            </Label>
-        </Frame>
 
+        <Button
+            Grid.Row="3"
+            Margin="5"
+            Text="Timer Button"
+            FontSize="12"
+            Padding="5,0,5,10"
+            Command="{Binding ToTimerPageCommand}"
+            BackgroundColor="Purple" />
 
         <Button
             Grid.Row="4"
             Margin="5"
-            Text="Create Map "
+            Text="Create Map"
             FontSize="12" 
             Padding="5,0,5,10"        
             Command="{Binding ToMapPageCommand}" />
-
-
-
 
         <Button
             Grid.Row="5"
@@ -134,14 +116,6 @@
             FontSize="12" 
             Padding="5,0,5,10"        
             Command="{Binding GoToUserRecordsListCommand}"
-            BackgroundColor="BlueViolet"/>
-
-
-
-
-
-
-
-
+            BackgroundColor="BlueViolet" />
     </Grid>
 </ContentPage>

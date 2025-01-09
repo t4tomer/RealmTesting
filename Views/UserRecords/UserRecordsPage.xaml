@@ -37,18 +37,19 @@
     </ContentPage.BindingContext>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60" />
+            <RowDefinition Height="70" />
             <RowDefinition Height="*" />
 
         </Grid.RowDefinitions>
         <StackLayout Orientation="Horizontal"
                      BackgroundColor="#E3FCF7"
                      Padding="20"
-                     Spacing="15">
+                     Spacing="10">
             <Label HorizontalTextAlignment="End"
-                Text="Show All Users Maps"
-                FontSize="Default"
-                HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                   Text="Show All Users Records"
+                   FontSize="14"  
+                   FontAttributes="Bold"
+                   HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
             <Switch 
                 HorizontalOptions="End" 
                 VerticalOptions="Center"
