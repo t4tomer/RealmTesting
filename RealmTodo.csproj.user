@@ -7,7 +7,7 @@
     <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
   </PropertyGroup>
   <ItemGroup>
-    <MauiXaml Update="Views\UserRecords\AddRecordToDb2.xaml">
+    <MauiXaml Update="Views\UserRecords\UserDetails.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Views\UserRecords\UserRecordsPage.xaml">

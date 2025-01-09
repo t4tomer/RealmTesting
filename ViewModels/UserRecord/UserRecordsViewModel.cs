@@ -114,8 +114,9 @@ namespace RealmTodo.ViewModels
             //await Shell.Current.Navigation.PushAsync(userRecordDetailsPage);
 
 
-            var addRecordToDb2 = new AddRecordToDb2(); //TODO fix  problem here 
-            await Shell.Current.Navigation.PushAsync(addRecordToDb2);
+            var currentUserRecordDetails = new UserDetails(); //TODO fix  problem here 
+            currentUserRecordDetails.setXAML_Values(userRecordFromList);
+            await Shell.Current.Navigation.PushAsync(currentUserRecordDetails);
 
             //UserRecordDetails
 

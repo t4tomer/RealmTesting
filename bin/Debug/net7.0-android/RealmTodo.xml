@@ -806,15 +806,6 @@
         <member name="P:RealmTodo.Views.AddRecordToDb.UpLoadToMongoCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.AddRecordToDb.UpLoadToMongo"/>.</summary>
         </member>
-        <member name="T:RealmTodo.Views.AddRecordToDb2">
-            <inheritdoc/>
-        </member>
-        <member name="F:RealmTodo.Views.AddRecordToDb2.upLoadToMongoCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.Views.AddRecordToDb2.UpLoadToMongoCommand"/>.</summary>
-        </member>
-        <member name="P:RealmTodo.Views.AddRecordToDb2.UpLoadToMongoCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.AddRecordToDb2.UpLoadToMongo"/>.</summary>
-        </member>
         <member name="T:RealmTodo.Views.TimerPage">
             <inheritdoc/>
             <inheritdoc/>

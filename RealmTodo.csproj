@@ -70,8 +70,8 @@
     <Compile Update="Views\MapSettings\MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\UserRecords\AddRecordToDb2.xaml.cs">
-      <DependentUpon>AddRecordToDb2.xaml</DependentUpon>
+    <Compile Update="Views\UserRecords\UserDetails.xaml.cs">
+      <DependentUpon>UserDetails.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\UserRecords\AddRecordToDb.xaml.cs">
       <DependentUpon>AddRecordToDb.xaml</DependentUpon>
@@ -104,7 +104,7 @@
 		<Folder Include="Services\" />
 	</ItemGroup>
 	<ItemGroup>
-		<MauiXaml Update="Views\UserRecords\AddRecordToDb2.xaml">
+		<MauiXaml Update="Views\UserRecords\UserDetails.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Views\UserRecords\UserRecordsPage.xaml">
