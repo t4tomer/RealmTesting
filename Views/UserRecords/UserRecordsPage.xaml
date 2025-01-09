@@ -66,6 +66,13 @@
                         <StackLayout Orientation="Horizontal" Padding="5">
                             <CheckBox IsChecked="{Binding IsComplete}" VerticalOptions="Center" IsEnabled="{Binding IsMine}"  />
                             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                    Command="{Binding Path=BindingContext.ShowRecordCommand, Source={x:Reference RecordsList}}"
+                                    CommandParameter="{Binding .}"/>
+
+                                </StackLayout.GestureRecognizers>
+
 
                                 <Label Text="{Binding ProfileName}"
                                     HorizontalOptions="FillAndExpand"
@@ -84,7 +91,7 @@
                                     IsEnabled="{Binding IsMine}"
                                     />
 
-
+                            
 
 
                         </StackLayout>

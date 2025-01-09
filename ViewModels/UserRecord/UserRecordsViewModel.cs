@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
 using Position = Maui.GoogleMaps.Position;
 using Realms.Sync;
+//using WebKit;
 
 
 
@@ -81,6 +82,9 @@ namespace RealmTodo.ViewModels
         [RelayCommand]
         public async Task DeleteUserRecord(UserRecord userRecordFromList)
         {
+            string userRecordComment = userRecordFromList.Comment;
+
+            Console.WriteLine($"---------->>> the comment of the user is:{userRecordComment} ");
 
             //await DialogService.ShowAlertAsync("Error", "You cannot delete user record that is not belonging to you", "OK");
 
@@ -97,6 +101,38 @@ namespace RealmTodo.ViewModels
             // Refresh the list after deletion
             OnAppearing();
         }
+
+
+        // used to user record   from the user recorods list 
+        [RelayCommand]
+        public async Task ShowRecord(UserRecord userRecordFromList)
+        {
+            string userRecordComment = userRecordFromList.Comment;
+
+            Console.WriteLine($"---------->>> the comment of the ShowRecord user is:{userRecordComment} ");
+            //var userRecordDetailsPage = new UserRecordDetails(); //TODO fix  problem here 
+            //await Shell.Current.Navigation.PushAsync(userRecordDetailsPage);
+
+
+            var addRecordToDb2 = new AddRecordToDb2(); //TODO fix  problem here 
+            await Shell.Current.Navigation.PushAsync(addRecordToDb2);
+
+            //UserRecordDetails
+
+
+
+            //userRecordDetailsPage.setUserRecord(userRecordFromList);
+            //await Shell.Current.Navigation.PushAsync(userRecordDetailsPage);//1 way 
+
+            OnAppearing();
+        }
+
+
+
+ 
+
+
+
 
 
         private async Task<bool> CheckUserRecordOwnership(UserRecord userRecordFromList)

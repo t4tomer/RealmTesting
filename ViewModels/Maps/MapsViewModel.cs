@@ -356,10 +356,9 @@ namespace RealmTodo.ViewModels
                     mapPage.ShowButtonsOnMap(false); // Remove buttons from the map 
                     mapPage._canAddPins = false;
                     await Shell.Current.Navigation.PushAsync(mapPage);//1 way 
-                    //await Shell.Current.GoToAsync($"chooseMapFromList");//2 way
 
 
-
+}
                 }
 
 
@@ -367,7 +366,7 @@ namespace RealmTodo.ViewModels
             }
 
 
-        }
+        
 
 
 
