@@ -1,11 +1,17 @@
 ﻿namespace RealmTodo.Views;
 
+
 public partial class MapsPage : ContentPage
 {
 	public MapsPage()
 	{
-		InitializeComponent();
-	}
+
+        InitializeComponent();
+     
+
+
+
+    }
 
     private void Switch_Toggled(object sender, ToggledEventArgs e)
     {

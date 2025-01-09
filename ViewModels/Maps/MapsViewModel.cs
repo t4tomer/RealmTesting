@@ -124,6 +124,9 @@ namespace RealmTodo.ViewModels
         public void OnAppearing()
         {
 
+            // used to reset the timer when switching tracks 
+            var timer = TimerPage.Instance;
+            timer.ResetTimer();
 
             //set the singlton object to mappin type 
             var singleton = ObjectSingleton.Instance;
@@ -263,8 +266,8 @@ namespace RealmTodo.ViewModels
 
 
 
-            var test = UserRecordsPage.Instance;
-            await Shell.Current.Navigation.PushAsync(test);
+            var userRecordsPage = UserRecordsPage.Instance;
+            await Shell.Current.Navigation.PushAsync(userRecordsPage);
 
 
 
