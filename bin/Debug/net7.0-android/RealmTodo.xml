@@ -646,6 +646,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.ConnectionStatusIcon">
             <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.connectionStatusIcon"/>
@@ -662,10 +663,21 @@
         <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.UserRecordsList">
             <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.userRecordsList"/>
         </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.SortOptions">
+            <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel._SortOptions"/>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.SelectedSortOption">
+            <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.selectedSortOption"/>
+        </member>
         <member name="M:RealmTodo.ViewModels.UserRecordsViewModel.OnIsShowAllTasksChanged(System.Boolean)">
             <summary>Executes the logic for when <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.IsShowAllTasks"/> just changed.</summary>
             <param name="value">The new property value that was set.</param>
             <remarks>This method is invoked right after the value of <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.IsShowAllTasks"/> is changed.</remarks>
+        </member>
+        <member name="M:RealmTodo.ViewModels.UserRecordsViewModel.OnSelectedSortOptionChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.SelectedSortOption"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.SelectedSortOption"/> is changed.</remarks>
         </member>
         <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.deleteUserRecordCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.DeleteUserRecordCommand"/>.</summary>
@@ -738,6 +750,12 @@
         </member>
         <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.GoToMapsListCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.GoToMapsList"/>.</summary>
+        </member>
+        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.sortUserRecordsCommand">
+            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.SortUserRecordsCommand"/>.</summary>
+        </member>
+        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.SortUserRecordsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.SortUserRecords"/>.</summary>
         </member>
         <member name="T:RealmTodo.Views.MapPage">
             <inheritdoc/>
@@ -1028,6 +1046,12 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserRecordsList">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserRecordsList" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SortOptions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SortOptions" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedSortOption">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedSortOption" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -1120,6 +1144,12 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserRecordsList">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserRecordsList" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SortOptions">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SortOptions" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedSortOption">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedSortOption" generated properties.</summary>
         </member>
     </members>
 </doc>

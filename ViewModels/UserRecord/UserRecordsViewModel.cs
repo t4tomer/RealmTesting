@@ -35,6 +35,17 @@ namespace RealmTodo.ViewModels
         [ObservableProperty]
         private IQueryable<UserRecord> userRecordsList;
 
+
+        // List of sorting options for the picker
+        [ObservableProperty]
+        public List<string> _SortOptions = new List<string> { "Date", "Record Time","Upload Date"};
+
+        // Selected sorting option
+        [ObservableProperty]
+        public string selectedSortOption;
+
+
+
         private string _mapTitle = "Test"; // Default value
 
 
@@ -425,6 +436,45 @@ namespace RealmTodo.ViewModels
 
 
         }
+
+
+
+        //TODO option tag  DropDown picker in the user records page 
+
+        // when the picker is chosen : Date,
+        partial void OnSelectedSortOptionChanged(string value)
+        {
+            SortUserRecords();
+        }
+
+        // Method to handle sorting logic when the user selects an option
+        [RelayCommand]
+        public void SortUserRecords()
+        {
+            if (SelectedSortOption == "Date")
+            {
+                Console.WriteLine($"=======>>>  sorting by date!!!!");
+
+                // Apply sorting by Date
+                //UserRecordsList = UserRecordsList.OrderBy(record => record.Date).ToList();
+            }
+            else if (SelectedSortOption == "Record Time")
+            {
+                Console.WriteLine($"=======>>>  sorting by Record Time!!!!");
+
+                // Apply sorting by Record Time
+                //UserRecordsList = UserRecordsList.OrderBy(record => record.RecordTime).ToList();
+            }
+            else if (SelectedSortOption == "Upload Date")
+            {
+                Console.WriteLine($"=======>>>  Upload Date!!!!");
+
+                // Apply sorting by Record Time
+                //UserRecordsList = UserRecordsList.OrderBy(record => record.RecordTime).ToList();
+            }
+        }
+
+
 
 
 
