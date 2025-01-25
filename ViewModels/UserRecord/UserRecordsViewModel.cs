@@ -39,7 +39,7 @@ namespace RealmTodo.ViewModels
 
         // List of sorting options for the picker
         [ObservableProperty]
-        public List<string> _SortOptions = new List<string> { "Date", "Record Time","Upload Date", "Default"};
+        public List<string> _SortOptions = new List<string> {"Profile Name", "Record Time","Upload Date", "Default"};
 
         // Selected sorting option
         [ObservableProperty]
@@ -469,10 +469,18 @@ namespace RealmTodo.ViewModels
         partial void OnSelectedSortOptionChanged(string value)
         {
             // no sorting is required 
-            if (value == "Default")
+            if (value == "Default" || value== "Upload Date")
             {
-                //UserRecordsList = realm.All<UserRecord>();
+
+                Console.WriteLine($"=======>>>  sorting by Upload Date or Default!!!!");
+
                 UserRecordsList = getUserRecrodsWithTheSameTrackName();
+
+                foreach (var userRecord in UserRecordsList)
+                {
+                    Console.WriteLine($"ProfileName(Default or Uploaddate): {userRecord.ProfileName}, Upload Date: {userRecord.UploadDateTime}");
+                }
+
 
                 return;
 
@@ -489,20 +497,14 @@ namespace RealmTodo.ViewModels
             realm = RealmService.GetMainThreadRealm();
 
 
-            if (SelectedSortOption == "Date")
-            {
-                Console.WriteLine($"=======>>>  sorting by date!!!!");
-
-
-            }
-            else if (SelectedSortOption == "Record Time")
+            if (SelectedSortOption == "Record Time")
             {
                 Console.WriteLine($"=======>>>  sorting by Record Time!!!!");
 
-                // Fetch the records with the same MapName from Realm
-                var userRecordsList = realm.All<UserRecord>()
-                                           .Where(record => record.MapName == _trackName)
-                                           .ToList(); // Materialize the data in memory
+
+
+                var userRecordsList = getUserRecrodsWithTheSameTrackName().ToList();
+
 
                 // Sort the user records with same map name by track time
                 var sortedUserRecords = userRecordsList
@@ -520,15 +522,21 @@ namespace RealmTodo.ViewModels
 
 
 
-                // Apply sorting by Record Time
-                //UserRecordsList = UserRecordsList.OrderBy(record => record.RecordTime).ToList();
             }
-            else if (SelectedSortOption == "Upload Date")
+            else if (SelectedSortOption == "Profile Name")
             {
-                Console.WriteLine($"=======>>>  Upload Date!!!!");
+                Console.WriteLine($"=======>>> sort by Profile name !!!!");
 
-                // Apply sorting by Record Time
-                //UserRecordsList = UserRecordsList.OrderBy(record => record.RecordTime).ToList();
+                var sortedUserRecords = UserRecordsList.OrderBy(record => record.ProfileName);
+
+                foreach (var userRecord in sortedUserRecords)
+                {
+                    Console.WriteLine($"ProfileName: {userRecord.ProfileName}, Upload Date: {userRecord.UploadDateTime}");
+                }
+
+                UserRecordsList = sortedUserRecords.AsQueryable();
+
+
             }
         }
 
