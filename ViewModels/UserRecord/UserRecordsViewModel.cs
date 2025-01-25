@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
 using Position = Maui.GoogleMaps.Position;
 using Realms.Sync;
+using System.Globalization;
 //using WebKit;
 
 
@@ -38,11 +39,11 @@ namespace RealmTodo.ViewModels
 
         // List of sorting options for the picker
         [ObservableProperty]
-        public List<string> _SortOptions = new List<string> { "Date", "Record Time","Upload Date"};
+        public List<string> _SortOptions = new List<string> { "Date", "Record Time","Upload Date", "Default"};
 
         // Selected sorting option
         [ObservableProperty]
-        public string selectedSortOption;
+        public string selectedSortOption= "Default";
 
 
 
@@ -193,14 +194,14 @@ namespace RealmTodo.ViewModels
 
         public async void OnAppearing()
         {
-            Console.WriteLine($"IsShowAllTasks is :{IsShowAllTasks}");
-
+            Console.WriteLine($"----> SelectedSortOption value :{SelectedSortOption}");
+            //OnSelectedSortOptionChanged(selectedSortOption);//Show List by sorting the records
             // Set the singleton object to UserRecord type
             var singleton = ObjectSingleton.Instance;
             singleton.SetUserRecordType();
             realm = RealmService.GetMainThreadRealm();
 
-            // Check if the subscription for UserRecord type exists
+            // Check if the subscription for UserRecord type exists,if not create new subscription
             var userRecordSubscriptionExists = realm.Subscriptions.Any(sub => sub.Name == "UserRecordSubscription");
 
             if (!userRecordSubscriptionExists)
@@ -229,42 +230,65 @@ namespace RealmTodo.ViewModels
                 Console.WriteLine("UserRecord subscription already exists.");
             }
 
+            //TODO show the user's record by sorting 
+            SortUserRecords();
+
             //show all the useres with the same MapName field
             if (_trackName != "Deafult")
             {
-                //all user records with same MapName
-                UserRecordsList = realm.All<UserRecord>()
-                .Where(record => record.MapName == _trackName)
-                .AsQueryable();
+                //list with  all user records with same MapName
+                UserRecordsList = getUserRecrodsWithTheSameTrackName();
 
             }
             else
                 UserRecordsList = realm.All<UserRecord>();
 
 
-            // show the records of the same user that is logged to the app 
-            if (IsShowAllTasks)
+            // Show only the current user's(the user that is currently logged to the app) UserRecords
+            if (!IsShowAllTasks)
             {
-                // Show all UserRecords
-                UserRecordsList = UserRecordsList;
+                //list with all the user records that is currently logged to the app
+                UserRecordsList = getUserRecrodsOfCurrentUser();
+
             }
-            else
-            {
-                // Show only the current user's UserRecords
-                UserRecordsList = UserRecordsList
-                    .Where(record => record.OwnerId == currentUserId)
-                    .AsQueryable();
-            }
+
+
+
+            //-------> used for testing !!!
+
+            /*
             Console.WriteLine($"----> Displaying all UserRecords with MapName: {_trackName}");
             foreach (var userRecord in UserRecordsList)
             {
                 Console.WriteLine($"Id: {userRecord.Id}, ProfileName: {userRecord.ProfileName}, OwnerId: {userRecord.OwnerId}, MapName: {userRecord.MapName}");
             }
+            */
 
             var currentSubscriptionType = RealmService.GetCurrentSubscriptionType(realm);
             IsShowAllTasks = currentSubscriptionType == SubscriptionType.All;// TODO cheack this code line 
+
         }
 
+
+
+        //get the user records of the user that is currenntly logged to the app
+        private IQueryable<UserRecord> getUserRecrodsOfCurrentUser()
+        {
+            IQueryable<UserRecord>  UserRecordsListOfCurrentUser = UserRecordsList
+            .Where(record => record.OwnerId == currentUserId)
+            .AsQueryable();
+            return UserRecordsListOfCurrentUser;
+        }
+
+        // get the user records with the same track name
+        private IQueryable<UserRecord> getUserRecrodsWithTheSameTrackName()
+        {
+            //all user records with same MapName
+            IQueryable<UserRecord> UserRecordsListSameTrackName = realm.All<UserRecord>()
+            .Where(record => record.MapName == _trackName)
+            .AsQueryable();
+            return UserRecordsListSameTrackName;
+        }
 
 
 
@@ -444,6 +468,15 @@ namespace RealmTodo.ViewModels
         // when the picker is chosen : Date,
         partial void OnSelectedSortOptionChanged(string value)
         {
+            // no sorting is required 
+            if (value == "Default")
+            {
+                //UserRecordsList = realm.All<UserRecord>();
+                UserRecordsList = getUserRecrodsWithTheSameTrackName();
+
+                return;
+
+            }
             SortUserRecords();
         }
 
@@ -451,16 +484,41 @@ namespace RealmTodo.ViewModels
         [RelayCommand]
         public void SortUserRecords()
         {
+            var singleton = ObjectSingleton.Instance;
+            singleton.SetUserRecordType();
+            realm = RealmService.GetMainThreadRealm();
+
+
             if (SelectedSortOption == "Date")
             {
                 Console.WriteLine($"=======>>>  sorting by date!!!!");
 
-                // Apply sorting by Date
-                //UserRecordsList = UserRecordsList.OrderBy(record => record.Date).ToList();
+
             }
             else if (SelectedSortOption == "Record Time")
             {
                 Console.WriteLine($"=======>>>  sorting by Record Time!!!!");
+
+                // Fetch the records with the same MapName from Realm
+                var userRecordsList = realm.All<UserRecord>()
+                                           .Where(record => record.MapName == _trackName)
+                                           .ToList(); // Materialize the data in memory
+
+                // Sort the user records with same map name by track time
+                var sortedUserRecords = userRecordsList
+                    .Where(record => TimeSpan.TryParse(record.TrackTime, out _)) // Ensure valid times
+                    .OrderBy(record => TimeSpan.Parse(record.TrackTime))
+                    .ToList();
+
+                UserRecordsList = sortedUserRecords.AsQueryable();
+
+                //used for testing 
+                foreach (var userRecord in sortedUserRecords)
+                {
+                    Console.WriteLine($"ProfileName: {userRecord.ProfileName}, Record Time: {userRecord.TrackTime}");
+                }
+
+
 
                 // Apply sorting by Record Time
                 //UserRecordsList = UserRecordsList.OrderBy(record => record.RecordTime).ToList();
