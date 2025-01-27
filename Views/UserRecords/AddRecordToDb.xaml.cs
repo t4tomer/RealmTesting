@@ -10,6 +10,8 @@ using RealmTodo.ViewModels;
 
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
+using RealmTodo.Services;
+
 
 
 namespace RealmTodo.Views
@@ -32,6 +34,9 @@ namespace RealmTodo.Views
             get => _inputUserName;
             set
             {
+                
+
+
                 if (_inputUserName != value)
                 {
                     _inputUserName = value;
@@ -192,7 +197,19 @@ namespace RealmTodo.Views
         //upload new user record to mongodb 
         public async Task UpLoadToMongo()
         {
-            string InputUploadDateTime = CurrentDate + CurrentTime;
+
+            if (string.IsNullOrEmpty(_inputUserName))
+            {
+                Console.WriteLine($"---------> empty string name");
+                await DialogService.ShowAlertAsync("Error", "Can Not Enter Empty User Name.", "OK");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(_commentText))
+                _commentText = "No Comment Inserted";
+
+
+                string InputUploadDateTime = CurrentDate + CurrentTime;
             Console.WriteLine($"the InputProfileName is---> :{InputUserName} ");
 
             

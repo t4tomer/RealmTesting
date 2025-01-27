@@ -12,15 +12,12 @@ using RealmTodo.ViewModels;
 
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using RealmTodo.Models;
 using RealmTodo.Services;
 using Realms;
 using RealmTodo.Views; // Correct namespace for TestPage
 using Microsoft.Maui.Controls; // Required for navigation
-using System.Windows.Input;
 using System.Linq;
 using System.Threading.Tasks;
-using DocumentFormat.OpenXml.Drawing.Diagrams;
 using System.ComponentModel;
 //using static Xamarin.Google.Crypto.Tink.Shaded.Protobuf.Internal;
 
@@ -444,7 +441,7 @@ namespace RealmTodo.Views
 
 
 
-
+        // cheack if there are enought opins on the track in order to upload it .
         private async Task<bool> EnoughPins(int num)
         {
             if (num == 0)
@@ -454,7 +451,7 @@ namespace RealmTodo.Views
             }
             else if (num == 1)
             {
-                await DialogService.ShowAlertAsync("Error", "Not Enough Pins(add at least 1 point).", "OK");
+                await DialogService.ShowAlertAsync("Error", "Not Enough Pins(add 1 more point).", "OK");
                 return false;
             }
             return true;

@@ -188,6 +188,15 @@ namespace RealmTodo.ViewModels
         {
             Console.WriteLine($"UploadToCloudPins maptrack name is: {InputTrackName}");
 
+            if (string.IsNullOrEmpty(InputTrackName))
+            {
+                Console.WriteLine($"---------> empty InputTrackName ");
+                await DialogService.ShowAlertAsync("Error", "Can Not Enter Empty Track Name.", "OK");
+                return;
+            }
+
+
+
             /*
             Console.WriteLine("UploadToCloudPins --EditMapPinViewModel.");
             if (MapPage.Instance == null)
