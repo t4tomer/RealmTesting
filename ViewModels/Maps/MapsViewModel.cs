@@ -345,6 +345,7 @@ namespace RealmTodo.ViewModels
                 {
                     Console.WriteLine($"-->Track is  mine!!!");
                     mapPage.ShowStartExerciseButton(true);//show the start exerice button on map
+                    mapPage.ShowUsersRecordsButton(true);
                     mapPage.ShowButtonsOnMap(true); // show buttons 
                     mapPage._canAddPins = true;
                     await Shell.Current.Navigation.PushAsync(mapPage);//1 way 
@@ -355,7 +356,7 @@ namespace RealmTodo.ViewModels
                 {
                     Console.WriteLine($"-->Track is not mine!!!");
                     mapPage.ShowStartExerciseButton(true);//show the start exerice button on map
-
+                    mapPage.ShowUsersRecordsButton(true);
                     mapPage.ShowButtonsOnMap(false); // Remove buttons from the map 
                     mapPage._canAddPins = false;
                     await Shell.Current.Navigation.PushAsync(mapPage);//1 way 
@@ -391,6 +392,7 @@ namespace RealmTodo.ViewModels
             if (await mapPage.IsLocationEnabled())
             {
                 mapPage.ShowStartExerciseButton(false);
+                mapPage.ShowUsersRecordsButton(false);
                 mapPage.ClearMap();
                 mapPage.ShowButtonsOnMap(true);//show buttons on map
                 mapPage._canAddPins = true;// user can add pins on map

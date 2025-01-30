@@ -92,7 +92,7 @@
             AbsoluteLayout.LayoutBounds="0.62, 1.0, AutoSize, AutoSize" />
 
         <Button
-            x:Name="ShowUsersRecords"
+            x:Name="UsersRecordsButton"
             ImageSource="records_of_users.png"
             BackgroundColor="Transparent"
              Command="{Binding GoToUserRecordsListCommand}" 

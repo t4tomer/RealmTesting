@@ -427,6 +427,15 @@ namespace RealmTodo.Views
             StartExcericeButton.IsVisible = cond;
         }
 
+        public void ShowUsersRecordsButton(bool cond)
+        {
+            Console.WriteLine($"----> ShowUsersRecordsButton condtion:{cond}");
+
+            UsersRecordsButton.IsVisible = cond;
+        }
+
+
+
         public void ShowTrack_Clicked()//show the pins and the lines of the track 
         {
 
