@@ -79,7 +79,7 @@ namespace RealmTodo.Views
         }
 
 
-        public void set_pinsList(List<Maui.GoogleMaps.Pin> newpinstList)
+        public void setPinsList(List<Maui.GoogleMaps.Pin> newpinstList)
         {
             this.pinsList = newpinstList;
         }
@@ -278,11 +278,8 @@ namespace RealmTodo.Views
             if (await EnoughPins(pinCount))
             {
                 MapHelperObject = new MapHelper(pinsList, myMap);
-                MapHelperObject.PrintPinAddresses();
-                //CloudPage = new EditItemViewModel(pinsList, myMap);
+                //MapHelperObject.PrintPinAddresses();// used for testing
                 var AddToCloud = new AddMapToDbPage(pinsList, myMap);
-                //EditPinAddrPage.SetPinsList(pinsList);
-                //! Pass the pinsList directly when navigating to the triggerPage
                 await Navigation.PushAsync(AddToCloud);
             }
         }
@@ -301,7 +298,7 @@ namespace RealmTodo.Views
             {
                 //MapHelperObject = new MapHelper(pinsList,myMap); // Initialize m in the constructor
 
-                MapHelperObject.set_pinsList(pinsList);
+                MapHelperObject.setPinsList(pinsList);
                 double totalDistance = MapHelperObject.calculateTotalDistance();
 
 
@@ -384,7 +381,7 @@ namespace RealmTodo.Views
             List<Maui.GoogleMaps.Pin> pinsList = myMap.Pins.ToList();
 
             MapHelperObject = new MapHelper(pinsList, myMap); 
-            MapHelperObject.DrawLineBetweenAllPins(strokeColorPolyline);
+            MapHelperObject.drawLineBetweenAllPins(strokeColorPolyline);
 
         }
 
@@ -442,7 +439,7 @@ namespace RealmTodo.Views
 
             MapHelperObject = new MapHelper(pinsList, myMap);
             MapHelperObject.showTrackOnMap();//show the pins on the map .
-            MapHelperObject.DrawLineBetweenAllPins(strokeColorPolyline);//draw line between all the pins of the map .
+            MapHelperObject.drawLineBetweenAllPins(strokeColorPolyline);//draw line between all the pins of the map .
 
         }
 

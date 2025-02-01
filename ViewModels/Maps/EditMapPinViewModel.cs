@@ -133,7 +133,7 @@ namespace RealmTodo.ViewModels
             // Navigate to the singleton instance of MapPage
             var mapPage = MapPage.Instance;
             List<Maui.GoogleMaps.Pin> pinList = MapPage.Instance.GetPinList();
-            mapPage.set_pinsList(summaries);
+            mapPage.setPinsList(summaries);
             mapPage.ShowTrack_Clicked();
 
             if (await mapPage.IsLocationEnabled())

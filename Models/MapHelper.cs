@@ -40,12 +40,8 @@ namespace RealmTodo.Models
             this.myMap = newMyMap;  
         }
 
-        public void test()
-        {
-            Console.WriteLine($"---->  Test MapHelper");
 
-        }
-        public void set_Map(Maui.GoogleMaps.Map myMap)
+        public void setMap(Maui.GoogleMaps.Map myMap)
         {
             this.myMap = myMap;
         }
@@ -91,12 +87,13 @@ namespace RealmTodo.Models
             }
         }
 
-        public void set_pinsList(List<Maui.GoogleMaps.Pin> newpinstList)
+        public void setPinsList(List<Maui.GoogleMaps.Pin> newpinstList)
         {
             this.pinsList=newpinstList;
         }
 
-        //method used for testing 
+        //method used for testing-print pin address
+        /*
         public void PrintPinAddresses()
         {
             if (pinsList != null)
@@ -116,15 +113,7 @@ namespace RealmTodo.Models
         }
 
 
-
-
-
-
-
-
-
-
-        public void PrintPinAddresses(object sender, MapClickedEventArgs e)
+               public void PrintPinAddresses(object sender, MapClickedEventArgs e)
         {
             var pins = pinsList;
             foreach (var pin in pins)
@@ -133,7 +122,21 @@ namespace RealmTodo.Models
             }
         }
 
-        public void DrawLineBetweenAllPins(int strokeColorPolyline)
+
+
+        */
+
+
+
+
+
+
+
+
+
+
+
+        public void drawLineBetweenAllPins(int strokeColorPolyline)
         {
             switch (pinsList)
             {
@@ -180,7 +183,7 @@ namespace RealmTodo.Models
         }
 
 
-        private void RemovePolylineBetweenPins( Maui.GoogleMaps.Pin pin1, Maui.GoogleMaps.Pin pin2)
+        private void removePolylineBetweenPins( Maui.GoogleMaps.Pin pin1, Maui.GoogleMaps.Pin pin2)
         {
 
 
@@ -240,7 +243,7 @@ namespace RealmTodo.Models
                         Console.WriteLine($" \t\t-->pinsList.Count: {pinsList.Count}");
 
                         // Remove the polyline between the last pin and the pin before last pin
-                        RemovePolylineBetweenPins(beforeLastPin, lastPin);
+                        removePolylineBetweenPins(beforeLastPin, lastPin);
 
                         // Remove the last pin from the map's Pins collection
                         myMap.Pins.Remove(lastPin);
@@ -258,7 +261,7 @@ namespace RealmTodo.Models
                             var beforeLastPin = pinsList[pinsList.Count - 2];
 
                             // Remove the polyline between the last pin and the pin before last pin
-                            RemovePolylineBetweenPins(beforeLastPin, lastPin);
+                            removePolylineBetweenPins(beforeLastPin, lastPin);
 
                             // Remove the last pin from the pinsList and the map's Pins collection
                             pinsList.Remove(lastPin);
@@ -611,7 +614,8 @@ namespace RealmTodo.Models
         }
 
 
-     // Add new point on the map
+     // Add new point on the map -used for testing 
+     /*
         public static void OnMapClicked666(object sender, MapClickedEventArgs e, Maui.GoogleMaps.Map myMap)
         {
             Console.WriteLine($"----> Pressed the screen666 ");
@@ -626,6 +630,8 @@ namespace RealmTodo.Models
 
             myMap.Pins.Add(pin);
         }
+
+        */
 
 
       
@@ -644,7 +650,7 @@ namespace RealmTodo.Models
 
             myMap.Pins.Add(pin);
         }
-        public static Pin GetPoint(double x, double y, string inputLabel, string inputAddress, Maui.GoogleMaps.Map myMap)
+        public static Pin getPoint(double x, double y, string inputLabel, string inputAddress, Maui.GoogleMaps.Map myMap)
         {
             var position = new Location(x, y);
             var pin1 = new Pin

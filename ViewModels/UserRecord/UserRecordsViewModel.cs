@@ -74,20 +74,6 @@ namespace RealmTodo.ViewModels
         }
 
 
-        //[RelayCommand]
-        //public async Task DeleteItem(Item item)
-        //{
-        //    if (!await CheckItemOwnership(item))
-        //    {
-        //        return;
-        //    }
-
-        //    await realm.WriteAsync(() =>
-        //    {
-        //        realm.Remove(item);
-        //    });
-        //}
-
 
 
         // used to user record   from the user recorods list 

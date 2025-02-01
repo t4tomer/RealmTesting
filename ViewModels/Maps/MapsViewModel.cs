@@ -336,7 +336,7 @@ namespace RealmTodo.ViewModels
             List<Maui.GoogleMaps.Pin> pinListOfSameMapName = getPinsListByName(mapName);
 
             var mapPage = MapPage.Instance;
-            mapPage.set_pinsList(pinListOfSameMapName);
+            mapPage.setPinsList(pinListOfSameMapName);
             mapPage.ShowTrack_Clicked();
             mapPage.SetTitle(mapName);
             if (await mapPage.IsLocationEnabled())

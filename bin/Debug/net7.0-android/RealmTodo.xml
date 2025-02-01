@@ -359,7 +359,6 @@
         <member name="T:RealmTodo.ViewModels.EditUserRecordViewModel">
             <inheritdoc/>
             <inheritdoc/>
-            <inheritdoc/>
         </member>
         <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.InputUserName">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.inputUserName"/>
@@ -384,12 +383,6 @@
         </member>
         <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.PageHeader">
             <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.pageHeader"/>
-        </member>
-        <member name="F:RealmTodo.ViewModels.EditUserRecordViewModel.saveUserRecordCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditUserRecordViewModel.SaveUserRecordCommand"/>.</summary>
-        </member>
-        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.SaveUserRecordCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditUserRecordViewModel.SaveUserRecord(RealmTodo.Models.UserRecord)"/>.</summary>
         </member>
         <member name="F:RealmTodo.ViewModels.EditUserRecordViewModel.cancelCommand">
             <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditUserRecordViewModel.CancelCommand"/>.</summary>
