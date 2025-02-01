@@ -134,10 +134,6 @@
 			<SubType>
 			</SubType>
 		</MauiXaml>
-		<MauiXaml Update="Views\Items\ItemsPage.xaml">
-			<SubType>
-			</SubType>
-		</MauiXaml>
 		<MauiXaml Update="Views\BusyPopup.xaml">
 		  <SubType></SubType>
 		</MauiXaml>

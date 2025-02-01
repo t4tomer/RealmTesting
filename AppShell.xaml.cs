@@ -7,7 +7,6 @@ public partial class AppShell : Shell
     public AppShell()
     {
         InitializeComponent();
-        Routing.RegisterRoute("itemEdit", typeof(EditItemPage));
         Routing.RegisterRoute("mapEdit", typeof(EditMapPage));
         Routing.RegisterRoute("chooseMapFromList", typeof(MapPage));//TODO fix this 
 

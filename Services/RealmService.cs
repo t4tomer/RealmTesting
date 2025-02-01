@@ -117,33 +117,7 @@ namespace RealmTodo.Services
 
 
 
-        // new method-used for adding Item class 
-        private static (IQueryable<Item> Query, string Name) GetQueryForSubscriptionItemType(Realm realm, SubscriptionType subType)
-        {
-            Console.WriteLine($"(GetQueryForSubscriptionItemType)inputObject is Item ");
 
-
-
-            IQueryable<Item> query = null;
-            string queryName = null;
-
-            if (subType == SubscriptionType.Mine)
-            {
-                query = realm.All<Item>().Where(i => i.OwnerId == CurrentUser.Id);
-                queryName = "mine";
-            }
-            else if (subType == SubscriptionType.All)
-            {
-                query = realm.All<Item>();
-                queryName = "all";
-            }
-            else
-            {
-                throw new ArgumentException("Unknown subscription type");
-            }
-
-            return (query, queryName);
-        }
         public static Realm GetRealm()
         {
 
@@ -169,21 +143,7 @@ namespace RealmTodo.Services
 
             }
 
-            else if (singleton.GetCurrentType() == typeof(Item))
-            {
-                Console.WriteLine($" GetRealm the type is Item");
 
-                var configItem = new FlexibleSyncConfiguration(app.CurrentUser)
-                {
-                    PopulateInitialSubscriptions = (realm) =>
-                    {
-                        var (query, queryName) = GetQueryForSubscriptionItemType(realm, SubscriptionType.Mine);
-                        realm.Subscriptions.Add(query, new SubscriptionOptions { Name = queryName });
-                    }
-                };
-                return Realm.GetInstance(configItem);
-
-            }
             Console.WriteLine($" GetRealm the type is UserRecord");
 
             var configUserRecord = new FlexibleSyncConfiguration(app.CurrentUser)

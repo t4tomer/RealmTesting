@@ -30,7 +30,6 @@ namespace RealmTodo.Views
         private CancellationTokenSource _cancelTokenSource;
         private bool _isCheckingLocation;
         private MapHelper MapHelperObject; // Declare m as a class-level variable
-        private EditItemViewModel CloudPage; //new 
         List<Maui.GoogleMaps.Pin> pinsList;// the list of pins in the map
         public bool _canAddPins = true; // Controls if pins can be added
         private string _mapTitle = ""; // Default value

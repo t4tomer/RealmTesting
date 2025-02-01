@@ -42,18 +42,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.BusyPopup.
 build_metadata.AdditionalFiles.TargetPath = Views\BusyPopup.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\BusyPopup.xaml
 
-[D:/GitHub/RealmExamples/RealmTesting/Views/Items/EditItemPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.Items.EditItemPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\Items\EditItemPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\Items\EditItemPage.xaml
-
-[D:/GitHub/RealmExamples/RealmTesting/Views/Items/ItemsPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.Items.ItemsPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\Items\ItemsPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\Items\ItemsPage.xaml
-
 [D:/GitHub/RealmExamples/RealmTesting/Views/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RealmTodo.Views.LoginPage.xaml

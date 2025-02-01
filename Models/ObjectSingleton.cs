@@ -20,12 +20,7 @@ namespace RealmTodo.Models
         public static ObjectSingleton Instance => _instance.Value;
 
 
-        // Method to set type to Item
-        public void SetItemType()
-        {
-            _currentType = new Item();
-            Console.WriteLine("Object type set to Item.");
-        }
+
 
         // Method to set type to MapPin
         public void SetMapPinType()
