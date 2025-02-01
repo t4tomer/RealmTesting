@@ -1,4 +1,4 @@
-﻿namespace RealmTodo.Views;
+﻿namespace AerobicWithMe.Views;
 
 
 public partial class MapsPage : ContentPage

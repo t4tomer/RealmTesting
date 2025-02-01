@@ -6,7 +6,7 @@ using Position = Maui.GoogleMaps.Position;
 using Microsoft.Maui.Controls.Maps;
 using System.Net.NetworkInformation;
 
-namespace RealmTodo.Views
+namespace AerobicWithMe.Views
 {
     public partial class PropertyTriggerXaml : ContentPage
     {

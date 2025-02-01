@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace RealmTodo;
+namespace AerobicWithMe;
 
 public class Program
 {

@@ -1,6 +1,6 @@
-﻿using RealmTodo.Services;
+﻿using AerobicWithMe.Services;
 
-namespace RealmTodo;
+namespace AerobicWithMe;
 
 public partial class App : Application
 {

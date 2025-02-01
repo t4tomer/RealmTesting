@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RealmTodo.Models
+namespace AerobicWithMe.Models
 {
     public sealed class ObjectSingleton
     {

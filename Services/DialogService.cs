@@ -1,9 +1,9 @@
 ﻿using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Views;
-using RealmTodo.Views;
+using AerobicWithMe.Views;
 
-namespace RealmTodo.Services
+namespace AerobicWithMe.Services
 {
     public static class DialogService
     {

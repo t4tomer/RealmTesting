@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Maui.Views;
 
-namespace RealmTodo.Views;
+namespace AerobicWithMe.Views;
 
 public partial class BusyPopup : Popup
 {

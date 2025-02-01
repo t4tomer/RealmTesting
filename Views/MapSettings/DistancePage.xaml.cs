@@ -1,8 +1,8 @@
-using RealmTodo.Models;
+using AerobicWithMe.Models;
 using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace RealmTodo.Views
+namespace AerobicWithMe.Views
 {
     public partial class DistancePage : ContentPage, INotifyPropertyChanged
     {

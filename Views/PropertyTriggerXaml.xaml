@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage
-             x:Class="RealmTodo.Views.PropertyTriggerXaml"
+             x:Class="AerobicWithMe.Views.PropertyTriggerXaml"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Padding="20, 50, 20, 0">

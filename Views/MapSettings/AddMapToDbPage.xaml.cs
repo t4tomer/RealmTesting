@@ -5,10 +5,10 @@ using Microsoft.Maui.Maps;
 using Position = Maui.GoogleMaps.Position;
 using Microsoft.Maui.Controls.Maps;
 using System.Net.NetworkInformation;
-using RealmTodo.Models;
+using AerobicWithMe.Models;
 
 
-namespace RealmTodo.Views
+namespace AerobicWithMe.Views
 {
 
     public partial class AddMapToDbPage : ContentPage

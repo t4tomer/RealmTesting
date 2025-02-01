@@ -3,7 +3,7 @@
 
 
 
-namespace RealmTodo.Views;
+namespace AerobicWithMe.Views;
 
 public partial class EditMapPage : ContentPage, IQueryAttributable
 {

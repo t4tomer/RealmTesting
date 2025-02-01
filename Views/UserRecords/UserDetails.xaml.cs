@@ -5,13 +5,13 @@ using Microsoft.Maui.Maps;
 using Position = Maui.GoogleMaps.Position;
 using Microsoft.Maui.Controls.Maps;
 using System.Net.NetworkInformation;
-using RealmTodo.Models;
-using RealmTodo.ViewModels;
+using AerobicWithMe.Models;
+using AerobicWithMe.ViewModels;
 
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace RealmTodo.Views
+namespace AerobicWithMe.Views
 {
 
     //UserDetails

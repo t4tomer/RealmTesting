@@ -1,9 +1,9 @@
 using System.Text.Json;
 using Realms;
 using Realms.Sync;
-using RealmTodo.Models;
+using AerobicWithMe.Models;
 
-namespace RealmTodo.Services
+namespace AerobicWithMe.Services
 {
     public static class RealmService
     {

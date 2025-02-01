@@ -1,9 +1,9 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using RealmTodo.Models;
-using RealmTodo.Services;
+using AerobicWithMe.Models;
+using AerobicWithMe.Services;
 using Realms;
-using RealmTodo.Views; // Correct namespace for TestPage
+using AerobicWithMe.Views; // Correct namespace for TestPage
 using Microsoft.Maui.Controls; // Required for navigation
 using System.Windows.Input;
 using System.Linq;
@@ -16,7 +16,7 @@ using System.Globalization;
 
 
 
-namespace RealmTodo.ViewModels
+namespace AerobicWithMe.ViewModels
 {
     public partial class UserRecordsViewModel : BaseViewModel
     {

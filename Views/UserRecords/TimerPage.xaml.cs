@@ -6,7 +6,7 @@ using CommunityToolkit.Mvvm.Input;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
 using Microsoft.Maui.Controls;
 
-namespace RealmTodo.Views
+namespace AerobicWithMe.Views
 {
     public partial class TimerPage : ContentPage, INotifyPropertyChanged
     {

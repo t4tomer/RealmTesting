@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Input;
-using RealmTodo.Services;
+using AerobicWithMe.Services;
 
-namespace RealmTodo.ViewModels
+namespace AerobicWithMe.ViewModels
 {
     public partial class LoginViewModel : BaseViewModel
     {

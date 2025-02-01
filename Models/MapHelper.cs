@@ -7,7 +7,7 @@ using Position = Maui.GoogleMaps.Position;
 //object that is used for saving methods that are used for map page.
 
 
-namespace RealmTodo.Models
+namespace AerobicWithMe.Models
 {
     public  class MapHelper
     {

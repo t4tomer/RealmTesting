@@ -1,10 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using RealmTodo.Models;
-using RealmTodo.Services;
-using RealmTodo.ViewModels;
+using AerobicWithMe.Models;
+using AerobicWithMe.Services;
+using AerobicWithMe.ViewModels;
 
-using RealmTodo.Views; // Correct namespace for TestPage
+using AerobicWithMe.Views; // Correct namespace for TestPage
 using Realms;
 using Microsoft.Maui.Controls; // Required for navigation
 using System.Windows.Input;
@@ -22,11 +22,11 @@ using System.Threading.Tasks;
 using DocumentFormat.OpenXml.Wordprocessing;
 
 using Position = Maui.GoogleMaps.Position;
-using RealmTodo.Views; // Correct namespace for TestPage
+using AerobicWithMe.Views; // Correct namespace for TestPage
 
 using Realms.Sync;
 
-namespace RealmTodo.ViewModels
+namespace AerobicWithMe.ViewModels
 
 {
     public partial class EditUserRecordViewModel : BaseViewModel, IQueryAttributable

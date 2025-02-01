@@ -1,20 +1,20 @@
 ﻿using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
 using Maui.GoogleMaps;
-using RealmTodo.Models;
+using AerobicWithMe.Models;
 using Microsoft.Maui.Devices.Sensors;
 using Microsoft.Maui.Maps;
 using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Windows.Input;
 using Position = Maui.GoogleMaps.Position;
-using RealmTodo.ViewModels;
+using AerobicWithMe.ViewModels;
 
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using RealmTodo.Services;
+using AerobicWithMe.Services;
 using Realms;
-using RealmTodo.Views; // Correct namespace for TestPage
+using AerobicWithMe.Views; // Correct namespace for TestPage
 using Microsoft.Maui.Controls; // Required for navigation
 using System.Linq;
 using System.Threading.Tasks;
@@ -22,7 +22,7 @@ using System.ComponentModel;
 //using static Xamarin.Google.Crypto.Tink.Shaded.Protobuf.Internal;
 
 
-namespace RealmTodo.Views
+namespace AerobicWithMe.Views
 {
     public partial class MapPage : ContentPage, INotifyPropertyChanged
     {

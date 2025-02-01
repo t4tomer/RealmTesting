@@ -1,6 +1,6 @@
-﻿using RealmTodo.Views;
+﻿using AerobicWithMe.Views;
 
-namespace RealmTodo;
+namespace AerobicWithMe;
 
 public partial class AppShell : Shell
 {

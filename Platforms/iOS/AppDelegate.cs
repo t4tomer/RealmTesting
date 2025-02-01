@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace RealmTodo;
+namespace AerobicWithMe;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

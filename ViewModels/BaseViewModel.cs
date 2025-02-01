@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace RealmTodo.ViewModels
+namespace AerobicWithMe.ViewModels
 {
     public partial class BaseViewModel : ObservableObject
     {

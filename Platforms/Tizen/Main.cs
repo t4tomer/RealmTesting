@@ -2,7 +2,7 @@
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 
-namespace RealmTodo;
+namespace AerobicWithMe;
 
 class Program : MauiApplication
 {

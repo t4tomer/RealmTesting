@@ -1,11 +1,11 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using RealmTodo.Models;
-using RealmTodo.Services;
-using RealmTodo.ViewModels;
+using AerobicWithMe.Models;
+using AerobicWithMe.Services;
+using AerobicWithMe.ViewModels;
 
 using Position = Maui.GoogleMaps.Position;
-using RealmTodo.Views; // Correct namespace for TestPage
+using AerobicWithMe.Views; // Correct namespace for TestPage
 
 using Realms.Sync;
 
@@ -13,7 +13,7 @@ using Realms.Sync;
 
 
 
-namespace RealmTodo.ViewModels
+namespace AerobicWithMe.ViewModels
 
 {
     public partial class EditMapPinViewModel : BaseViewModel, IQueryAttributable

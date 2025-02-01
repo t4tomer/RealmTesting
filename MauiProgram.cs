@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using Maui.GoogleMaps.Hosting;
 
 
-namespace RealmTodo;
+namespace AerobicWithMe;
 
 public static class MauiProgram
 {

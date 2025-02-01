@@ -4,165 +4,165 @@
         <name>RealmTodo</name>
     </assembly>
     <members>
-        <member name="F:RealmTodo.Models.MapPin.RealmSchema">
+        <member name="F:AerobicWithMe.Models.MapPin.RealmSchema">
             <summary>
-            Defines the schema for the <see cref="T:RealmTodo.Models.MapPin"/> class.
+            Defines the schema for the <see cref="T:AerobicWithMe.Models.MapPin"/> class.
             </summary>
         </member>
-        <member name="P:RealmTodo.Models.MapPin.IsManaged">
+        <member name="P:AerobicWithMe.Models.MapPin.IsManaged">
             <inheritdoc />
         </member>
-        <member name="P:RealmTodo.Models.MapPin.IsValid">
+        <member name="P:AerobicWithMe.Models.MapPin.IsValid">
             <inheritdoc />
         </member>
-        <member name="P:RealmTodo.Models.MapPin.IsFrozen">
+        <member name="P:AerobicWithMe.Models.MapPin.IsFrozen">
             <inheritdoc />
         </member>
-        <member name="P:RealmTodo.Models.MapPin.Realm">
+        <member name="P:AerobicWithMe.Models.MapPin.Realm">
             <inheritdoc />
         </member>
-        <member name="P:RealmTodo.Models.MapPin.ObjectSchema">
+        <member name="P:AerobicWithMe.Models.MapPin.ObjectSchema">
             <inheritdoc />
         </member>
-        <member name="P:RealmTodo.Models.MapPin.DynamicApi">
+        <member name="P:AerobicWithMe.Models.MapPin.DynamicApi">
             <inheritdoc />
         </member>
-        <member name="P:RealmTodo.Models.MapPin.BacklinksCount">
+        <member name="P:AerobicWithMe.Models.MapPin.BacklinksCount">
             <inheritdoc />
         </member>
-        <member name="E:RealmTodo.Models.MapPin.PropertyChanged">
+        <member name="E:AerobicWithMe.Models.MapPin.PropertyChanged">
             <inheritdoc />
         </member>
-        <member name="M:RealmTodo.Models.MapPin.op_Explicit(Realms.RealmValue)~RealmTodo.Models.MapPin">
+        <member name="M:AerobicWithMe.Models.MapPin.op_Explicit(Realms.RealmValue)~AerobicWithMe.Models.MapPin">
             <summary>
-            Converts a <see cref="T:Realms.RealmValue"/> to <see cref="T:RealmTodo.Models.MapPin"/>. Equivalent to <see cref="M:Realms.RealmValue.AsNullableRealmObject``1"/>.
+            Converts a <see cref="T:Realms.RealmValue"/> to <see cref="T:AerobicWithMe.Models.MapPin"/>. Equivalent to <see cref="M:Realms.RealmValue.AsNullableRealmObject``1"/>.
             </summary>
             <param name="val">The <see cref="T:Realms.RealmValue"/> to convert.</param>
-            <returns>The <see cref="T:RealmTodo.Models.MapPin"/> stored in the <see cref="T:Realms.RealmValue"/>.</returns>
+            <returns>The <see cref="T:AerobicWithMe.Models.MapPin"/> stored in the <see cref="T:Realms.RealmValue"/>.</returns>
         </member>
-        <member name="M:RealmTodo.Models.MapPin.op_Implicit(RealmTodo.Models.MapPin)~Realms.RealmValue">
+        <member name="M:AerobicWithMe.Models.MapPin.op_Implicit(AerobicWithMe.Models.MapPin)~Realms.RealmValue">
             <summary>
-            Implicitly constructs a <see cref="T:Realms.RealmValue"/> from <see cref="T:RealmTodo.Models.MapPin"/>.
+            Implicitly constructs a <see cref="T:Realms.RealmValue"/> from <see cref="T:AerobicWithMe.Models.MapPin"/>.
             </summary>
             <param name="val">The value to store in the <see cref="T:Realms.RealmValue"/>.</param>
             <returns>A <see cref="T:Realms.RealmValue"/> containing the supplied <paramref name="val"/>.</returns>
         </member>
-        <member name="M:RealmTodo.Models.MapPin.op_Implicit(RealmTodo.Models.MapPin)~Realms.QueryArgument">
+        <member name="M:AerobicWithMe.Models.MapPin.op_Implicit(AerobicWithMe.Models.MapPin)~Realms.QueryArgument">
             <summary>
-            Implicitly constructs a <see cref="T:Realms.QueryArgument"/> from <see cref="T:RealmTodo.Models.MapPin"/>.
+            Implicitly constructs a <see cref="T:Realms.QueryArgument"/> from <see cref="T:AerobicWithMe.Models.MapPin"/>.
             </summary>
             <param name="val">The value to store in the <see cref="T:Realms.QueryArgument"/>.</param>
             <returns>A <see cref="T:Realms.QueryArgument"/> containing the supplied <paramref name="val"/>.</returns>
         </member>
-        <member name="M:RealmTodo.Models.MapPin.GetTypeInfo">
+        <member name="M:AerobicWithMe.Models.MapPin.GetTypeInfo">
             <inheritdoc />
         </member>
-        <member name="M:RealmTodo.Models.MapPin.Equals(System.Object)">
+        <member name="M:AerobicWithMe.Models.MapPin.Equals(System.Object)">
             <inheritdoc />
         </member>
-        <member name="M:RealmTodo.Models.MapPin.GetHashCode">
+        <member name="M:AerobicWithMe.Models.MapPin.GetHashCode">
             <inheritdoc />
         </member>
-        <member name="M:RealmTodo.Models.MapPin.ToString">
+        <member name="M:AerobicWithMe.Models.MapPin.ToString">
             <inheritdoc />
         </member>
-        <member name="F:RealmTodo.Models.UserRecord.RealmSchema">
+        <member name="F:AerobicWithMe.Models.UserRecord.RealmSchema">
             <summary>
-            Defines the schema for the <see cref="T:RealmTodo.Models.UserRecord"/> class.
+            Defines the schema for the <see cref="T:AerobicWithMe.Models.UserRecord"/> class.
             </summary>
         </member>
-        <member name="P:RealmTodo.Models.UserRecord.IsManaged">
+        <member name="P:AerobicWithMe.Models.UserRecord.IsManaged">
             <inheritdoc />
         </member>
-        <member name="P:RealmTodo.Models.UserRecord.IsValid">
+        <member name="P:AerobicWithMe.Models.UserRecord.IsValid">
             <inheritdoc />
         </member>
-        <member name="P:RealmTodo.Models.UserRecord.IsFrozen">
+        <member name="P:AerobicWithMe.Models.UserRecord.IsFrozen">
             <inheritdoc />
         </member>
-        <member name="P:RealmTodo.Models.UserRecord.Realm">
+        <member name="P:AerobicWithMe.Models.UserRecord.Realm">
             <inheritdoc />
         </member>
-        <member name="P:RealmTodo.Models.UserRecord.ObjectSchema">
+        <member name="P:AerobicWithMe.Models.UserRecord.ObjectSchema">
             <inheritdoc />
         </member>
-        <member name="P:RealmTodo.Models.UserRecord.DynamicApi">
+        <member name="P:AerobicWithMe.Models.UserRecord.DynamicApi">
             <inheritdoc />
         </member>
-        <member name="P:RealmTodo.Models.UserRecord.BacklinksCount">
+        <member name="P:AerobicWithMe.Models.UserRecord.BacklinksCount">
             <inheritdoc />
         </member>
-        <member name="E:RealmTodo.Models.UserRecord.PropertyChanged">
+        <member name="E:AerobicWithMe.Models.UserRecord.PropertyChanged">
             <inheritdoc />
         </member>
-        <member name="M:RealmTodo.Models.UserRecord.op_Explicit(Realms.RealmValue)~RealmTodo.Models.UserRecord">
+        <member name="M:AerobicWithMe.Models.UserRecord.op_Explicit(Realms.RealmValue)~AerobicWithMe.Models.UserRecord">
             <summary>
-            Converts a <see cref="T:Realms.RealmValue"/> to <see cref="T:RealmTodo.Models.UserRecord"/>. Equivalent to <see cref="M:Realms.RealmValue.AsNullableRealmObject``1"/>.
+            Converts a <see cref="T:Realms.RealmValue"/> to <see cref="T:AerobicWithMe.Models.UserRecord"/>. Equivalent to <see cref="M:Realms.RealmValue.AsNullableRealmObject``1"/>.
             </summary>
             <param name="val">The <see cref="T:Realms.RealmValue"/> to convert.</param>
-            <returns>The <see cref="T:RealmTodo.Models.UserRecord"/> stored in the <see cref="T:Realms.RealmValue"/>.</returns>
+            <returns>The <see cref="T:AerobicWithMe.Models.UserRecord"/> stored in the <see cref="T:Realms.RealmValue"/>.</returns>
         </member>
-        <member name="M:RealmTodo.Models.UserRecord.op_Implicit(RealmTodo.Models.UserRecord)~Realms.RealmValue">
+        <member name="M:AerobicWithMe.Models.UserRecord.op_Implicit(AerobicWithMe.Models.UserRecord)~Realms.RealmValue">
             <summary>
-            Implicitly constructs a <see cref="T:Realms.RealmValue"/> from <see cref="T:RealmTodo.Models.UserRecord"/>.
+            Implicitly constructs a <see cref="T:Realms.RealmValue"/> from <see cref="T:AerobicWithMe.Models.UserRecord"/>.
             </summary>
             <param name="val">The value to store in the <see cref="T:Realms.RealmValue"/>.</param>
             <returns>A <see cref="T:Realms.RealmValue"/> containing the supplied <paramref name="val"/>.</returns>
         </member>
-        <member name="M:RealmTodo.Models.UserRecord.op_Implicit(RealmTodo.Models.UserRecord)~Realms.QueryArgument">
+        <member name="M:AerobicWithMe.Models.UserRecord.op_Implicit(AerobicWithMe.Models.UserRecord)~Realms.QueryArgument">
             <summary>
-            Implicitly constructs a <see cref="T:Realms.QueryArgument"/> from <see cref="T:RealmTodo.Models.UserRecord"/>.
+            Implicitly constructs a <see cref="T:Realms.QueryArgument"/> from <see cref="T:AerobicWithMe.Models.UserRecord"/>.
             </summary>
             <param name="val">The value to store in the <see cref="T:Realms.QueryArgument"/>.</param>
             <returns>A <see cref="T:Realms.QueryArgument"/> containing the supplied <paramref name="val"/>.</returns>
         </member>
-        <member name="M:RealmTodo.Models.UserRecord.GetTypeInfo">
+        <member name="M:AerobicWithMe.Models.UserRecord.GetTypeInfo">
             <inheritdoc />
         </member>
-        <member name="M:RealmTodo.Models.UserRecord.Equals(System.Object)">
+        <member name="M:AerobicWithMe.Models.UserRecord.Equals(System.Object)">
             <inheritdoc />
         </member>
-        <member name="M:RealmTodo.Models.UserRecord.GetHashCode">
+        <member name="M:AerobicWithMe.Models.UserRecord.GetHashCode">
             <inheritdoc />
         </member>
-        <member name="M:RealmTodo.Models.UserRecord.ToString">
+        <member name="M:AerobicWithMe.Models.UserRecord.ToString">
             <inheritdoc />
         </member>
-        <member name="T:RealmTodo.ViewModels.BaseViewModel">
+        <member name="T:AerobicWithMe.ViewModels.BaseViewModel">
             <inheritdoc/>
         </member>
-        <member name="P:RealmTodo.ViewModels.BaseViewModel.IsBusy">
-            <inheritdoc cref="F:RealmTodo.ViewModels.BaseViewModel.isBusy"/>
+        <member name="P:AerobicWithMe.ViewModels.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.BaseViewModel.isBusy"/>
         </member>
-        <member name="M:RealmTodo.ViewModels.BaseViewModel.OnIsBusyChanged(System.Boolean)">
-            <summary>Executes the logic for when <see cref="P:RealmTodo.ViewModels.BaseViewModel.IsBusy"/> just changed.</summary>
+        <member name="M:AerobicWithMe.ViewModels.BaseViewModel.OnIsBusyChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:AerobicWithMe.ViewModels.BaseViewModel.IsBusy"/> just changed.</summary>
             <param name="value">The new property value that was set.</param>
-            <remarks>This method is invoked right after the value of <see cref="P:RealmTodo.ViewModels.BaseViewModel.IsBusy"/> is changed.</remarks>
+            <remarks>This method is invoked right after the value of <see cref="P:AerobicWithMe.ViewModels.BaseViewModel.IsBusy"/> is changed.</remarks>
         </member>
-        <member name="T:RealmTodo.ViewModels.LoginViewModel">
+        <member name="T:AerobicWithMe.ViewModels.LoginViewModel">
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="F:RealmTodo.ViewModels.LoginViewModel.appearingCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.LoginViewModel.AppearingCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.LoginViewModel.appearingCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.LoginViewModel.AppearingCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.LoginViewModel.AppearingCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.LoginViewModel.OnAppearing"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.LoginViewModel.AppearingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.LoginViewModel.OnAppearing"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.LoginViewModel.loginCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.LoginViewModel.LoginCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.LoginViewModel.loginCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.LoginViewModel.LoginCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.LoginViewModel.LoginCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.LoginViewModel.Login"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.LoginViewModel.LoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.LoginViewModel.Login"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.LoginViewModel.signUpCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.LoginViewModel.SignUpCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.LoginViewModel.signUpCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.LoginViewModel.SignUpCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.LoginViewModel.SignUpCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.LoginViewModel.SignUp"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.LoginViewModel.SignUpCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.LoginViewModel.SignUp"/>.</summary>
         </member>
-        <member name="T:RealmTodo.ViewModels.EditMapPinViewModel">
+        <member name="T:AerobicWithMe.ViewModels.EditMapPinViewModel">
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
@@ -170,65 +170,61 @@
             <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.InitialMapPin">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.initialMapPin"/>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.InitialMapPin">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.initialMapPin"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.InputTrackName">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.inputTrackName"/>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.InputTrackName">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.inputTrackName"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Map_nameNew">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.map_nameNew"/>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.Map_nameNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.map_nameNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.Label_pinNew">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.label_pinNew"/>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.Label_pinNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.label_pinNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.AddressNew">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.addressNew"/>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.AddressNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.addressNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.LatitudeNew">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.latitudeNew"/>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.LatitudeNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.latitudeNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.LongtiudeNew">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.longtiudeNew"/>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.LongtiudeNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.longtiudeNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.PageHeader">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditMapPinViewModel.pageHeader"/>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.PageHeader">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditMapPinViewModel.pageHeader"/>
         </member>
-        <member name="F:RealmTodo.ViewModels.EditMapPinViewModel.showTrackCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditMapPinViewModel.ShowTrackCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.showTrackCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.ShowTrackCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.ShowTrackCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditMapPinViewModel.ShowTrack"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.ShowTrackCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.ShowTrack"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.EditMapPinViewModel.printListCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditMapPinViewModel.PrintListCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.printListCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.PrintListCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.PrintListCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditMapPinViewModel.PrintList"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.PrintListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.PrintList"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.EditMapPinViewModel.uploadToCloudPinsCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditMapPinViewModel.UploadToCloudPinsCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.uploadToCloudPinsCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.UploadToCloudPinsCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.UploadToCloudPinsCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditMapPinViewModel.UploadToCloudPins"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.UploadToCloudPinsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.UploadToCloudPins"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.EditMapPinViewModel.savePinCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditMapPinViewModel.SavePinCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.savePinCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.SavePinCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.SavePinCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditMapPinViewModel.SavePin(Maui.GoogleMaps.Pin)"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.SavePinCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.SavePin(Maui.GoogleMaps.Pin)"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.EditMapPinViewModel.cancelCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditMapPinViewModel.CancelCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.EditMapPinViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditMapPinViewModel.CancelCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditMapPinViewModel.CancelCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditMapPinViewModel.Cancel"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.EditMapPinViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditMapPinViewModel.Cancel"/>.</summary>
         </member>
-        <member name="T:RealmTodo.ViewModels.MapsViewModel">
-            <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
+        <member name="T:AerobicWithMe.ViewModels.MapsViewModel">
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
@@ -239,161 +235,162 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.ConnectionStatusIcon">
-            <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.connectionStatusIcon"/>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ConnectionStatusIcon">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.connectionStatusIcon"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.IsShowAllTasks">
-            <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.isShowAllTasks"/>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.IsShowAllTasks">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.isShowAllTasks"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.Maps">
-            <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.maps"/>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.Maps">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.maps"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.DataExplorerLink">
-            <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.dataExplorerLink"/>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.DataExplorerLink">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.dataExplorerLink"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.InitialUserRecord">
-            <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.initialUserRecord"/>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.InitialUserRecord">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.initialUserRecord"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.ProfileNameNew">
-            <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.profileNameNew"/>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ProfileNameNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.profileNameNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.MapNameNew">
-            <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.mapNameNew"/>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.MapNameNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.mapNameNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.TrackTimeNew">
-            <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.trackTimeNew"/>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.TrackTimeNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.trackTimeNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.UploadDateTimeNew">
-            <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.uploadDateTimeNew"/>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.UploadDateTimeNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.uploadDateTimeNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.Comment">
-            <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.comment"/>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.Comment">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.comment"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.PageHeader">
-            <inheritdoc cref="F:RealmTodo.ViewModels.MapsViewModel.pageHeader"/>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.PageHeader">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.MapsViewModel.pageHeader"/>
         </member>
-        <member name="M:RealmTodo.ViewModels.MapsViewModel.OnIsShowAllTasksChanged(System.Boolean)">
-            <summary>Executes the logic for when <see cref="P:RealmTodo.ViewModels.MapsViewModel.IsShowAllTasks"/> just changed.</summary>
+        <member name="M:AerobicWithMe.ViewModels.MapsViewModel.OnIsShowAllTasksChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.IsShowAllTasks"/> just changed.</summary>
             <param name="value">The new property value that was set.</param>
-            <remarks>This method is invoked right after the value of <see cref="P:RealmTodo.ViewModels.MapsViewModel.IsShowAllTasks"/> is changed.</remarks>
+            <remarks>This method is invoked right after the value of <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.IsShowAllTasks"/> is changed.</remarks>
         </member>
-        <member name="F:RealmTodo.ViewModels.MapsViewModel.appearingCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.AppearingCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.appearingCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.AppearingCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.AppearingCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.OnAppearing"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.AppearingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.OnAppearing"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.MapsViewModel.saveUserRecordCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.SaveUserRecordCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.saveUserRecordCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.SaveUserRecordCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.SaveUserRecordCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.SaveUserRecord"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.SaveUserRecordCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.SaveUserRecord"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.MapsViewModel.goToUserRecordsListCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.GoToUserRecordsListCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.goToUserRecordsListCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.GoToUserRecordsListCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.GoToUserRecordsListCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.GoToUserRecordsList"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.GoToUserRecordsListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.GoToUserRecordsList"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.MapsViewModel.logoutCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.LogoutCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.logoutCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.LogoutCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.LogoutCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.Logout"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.LogoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.Logout"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.MapsViewModel.testCommandCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.TestCommandCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.testCommandCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.TestCommandCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.TestCommandCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.TestCommand(RealmTodo.Models.MapPin)"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.TestCommandCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.TestCommand(AerobicWithMe.Models.MapPin)"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.MapsViewModel.chooseMapFromListCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.ChooseMapFromListCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.chooseMapFromListCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.ChooseMapFromListCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.ChooseMapFromListCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.ChooseMapFromList(RealmTodo.Models.MapPin)"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ChooseMapFromListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.ChooseMapFromList(AerobicWithMe.Models.MapPin)"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.MapsViewModel.toMapPageCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.ToMapPageCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.toMapPageCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.ToMapPageCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.ToMapPageCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.ToMapPage"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ToMapPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.ToMapPage"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.MapsViewModel.deleteMapCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.DeleteMapCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.deleteMapCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.DeleteMapCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.DeleteMapCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.DeleteMap(RealmTodo.Models.MapPin)"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.DeleteMapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.DeleteMap(AerobicWithMe.Models.MapPin)"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.MapsViewModel.deleteSinglePinCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.DeleteSinglePinCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.deleteSinglePinCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.DeleteSinglePinCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.DeleteSinglePinCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.DeleteSinglePin(RealmTodo.Models.MapPin)"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.DeleteSinglePinCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.DeleteSinglePin(AerobicWithMe.Models.MapPin)"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.MapsViewModel.refreshCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.RefreshCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.refreshCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.RefreshCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.RefreshCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.Refresh"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.RefreshCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.Refresh"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.MapsViewModel.toTimerPageCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.ToTimerPageCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.toTimerPageCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.ToTimerPageCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.ToTimerPageCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.ToTimerPage"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ToTimerPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.ToTimerPage"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.MapsViewModel.changeConnectionStatusCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.ChangeConnectionStatusCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.changeConnectionStatusCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.ChangeConnectionStatusCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.ChangeConnectionStatusCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.ChangeConnectionStatus"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.ChangeConnectionStatusCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.ChangeConnectionStatus"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.MapsViewModel.urlTapCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.MapsViewModel.UrlTapCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.MapsViewModel.urlTapCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.MapsViewModel.UrlTapCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.MapsViewModel.UrlTapCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.MapsViewModel.UrlTap(System.String)"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.MapsViewModel.UrlTapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.MapsViewModel.UrlTap(System.String)"/>.</summary>
         </member>
-        <member name="T:RealmTodo.ViewModels.EditUserRecordViewModel">
+        <member name="T:AerobicWithMe.ViewModels.EditUserRecordViewModel">
             <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.InputUserName">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.inputUserName"/>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.InputUserName">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.inputUserName"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.InitialUserRecord">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.initialUserRecord"/>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.InitialUserRecord">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.initialUserRecord"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.ProfileNameNew">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.profileNameNew"/>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.ProfileNameNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.profileNameNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.MapNameNew">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.mapNameNew"/>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.MapNameNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.mapNameNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.TrackTimeNew">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.trackTimeNew"/>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.TrackTimeNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.trackTimeNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.UploadDateTimeNew">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.uploadDateTimeNew"/>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.UploadDateTimeNew">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.uploadDateTimeNew"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.Comment">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.comment"/>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.Comment">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.comment"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.PageHeader">
-            <inheritdoc cref="F:RealmTodo.ViewModels.EditUserRecordViewModel.pageHeader"/>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.PageHeader">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.pageHeader"/>
         </member>
-        <member name="F:RealmTodo.ViewModels.EditUserRecordViewModel.cancelCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.EditUserRecordViewModel.CancelCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.EditUserRecordViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.CancelCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.EditUserRecordViewModel.CancelCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.EditUserRecordViewModel.Cancel"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.EditUserRecordViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.EditUserRecordViewModel.Cancel"/>.</summary>
         </member>
-        <member name="T:RealmTodo.ViewModels.UserRecordsViewModel">
-            <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
+        <member name="T:AerobicWithMe.ViewModels.UserRecordsViewModel">
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
@@ -405,117 +402,120 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.ConnectionStatusIcon">
-            <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.connectionStatusIcon"/>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ConnectionStatusIcon">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel.connectionStatusIcon"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.IsShowAllTasks">
-            <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.isShowAllTasks"/>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.IsShowAllTasks">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel.isShowAllTasks"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.Maps">
-            <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.maps"/>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.Maps">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel.maps"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.DataExplorerLink">
-            <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.dataExplorerLink"/>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DataExplorerLink">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel.dataExplorerLink"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.UserRecordsList">
-            <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.userRecordsList"/>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.UserRecordsList">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel.userRecordsList"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.SortOptions">
-            <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel._SortOptions"/>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.SortOptions">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel._SortOptions"/>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.SelectedSortOption">
-            <inheritdoc cref="F:RealmTodo.ViewModels.UserRecordsViewModel.selectedSortOption"/>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.SelectedSortOption">
+            <inheritdoc cref="F:AerobicWithMe.ViewModels.UserRecordsViewModel.selectedSortOption"/>
         </member>
-        <member name="M:RealmTodo.ViewModels.UserRecordsViewModel.OnIsShowAllTasksChanged(System.Boolean)">
-            <summary>Executes the logic for when <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.IsShowAllTasks"/> just changed.</summary>
+        <member name="M:AerobicWithMe.ViewModels.UserRecordsViewModel.OnIsShowAllTasksChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.IsShowAllTasks"/> just changed.</summary>
             <param name="value">The new property value that was set.</param>
-            <remarks>This method is invoked right after the value of <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.IsShowAllTasks"/> is changed.</remarks>
+            <remarks>This method is invoked right after the value of <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.IsShowAllTasks"/> is changed.</remarks>
         </member>
-        <member name="M:RealmTodo.ViewModels.UserRecordsViewModel.OnSelectedSortOptionChanged(System.String)">
-            <summary>Executes the logic for when <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.SelectedSortOption"/> just changed.</summary>
+        <member name="M:AerobicWithMe.ViewModels.UserRecordsViewModel.OnSelectedSortOptionChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.SelectedSortOption"/> just changed.</summary>
             <param name="value">The new property value that was set.</param>
-            <remarks>This method is invoked right after the value of <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.SelectedSortOption"/> is changed.</remarks>
+            <remarks>This method is invoked right after the value of <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.SelectedSortOption"/> is changed.</remarks>
         </member>
-        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.deleteUserRecordCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.DeleteUserRecordCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.deleteUserRecordCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteUserRecordCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.DeleteUserRecordCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.DeleteUserRecord(RealmTodo.Models.UserRecord)"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteUserRecordCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteUserRecord(AerobicWithMe.Models.UserRecord)"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.showRecordCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.ShowRecordCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.showRecordCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ShowRecordCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.ShowRecordCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.ShowRecord(RealmTodo.Models.UserRecord)"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ShowRecordCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.ShowRecord(AerobicWithMe.Models.UserRecord)"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.appearingCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.AppearingCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.appearingCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.AppearingCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.AppearingCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.OnAppearing"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.AppearingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.OnAppearing"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.logoutCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.LogoutCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.logoutCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.LogoutCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.LogoutCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.Logout"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.LogoutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.Logout"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.toMapPageCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.ToMapPageCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.toMapPageCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ToMapPageCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.ToMapPageCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.ToMapPage"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ToMapPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.ToMapPage"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.deleteMapCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.DeleteMapCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.deleteMapCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteMapCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.DeleteMapCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.DeleteMap(RealmTodo.Models.MapPin)"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteMapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteMap(AerobicWithMe.Models.MapPin)"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.deleteSinglePinCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.DeleteSinglePinCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.deleteSinglePinCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteSinglePinCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.DeleteSinglePinCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.DeleteSinglePin(RealmTodo.Models.MapPin)"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteSinglePinCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.DeleteSinglePin(AerobicWithMe.Models.MapPin)"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.refreshCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.RefreshCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.refreshCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.RefreshCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.RefreshCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.Refresh"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.RefreshCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.Refresh"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.toTimerPageCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.ToTimerPageCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.toTimerPageCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ToTimerPageCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.ToTimerPageCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.ToTimerPage"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ToTimerPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.ToTimerPage"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.changeConnectionStatusCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.ChangeConnectionStatusCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.changeConnectionStatusCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ChangeConnectionStatusCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.ChangeConnectionStatusCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.ChangeConnectionStatus"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.ChangeConnectionStatusCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.ChangeConnectionStatus"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.urlTapCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.UrlTapCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.urlTapCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.UrlTapCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.UrlTapCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.UrlTap(System.String)"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.UrlTapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.UrlTap(System.String)"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.goToMapsListCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.GoToMapsListCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.goToMapsListCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.GoToMapsListCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.GoToMapsListCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.GoToMapsList"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.GoToMapsListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.GoToMapsList"/>.</summary>
         </member>
-        <member name="F:RealmTodo.ViewModels.UserRecordsViewModel.sortUserRecordsCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.ViewModels.UserRecordsViewModel.SortUserRecordsCommand"/>.</summary>
+        <member name="F:AerobicWithMe.ViewModels.UserRecordsViewModel.sortUserRecordsCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.ViewModels.UserRecordsViewModel.SortUserRecordsCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.ViewModels.UserRecordsViewModel.SortUserRecordsCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.ViewModels.UserRecordsViewModel.SortUserRecords"/>.</summary>
+        <member name="P:AerobicWithMe.ViewModels.UserRecordsViewModel.SortUserRecordsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.ViewModels.UserRecordsViewModel.SortUserRecords"/>.</summary>
         </member>
-        <member name="T:RealmTodo.Views.MapPage">
+        <member name="T:AerobicWithMe.Views.MapPage">
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
@@ -525,92 +525,92 @@
             <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="F:RealmTodo.Views.MapPage.toTimerPageCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.ToTimerPageCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.MapPage.toTimerPageCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.ToTimerPageCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.Views.MapPage.ToTimerPageCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.ToTimerPage"/>.</summary>
+        <member name="P:AerobicWithMe.Views.MapPage.ToTimerPageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.ToTimerPage"/>.</summary>
         </member>
-        <member name="F:RealmTodo.Views.MapPage.zoomToMyLocationCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.ZoomToMyLocationCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.MapPage.zoomToMyLocationCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.ZoomToMyLocationCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.Views.MapPage.ZoomToMyLocationCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.ZoomToMyLocation"/>.</summary>
+        <member name="P:AerobicWithMe.Views.MapPage.ZoomToMyLocationCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.ZoomToMyLocation"/>.</summary>
         </member>
-        <member name="F:RealmTodo.Views.MapPage.goToUserRecordsListCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.GoToUserRecordsListCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.MapPage.goToUserRecordsListCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.GoToUserRecordsListCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.Views.MapPage.GoToUserRecordsListCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.GoToUserRecordsList"/>.</summary>
+        <member name="P:AerobicWithMe.Views.MapPage.GoToUserRecordsListCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.GoToUserRecordsList"/>.</summary>
         </member>
-        <member name="F:RealmTodo.Views.MapPage.deletLastPointCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.DeletLastPointCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.MapPage.deletLastPointCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.DeletLastPointCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.Views.MapPage.DeletLastPointCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.DeletLastPoint"/>.</summary>
+        <member name="P:AerobicWithMe.Views.MapPage.DeletLastPointCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.DeletLastPoint"/>.</summary>
         </member>
-        <member name="F:RealmTodo.Views.MapPage.addToCloudCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.AddToCloudCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.MapPage.addToCloudCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.AddToCloudCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.Views.MapPage.AddToCloudCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.AddToCloud"/>.</summary>
+        <member name="P:AerobicWithMe.Views.MapPage.AddToCloudCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.AddToCloud"/>.</summary>
         </member>
-        <member name="F:RealmTodo.Views.MapPage.calcDistanceCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.CalcDistanceCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.MapPage.calcDistanceCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.CalcDistanceCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.Views.MapPage.CalcDistanceCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.CalcDistance"/>.</summary>
+        <member name="P:AerobicWithMe.Views.MapPage.CalcDistanceCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.CalcDistance"/>.</summary>
         </member>
-        <member name="F:RealmTodo.Views.MapPage.resetMapCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.ResetMapCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.MapPage.resetMapCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.ResetMapCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.Views.MapPage.ResetMapCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.ResetMap"/>.</summary>
+        <member name="P:AerobicWithMe.Views.MapPage.ResetMapCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.ResetMap"/>.</summary>
         </member>
-        <member name="F:RealmTodo.Views.MapPage.editPointCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.Views.MapPage.EditPointCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.MapPage.editPointCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.MapPage.EditPointCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.Views.MapPage.EditPointCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.MapPage.EditPoint"/>.</summary>
+        <member name="P:AerobicWithMe.Views.MapPage.EditPointCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.MapPage.EditPoint"/>.</summary>
         </member>
-        <member name="T:RealmTodo.Views.AddRecordToDb">
+        <member name="T:AerobicWithMe.Views.AddRecordToDb">
             <inheritdoc/>
         </member>
-        <member name="F:RealmTodo.Views.AddRecordToDb.upLoadToMongoCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.Views.AddRecordToDb.UpLoadToMongoCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.AddRecordToDb.upLoadToMongoCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.AddRecordToDb.UpLoadToMongoCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.Views.AddRecordToDb.UpLoadToMongoCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.AddRecordToDb.UpLoadToMongo"/>.</summary>
+        <member name="P:AerobicWithMe.Views.AddRecordToDb.UpLoadToMongoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.AddRecordToDb.UpLoadToMongo"/>.</summary>
         </member>
-        <member name="T:RealmTodo.Views.TimerPage">
+        <member name="T:AerobicWithMe.Views.TimerPage">
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
         </member>
-        <member name="F:RealmTodo.Views.TimerPage.startTimerCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.Views.TimerPage.StartTimerCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.TimerPage.startTimerCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.TimerPage.StartTimerCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.Views.TimerPage.StartTimerCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.TimerPage.StartTimer"/>.</summary>
+        <member name="P:AerobicWithMe.Views.TimerPage.StartTimerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.TimerPage.StartTimer"/>.</summary>
         </member>
-        <member name="F:RealmTodo.Views.TimerPage.pauseTimerCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.Views.TimerPage.PauseTimerCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.TimerPage.pauseTimerCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.TimerPage.PauseTimerCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.Views.TimerPage.PauseTimerCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.TimerPage.PauseTimer"/>.</summary>
+        <member name="P:AerobicWithMe.Views.TimerPage.PauseTimerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.TimerPage.PauseTimer"/>.</summary>
         </member>
-        <member name="F:RealmTodo.Views.TimerPage.resetTimerCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.Views.TimerPage.ResetTimerCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.TimerPage.resetTimerCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.TimerPage.ResetTimerCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.Views.TimerPage.ResetTimerCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.TimerPage.ResetTimer"/>.</summary>
+        <member name="P:AerobicWithMe.Views.TimerPage.ResetTimerCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.TimerPage.ResetTimer"/>.</summary>
         </member>
-        <member name="F:RealmTodo.Views.TimerPage.uploadCommand">
-            <summary>The backing field for <see cref="P:RealmTodo.Views.TimerPage.UploadCommand"/>.</summary>
+        <member name="F:AerobicWithMe.Views.TimerPage.uploadCommand">
+            <summary>The backing field for <see cref="P:AerobicWithMe.Views.TimerPage.UploadCommand"/>.</summary>
         </member>
-        <member name="P:RealmTodo.Views.TimerPage.UploadCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RealmTodo.Views.TimerPage.Upload"/>.</summary>
+        <member name="P:AerobicWithMe.Views.TimerPage.UploadCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:AerobicWithMe.Views.TimerPage.Upload"/>.</summary>
         </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing)">
             <summary>

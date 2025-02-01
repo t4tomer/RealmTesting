@@ -1,8 +1,8 @@
 ﻿using MongoDB.Bson;
 using Realms;
-using RealmTodo.Services;
+using AerobicWithMe.Services;
 
-namespace RealmTodo.Models
+namespace AerobicWithMe.Models
 {
     public partial class UserRecord : IRealmObject
     {
