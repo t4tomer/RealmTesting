@@ -54,7 +54,6 @@ namespace AerobicWithMe.Services
         {
 
             return mainThreadRealm ??= GetRealm();//original code line
-            //return mainThreadRealm ??= GetRealmForMultipleTypes();//original code line
 
 
         }

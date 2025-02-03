@@ -43,9 +43,7 @@ namespace AerobicWithMe.Models
 
 
 
-        //new code 
-        [MapTo("isComplete")]
-        public bool IsComplete { get; set; }
+  
 
         public bool IsMine => OwnerId == RealmService.CurrentUser.Id;
     }
